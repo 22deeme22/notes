@@ -1,0 +1,505 @@
+% !TEX root = /home/deeme/Documents/epfl/notes/proba_stats/notes.tex
+\chapter{Probabilities: starter guide}
+   \section{Probabilities spaces and measures}
+           \subsection{Probability spaces}
+                \begin{definition}
+                    A \important{probability space} is a set of realisations denoted $\Omega$, together with a probability measure on $\Omega$. A \important{probability measure} on $\Omega$ is a function $\mathcal{P} : \mathcal{P} \left(\Omega\right) \to \left[0,1\right]$ such that 
+                    \begin{enumerate}[left=10pt]
+                        \item $P\left(\emptyset\right)=0, P\left(\Omega\right)=1$. 
+                        \item If $A_i \in \mathcal{F}, i \in \mathbb{N}$ is a sequence of events with $A_i \cap A_j = \emptyset$ for $i \neq j$, then 
+                        \[P\left(\bigcup_{i \in \mathbb{N}} A_i\right)= \sum_{ i \in \mathbb{N} } P\left(A_i\right). \]
+
+                        
+                    \end{enumerate}
+                \end{definition} 
+                \begin{remark}{Remarque}
+                    (1) The probability that something happens is 1 and that nothing happens is 0.
+
+                    (2) The probability of events that cannor occur simultaneously is the suk of the probabilities of the events.
+
+                    From these properties, we can deduce the next theorems. 
+                \end{remark}
+                \begin{theoreme}
+                    Let P be a a probability measure on some realisation set $\Omega$. Then,
+                    \begin{enumerate}[left=10pt]
+                        \item $P\left(\emptyset \right)=0, P\left(\Omega\right)=1;$
+                        \item for any event $A, P\left(\Omega \backslash A\right)=1- P\left(A\right)$; 
+                        \item if two events $A, B$ are such that $A \subset B, P\left(B\right) = P\left(A\right) + P\left(B \backslash A\right)$. In particular, $P\left(A\right) \leq P\left(B\right)$; 
+                        \item for two events $A,B$, 
+                        \[P\left(A \cup B\right) = P\left(A\right) + P\left(B\right) - P\left(A \cap B\right);\]
+                        
+                        \item finite $\sigma$-additivity: if $n \geq 2$, and $A_1, \ldots, A_n$ are events such that $A_i \cap A_j = \emptyset$ for $i \neq j$, then 
+                        \[P\left(\bigcup_{i=1}^{n} A_i\right) = \sum_{ i=1 } ^{n} P\left(A_i\right);\]
+                        
+                        \item countable $\sigma$-additivity: if $A_1, A_2, \ldots$ are events such that $A_i \cap A_j = \emptyset$ for $i \neq j$, then 
+                        \[ P\left(\bigcup_{i=1}^{\infty} A_i\right) = \sum_{ i=1 } ^{ \infty } P\left(A_i\right);\]
+                        
+                        \item finite $\sigma$-sub-additivity: if $n \geq 2$, and $A_1, \ldots, A_n$ are events, then 
+                        \[P\left(\bigcup_{i=1}^{n} A_i\right) \leq \sum_{ i=1 } ^{n} P\left(A_i\right);\]
+                        
+                    \item countable $\sigma$-sub-additivity: if $A_1, A_2, \ldots$ are events, then 
+                        \[ P\left(\bigcup_{i=1}^{\infty} A_i\right) \leq \sum_{ i=1 } ^{ \infty } P\left(A_i\right);\]
+                        
+                    \item monotone convergence, increasing sequences: if $A_1, A_2, \ldots$ are events such that $A_i \subset A_{i+1}$ for all i's then 
+                    \[\lim_{n \to \infty} P\left(A_n\right)=P\left(\bigcup_{n=1}^{\infty} A_n\right);\]
+                    
+                \item monotoneconvergence, decreasing sequences: if $A_1, A_2, \ldots$ are events such that $A_{i+1} \subset A_i$ for all i's, then 
+                \[\lim_{n \to \infty} P\left(A_n\right)=P\left(\bigcap_{n=1}^{\infty} A_n\right).\]
+                    \end{enumerate}
+                \end{theoreme}
+                \begin{remark}{Remarque}
+                    It's not necessary to learn this list by heart
+                \end{remark}
+                We will encounter two main types of probability spaces in these notes:
+                \begin{itemize}[left=10pt, label=\textbullet]
+                    \item \textbf{Discrete probability spaces:} in that case $\Omega$ is a finite or a countable set, and the set of events really is $\mathcal{F} =\mathcal{P}\left(\Omega)$. 
+                    \item \textbf{Continuous probability spaces:} in that case, $\Omega= \mathbb{R}^d$ with $d \geq 1$ integer. We won't go into a formal definition of the \textit{set of Borel sets}, and we will do as if we could take $\mathcal{F}= \mathcal{P}\left(\mathbb{^d\right)}$
+                \end{itemize}
+                
+            \subsection{Discrete probability measures}
+                \begin{definition}
+                    \hypertarget{def2}{}
+                    Let $\Omega$ be a finite countable set. A \important{probability mass function} on $\Omega$ is a function $p: \Omega \to \left[0,1\right]$ such that 
+                    \[\sum_{ \omega \in \Omega } p\left(\omega\right)=1\]
+                    The \important{probability measure} associated to a probability mass function $p$ is the function $P_p : \mathcal{P}\left(\Omega\right)\to \left[0,1\right]$ given by 
+                    \[P_p\left(A\right)= \sum_{ \omega \in A } p\left(\omega\right).\]
+                    
+                \end{definition}
+                
+            \subsection{Continuous probability measures}
+                One cannor make sense of the probability that a drop of water falls at \textit{precisely} one point $x$, but it is relatively easy to make sense of the probability that the drop falls \textit{is a small disk} around $x$. This is the essence of the next definition.
+                \begin{definition}
+                   Let $d \geq 1$. A \important{probability density function} on $\mathbb{R}^d$ is a Riemann integrable function $f: \mathbb{R}^d \to \left[0, +\infty\right)$ such that 
+                   \[\int_{-\infty}^{\infty} dx_1 \ldots \int_{-\infty}^{+\infty} dx_d f\left(x_1, \ldots, x_d\right) = 1.\]
+                   The \important{probability measure} associated to a probability density function $f$ is the $\left[0,1\right]$-valued function $P_f$ given by 
+                   \[P_f\left(A\right)=\int_{-\infty}^{+\infty}dx_1 \ldots \int_{-\infty}^{+\infty} dx_d f\left(x_1, \ldots, x_d\right) \mathbbm{1}_A \left(x_1, \ldots, x_d\right).\]       
+                \end{definition}
+                \begin{remark}{Remarque}
+                    This is the equivalent of \textbf{\hyperlink{def2}{the second definition}} but for a space where you can't delimit the element to sum: a continuous space.
+
+
+                    The \important{density function} is a function that shows where the variable like to be at most. The probability is the area under this curve.
+
+                    $\begin{functionbypart}{\mathbbm{1}_A}
+                        1 \text{ if } x \text{ }\in\text{ } A,  \\
+                        0 \text{ otherwise.}
+                    \end{functionbypart}$
+                \end{remark}
+            \subsection{Genreal probability spaces and measures}
+                \begin{definition}
+                    Let $\Omega$ be a set. A \important{sigma-algebra} on $\Omega$ is a set $\mathcal{F} \subset \mathcal{P}\left(\Omega\right)$ which satisfies 
+                    \begin{enumerate}[left=10pt]
+                        \item $\mathcal{F}$ contains the empty set $\left(\emptyset \in \mathcal{F}\right)$. 
+                        \item $\mathcal{F}$ is stable by taking the complement $\left(A \in \mathcal{F} \implies \Omega \backslash A \in \mathcal{F}\right)$. 
+                        \item $\mathcal{F}$ is stable by countabe unions (if for all i $\in \mathbb{N}, A_i \in \mathcal{F}$, then $\bigcup_{i \in \mathbb{N}} A_i \in \mathcal{F}$
+                    \end{enumerate}
+                \end{definition}
+                \begin{remark}{Remarque}
+                    $\mathcal{P}\left(\Omega\right)$ is the set of all subset of $\Omega$.
+
+                \end{remark}
+                Now whe can deduce the following properties. 
+                \begin{theoreme}
+                    Let $\Omega$ be a set and $\mathcal{F}$ a sigma-algebra on $\Omega$. Then all of the following hold.
+                    \begin{enumerate}[left=10pt]
+                        \item $\Omega \in \mathcal{F}$. 
+                        \item $\mathcal{F}$ is stable by finite intersections: if $A,B \in \mathcal{F}$, then $A \cap B \in \mathcal{F}$. 
+                        \item If $A,B \in \mathcal{F}$, then $A \backslash B \in \mathcal{F}$. 
+                        \item $\mathcal{F}$ stable by countable intersections: if $A_1, A_2, \ldots \in \mathcal{F}$, then $\bigcap_{i \geq 1} A_i \in \mathcal{F}$. 
+                        \item $\mathcal{F}$ is stable by increasing limits: if $A_i \in \mathcal{F}$, $i \geq 1$ is such that $A_i \subset A_{i+1}$, then, $\bigcup_{i=1}^{\infty} A_i \in \mathcal{F}$. 
+                        \item $\mathcal{F}$ is stable by decreasing limits: if $A_i \in \mathcal{F}, i \geq 1$ is such that $A_{i+1} \subset A_i$, then, $\bigcap_{i=1}^{\infty} A_i \in \mathcal{F}$.
+                    \end{enumerate}
+                \end{theoreme}
+                \begin{definition}
+                    Let $\Omega$ be a set and $\mathcal{F}$ a sigma-algebra on $\Omega$. A \important{probability measure} on $\left(\Omega,\mathcal{F}\right)$ is a function $P: \mathcal{F} \to \left[0,1]$ such that 
+                        \begin{enumerate}[left=10pt]
+                            \item $P\left(\Omega\right)=1$. 
+                            \item If $A_i \in \mathcal{F}, i \in \mathbb{N}$ is a sequence of events with $A_i \cap A_j = \emptyset$ for $i \neq j$, then 
+                            \[P\left(\bigcup_{i \in \mathbb{N}} A_i\right)= \sum_{ i \in \mathbb{N} } P\left(A_i\right). \]
+                        \end{enumerate}
+                \end{definition}
+                \begin{remark}{Remarque}
+                    The same as before but more precise.
+                \end{remark}
+                \begin{definition}
+                    A \important{proability space} is a triplet $\Omega, \mathcal{F}, P$ where $\Omega$ is a set (the set of realisations), $\mathcal{F}$ is a sigma-algebra on $\Omega$ (the set of events), and P is a probability measure on $\left(\Omega, \mathcal{F}\right)$.
+                \end{definition}
+                \begin{remark}{Remarque}
+                    \important{This is the most important definintion of this ``introduction''}
+                \end{remark}
+            \subsection{Inclusion-Exclusion}
+                It is a generalisation of the following fact that we encounter when counting objects: to count the number of objects with property A or property B, we can count the number of objects with property A add the number of objects with property B, and correct our over-counting by removing from this the number of objects with both property A and property B (which were counted twice). 
+                \begin{theoreme}
+                    Let P be a probability measure on some realisation ser $\Omega$. Let $n \geq 1 $ and $A_1, \ldots, A_n$ be events. Then, 
+                    \[P\left(\bigcup_{i=1}^{n} A_i\right) = \sum_{ k=1 } ^{ n } \left(-1\right)^{k+1} \sum_{ i \leq i_1 < \ldots \leq i_k \leq n } P\left(\bigcap_{j=1}^{k} A_{i_j}\right).\]
+                    
+                    Moreover, for $1 \leq l \leq \frac{n}{2}$ integer a, 
+                    \[\begin{functionbypart}{P\left(\bigcup_{i=1}^{n} A_i\right)}
+                        \leq \sum_{ k=1 } ^{ 2l-1 } \left(-1\right)^{k+1} \sum_{ 1 \leq i_1 < \ldots < i_k \leq n } P\left(\bigcap_{j=1}^{k} A_{i_j}\right)  \\
+                        \geq \sum_{ k=1 } ^{ 2l} \left(-1\right)^{k+1} \sum_{ 1 \leq i_1 < \ldots < i_k \leq n } P\left(\bigcap_{j=1}^{k} A_{i_j}\right)  
+                    \end{functionbypart}
+                    .\]
+                \end{theoreme}
+                
+    \section{Random variables and expectation}
+            \subsection{Random variables}
+                Random variables are therefore functions going from the set of realisations to the real numbers; for example, if the ``experiment '' is looking at all poeple born in 2000, one could make the measurement of the height of the first individual born that year.
+                \begin{definition}
+                    A (real) \important{random variable} is a function from the realisation space $\Omega$ to $\mathbb{R}$. The probability that a random variable falls in a set A is 
+                    \[P\left(X \in A\right):=P\left(X^{-1}\left(A)\right)\]
+                    In words: it is the probability that the realisation of the experiment is such that the measurement X takes a value A.
+                \end{definition}
+                \begin{remark}{Example}
+                    \begin{tcolorbox}[gris]
+                        We are throwing a dice: 
+                        \begin{itemize}[left=10pt, label=\textbullet]
+                            \item $\Omega = \{1,2,3,4,5,6\}$
+                            \item $X\left(\omega\right)= 1$ if it's even, $X\left(\omega\right)=0$ if it's odd. 
+                            \item So we are searching $\omega \text{ in } \Omega$ that gives $X\left(\omega\right)=1$: 
+                                \[X^{-1}\left(A\right)= \{\omega \in \Omega: X\left(\omega\right) \in A \} = \{2,4,6\}\]
+                            Then we apply the probability on these results 
+                            \[P\left(X \in A\right)= P\left(\{2,4,6\}\right)= \frac{3}{6} = 0.5\]
+                        \end{itemize}
+                    \end{tcolorbox}
+                \end{remark}
+                We will frequently use notations similar to the following: 
+                \begin{align*} 
+                    P\left(X=x\right) &\equiv P\left(X \in \{x\}\right), \\
+                    P\left(X \leq x\right) &\equiv P\left(X \in \left(-\infty,x\right]\right), \\
+                        P\left(X >x \right) &\equiv P\left(X \in \left(x, +\infty)\right).
+                \end{align*}
+                \begin{definition}
+                   Le $\Omega$ be a set of realisation, and let P be a probability measure on $\Omega$. Let $X: \Omega \to \mathbb{R}$ be a random variable. X is \important{discrete} if there is $\mathcal{D}_X \subset \Omega$ countable or finite such that $P\left(X \in \mathcal{D}_X)=1$. The \important{law of X} is then the probability measure on $\mathbb{R}$ given by 
+                   \[P_X\left(A\right)= \sum_{ x\in A \cap \mathcal{D}_X } P\left(X=x\right)\]
+                   In words, a \important{discrete random variable }is a variable that can take only finitely or countabley many values with non-zero probability.  
+                \end{definition}
+                
+               The second very important family of variables are \important{continuous random variables}.
+               \begin{definition}
+                   Let $\Omega$ be a set of realisation, and let P be a probability measure on $\Omega$. Let $X:\Omega \to \mathbb{R}$ be a random variable. $X$ is \important{continuous random variable} if there is a density function $f_X : \mathbb{R} \to \left[0, +\infty\right)$ such that 
+                   \[P\left(X \in A\right)= \int_{\mathbb{R}} \mathbbm{1}_A f_X\left(x\right)dx.\]
+                   The \important{law of X} is then the probability measure on $\mathbb{R}$ given by $P_{f_X}$.
+               \end{definition}
+               \begin{remark}{Remarque}
+                   Here we can't say: ``the probability that $X=2$'', because it will always be 0. Instead we use a density $f_X\left(x\right)$ to compute on an interval. For exemple, if $X$ is mesuring the size of somebody, $P\left(170 \leq X \leq 180\right)$ is compute with the density $f_X$ by an inegral, because the probability to have 170.000000cm is 0.
+
+                   \begin{itemize}[left=10pt, label=\textbullet]
+                       \item Discrete: whe can say $P\left(X=x\right)$.
+                       \item Continue: values are infinite, we look at interval not precise points.
+                   \end{itemize}
+               \end{remark}
+               
+               There is a similat notion of law for general random variables. 
+               Random variables allows us sometime to pass from some continuous proability to some discrete random variables.
+               \begin{definition}
+                   Let $\Omega$ be a seet of realisation, and let P be a probability measure on $\Omega$. Let $X: \Omega \to \mathbb{R}$. The \important{law of X} is the probability measure $P_X$ on $\mathbb{R}$ given by 
+                   \[P_X \left(A\right)=P\left(X \in A\right).\]
+               \end{definition}
+               \begin{definition}
+                   Let $X: \Omega \to \mathbb{R}$ be a random variable. The \important{cumulative distribution function of X} is defined by 
+                   \[F_X\left(t\right)=P\left(X \leq t\right).\]
+                   Two random variables have the same law if and only if they have the same cumulative distribution functions. Note that if X is a continuous random variable with density $f_X$, one has that $F_X$ is a primitive of $f_X$: 
+                   \[F'_X\left(t\right)=f_X\left(t\right) \mathspace \forall t \in \mathbb{R}.\]
+               \end{definition}
+               \begin{remark}{Remarque}
+                   $F_x: \mathbb{R} \to \left[0,1\right]$
+
+                    \begin{tcolorbox}[gris]
+                    Example 1:    
+                    If $P\left(X=0\right)=P\left(X=1\right)=\frac{1}{2}$ 
+                       \[\begin{functionbypart}{F_X\left(t\right)}
+                           0 \mathspace \mathspace \mathspace t <0  \\
+                           \frac{1}{2} \mathspace  \mathspace \mathspace 0 \leq t<1  \\
+                           1 \mathspace \mathspace \mathspace t \geq 1
+                       \end{functionbypart}
+                       \]
+                    \end{tcolorbox}
+               \end{remark}
+               \begin{theoreme}
+                    Let    $x \to \int_a^x f\left(t\right)dt$ is primitive of f
+
+                   If $X $ is a continuous random variable: there exist a density function 
+                   \[f_X: \mathbb{R} \to \mathbb{R} \text{,   }P\left(X \inA\right)= \int_{\mathbb{R}} \mathbbm{1}_A\left(x\right) f_X\left(x\right)dx\]
+                   So $F_X$ is differentiable and 
+                   \[F'_X\left(t\right)=f_x\left(t\right)= \int_{-\infty}^t f_X\left(x\right)dx\]
+                   
+               \end{theoreme}
+               \begin{remark}{Example}
+                   \begin{tcolorbox}[gris]
+                        If X is a continuous random variable with density $f_X\left(x\right)= \mathbbm{1}_{\left[0,4\right]}\left(x\right)$ then 
+                       \[\begin{functionbypart}{P\left(X \leq t \right)= \int_{-\infty}^t f_X\left(x\right)dx= \frac{1}{4}\int_{-\infty}^t \mathbbm{1}_{\left[0,4\right]}\left(x\right)dx}
+                               0 \mathspace \text{ if } t < 0,  \\
+                               \frac{t}{4} \mathspace \text{ if } t \in \left[0,4\right],  \\
+                               1 \mathspace \text{ if } t >4.
+                       \end{functionbypart} \]                                           
+                   \end{tcolorbox}
+                                 \end{remark}
+                                 \begin{remark}{Remarque}
+                                     to
+                                 \end{remark}
+                                 
+               
+                                 \begin{remark}{\important{Remarque importante}}
+                    To resume an important point:
+                    \begin{itemize}[left=10pt, label=\textbullet]
+                        \item for discrete random variables we use a \important{probability masse function}.
+                        \item for continue random variables we use a \important{density function}.
+                    \end{itemize}
+                    
+                \end{remark}
+                
+               
+            \subsection{Expectation}
+                \begin{definition}
+                    \textbf{Discrete case:} If $\Omega$ is a finite or countable set, $p: \Omega \to \left[0,1\right]$ is a probability mass function, and $X:\Omega\to\mathbb{R}$ is a random variable such that 
+                    \[\sum_{ \omega \in \Omega } \left|X\left(\omega\right)\right|p\left(\omega\right) < \infty,\]
+                   the \important{expectation of X under p} is  
+                   \[E_p\left(X\right):= \sum_{ \omega \in \Omega } X\left(\omega\right)p\left(\omega\right).\]
+                   In this case, we say that X is \important{$P_p$-integrable}.
+
+                   \textbf{Continuous case:} If $f: \mathbb{R}^d \to \mathbb{R}$ is a probability density function, and $X: \mathbb{R}^d \to \mathbb{R}$ is a random variable such that 
+               \[\int_{\mathbb{R}^d} dx \left|X\left(x\right)\right|f\left(x\right) < \infty,\]
+                  the \important{expectation of X under $P_f$} is 
+                  \[E_f\left(x\right) := \int_{\mathbb{R}^d} dx X\left(x\right)f\left(x\right).\]
+                  In this case, we say that X is \important{$P_f$-integrable}.
+
+                  \textbf{General case:} If $\Omega$ is a set of realisation, and P is a probability measure on $\Omega$, we will denote $E_p\left(X\right)$ the \important{expectation of X under P}.
+                \end{definition}
+                \begin{remark}{Remarque}
+                    Note that the expectede value of a random variable depends only on its law
+                \end{remark}
+                \begin{remark}{Example}
+                    \begin{tcolorbox}[gris]
+                        Look at a fair 6-face dice roll: $\Omega = \{ F1, F2, \ldots, F6 \}, p\left(\omega\right)= \frac{1}{6}$ for every $\omega \in \Omega$.
+
+                        Take the random variable $X\left(F1\right)=X\left(F3\right)=X\left(F5\right)=-1, X\left(F2\right)=X\left(F4\right)=X\leftF6\right)=2$, then 
+                        \[E_p\left(X\right)=p\left(F1\right)X\left(F1\right)+p\left(F2\right)X\left(F2\right)+p\left(F3\right)X\left(F3\right)+p\left(F4\right)X\left(F4\right)
+
+                            +p\left(F5\right)X\left(F5\right)+p\left(F6\right)+X\left(F6\right) = -\frac{1}{6}+\frac{1}{6}\cdot 2 - \frac{1}{6} + \frac{1}{6}\cdot 2 - \frac{1}{6} + \frac{1}{6}\cdot 2=\frac{1}{2}.\]
+                    \end{tcolorbox}
+                \end{remark}
+                The properties of expectation are summarized in the next Theorem. 
+                \begin{theoreme}
+                    Let $\Omega$ be a realisation set, and P a probabilisty measure on $\Omega$. Let $X,Y : \Omega \to \mathbb{R}$ be two random variables. Then,
+                    \begin{enumerate}[left=10pt]
+                        \item linearity: for any $a,b \in \mathbb{R}, E_P\left(aX+bY)=aE_P\left(X\right)+bE_P\left(Y\right)$; 
+                        \item ordering: if $P\left(X \geq Y\right)=1, E_P\left(X\right) \geq E_P\left(Y\right)$. In particular,
+                            \begin{itemize}[left=10pt, label=\textbullet]
+                                \item if $P\left(x \geq 0\right)=1$, then $E_P\left(X\right) \geq 0$; 
+                                \item if $P\left(a \leq X \leq b\right)=1$, then $a \leq E_P\left(X\right) \leq b$; 
+                                \item $\left|E_P\left(X\right)\right| \leq E_P\left(\left|X\right|\right)$.
+                            \end{itemize}
+                    \end{enumerate}
+                \end{theoreme}
+            \subsection{Transfer Theorem}
+                The transfer theorem confirm us that the intuition that if we have a random variable that takes values $x_1,x_2,x_3$, with probabilities $p_1,p_2,p_3$, and we have a function $g:\mathbb{R} \to \mathbb{R}$, then expectation of $g\left(X\right)$ should be 
+                \[E\left(g\left(X)\right)=p_1g\left(x_1\right)+p_2g\left(x_2\right)+p_3g\left(x_3\right).\]
+                \begin{theoreme}
+                    Let X be a random variable. Then,
+                    \begin{enumerate}[left=10pt]
+                        \item if X is a discrete random variable, for any $g: \mathbb{R} \to \mathbb{R}, g\left(X\right)$ is a discrete random variable, and 
+                        \[E\left(g\left(X\right)\right)= \sum_{ x \in \text{ Image }\left(X\right) } g\left(x\right)P\left(X=x\right)\]
+                        as soon as the sum converges absolutely; 
+                        \item if X is a continuous random variable, for any $g: \mathbb{R} \to \mathbb{R}$ 
+                            \[E\left(g\left(X\right)\right)= \int_{-\infty}^{+\infty} f_X\left(x\right)g\left(x\right)dx\]
+                        as soon as the integral converges absolutely.
+                    \end{enumerate}
+                \end{theoreme}
+            \subsection{Random vectors}
+                \begin{definition}
+                    Let $\Omega$ be a realisation set, and $P$ a probability measure on $\Omega$. Let $d \geq 1$. A \important{random vector of dimension d} is  function $X : \Omega \to \mathbb{R}^d$. We will denote 
+                    \[X\left(\omega\right)=\left(X_1\left(\omega\right), \ldots, X_d\left(\omega\right)\right).\]
+                    The functions $X_i: \Omega \to \mathbb{R}$ are random variables. They are calles the \important{marginals} of X.
+
+                    The \important{cumulative distribution function} (CDF) of a random vector $X:\Omega \to \mathbb{R}^d$ is given by $F_X:\mathbb{R}^d \to \left[0,1\right]$,
+                    \[F_X\left(t_1, \ldots, t_d\right)=P\left(X_1 \leq t_1, \ldots, X_d \leq t_d\right)\]
+                \end{definition}
+                \begin{remark}{Remarque}
+                    Random vectors are just a list of random variables.
+                \end{remark}
+                \begin{remark}{Pas sur de l'utilité de celle la}
+                    \begin{definition}
+                        Let $\Omega$ be a realisation set, and P a probability measure on $\Omega$. A \important{complex random variable} is a function $X:\Omega \to \mathbb{C}$. The real and imaginary parts of X are then random variables.
+                    \end{definition}
+                \end{remark}
+                There is then also discrete and continuous random vectors
+                \begin{definition}
+                    Let $\Omega$ be a realisation set, and P a probability measure on $\Omega$. Let $X:\Omega \to \mathbb{R}^d$ be a random vector. We say that
+                    \begin{itemize}[left=10pt, label=\textbullet]
+                        \item X is a \important{discrete random vector} if there is a finite of countable set $\mathcal{D}_X \subset \mathbb{R}^d$ with $P\left(X \in \mathcal{D}_X\right)=1$; 
+                        \item X is a \important{continuous random vector }if there is a density function $f_X: \mathbb{R}^d \to \left[0, +\infty\right)$ such that 
+                            \[P\left(X \in A\right)= \int_{\mathbb{R}^d} \mathbbm{1}_A\left(x\right)dx\]
+                    \end{itemize}
+                \end{definition}
+                \begin{remark}{Example}
+                    \begin{tcolorbox}[gris]
+                        Consider $\left(X,Y\right)$ a uniform random vector in the unit disc: 
+                        \[f_{\left(X,Y\right)}\left(x,y\right) = \frac{1}{\pi} \mathbbm{1}_{\left[0,1\right]}\left(x^2+y^2\right).\]
+                        The first marginal, X, of this random vector is then a continuous random variable with density given by $f_X\left(x\right)=0$ for $\left|x\right|>1$, and, for $\left|x\right| \leq 1$, 
+                        \[f_X\left(x\right)= \int_{-\infty}^{\infty} f_{\left(X,Y\right)}\left(x,y\right) dy =\] \[\frac{1}{\pi} \int_{-\infty}^\infty \mathbbm{1}_{\left[0,1-x^2\right]} \left(y^2\right) dy = \frac{1}{\pi} \int_{- \sqrt{1-x^2}}^{\sqrt{1-x^2}}dy= \frac{2}{\pi}\sqrt{1-x^2}.\]
+                        
+                        
+                    \end{tcolorbox}
+                \end{remark}
+                \begin{remark}{\important{Hors sujet important}}
+                    Let a random vector have two variables, then his density function will be $f_{XY}\left(x,y\right)$. So the density of the random variable $X_1$ will be $f_X\left(x\right)= \int_{\mathbb{R}}f_{XY}\left(x,y\right)dy$ and the expected value of X1 will be $E\left[X_1\right]= \int_{\mathbb{R}}xf_X\left(x\right)dx=\int_{\mathbb{R}}\int_{\mathbb{R}}xf_{XY}\left(x,y\right)dxdy$.
+                \end{remark}
+            \subsection{Change of variable formula}
+                Let $d \geq 1, U \subset \mathbb{R}^d$ an open set, and $\phi : U \to \mathbb{R}^d, \phi\left(y\right)=\left(\phi_1\left(y\right), \ldots, \phi_d\left(y\right)\right), y= \left(y_1, \ldots, y_d\right)$. Then,
+                \begin{itemize}[left=10pt, label=\textbullet]
+                    \item we say that $\phi$ is \important{continuously differential} on U if the partial derivative $\frac{\delta \phi_i}{\delta y_j}$ exists and are continuous on U;
+                    \item we denote $D_{\phi}\left(y\right)$ the \important{Jacobian matrix} of $\phi$ ;
+                    \item we denot det the determinant.
+                \end{itemize}
+        
+                \begin{theoreme}
+                    \hypertarget{thm1}{}
+                    Let $d \geq 1, U \subset \mathbb{R}^d$ an open set, $V \subset \mathbb{R}^d$, and $\phi : U \to V$ a continuously differentiable bijection with $\text{det}D_{\phi}\left(y\right)\neq 0$ for all $y \in U$. Then, for any function $f:V \to \mathbb{R}$, we have: 
+                    \[\int_U dy_1 \ldots dy_d f\left(\phi\left(y\right)\right) \left|\text{det}D_{\phi}\left(y\right)\right|= \int_V dx_1 \ldots dx_d f\left(x\right).\]
+                \end{theoreme}
+                From this, we can deduce:
+                \begin{theoreme}
+                    Let $\Omega$ be a realisation set, P be a probability measure on $\Omega$, and $X:\Omega \to \mathbb{R}^d$ a random vector with a density $f_X$. Let $U,V, \phi : U \to V$, be as in \textbf{\hyperlink{thm1}{the theorem above}}. Suppose that $P\left(X \in U\right)=1$. We then have that $Y= \phi \odot X : \Omega \to \mathbb{R}^d \left(Y=\phi\left(X\right)\right)$ is a continuous random vector with density 
+                    \[f_Y\left(y\right)=f_X\left(\phi^{-1}\left(y\right)\right) \left|\text{det}D_{\phi^{-1}}\left(y\right)\right|= \frac{1}{\left|\text{det}D_{\phi}\left(\phi^{-1}\left(y\right)\right)\right|}f_X\left(\phi^{-1}\left(y\right)\right).\]
+                    In the case $d = 1$, this formula simplifies to 
+                    \[f_Y\left(y\right)=f_X\left(\phi^{-1}\left(y\right)\right) \left|\left(\phi^{-1}\right)'\left(y\right)\right|= \frac{1}{\left|\phi'\left(\phi^{-1}\left(y\right)\right)\right|}f_X\left(\phi^{-1}\left(y\right)\right).\]
+                \end{theoreme}
+                \begin{remark}{Example}
+                   \begin{tcolorbox}[gris]
+                       We take $U$ a uniform random variable on $\left[0,1\right]: \mathspace U$ is a continuous random variable with density $f_U\left(x\right)= \mathbbm{1}_{\left[0,1\right]}\left(x\right)$. Then for $a \in \mathbb{R}$ and $r > 0$, define $X = a + rU$. Using theorem 8 with $\phi\left(x\right)= a + rx, \phi^{-1}\left(x\right)= \frac{x-a}{r}$, we get that X is a continuous random variable with density 
+                       \[f_X\left(x\right)=f_U\left(\phi^{-1}\left(x\right)\right) \frac{1}{\phi'\left(\phi^{-1}\left(x\right)\right)} = \mathbbm{1}_{\left[0,1\right]}\left(\frac{x-a}{r}\right)\frac{1}{r}=\frac{1}{r}\mathbbm{1}_{\left[a, a+r\right]}\left(x\right).\]
+                       So, X is a uniform random variable on $\left[a, a+r\right]$.
+                   \end{tcolorbox}
+                \end{remark}
+                \begin{remark}{Remarque}
+                    With polar coordinates, we then have 
+                    \[\phi^{-1}\left(x,y\right)= \left(\text{atan2}\left(y,x\right), \sqrt{x^2+y^2}\right)\]
+                    where 
+                    \[\begin{functionbypart}{\text{atan2}\left(y,x\right)}
+                        \arctan\left(\frac{y}{x}\right) \mathspace \mathspace \text{ if x } > 0,  \\
+                        \arctan\left(\frac{y}{x}\right) + \pi \mathspace \mathspace \text{ if x } > 0,  \\
+                        \arctan\left(\frac{y}{x}\right) + \pi \mathspace \mathspace \text{ if x } > 0,  \\
+                        \frac{\pi}{2} \mathspace \mathspace \text{ if } x = 0, y >0,\\
+                        -\frac{\pi}{2} \mathspace \mathspace \text{ if } x=0, y < 0,\\
+                        \text{undefined} \mathspace \mathspace \text{ if } x=y=0.
+                    \end{functionbypart}
+                    \]
+                    In this case 
+                    \[\left|\text{det}D_{\phi}\left(\theta,r\right)\right|= r,\]
+                    which leads to the formula 
+                    \[dxdy=rd\theta dr\]
+                \end{remark}
+            \subsection{Moments, and Moment Generating Function}
+                We already saw the cumulative distribution function (CDF), there is an other useful object sometime: the \important{moment generating function}
+                \begin{definition}
+                    Let X be a random variable. Let $p > 0$. We say that X \important{admits a moment of order p} if 
+                    \[E\left(\left|X\right|^p\right) < \infty\]
+                    When X admits a moment of order p, we define
+                    \begin{itemize}[left=10pt, label=\textbullet]
+                        \item the \textit{pth moment} of X: $E\left(X^p\right)$; 
+                        \item the \textit{pth absolute moment} of X: $E\left(\left|X\right|^p\right)$.
+                    \end{itemize}
+                \end{definition}
+                \begin{definition}
+                    Let X be a random variable. we say that X \important{admits exponential moments of order $\delta >0$} if 
+                    \[E\left(e^{\delta \left|X\right|}\right) < \infty\]
+                    When X admits exponential moments, we define the \important{moment generating function of} X by 
+                    \[M_X\left(t\right)=E\left(e^{tx}\right), \mathspace t \in \left(-\delta, \delta\right).\]
+                \end{definition}
+                \begin{theoreme}
+                    Let X,Y be two random variables. Suppose that there is $\delta >0 $ such that 
+                    \[E\left(e^{\delta \left|X\right|}\right) < \infty, \mathspace E\left(e^{\delta \left|Y\right|}\right) < \infty.\]
+                   Then, we have the following properties. 
+                   \begin{itemize}[left=10pt, label=\textbullet]
+                       \item X admits moments of any integer order. 
+                       \item $M_X$ is analytic in a neighbourhood of 0, and for any $n \in \mathbb{N}$, 
+                       \item $M_X, M_Y$ characterise $X, Y $: 
+                       \[M_X\left(t\right)=M_Y\left(t\right) \text{ for all } t \in \left(-\delta,\delta\right) \implies X=Y.\]
+                   \end{itemize}
+                \end{theoreme}
+        \section{Conditional probability independence}
+            \subsection{Conditional probability}
+                \begin{definition}
+                    Let $\Omega$ be a set of realissations, and P a probability measure on $\Omega$. Let $A \subset \Omega$ be an event such that $P\left(A\right)>0$. Defin then the \important{probability measure P conditioned on A}, denoted $P\left(|A\right)$, by 
+                    \[P\left(B|A\right)=\frac{P\left(A\cap B\right)}{P\left(A\right)}, \mathspace \forall \mathspace \text{ event } \mathspace B.\]
+                    We can then defin the \important{conditions expectation} of a random variable $X : \Omega \to \mathbb{R}$ by 
+                    \[E_P\left(X|A\right)=E_{P_A}\left(X\right),\]
+                    where $P_A$ stands for $P_A=P\left(|A\right)$.
+                \end{definition}
+            \subsection{Independence}
+                \begin{definition}
+                    \begin{itemize}[left=10pt, label=\textbullet]
+                        \item Two events A, B are said to be \important{independent} if 
+                        \[P\left(A \cap B\right)=P\left(A\right)P\left(B\right).\]
+                        
+                        \item A family of events $\left(A_i\right)_{i \in I}$ is said to be \important{two-by-two independent} if for any $i \neq j, A_i$ and $A_j$ are independent.
+                        \item A family of events $\left(A_i\right)_{i \in I}$ is said to be \important{an independent family} if for any $J \subset I$ finite, 
+                        \[P\left(\bigcap_{i \in J} A_i\right)=\prod_{i \in J}P\left(A_i\right). \]
+                    \end{itemize}
+                \end{definition}
+                \begin{definition}
+                    \begin{itemize}[left=10pt, label=\textbullet]
+                        \item Two random variables $X,Y$ are said to be \important{independent} if for any events $A,B \subset \mathbb{R}$, 
+                        \[P\left(X \in A,Y \in B\right)=P\left(X \in A\right)P\left(Y \in B\right).\]
+                        Equivalentyl, X,Y are independent if for any $f,g: \mathbb{R} \to \mathbb{R}$, 
+                        \[E\left(f\left(X\right)g\left(Y\right)\right)=E\left(f\left(X\right)\right)E\left(g\left(Y\right)\right).\]
+                        
+                        \item A familiy of random variables $\left(X_i\right)_{i \in I}$ is said to be \important{two-by-two independent} if for any $ i\neqj, X_i$ and $X_j$ are independent. 
+                        \item A family of random variables $\left(X_i\right)_{i \in I}$ is said to be \important{an independent family} if for any $J \subset I$ finite, and any events $A_i \subset \mathbb{R}, i \in J$, 
+                            \[P\left(\cap_{i \in J}\{X_i \in A_i \}\right)= \prod_{i \in J}P\left(X_i \in A_i\right).\]
+                            Equivalently, $\left(X_i\right)_{i \in I}$ is an independent family if for any $J \subset I$ finite, and any functions $f_i: \mathbb{R} \to \mathbb{R}, i \in J$, 
+                            \[E\left(\prod_{i \in J}f_i\left(X_i\right)\right)=\prod_{i \in J} E\left(f_i\left(X_i\right)\right).\]
+                            The same definition holds with ``random vectors'' replacing ``random variables''.
+                        
+                    \end{itemize}
+                \end{definition}
+                \begin{definition}
+                    A family $\left(X_i_{i \in I}$ of random variables is called an \important{independent identically distributed} family, abbreviated \important{i.i.d. familiy}, if the familiy $\left(X_i\right)_{i \in I}$ is an independent family, and for any $i, j \in I, X_i = X_j$.
+                \end{definition}
+                \begin{theoreme}
+                    Let $d,d' \geq 1$. Let $X:\Omega \to \mathbb{R}^d, Y:\Omega \to \mathbb{R}^{d'}$ be a random vector. 
+                    \begin{itemize}[left=10pt, label=\textbullet]
+                        \item If X,Y \textbf{are continuous random vector}: X and Y are independent if and only if the random vector $\left(X,Y\right):\Omega \to \mathbb{R}^{d+d'}$ has density 
+                        \[f_{\left(X,Y\right)}\left(x,y\right)=f_X\left(x\right)f_Y\left(y\right),\]
+                        where $f_X: \mathbb{R}^d \to \mathbb{R}$ is a density for X, and $f_Y:\mathbb{R}^{d'} \to \mathbb{R}$ is a density for Y. 
+                        \item If X,Y \textbf{are discrete random vectors}: X and Y are independent if and only if for any $x \in \mathbb{R}^d, y \in \mathbb{R}^{d'}$, 
+                    \[P\left(X=x,Y=y\right)=P\left(X=x\right)P\left(Y=y\right).\]
+                    
+                        \item If X \textbf{is discete and Y is continuous}: X and Y are independent if and only if for any $x \in \mathbb{R}^d, A \subset \mathbb{R}^{d'}$, 
+                \[P\left(X=x, Y \in A\right)=P\left(X=x\right) \int_A f_Y\left(y\right)dy\]
+            where $f_Y:\mathbb{R}^{d'} \to \mathbb{R}$ is a density for Y.
+                    \end{itemize}
+                    
+                \end{theoreme}
+            \subsection{Bayes law, formula of total probability}
+                Bayes Law:
+                \begin{theoreme}
+                    Let $\Omega$ be a set of realisations, and let P be a probability measure on $\Omega$. Let $A, B \subset \Omega$ be two events such that $P\left(A\right), P\left(B\right) >0$. Then 
+                    \[P\left(A|B\right)=\frac{P\left(B|A\right)P\left(A\right)}{P\left(B\right)}.\]
+                \end{theoreme}
+                \begin{theoreme}
+                    Let $\Omega$ be a set of realisations, and let P be a probability measure on $\Omega$. Let I be a finite or countable set. Let $A_i, i \in I$ be a collection of events such that 
+                    \begin{itemize}[left=10pt, label=\textbullet]
+                        \item if $i \neq j$, then $A_i \cap A_j = \emptyset$; 
+                        \item $\cup_{i \in I}A_i = \Omega^a$.
+                    \end{itemize}
+                    Suppose moreover that $P\left(A_i\right) > 0$ for all $i \in I$. Then for any event $B$, 
+                    \[P\left(B\right)= \sum_{ i \in I } P\left(B \cap A_i\right)= \sum_{ i \in I }P\left(B|A_i\right)P\left(A_i\right).\]
+                    In the same fashion, for every random variable X 
+                    \[E\left(X\right)= \sum_{ i \in I }E\left(X|A_i\right)P\left(A_i\right).\]
+                \end{theoreme}
+                \begin{remark}{Example}
+                   \begin{tcolorbox}[gris]
+                       We throw some dices:
+                       \begin{itemize}[left=10pt, label=\textbullet]
+                           \item $A_1$ : we throw an even dice
+                           \item $A_2$ : we throw an odd dice
+                           \item $B$ : the result is $\leq 4$
+                       \end{itemize}
+                       Then 
+                       \[P\left(B\right)=P\left(B|A_1\right)P\left(A_1\right)+P\left(B|A_2\right)P\left(A_2\right).\]
+                   \end{tcolorbox}
+                \end{remark}
+                
+                
+                

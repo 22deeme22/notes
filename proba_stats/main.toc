@@ -1,0 +1,19 @@
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}Probabilities: starter guide}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Probabilities spaces and measures}{2}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Probability spaces}{2}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Discrete probability measures}{3}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Continuous probability measures}{3}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Genreal probability spaces and measures}{4}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}Inclusion-Exclusion}{5}{subsection.1.1.5}%
+\contentsline {section}{\numberline {1.2}Random variables and expectation}{5}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Random variables}{5}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Expectation}{8}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Transfer Theorem}{9}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Random vectors}{9}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.5}Change of variable formula}{10}{subsection.1.2.5}%
+\contentsline {subsection}{\numberline {1.2.6}Moments, and Moment Generating Function}{11}{subsection.1.2.6}%
+\contentsline {section}{\numberline {1.3}Conditional probability independence}{12}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Conditional probability}{12}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Independence}{12}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Bayes law, formula of total probability}{13}{subsection.1.3.3}%

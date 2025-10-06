@@ -1,16 +1,18 @@
 
 % mystyle.sty
 \usepackage[utf8]{inputenc}
-
 \usepackage[left=2.75cm,right=2.75cm,top=2cm,bottom=3cm]{geometry}
 \usepackage{tcolorbox}
+\usepackage{subfiles} % <--- ajoute ça
 \usepackage{xcolor}
 \usepackage{amssymb}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{amsmath}
 \usepackage{enumitem} % important pour les options de listes
 \usepackage[framemethod=tikz]{mdframed}
 \usepackage{etoolbox} % Pour ajuster la position du titre
+\usepackage[hidelinks]{hyperref}
+\usepackage{bbm}
 \tcbuselibrary{skins, breakable}
 
 \definecolor{vert}{HTML}{F3FBF3}    % Vert menthe pastel
@@ -137,6 +139,7 @@
         arc=1mm,                  % rayon des coins
         boxrule=0.4pt,            % épaisseur de la bordure
         left=4mm, right=4mm, top=2mm, bottom=2mm,
+        breakable,
         title=Définition~\refstepcounter{definitioncounter}\thedefinitioncounter       
     }
 }
@@ -151,6 +154,7 @@
         arc=1mm,                  % rayon des coins
         boxrule=0.4pt,            % épaisseur de la bordure
         left=4mm, right=4mm, top=2mm, bottom=2mm,
+        breakable,
         title=Théorème~\refstepcounter{theoremecounter}\thetheoremecounter       
     }
 }
