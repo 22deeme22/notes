@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.7.21)  6 OCT 2025 15:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.7.21)  14 OCT 2025 16:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -745,9 +745,9 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Unused global option(s):
-    [10].
+    [14].
 
-No file main.aux.
+(./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
@@ -768,6 +768,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -822,6 +823,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring OFF on input line 9.
+ (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
@@ -842,8 +844,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 11.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-No file main.toc.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
@@ -2009,37 +2010,105 @@ l.492                    \begin{tcolorbox}[gris]
                                                 
 (That was another \errmessage.)
 
-) [14] (./main.aux)
+
+./chapitres/chapitre1.tex:505: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.505                     A
+                           n event A is said to occur \important{almost-sure...
+(That was another \errmessage.)
+
+
+./chapitres/chapitre1.tex:512: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.512                 L
+                       et $\Omega$ be a realisation set and $P$ a probabilit...
+(That was another \errmessage.)
+
+
+./chapitres/chapitre1.tex:518: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.518                T
+                      he \important{standard deviation} of a random variable...
+(That was another \errmessage.)
+
+
+./chapitres/chapitre1.tex:522: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.522                 L
+                       et $\Omega$ be a realisation set and P a probability ...
+(That was another \errmessage.)
+
+[14]
+
+./chapitres/chapitre1.tex:532: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.532                 L
+                       et x, Y be two random variables such that
+(That was another \errmessage.)
+
+
+./chapitres/chapitre1.tex:537: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.537                 L
+                       et $X,Y,Y_1,Y_2$ be random variables and $a,b \in \ma...
+(That was another \errmessage.)
+
+
+./chapitres/chapitre1.tex:545: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.545                  F
+                        or two random variables X, Y define their \important...
+(That was another \errmessage.)
+
+) [15] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  3D3C722FBE1AC09893CE861EAA69071C;3478.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 1DFB76CA42E4C24F044D5731A7B1A25C;4154.
  ) 
 Here is how much of TeX's memory you used:
- 27832 strings out of 474222
- 543833 string characters out of 5748733
+ 27891 strings out of 474222
+ 544762 string characters out of 5748733
  1948975 words of memory out of 5000000
- 49529 multiletter control sequences out of 15000+600000
+ 49568 multiletter control sequences out of 15000+600000
  580444 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,14n,121p,510b,1101s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/deeme/.texlive2023/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbi0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbi1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on main.pdf (15 pages, 410585 bytes).
+Output written on main.pdf (16 pages, 423456 bytes).
 PDF statistics:
- 316 PDF objects out of 1000 (max. 8388607)
- 243 compressed objects within 3 object streams
- 96 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 423 PDF objects out of 1000 (max. 8388607)
+ 348 compressed objects within 4 object streams
+ 108 named destinations out of 1000 (max. 500000)
+ 189 words of extra memory for PDF output out of 10000 (max. 10000000)
 

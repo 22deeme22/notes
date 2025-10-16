@@ -500,6 +500,52 @@
                        \[P\left(B\right)=P\left(B|A_1\right)P\left(A_1\right)+P\left(B|A_2\right)P\left(A_2\right).\]
                    \end{tcolorbox}
                 \end{remark}
-                
-                
-                
+            \subsection{Almost sure properties}
+                \begin{definition}
+                    An event A is said to occur \important{almost-surely} if 
+                    \[P\left(A\right)=1.\]
+                \end{definition}
+    \section{Correlation}
+        \subsection{Variance, Covariance}
+            Variance is a way to quantify ``how far frome its mean is typically my variable''. If every value than X can take is note far from the mean of every value of X, then the variance will be small.
+            \begin{definition}
+                Let $\Omega$ be a realisation set and $P$ a probability measure on $\Omega$. Let $X : \Omega\to\mathbb{R}$ be a random variable. The \important{variance of X} is given by 
+                \[\text{Var}_P\left(X\right):=E_P\left(\left(X-E_P\left(X\right)\right)^2\right).\]
+                Alternatively, $\text{Var}_P\left(X\right)=E_P\left(X^2\right)-E_P\left(X\right)^2$.
+            \end{definition}
+            The inside of the expected value in the definition on Var $\left(X-E_P\left(X\right)\right)$ is called the standard deviation
+            \begin{definition}
+               The \important{standard deviation} of a random variable X, often denoted as $\sigma_X$, is the square root of its variance: 
+               \[\sigma_X = \sqrt{\text{Var}\left(X\right)}.\]
+            \end{definition}
+            \begin{definition}
+                Let $\Omega$ be a realisation set and P a probability measure on $\Omega$. Let $X,Y : \Omega \to \mathbb{R}$ be two random variables. The \important{covariance between X and Y} is given by 
+                \[\text{Cov}_P\left(X,Y\right) := E_P\left(XY\right)-E_P\left(X\right)E_P\left(Y\right).\]
+                When $\text{Cov}_P\left(X,Y\right)=0$, we say that X and Y are \important{uncorrelated}.
+            \end{definition}
+            \begin{remark}{Remarque}
+                The covariance between X and Y is a measure of how much ``typical large values of X'' and ``typical large values of Y'' are influencing each other. Two independent event have a covariance of 0 (the opposite isn't true!).
+
+                But there is one case where uncorrelated implies independent: it's with Bernoulli random variables
+            \end{remark}
+            \begin{theoreme}
+                Let x, Y be two random variables such that 
+                \[P(X \in \{0,1\}) \equiv P(Y \in \{0,1\}) = 1.\]
+                Suche variable are called \important{Bernoulli random variables}. Then, X and Y are independent if  and only if $\text{Cov}\left(X,Y\right) = 0$.
+            \end{theoreme}
+            \begin{theoreme}
+                Let $X,Y,Y_1,Y_2$ be random variables and $a,b \in \mathbb{R}$. Then, 
+                \[\text{Cov}(X,Y) = \text{Cov}(Y, X), \mathspace\mathspace \text{ Cov}(aX, bY) = ab\text{Cov}(x,Y),\]
+                \[\text{Cov}(X_1,Y_1 + Y_2) = \text{Cov}(X, Y_1) + \text{Cov}(X, Y_2).\]
+                In words: Cov is symmetric, and linear im each of its arguments.
+            \end{theoreme}
+        \subsection{Pearson correlation coefficient}
+             In statistics, a coefficient obtained form the covariance and standard deviation is frequently used: the Pearson correlation coefficient. 
+             \begin{definition}
+                 For two random variables X, Y define their \important{Pearson correlation coefficient}: 
+                \[\rho_{X,Y} = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}=\frac{Cov(X,Y)}{\sigma_Y \sigma_x} \in [-1,1].\]
+                $\left|\rho_{X,Y}\right|=1$ if and only if X and Y are related by an affine transformation (i.e: there are $a,b \in \mathbb{R}$ such that $Y = aX + b$).
+             \end{definition}
+             \begin{remark}{Remarque}
+                 We normalize by the product of variance because `` the height of Bob influences the height of Alice'' should not depend on unit we chose to measure height, but the covariance does, so it's a way to correct this
+             \end{remark}
