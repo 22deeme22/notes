@@ -548,4 +548,106 @@
              \end{definition}
              \begin{remark}{Remarque}
                  We normalize by the product of variance because `` the height of Bob influences the height of Alice'' should not depend on unit we chose to measure height, but the covariance does, so it's a way to correct this
-             \end{remark}
+             \end{remark}        
+
+    \section{Classical example of random variables}
+        $\Omega$ will be an abstract space of realisation.
+
+        P will be an abstract probability measure.
+        \subsection{Discrete random variables}
+                \subsubsection{Constant random variable}
+                    $X: \Omega \to \mathbb{R}, \mathspace \omega \to c$. The law of X is a \important{Dirac measure.}
+                    \[\begin{functionbypart}{\delta_c(A)}
+                        1 \text{ if } c \in A  \\
+                        0 \text{  else }
+                    \end{functionbypart}
+                    \]
+                    \subsubsection{Bernoulli random variable}
+                        $X : \Omega \to \mathbb{R}$ is a random variables of Bernoulli of parameter p if 
+                        \[P(X=1) = p = 1-P(X=0)\]
+                        \begin{remark}{Example}
+                            \begin{tcolorbox}[gris]
+                             
+                            $A \in P\left(\Omega\right)$ event, 
+                            \[\mathbbm{1}_A : \Omega \to \mathbb{R}, \mathspace \begin{functionbypart}{\mathbbm{1}_A(\omega)}
+                                1 \text{  if } \omega \in A  \\
+                                0 \text{  else}
+                            \end{functionbypart}
+                            \]
+                            is a random variable of Bernoulli parameter $P\left(A\right)$.
+                            \end{tcolorbox}
+                        \end{remark}
+                    \subsubsection{Binomiale random variable}
+                    A random variable $X : \Omega \to \mathbb{R}$ is a binomial random variable with parameter $n \in \mathbb{N}, \mathspace p \in \left[0,1\right]$, denoted $X \sim \text{Bin}\left(n,p\right)$ if 
+                    \[P(X = k)= \mathbbm{1}_{\{0, \ldots, n\}}(k)\binom{n}{k} 
+                    p^k (1-p)^{n-k}\]
+                    In particular $P\left(X \in \{0, \ldots, n \}\right) =1.$
+                    \begin{theoreme}
+                        Let $n \in \mathbb{N}, \mathspace p \in \left[0,1\right]. \text{ Let } X_1, \ldots, X_n$ be an independent family of Bernoulli random variables of parameter p. Define 
+                        \[Y = \sum_{ k = 1 } ^{ n }X_k.\]
+                        Then, $Y \sim \text{ Bin}\left(n,p\right)$.
+                    \end{theoreme}
+                       \subsubsection{Geometric random variable}
+                       A random variable $X: \Omega \to \mathbb{R}$ is a geometric random variable with parameter $p \in \left[0,1\right]$, denoted $X \sim \text{Geo}\left(p\right)$, if 
+                       \[P(X=k)= \mathbbm{1}_{k \in \mathbb{N}^*}(1-p)^{k-1}p.\]
+                       \begin{theoreme}
+                           Let $X_1, X_2, \ldots$ be an i.i.d sequence of Bernoulli random variables with parameter p. Define 
+                           \[Y = 1+ \sum_{ n\geq1 } \prod_{i = 1}^{ n } (1-X_i),\]
+                            the number of trials before getting a 1 in the sequence. Then, $Y \sim \text{ Geo }\left(p\right)$.     
+                       \end{theoreme}
+                       \begin{theoreme}
+                           Let $X \sim \text{ Geo }\left(p\right)$ be a geometric random variable. Then, for any $n > k \in \mathbb{N}$, 
+                           \[P(X=n | X > k)=P(X=n-k).\]
+                           In particular, under the law $P\left( \mathspace | X > k\right), X -k$ follows a geometric law of parameter p.
+                       \end{theoreme}
+                        \begin{remark}{Remarque}
+                            We can see this ``loss of memory'' porperty as follows: a gemotric random variable is the number of independent coin toss needed to make a 1. If we pause after k tosses and that the first k coins all gave 0, the following coins being independent of the first k, we end up with simply a sequence of independent coins tosses, exactly as we started.
+                        \end{remark}
+                            \subsubsection{Poisson random variable}
+                                Let $\lambda \geq 0$. A random variable $X:\Omega \to \mathbb{R}$ is a \important{Poisson random variable of parameter} $\lambda$, denoted $X \sim \text{Poi}\left(\lambda\right)$, if 
+                                \[P(X=k) = \mathbbm{1}_{k \in \mathbb{N}} e^{-\lambda}\frac{\lambda^k}{k!}.\]
+                                \begin{theoreme}
+                                    Let X be a random variable. Then the two following points are equivalent: 
+                                    \begin{itemize}[left=10pt, label=\textbullet]
+                                        \item $X \sim \text{Poi}\left(\lambda\right)$; 
+                                        \item $P\left(X=0\right)=e^{-\lambda}$ and for all $k \in \mathbb{N}$, 
+                                        \[\frac{P\left(X=k+1\right)}{P(X=k)} = \frac{\lambda}{k+1}.\]
+                                        
+                                    \end{itemize}
+                                \end{theoreme}
+                        \subsubsection{Uniform random variable (finite case)}
+                            Let $J \subset \mathbb{R}$ be finite. A random variable $X: \Omega \to \mathbb{R}$ is a \important{uniform random variable on J} denoted $X \sim \text{Uni}\left(J\right)$ if 
+                            \[P(X=x)= \frac{1}{\left|J\right|} \forall x \in  J.\]
+                            In particular, $P\left(X \in J\right)=1$. We will often look at $J=\{0,1, \ldots, n \}$ or $J = \{1, \ldots, n \}$ for some $n\geq1$.
+                            \begin{theoreme}
+                                Let $J \subset \mathbb{R}$ be finite, and let $X \sim \text{Uni}\left(J\right)$. Let $I \subset J$. Then, for any $A \subset I$, 
+                                \[P(X \in A | X \in I)= \frac{\left|A\right|}{\left|I\right|}.\]
+                            \end{theoreme}
+                    \subsection{Continuous random variables}
+                        \subsubsection{Uniform random variable on an interval}
+                        Let $a < b \in \mathbb{R}$. A random variable $X:\Omega \to \mathbb{R}$ is a \important{uniform random variable on $\left[a,b\right]$}, denoted $X \sim \text{Uni}\left(\left[a,b\right]\right)$ , if it is a continuous random variable with probability density given by 
+                        \[f_X(x)=\frac{1}{b-a} \mathbbm{1}_{[a,b]}(x).\]
+                        \begin{theoreme}
+                            Let $a < b <c<d \in \mathbb{R}$. Then, if $X \in \text{Uni}\left(\left[a,d\right]\right)$, 
+                            \[P(t_1 \leq X \leq t_2 | b\leq X\leq c) = \frac{t_1-t_2}{c-b}, \mathspace \forall b \leq t_1 \leq t_2 \leq c,\]
+                            which is equivalent to say that under the conditioning $\{ X \in \left[b,c\right] \}$, X is a uniform random variable on $\left[b,c\right]$.
+                        \end{theoreme}
+                        \subsubsection{Gaussian random variables}
+                            Let $\mu \in \mathbb{R}, \sigma \geq 0$. A random variable $X : \Omega \to \mathbb{R}$ is a \important{Gaussian random variable with mean $\mu$ and variance $\mu^2$}, denoted $X \sim \mathcal{N}\left(\mu, \sigma ^2\right)$, if it is a continuous random variable with density 
+                            \[f_X(x)= \frac{1}{\sqrt{2 \pi \sigma ^2}} e^{- \frac{(x-\mu)^2}{2 \sigma ^2}}.\]
+                            \begin{theoreme}
+                                Let $X, Y : \Omega \to \mathbb{R}$ be two independent Gaussian random variables. Suppose that $x \sim \mathcal{N}\left(\mu_1, \sigma_1^2\right)$ and $Y \sim \mathcal{N}\left(\mu_2, \sigma_2^2\right)$. Then, 
+                                \begin{itemize}[left=10pt, label=\textbullet]
+                                    \item the random variable $\widetilde{X}=\left(X-\mu_1\right) \text{/} \sigma_1$ is a centred and reduced Gaussian random variable: $\widetilde{X} \sim \mathcal{N}\left(0,1\right)$; 
+                                    \item the random variable $Z=X+Y$ is a Gaussian random variable wilth mean $\mu_1 + \mu_2$ and variance $\sigma_1^2+\sigma_2^2: \mathspace Z \sim \mathcal{N}\left(\mu_1 + \mu_2, \sigma_1 ^2 + \sigma_2 ^2\right)$.
+                                \end{itemize}
+                                
+                            \end{theoreme}
+                            
+                                                    
+                        
+
+                        
+                        
+                            
+                        
