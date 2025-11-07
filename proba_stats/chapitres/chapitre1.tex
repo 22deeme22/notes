@@ -641,8 +641,53 @@
                                     \item the random variable $\widetilde{X}=\left(X-\mu_1\right) \text{/} \sigma_1$ is a centred and reduced Gaussian random variable: $\widetilde{X} \sim \mathcal{N}\left(0,1\right)$; 
                                     \item the random variable $Z=X+Y$ is a Gaussian random variable wilth mean $\mu_1 + \mu_2$ and variance $\sigma_1^2+\sigma_2^2: \mathspace Z \sim \mathcal{N}\left(\mu_1 + \mu_2, \sigma_1 ^2 + \sigma_2 ^2\right)$.
                                 \end{itemize}
-                                
                             \end{theoreme}
+                        \subsubsection{Expononential random variable}
+                            let $\lambda > 0$. A random variable $X:\Omega \to \mathbb{R}$ is an \important{exponential random variable of parameter $\lambda$}, denoted $X \sim \text{Exp}\left(\lambda\right)$, if X is a continuous random variable with density 
+                            \[f_X(x)= \mathbbm{1}_{[0,\infty)}(x)\lambda e^{-\lambda }\]
+                            \begin{remark}{Remarque}
+                                The exponential random variable is the continuous version of the geometric random variable, it is therefore not a surprise that they share the ``memory loss''property.
+                            \end{remark}
+                            \begin{theoreme}
+                                Let $\lambda > 0$, and $X \sim \text{Exp}\left(\lambda\right)$. Then for any $0 < a < b$, 
+                                \[P(X \geq b | Y \geq a)= P(X \geq b-a).\]
+                                In particular, under the conditioning $\{X\geq <\}$, the variable $X-a$ is an exponential random variable with parameter $\lambda$.
+                            \end{theoreme}
+                        \subsubsection{Cauchy random variable}
+                            Let $x_0 \in \mathbb{R}$ and $\alpha > 0$. A random variable $X:\Omega \to \mathbb{R}$ is a \important{Cauchy random variable}, denoted $X \sim\text{Cauchy}\left(x_0, \alpha\right)$, if it is a continuous random variable with density 
+                            \[f_X(x)=\frac{\alpha}{\pi((x-x_0)^2+\alpha ^2)}.\]
+                        \subsubsection{Summary of usual random variables}
+                        \includegraphics[width=0.6\textwidth]{images/1.png}
+                \section{Probabilistic inequalities and applications}
+                    \subsection{Markov's inequality}
+                        \begin{theoreme}
+                            Let X be a non-negative random variable $\left(X:\Omega \to \left[0, + \infty\right)\right)$. Then, for any $ a > 0$, 
+                            \[P\left(X \geq a\right) \leq \frac{E\left(X\right)}{a}.\]
+                        \end{theoreme}
+                    \subsection{First moment method}
+                        The first moment method is a simle observation: if we have a random variable X taking values in the non-negative integers, $P\left(X \in \mathbb{N}\right)=1$, we can upper bound the probability that X is non-zero by using its mean: 
+                        \[P\left(X \neq 0\right)=P\left(X >0\right)= E\left(\mathbb{1}_{X>0}X\right)\leq E \left(X\right).\]
+                       \begin{remark}{Example}
+                           \begin{tcolorbox}[gris]
+                               \begin{itemize}[left=10pt, label=\textbullet]
+                                   \item We define $M_n = $ the maximum length of a consecutive run of 1's in the n bits. 
+                                   \item To study $M_n$, we look at $Y_ =k$ the number of runs of 1's of length k.
+                                   \item We compute the expected value of $Y_k$: 
+                                       \[E \left(Y_k\right) = \left(n-k+1\right)\cdot 2^{-k}.\] 
+                                       \item Applying the first moment method 
+                                           \[P \left(M_n \geq k\right) \leq E \left(Y_k\right) \leq n \cdot  2^{-k}\] 
+                                       \item if $k > \log_2\left(n\right)$, then $n\cdot 2^{-k}$ becomes very small, so the probability of having such a long run of 1's is close to 0. In particular, we obtain that the longest run of 1's is at most of oder $\log_2 \left(n\right)$
+                               \end{itemize}
+                               
+                           \end{tcolorbox}
+                           
+                       \end{remark}
+                        
+                        
+                         
+                            
+                            
+                    
                             
                                                     
                         

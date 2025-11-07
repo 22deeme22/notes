@@ -358,6 +358,11 @@ INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecti0500.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbi0800.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcti1000.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbi1000.tfm
+INPUT ./images/1.png
+INPUT ./images/1.png
+INPUT images/1.png
+INPUT ./images/1.png
+INPUT ./images/1.png
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
