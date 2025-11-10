@@ -1,0 +1,232 @@
+\documentclass[10 ,titlepage, a4paper]{article}
+\usepackage{mystyle}
+
+\thispagestyle{fancy}
+\title{Summary of introduction to information processing}
+\author{Dario Marcone}
+\date{Samedi 08 novembre 2025}
+
+\begin{document}
+\maketitle
+
+\thispagestyle{empty}
+\tableofcontents
+\newpage
+
+\section{Linear algebra in Dirac notation}
+    \begin{tcolorbox}[vert]
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item A \important{Hilbert space} is a vector space on complex numbers with an inner product stucture. 
+            \item $\mathcal{H},\mathspace dim\mathcal{H}=d, \mathspace \text{colon vectors: } \vec{\psi}=\begin{pmatrix} \psi_1 \\ \ldots \\ \psi_d \end{pmatrix}, \mathspace \psi \in \mathbb{C}$, line vectors: $\vec{\psi}^{T, *} = \left(\psi_1^*, \psi_2^*, \ldots, \psi_d^*\right)$, scalar product: $\vec{\phi}^{T, *}\cdot \vec{\psi}=\sum_{ i=1 } ^{ d } \phi_i^*\psi_i$. 
+
+                \textit{(* means conjugate)}
+        \end{itemize}
+    \end{tcolorbox}
+    \subsection{Dirac notation}
+    Ket: $\vec{\psi} = \ket{\psi}$, Bra: $\vec{\psi}^{T, *} = \bra{\psi}$, $\implies$ braket: $\vec{\phi}^{T, *} \vec{\psi} = \braket{\phi|\psi}$.
+    \subsection{Propreties of Dirac}
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item \textbf{Linearity:} $\left(\alpha^*\bra{\psi_1}+\beta^*\bra{\psi_2}\right)\ket{\phi}=\alpha^*\braket{\psi_1|\phi}+\beta^*\braket{\psi_2|\phi}$ .
+            \item \textbf{Dirac conjugate:} $\left(\ket{\phi}\right)^{T, *}=\bra{\phi}$.
+            \item \textbf{Skew symmetry:} $\braket{\phi|\psi}^* = \braket{\psi|\phi}$.
+            \item \textbf{Norm:} $\left\|\psi\right\|=\sqrt{\braket{\psi|\psi}}$ with properties:
+                \begin{enumerate}[left=10pt]
+                    \item $\left\|\psi\right\|\geq 0, \left\|\psi\right\|=0 \leftrightarrow \ket{\psi}=0$,
+                    \item $\left\|\psi_1\right\|-\left\|\psi_2\right\|\leq \left|\ket{\psi_1}+\ket{\psi_2}\right| \leq \left\|\psi_1\right\| + \left\|\psi_2\right\|$ ,
+                    \item  $\left|\braket{\phi|\psi}\right| \leq \left\|\phi\right\|\cdot \left\|\psi\right\|$.
+                \end{enumerate}
+                
+            \item \textbf{Basis:}
+                \begin{enumerate}
+                    \item Orthonormal Basis: $\{\ket{v_1}, \ket{v_2}, \ldots, \ket{v_d}\}$, then $\braket{v_i|v_j}=\begin{functionbypart}{\delta_{ij}}
+                        1, \mathspace i = j  \\
+                        0, \mathspace i \neq j
+                    \end{functionbypart}.
+                    $
+                    \item Other basis: $\frac{\ket{0}+\ket{1}}{\sqrt{2}}=\frac{1}{\sqrt{2}}=\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \end{pmatrix} \equiv \ket{+}, \mathspace \frac{\ket{0}-\ket{1}}{\sqrt{2}}=\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ -1 \end{pmatrix} \equiv \ket{-}$.
+                \end{enumerate}
+                
+                \item \textbf{Tensor product:} 
+
+                   Linear:
+                    $\left(\alpha\ket{0}+\beta\ket{1}\right)\otimes\left(\gamma\ket{0}+\delta\ket{1}\right)=\alpha \gamma\ket{0}\otimes\ket{0}+\alpha\delta\ket{0}\otimes\ket{1}+\beta \gamma\ket{1}\otimes\ket{0}+\beta\delta\ket{1}\otimes\ket{1}$.
+                    \begin{remark}{Example}
+                        \begin{tcolorbox}[rouge]
+                            Let $\mathcal{H}=\mathbb{C}^2, \mathspace \ket{0}= \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \ket{1}=\begin{pmatrix} 0 \\ 1 \end{pmatrix} $, then
+                            \[\ket{0} \otimes \ket{0} = \ket{00} = \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}, \mathspace \ket{0} \otimes \ket{1} = \ket{01}= \begin{pmatrix} 0 \\ 1 \\ 0 \\ 0 \end{pmatrix},\] 
+                            \[\ket{1} \otimes \ket{0} = \ket{10}= \begin{pmatrix} 0 \\ 0 \\ 1 \\ 0 \end{pmatrix}, \mathspace \ket{1} \otimes \ket{1} = \ket{11} = \begin{pmatrix} 0 \\ 0 \\ 0 \\ 1 \end{pmatrix} .\]
+                        \end{tcolorbox}
+                    \end{remark}
+                        
+                    
+            \item \textbf{Matrices:}
+                \begin{itemize}[left=10pt, label=\textendash]
+                    \item Dagger: $A^{T, *} = A^{\dagger}, \mathspace \left(A\ket{\psi}\right)^{T, *}=\left(A\ket{\psi}\right)^{\dagger} = \left(\ket{\psi}\right)^{\dagger}A^{\dagger}=\ket{\psi}A^{\dagger}$.
+                    \item Notation: Let $\{\ket{v_1}, \ldots, \ket{v_3}\}$ an orthonormal basis and $A_{ij}=\bra{v_i}A\ket{v_j}$ ((i,j)th element of the matrice), then $A = \sum_{ i,j = 1 } ^{ d }A_{ij}\ket{v_i}\bra{v_j}$. 
+                    \item Hermitian matrices: $A^{\dagger}=A$ (self-adjoint), i.e. $\begin{pmatrix} 1 & i  \\ -i &  0 \end{pmatrix}$. 
+                    \item Unitary matrices: $U^{\dagger}U=UU^{\dagger}=\mathbbm{1}, \mathspace U^{\dagger}=U^{-1}$, with properties:
+                        \begin{enumerate}[left=10pt]
+                            \item $\left\|U\ket{\psi}\right\|=\left\|\ket{\psi}\right\|$,
+                            \item $\left(\bra{\phi}U^{\dagger}\right)\left(U\ket{\psi}\right)=\braket{\phi|\psi}$.
+                        \end{enumerate}
+                \end{itemize}
+        \end{itemize}
+\section{5 principles of quantum mechanics}
+    \subsection{State of a system}
+        \begin{tcolorbox}[vert]
+            The state of an \important{isolated} system is a vector $\ket{\phi} \in \mathcal{H}$ in Hilbert space $\mathcal{H}$ w.r.t the normalization condition $\braket{\phi|\phi}=1$.       
+        \end{tcolorbox}
+        \begin{remark}{Remarque}
+            $\ket{\phi}$ and $e^{i\lambda}\ket{\phi}, \lambda \in \mathbb{R}$ are physically equivalent.
+        \end{remark}
+        \begin{remark}{Examples}
+           \begin{tcolorbox}[rouge]
+              \begin{enumerate}[left=10pt]
+                  \item  Let $\mathcal{H}=\mathbb{C}^2=\{\begin{pmatrix} \alpha \\ \beta \end{pmatrix} | \mathspace\alpha,\beta \in \mathbb{C}\}$ (qubit space), then
+                  $\mathbb{C} \implies \ket{\psi}=\alpha\ket{0}+\beta\ket{1}, \mathspace \left|\alpha\right|^2+\left|\beta\right|^2=1=\alpha\alpha^*+\beta\beta^*$,
+                  \item Physical system: Mach-Zehnder interferometer: \includegraphics[width=5cm]{images/1.png},
+                  \item Let $\mathcal{H}=\mathbb{C}^d, \mathspace \begin{pmatrix} \alpha_1 \\ \ldots \\ \alpha_d \end{pmatrix} = \ket{\psi}=\sum_{ i = 1 } ^{ d }\alpha_i \ket{i}, \mathspace \sum_{ i=1 } ^{ d }\left(\alpha_i\right)^2=1,$ (qudit space).
+              \end{enumerate}
+               
+           \end{tcolorbox}
+        \end{remark}
+    \subsection{States evolve with time}
+        \begin{tcolorbox}[vert]
+           As follows: $\left|\psi_t\right|= U_t\ket{\psi_0}$ where $U_t$ is unitary matrix.
+        \end{tcolorbox}
+        \begin{remark}{Example}
+            \begin{tcolorbox}[rouge]
+                We can desribe the transformation of the state of a particle by a prefecting reflecting mirror ($\ket{H} \to \ket{V} \text{ and } \ket{V}\to\ket{H}$), by 
+                \[U = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \mathspace \ket{H}=\begin{pmatrix} 1 \\ 0 \end{pmatrix}, \mathspace \ket{V}=\begin{pmatrix} 0 \\ 1 \end{pmatrix},\] 
+                \[\implies U\left(\alpha\ket{H} + \beta\ket{V}\right)= \beta\ket{H}+\alpha\ket{V}.\]
+            \end{tcolorbox}
+        \end{remark}
+    \subsection{Observable quantities}
+        \begin{tcolorbox}[vert]
+            Quantities that we measure: ``observables'' are given by Hermitian matrices of dimension $\mathcal{H} \cdot \mathcal{H}$
+        \end{tcolorbox}
+        \begin{remark}{Example}
+            \begin{tcolorbox}[rouge]
+                Observable for 1 qubit $\left(\mathbb{C}^2\right)$: 
+                \[A=a\mathbbm{1}+bX+cY+dZ, \mathspace A = a^{\dagger} \implies a,b,c,d \in \mathbb{R}\]
+                \[\mathbbm{1}=\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}, X= \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, Y=\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, Z = \begin{pmatrix} 1 & 0 \\ 0 & -i \end{pmatrix}.\]
+            \end{tcolorbox}
+        \end{remark}
+        \hypertarget{princ4}{}
+        \subsection{Measurement give probability outcome}
+            \begin{tcolorbox}[vert]
+                When observable A is measured, the outcome is a random eigenvalue of A, call it $\lambda_i, i = 1, \ldots, d = dim \mathcal{H}$, the original state before measure $\ket{\psi}$ becomes after measurement an output state $\ket{v_i}$ with eigenvalues corresponding to $\lambda_i$. The probability distributioin associated to the output $\lambda_i, \ket{v_i}$ is $prob\left(i\right)=\left|\braket{v_i|\psi}\right|^2 \leftarrow $ \textbf{BORN RULE}.
+            \end{tcolorbox}
+            \begin{itemize}[left=10pt, label=\textbullet]
+                \item Results of the measurement are eigenvalues $\lambda_i$ of observable A, 
+                \item Every eigenvalue is associated to an eigenvector $\ket{v_i}$, 
+                \item If the system is in the original state $\ket{\psi}$, the probability to obtain $\lambda_i$ is \[P\left(\lambda_i\right)=\left|\braket{v_i|\psi}\right|^2,\]
+                \item After the measurement, the state collapse on the eigenvector: $\ket{\psi} \to \ket{v_i}$.
+            \end{itemize}
+            \begin{theoreme}
+                Spectral Theorem: 
+
+                Let A be an hermitian matrice $A = A^{\dagger}$ and let $A\ket{v_i}= \lambda_i\ket{v_i}, i = 1, \ldots, d = dim\mathcal{H}$
+                \begin{itemize}[left=10pt, label=\textbullet]
+                    \item $\lambda_i \in \mathbb{R}$,
+                    \item $\ket{v_1}, \ldots, \ket{v_d}$ form an orthogonal basis,
+                \end{itemize}
+                    \important{$ \implies A=\sum_{ i =1 } ^{ d }\lambda_i \ket{v_i}\bra{v_i}= \begin{pmatrix} \lambda_1 & \ldots & 0 \\  & \ldots &  \\ 0 & \ldots & \lambda_d \end{pmatrix} $}.
+            \end{theoreme}
+            \begin{itemize}[left=10pt, label=\textbullet]
+                \item Lemma: $\sum_{ i=1 } ^{ d }\left|\braket{v_i|\psi}\right|^2=1$,  because $\left\|\psi\right\|=1$.
+                \item Property: 
+                    \begin{itemize}[left=10pt, label=\textendash]
+                        \item $E\left(A\right)=\sum_{ i=1 } ^{ d }\lambda_i \left|\braket{v_i|\psi}\right|^2=\bra{\psi}A\ket{\psi}$
+                        \item Var$\left(A\right)=\bra{\psi}A^2\ket{\psi}-\bra{\psi}A\ket{\psi}^2$
+                    \end{itemize}
+            \end{itemize}
+        \subsection{Composite system and entanglement}
+            \begin{tcolorbox}[vert]
+                The composite system of $\mathcal{H}_A$ and $\mathcal{H}_B$ is equal to $\mathcal{H}_{A\cup B}= \mathcal{H}_A \otimes \mathcal{H}_B$.
+            \end{tcolorbox}
+            \begin{remark}{Remarque}
+                $dim\left(\mathcal{H}_A \otimes \mathcal{H}_B\right)=\left(dim\mathcal{H}_A\right)\left(dim\mathcal{H}_B\right)$.
+            \end{remark}
+            \begin{remark}{Example}
+                \begin{tcolorbox}[rouge]
+                    $\mathcal{H}_A = \mathbb{C}^2, \mathspace \mathcal{H}_B=\mathbb{C}^2, \mathspace \begin{functionbypart}{\mathbb{C}^2 \otimes \mathbb{C}^2}
+                        \ket{00} = \ket{0} \otimes \ket{0}  \\
+                        \ket{01} = \ket{0} \otimes \ket{1}  \\
+                        \ket{10} = \ket{1} \otimes \ket{0}  \\
+                        \ket{11} = \ket{1} \otimes \ket{1}  
+                    \end{functionbypart}
+                    $ 
+                \end{tcolorbox}
+            \end{remark}
+            \textbf{Product states:} $\ket{\psi}=\ket{\phi_A} \otimes \ket{\chi_B}, \mathspace \psi \in \mathcal{H}_A \otimes \mathcal{H}_B,  \mathspace \phi \in \mathcal{H}_A, \mathspace \chi \in \mathcal{H}_B$.
+            \begin{tcolorbox}[vert]
+                Entangled states: $\nexists$ a factorisation of the state.
+            \end{tcolorbox}
+            \begin{remark}{Example}
+                \begin{tcolorbox}[rouge]
+                    
+                    $\ket{\psi}=\frac{1}{\sqrt{2}}\left(\ket{0}\otimes\ket{0}+\ket{1}\otimes \ket{1}\right) \neq \left(\alpha\ket{0}+\beta\ket{1}\right)\otimes\left(\gamma\ket{0}+\delta\ket{1}\right)$.
+                \end{tcolorbox}
+            \end{remark}
+            \begin{remark}{Apparté}
+                \textbf{Bloch sphere of a qubit state vector:}
+
+                $\ket{\psi}=\alpha\ket{0}+\beta\ket{1} = \cos\left(\frac{\theta}{2}\right)\ket{0} + e^{i\phi}\sin\left(\frac{\theta}{2}\right)\ket{1}$.
+            \end{remark}
+\section{Applications of principles}
+    \subsection{Mach-Zehnder interferometer}
+       \includegraphics[width=5cm]{images/1.png}
+       \begin{itemize}[left=10pt, label=\textbullet]
+           \item \textbf{Space:} $\mathcal{H}=\mathbb{C}^2=\{\begin{pmatrix} \alpha \\ \beta \end{pmatrix}, \mathspace \alpha & \beta \in \mathbb{C}, \left|\alpha\right|^2+\left|\beta\right|^2=1\}$.
+           \item \textbf{Basis:} $\begin{pmatrix} 1 \\ 0 \end{pmatrix} = \ket{H}, \mathspace \begin{pmatrix} 0 \\ 1 \end{pmatrix} = \ket{V}, \mathspace \alpha\ket{H}+\beta\ket{V}=\ket{\psi}$.
+           \item \textbf{Beam splitter:} $U = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \left(\text{ Hadamard matrix}\right)$.
+           \item \textbf{State after the beam splitter: }$U\ket{H}= \frac{1}{\sqrt{2}}\left(\ket{H}+\ket{V}\right)$. \begin{remark}{Remarque}
+               It's a very srange state that is at the same time horizontal and vertical. If it wasn't a qubit, it would either be completely reflected or it would go through. 
+           \end{remark}
+       \item \textbf{Perfect mirror: } $R = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \mathspace RR^{\dagger}=R^{\dagger}R=1 \left(\text{\important{important condition!}}\right), \mathspace R^{\dagger}=R \left(\text{coincidence}\right)$.
+       \item \textbf{State after the perfect mirror: }$RU\ket{H}=\frac{1}{\sqrt{2}}\left(R\ket{H}+R\ket{V}\right)=\frac{1}{\sqrt{2}}\left(\ket{V}+\ket{H}\right)$.
+       \item \textbf{State after the second beam splitter: }$URU\ket{H}=\frac{1}{\sqrt{2}}\left(U\ket{V}+U\ket{H}\right)$.
+       \item \textbf{State before the detector: }$\psi_{\text{before detector}}=2\cdot \frac{1}{2}\ket{H}=\ket{H}$.
+       \item \textbf{Measurement: } model with orthogonal basis of $\mathcal{H}=\mathbb{C}^2= \{\ket{H} \text{and} \ket{V}\}$:
+
+           At the end of the interferometer, we measure state $\ket{H} \text{ or state } \ket{V}$, 
+
+           if we measure $\ket{H} \implies$ clic in $D_1 \implies$ register +1,
+
+           if we measure $\ket{V}\implies$ clic in $D_1 \implies$ register -1.
+
+           By the Born rule : 
+           \begin{align*} 
+               prob\left(+1\right)=\left|\braket{H|\psi_{\text{before detector}}}\right|^2 &= 1 \\
+               prob\left(-1\right)=\left|\braket{V|\psi_{\text{before detector}}}\right|^2 &= 0
+           \end{align*}
+           If we follow the \textit{\hyperlink{princ4}{$4^{\text{th}}$ principle}}, then we know that $\ket{H}$ and $\ket{V}$ are the eigenvectors of our observable and $\left(+1\right)$ and $\left(-1\right)$ are the eigenvalues of our observable.
+
+           By spectral theorem, we define our observable: $\left(+1\right)\ket{H}\bra{H}+\left(-1\right)\ket{V}\bra{V}=\begin{pmatrix} +1 & 0 \\ 0 & -1 \end{pmatrix} = Z$.
+
+           Expectated value of (Z): $\bra{\psi_{\text{before detector}}}Z\ket{\psi_{\text{before detector}}}=\bra{H}\{\left(+1\right)\ket{H}\bra{H}+\left(-1\right)\ket{V}\bra{V}\}\ket{H}=\left(+1\right)\braket{H|H}\braket{H|H}+\left(-1\right)\braket{H|V}\braket{H|V}=\left(+1\right)$.
+
+           
+           Var(Z): $\bra{\psi}Z^2\ket{\psi}-\bra{\psi}Z\ket{\psi}^2=0$.
+
+            
+           
+           
+            
+       \end{itemize}
+        
+            
+            
+                
+            
+            
+
+
+            
+            
+            
+                    
+
+        
+\end{document}

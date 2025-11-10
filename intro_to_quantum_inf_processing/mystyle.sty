@@ -7,13 +7,13 @@
 \usepackage{xcolor}
 \usepackage{amssymb}
 \usepackage[hidelinks]{hyperref}
-\usepackage{amsmath}
 \usepackage{enumitem} % important pour les options de listes
 \usepackage[framemethod=tikz]{mdframed}
 \usepackage{etoolbox} % Pour ajuster la position du titre
 \usepackage[hidelinks]{hyperref}
 \usepackage{bbm}
 \usepackage{braket}
+\usepackage{amsmath}
 \tcbuselibrary{skins, breakable}
 
 \definecolor{vert}{HTML}{F3FBF3}    % Vert menthe pastel
@@ -25,6 +25,8 @@
 \definecolor{grisb}{HTML}{E6E6E6}    % Gris moyen
 \definecolor{violetb}{HTML}{EDDFF3}  % Lavande foncé
 \definecolor{bleu}{HTML}{1A4F9C} % Bleu profond élégant
+\definecolor{rouge}{HTML}{FBEAEA}   % Rouge pastel clair
+\definecolor{rougeb}{HTML}{F5C6C6}  % Rouge doux un peu plus soutenu pour bordure
 
 \newcommand{\important}[1]{\textbf{\textcolor{bleu}{#1}}} % Texte important
 
@@ -174,6 +176,49 @@
     }
 }
 
+\tcbset{
+    rouge/.style={
+        colback=rouge,     % fond
+        colframe=rougeb,  % bordure
+        fonttitle=\bfseries,      % titre en gras
+        coltitle=black,           % couleur du titre
+        sharp corners=none,       % coins arrondis
+        arc=1mm,                  % rayon des coins
+        boxrule=0.4pt,            % épaisseur de la bordure
+        left=4mm, right=4mm, top=2mm, bottom=2mm,
+        before skip=10pt,
+        after skip=10pt
+    }
+}
+
+\tcbset{
+    vert/.style={
+        colback=vert,     % fond
+        colframe=vertb,  % bordure
+        fonttitle=\bfseries,      % titre en gras
+        coltitle=black,           % couleur du titre
+        sharp corners=none,       % coins arrondis
+        arc=1mm,                  % rayon des coins
+        boxrule=0.4pt,            % épaisseur de la bordure
+        left=4mm, right=4mm, top=2mm, bottom=2mm,
+        before skip=10pt,
+        after skip=10pt
+    }
+}
+\tcbset{
+    violet/.style={
+        colback=violet,     % fond
+        colframe=violetb,  % bordure
+        fonttitle=\bfseries,      % titre en gras
+        coltitle=black,           % couleur du titre
+        sharp corners=none,       % coins arrondis
+        arc=1mm,                  % rayon des coins
+        boxrule=0.4pt,            % épaisseur de la bordure
+        left=4mm, right=4mm, top=2mm, bottom=2mm,
+        before skip=10pt,
+        after skip=10pt
+    }
+}
 \newtcolorbox{definition}[1][]{defstyle,#1}
 \newtcolorbox{theoreme}[1][]{thmstyle, #1, fontupper=\itshape}
     

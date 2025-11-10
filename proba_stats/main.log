@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.10.24)  28 OCT 2025 11:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.10.24)  9 NOV 2025 13:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -601,7 +601,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
 (Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
 LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 (Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
-) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+) (/usr/share/texmf-dist/tex/latex/braket/braket.sty) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
 Library (tcolorbox): 'tcbskins.code.tex' version '6.4.1'
 (/usr/share/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
 Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
@@ -665,13 +665,13 @@ Package babel Info: Importing font and identification data for french
 (babel)             from babel-fr.ini. Reported on input line 11.
 ) (/usr/share/texmf-dist/tex/latex/carlisle/scalefnt.sty)
 
-./mystyle.sty:112: LaTeX Error: Option clash for package hyperref.
+./mystyle.sty:113: LaTeX Error: Option clash for package hyperref.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.112 \RequirePackage
+l.113 \RequirePackage
                      {xcolor}
 The package hyperref has already been loaded with options:
   [hidelinks]
@@ -684,10 +684,10 @@ Try typing  <return>  to proceed.
 
 \c@definitioncounter=\count341
 \c@theoremecounter=\count342
-./mystyle.sty:179: Undefined control sequence.
+./mystyle.sty:180: Undefined control sequence.
 \endtcolorbox ->\tcb@insert@after@part 
                                        \end {tcb@savebox}\tcb@draw@color@box...
-l.179 \end{tcolorbox}
+l.180 \end{tcolorbox}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -695,25 +695,25 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./mystyle.sty:179: Extra \endgroup.
+./mystyle.sty:180: Extra \endgroup.
 \color@endgroup ->\endgraf \@endpefalse \endgroup 
                                                   
-l.179 \end{tcolorbox}
+l.180 \end{tcolorbox}
                      
 Things are pretty mixed up, but I think the worst is over.
 
-./mystyle.sty:179: Too many }'s.
+./mystyle.sty:180: Too many }'s.
 \endtcb@savebox ...efalse \color@endgroup \egroup 
                                                   \expandafter \@iiiparbox \...
-l.179 \end{tcolorbox}
+l.180 \end{tcolorbox}
                      
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
-./mystyle.sty:179: Undefined control sequence.
+./mystyle.sty:180: Undefined control sequence.
 \endtcb@savebox ...pandafter \@iiiparbox \@mpargs 
                                                   {\unvbox \@tempboxa }
-l.179 \end{tcolorbox}
+l.180 \end{tcolorbox}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2110,13 +2110,13 @@ l.537                 L
 (That was another \errmessage.)
 
 
-./chapitres/chapitre1.tex:545: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./chapitres/chapitre1.tex:546: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.545                  F
+l.546                  F
                         or two random variables X, Y define their \important...
 (That was another \errmessage.)
 
@@ -2124,46 +2124,46 @@ l.545                  F
 
 [15]
 
-./chapitres/chapitre1.tex:569: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./chapitres/chapitre1.tex:570: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.569 ...                  \begin{tcolorbox}[gris]
+l.570 ...                  \begin{tcolorbox}[gris]
                                                   
 (That was another \errmessage.)
 
 
-./chapitres/chapitre1.tex:586: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./chapitres/chapitre1.tex:587: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.586                         L
+l.587                         L
                                et $n \in \mathbb{N}, \mathspace p \in \left[...
 (That was another \errmessage.)
 
 
-./chapitres/chapitre1.tex:594: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./chapitres/chapitre1.tex:595: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.594                            L
+l.595                            L
                                   et $X_1, X_2, \ldots$ be an i.i.d sequence...
 (That was another \errmessage.)
 
 
-./chapitres/chapitre1.tex:599: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./chapitres/chapitre1.tex:600: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.599                            L
+l.600                            L
                                   et $X \sim \text{ Geo }\left(p\right)$ be ...
 (That was another \errmessage.)
 
@@ -2171,35 +2171,35 @@ l.599                            L
 
 [16]
 
-./chapitres/chapitre1.tex:610: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./chapitres/chapitre1.tex:611: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.610                                     L
+l.611                                     L
                                            et X be a random variable. Then t...
 (That was another \errmessage.)
 
 
-./chapitres/chapitre1.tex:623: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./chapitres/chapitre1.tex:624: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.623                                 L
+l.624                                 L
                                        et $J \subset \mathbb{R}$ be finite, ...
 (That was another \errmessage.)
 
 
-./chapitres/chapitre1.tex:631: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./chapitres/chapitre1.tex:632: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631                             L
+l.632                             L
                                    et $a < b <c<d \in \mathbb{R}$. Then, if ...
 (That was another \errmessage.)
 
@@ -2207,60 +2207,994 @@ l.631                             L
 
 [17]
 
-./chapitres/chapitre1.tex:639: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./chapitres/chapitre1.tex:640: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.639                                 L
+l.640                                 L
                                        et $X, Y : \Omega \to \mathbb{R}$ be ...
 (That was another \errmessage.)
 
 
-./chapitres/chapitre1.tex:652: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./chapitres/chapitre1.tex:653: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.652                                 L
+l.653                                 L
                                        et $\lambda > 0$, and $X \sim \text{E...
 (That was another \errmessage.)
 
-<images/1.png, id=335, 543.02875pt x 427.5975pt>
+<images/1.png, id=356, 543.02875pt x 427.5975pt>
 File: images/1.png Graphic file (type png)
 <use images/1.png>
-Package pdftex.def Info: images/1.png  used on input line 660.
+Package pdftex.def Info: images/1.png  used on input line 661.
 (pdftex.def)             Requested size: 264.61333pt x 208.36975pt.
 
 
 [18]
 
-./chapitres/chapitre1.tex:664: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./chapitres/chapitre1.tex:665: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.664                             L
+l.665                             L
                                    et X be a non-negative random variable $\...
 (That was another \errmessage.)
 
 
-./chapitres/chapitre1.tex:671: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./chapitres/chapitre1.tex:675: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.671 ...                  \begin{tcolorbox}[gris]
+l.675 ...                  \begin{tcolorbox}[gris]
                                                   
 (That was another \errmessage.)
 
-)
 
-[19 <./images/1.png>] (./main.aux)
+Overfull \vbox (35.22035pt too high) detected at line 686
+ []
+
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 686.
+
+Overfull \vbox (36.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (37.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (38.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (39.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (40.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (41.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (42.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (43.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (44.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (45.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (46.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (47.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (48.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (49.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (50.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (51.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (52.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (53.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (54.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (55.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (56.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (57.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (58.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (59.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (60.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (61.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (62.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (63.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (64.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (65.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (66.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (67.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (68.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (69.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (70.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (71.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (72.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (73.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (74.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (75.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (76.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (77.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (78.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (79.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (80.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (81.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (82.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (83.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (84.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (85.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (86.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (87.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (88.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (89.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (90.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (91.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (92.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (93.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (94.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (95.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (96.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (97.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (98.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (99.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (100.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (101.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (102.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (103.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (104.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (105.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (106.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (107.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (108.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (109.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (110.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (111.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (112.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (113.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (114.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (115.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (116.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (117.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (118.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (119.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (120.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (121.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (122.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (123.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (124.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (125.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (126.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (127.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (128.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (129.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (130.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (131.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (132.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (133.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (134.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (135.22035pt too high) detected at line 686
+ []
+
+
+Overfull \vbox (136.22035pt too high) detected at line 686
+ []
+
+
+Package mdframed Warning: correct box splittet fails
+ It seems you are using a non splittable contents
+(mdframed)                 on input line 686.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 686.
+
+
+[19 <./images/1.png>]
+
+./chapitres/chapitre1.tex:690: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.690                         L
+                               et $X:\Omega\to\mathbb{R}$ be a random variab...
+(That was another \errmessage.)
+
+
+./chapitres/chapitre1.tex:708: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.708                            L
+                                  et $X_1, X_2, \ldots$ be a sequence of \im...
+(That was another \errmessage.)
+
+
+
+[20]
+
+./chapitres/chapitre1.tex:721: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.721                            F
+                                  or any random variables $X,Y$,
+(That was another \errmessage.)
+
+
+./chapitres/chapitre1.tex:726: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.726                            L
+                                  et $X,Y$ be two random variables. Then,
+(That was another \errmessage.)
+
+
+./chapitres/chapitre1.tex:732: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.732                           L
+                                 et $p,q \in \left(1, +\infty\right)$ be suc...
+(That was another \errmessage.)
+
+./chapitres/chapitre1.tex:733: Undefined control sequence.
+l.733 ...     \[E\left(\left|XY\right|\right)\leqE
+                                                  \left(\left|X\right|^p\rig...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./chapitres/chapitre1.tex:741: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.741 ...                  \begin{tcolorbox}[gris]
+                                                  
+(That was another \errmessage.)
+
+
+./chapitres/chapitre1.tex:769: LaTeX Error: Unicode character ≃ (U+2243)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.769 ...           \[\left(n-k+1\right)2^{-k} ≃
+                                                   n^\epsilon\]
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Overfull \vbox (334.21468pt too high) detected at line 777
+ []
+
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 777.
+
+Overfull \vbox (335.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (336.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (337.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (338.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (339.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (340.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (341.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (342.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (343.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (344.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (345.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (346.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (347.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (348.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (349.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (350.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (351.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (352.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (353.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (354.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (355.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (356.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (357.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (358.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (359.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (360.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (361.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (362.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (363.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (364.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (365.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (366.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (367.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (368.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (369.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (370.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (371.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (372.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (373.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (374.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (375.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (376.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (377.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (378.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (379.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (380.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (381.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (382.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (383.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (384.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (385.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (386.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (387.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (388.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (389.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (390.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (391.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (392.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (393.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (394.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (395.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (396.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (397.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (398.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (399.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (400.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (401.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (402.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (403.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (404.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (405.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (406.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (407.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (408.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (409.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (410.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (411.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (412.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (413.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (414.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (415.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (416.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (417.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (418.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (419.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (420.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (421.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (422.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (423.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (424.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (425.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (426.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (427.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (428.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (429.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (430.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (431.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (432.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (433.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (434.21468pt too high) detected at line 777
+ []
+
+
+Overfull \vbox (435.21468pt too high) detected at line 777
+ []
+
+
+Package mdframed Warning: correct box splittet fails
+ It seems you are using a non splittable contents
+(mdframed)                 on input line 777.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 777.
+
+
+[21])
+
+[22] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -2270,21 +3204,21 @@ L3 programming layer <2025-01-18>
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A5E7AEB5BCF3272E031A24A46D1B1DCA;5404.
+(rerunfilecheck)             Checksum: F4B94D9C35A34DD8548215110B19E1EC;6238.
  ) 
 Here is how much of TeX's memory you used:
- 28242 strings out of 475142
- 551621 string characters out of 5765945
- 993108 words of memory out of 5000000
- 50635 multiletter control sequences out of 15000+600000
+ 28313 strings out of 475142
+ 552775 string characters out of 5765945
+ 994531 words of memory out of 5000000
+ 50687 multiletter control sequences out of 15000+600000
  581212 words of font info for 87 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 131i,14n,135p,517b,1142s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 131i,14n,135p,517b,1160s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0700.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcti1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi0800.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (20 pages, 350521 bytes).
+Output written on main.pdf (23 pages, 364470 bytes).
 PDF statistics:
- 869 PDF objects out of 1000 (max. 8388607)
- 433 compressed objects within 5 object streams
- 138 named destinations out of 1000 (max. 500000)
- 242 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 923 PDF objects out of 1000 (max. 8388607)
+ 475 compressed objects within 5 object streams
+ 153 named destinations out of 1000 (max. 500000)
+ 274 words of extra memory for PDF output out of 10000 (max. 10000000)
 

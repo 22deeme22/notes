@@ -539,6 +539,7 @@
                 \[\text{Cov}(X_1,Y_1 + Y_2) = \text{Cov}(X, Y_1) + \text{Cov}(X, Y_2).\]
                 In words: Cov is symmetric, and linear im each of its arguments.
             \end{theoreme}
+        \hypertarget{pearson}{}
         \subsection{Pearson correlation coefficient}
              In statistics, a coefficient obtained form the covariance and standard deviation is frequently used: the Pearson correlation coefficient. 
              \begin{definition}
@@ -665,8 +666,11 @@
                             \[P\left(X \geq a\right) \leq \frac{E\left(X\right)}{a}.\]
                         \end{theoreme}
                     \subsection{First moment method}
-                        The first moment method is a simle observation: if we have a random variable X taking values in the non-negative integers, $P\left(X \in \mathbb{N}\right)=1$, we can upper bound the probability that X is non-zero by using its mean: 
-                        \[P\left(X \neq 0\right)=P\left(X >0\right)= E\left(\mathbb{1}_{X>0}X\right)\leq E \left(X\right).\]
+                        The first moment method is a simple observation: if we have a random variable X taking values in the non-negative integers, $P\left(X \in \mathbb{N}\right)=1$, we can upper bound the probability that X is non-zero by using its mean: 
+                        \[P\left(X \neq 0\right)=P\left(X >0\right)= E\left(\mathbbm{1}_{X>0}X\right)\leq E \left(X\right).\]
+                        \begin{remark}{Remarque}
+                            This means that if you have a small expectation it implies that you have a large probability to be 0.
+                        \end{remark}
                        \begin{remark}{Example}
                            \begin{tcolorbox}[gris]
                                \begin{itemize}[left=10pt, label=\textbullet]
@@ -678,12 +682,105 @@
                                            \[P \left(M_n \geq k\right) \leq E \left(Y_k\right) \leq n \cdot  2^{-k}\] 
                                        \item if $k > \log_2\left(n\right)$, then $n\cdot 2^{-k}$ becomes very small, so the probability of having such a long run of 1's is close to 0. In particular, we obtain that the longest run of 1's is at most of oder $\log_2 \left(n\right)$
                                \end{itemize}
-                               
                            \end{tcolorbox}
-                           
                        \end{remark}
+                    \subsection{Chebychev's inequality}
+                    Chebychev's inequality can be seen as a re-phrasing of Markov's inequality.
+                    \begin{theoreme}
+                        Let $X:\Omega\to\mathbb{R}$ be a random variable. Let $g:\mathbb{R}\to\mathbb{R}_+$ be an increasing function such that $g\left(X\right)$ is a random variable. Then, 
+                        \[P\left(X \geq a\right) \leq \frac{E \left(g \left(X\right)\right)}{g \left(a\right)}, \forall a \in \mathbb{R}.\]
+                        The following cases are of particular interest. 
+                        \begin{itemize}[left=10pt, label=\textbullet]
+                            \item p-th moment version: for all $p \in \left(0, + \infty\right)$, 
+                            \[P \left(X \geq a\right) \leq \frac{E\left(\left|X\right|^p\right)}{a^p}, \forall a >0.\]
+                            
+                            \item Exponential version: for all $\delta \in \mathbb{R}_+$, 
+                                \[P\left(X \geq a\right) \leq e^{\delta a}E\left(e^{\delta X}\right), \forall a >0.\]
+                        \end{itemize}
+                    \end{theoreme}
+                    \begin{remark}{Remarque}
+                        Taking the function $g\left(x\right)=x^2$ applied to the random variable $\left|X-E\left(X\right)\right|$, we obtain the useful particular case 
+                        \[P\left(\left|X-E\left(X\right)\right|\geq a\right)\leq \frac{Var\left(X\right)}{a ^2}, \forall a >0.\]
+                    \end{remark}
+                    \subsection{A weak Law of Large Numbers}
+                       This is an application of Chebychev's inequality. This law states that with high probability, the empirical average of independent indentically distributed (i.i.d) random variables is close to its expectation.
+                       \begin{theoreme}
+                           Let $X_1, X_2, \ldots$ be a sequence of \important{identically ditributed} random variables. Suppose that 
+                           \begin{enumerate}[left=10pt]
+                               \item thy admit a second moment: $E\left(X_1^2\right)<\infty$, 
+                               \item they are \important{uncorrelated}: $Cov\left(X_i, X_j\right)=0 \text{ if } i \neq j$.
+                           \end{enumerate}
+                           Denote 
+                           \[E\left(X_1\right)= \mu, \mathspace Var\left(X_1\right)= \sigma ^2, \mathspace \bar{S}_n=\frac{1}{n}\sum_{ i=1 } ^{ n }X_i.\]
+                           Then, for all $\epsilon >0$, 
+                           \[P\left(\left|\bar{S}_n-\mu\right|\geq \epsilon\right)\leq\frac{\sigma ^2}{\epsilon^2n}.\]
+                           In particular, $\bar{S}_n$ converges in probability towards $\mu$.
+                       \end{theoreme}
+                    \subsection{Cauchy-Schwartz and Hölder's inequalities}
+                       \begin{theoreme}
+                           For any random variables $X,Y$, 
+                           \[E\left(XY\right)^2\leq E \left(X^2\right)E\left(Y^2\right).\]
+                       \end{theoreme}
+                       A direct application is that Pearson correlation coefficient defined in \hyperlink{pearson}{1.4.2}
+                       \begin{theoreme}
+                           Let $X,Y$ be two random variables. Then, 
+                           \[\left|Cov\left(X,Y\right)\right|\leq \sqrt{Var\left(X\right)}\sqrt{Var\left(Y\right)}.\]
+                           In particular, $\rho_{XY} \in \left[-1,1\right]$.        
+                       \end{theoreme}
+                      The generalisation of this theoreme is the Hölder's inequality. 
+                      \begin{theoreme}
+                          Let $p,q \in \left(1, +\infty\right)$ be such that $\frac{1}{p}+\frac{1}{q}=1$. Then, for all random variables $X,Y$, 
+                          \[E\left(\left|XY\right|\right)\leqE\left(\left|X\right|^p\right)^{\frac{1}{p}}E\left(\left|Y\right|^q\right)^{\frac{1}{q}}.\]
+                      \end{theoreme}
+                    \subsection{Second moment method}
+                        The second moment method is useful to show that a random variable is often positiv. This is the complement of the first moment method. It relies on the following: 
+
+                        for $X$ a $\mathbb{N}$-valued random variable, 
+                        \[P\left(X>0\right) \geq \frac{E\left(X\right)^2}{E\left(X^2\right)}.\]
+                        \begin{remark}{Example}
+                            \begin{tcolorbox}[gris]
+                               Let defin $M_n = $ the lenght of the longest run of 1's, $Y_k =$ number of consecutive blocks of lenght k consisting only of 1's 
+                               \begin{itemize}[left=10pt, label=\textbullet]
+                                   \item $Y_k >0 \leftrightarrow $ there exist a run of length $\geq k$
+                                   \item $P\left(M_n \geq k\right)=P\left(Y_k>0\right)$
+                               \end{itemize}
+                              Step 1: First Moment
+                                
+                                We compute the expectation: 
+                                \[E\left(Y_k\right)= \left(n-k+1\right)2^{-k}.\]
+                                This gives an upper bound, if this expectation is small, it's unlikely to have a run of 1's
+
+                                Step 2: Second Moment
+
+                                To show that run actually exists, we use the second moment method: 
+                                \[Var\left(Y_k\right)= \sum_{ i=1 } ^{ n-k+1 }\sum_{ j=1 } ^{ n-k+1 }Cov\left(B_i,B_j\right),\]
+                                Where $B_i=\prod_{l=0}^{ k-1 } X_{i+l}$ is the indicator that the block starting at i is all 1's.
+                                \begin{itemize}[left=10pt, label=\textbullet]
+                                    \item If the block do not overlap $\left(\left|i-j\right|\geq k\right)$ they are independent $\to$ covariance $=0$. 
+                                    \item If they overlap $\left(\left|i-j\right| < k\right)$, the covariance is compute explicitly: $Cov\left(B_i, B_j\right)= d^{-j+i-k}-2^{-2k}$.
+                                \end{itemize}
+                                It gives: $Var\left(Y_k\right)\leq3\left(n-k+1\right)2^{-k}$ 
+
+                                Step 3: Apply the second moment formula 
+                                \[P\left(Y_k > 0\right) \geq \left(1+\frac{Var\left(Y_k\right)}{\left(E\left[Y_k\right]\right)^2}\right)^{-1} \geq \left(1+\frac{3}{\left(n-k+1\right)2^{-k}}\right)^{-1}.\]
+                                Step 4: Asymptotic consequence 
+
+                                Choose $k = \left(1-\epsilon\right)\log_2n$. Then $2^{-k} = n^{-\left(1-\epsilon\right)}$, so: 
+                                \[\left(n-k+1\right)2^{-k} ≃ n^\epsilon\]
+                                and thus 
+                                \[P\left(M_n \geq \left(1-\epsilon\right)\log_2n\right)=P\left(Y_k>0\right)\geq\left(1+\frac{6}{n^\epsilon}\right)^{-1} \lim_{n \to \infty} 1.\]
+                                
+                                
+
+                            \end{tcolorbox}
+
+                        \end{remark}
+                            
+                      
                         
-                        
+                       
+
+                    
                          
                             
                             
