@@ -77,7 +77,9 @@
             The state of an \important{isolated} system is a vector $\ket{\phi} \in \mathcal{H}$ in Hilbert space $\mathcal{H}$ w.r.t the normalization condition $\braket{\phi|\phi}=1$.       
         \end{tcolorbox}
         \begin{remark}{Remarque}
-            $\ket{\phi}$ and $e^{i\lambda}\ket{\phi}, \lambda \in \mathbb{R}$ are physically equivalent.
+            \begin{tcolorbox}[gris]
+                $\ket{\phi}$ and $e^{i\lambda}\ket{\phi}, \lambda \in \mathbb{R}$ are physically equivalent.
+            \end{tcolorbox}
         \end{remark}
         \begin{remark}{Examples}
            \begin{tcolorbox}[rouge]
@@ -146,7 +148,9 @@
                 The composite system of $\mathcal{H}_A$ and $\mathcal{H}_B$ is equal to $\mathcal{H}_{A\cup B}= \mathcal{H}_A \otimes \mathcal{H}_B$.
             \end{tcolorbox}
             \begin{remark}{Remarque}
-                $dim\left(\mathcal{H}_A \otimes \mathcal{H}_B\right)=\left(dim\mathcal{H}_A\right)\left(dim\mathcal{H}_B\right)$.
+                \begin{tcolorbox}[gris]
+                    $dim\left(\mathcal{H}_A \otimes \mathcal{H}_B\right)=\left(dim\mathcal{H}_A\right)\left(dim\mathcal{H}_B\right)$.
+                \end{tcolorbox}
             \end{remark}
             \begin{remark}{Example}
                 \begin{tcolorbox}[rouge]
@@ -182,7 +186,9 @@
            \item \textbf{Basis:} $\begin{pmatrix} 1 \\ 0 \end{pmatrix} = \ket{H}, \mathspace \begin{pmatrix} 0 \\ 1 \end{pmatrix} = \ket{V}, \mathspace \alpha\ket{H}+\beta\ket{V}=\ket{\psi}$.
            \item \textbf{Beam splitter:} $U = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \left(\text{ Hadamard matrix}\right)$.
            \item \textbf{State after the beam splitter: }$U\ket{H}= \frac{1}{\sqrt{2}}\left(\ket{H}+\ket{V}\right)$. \begin{remark}{Remarque}
-               It's a very srange state that is at the same time horizontal and vertical. If it wasn't a qubit, it would either be completely reflected or it would go through. 
+                   \begin{tcolorbox}[gris]
+                        It's a very srange state that is at the same time horizontal and vertical. If it wasn't a qubit, it would either be completely reflected or it would go through. 
+                   \end{tcolorbox}
            \end{remark}
        \item \textbf{Perfect mirror: } $R = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \mathspace RR^{\dagger}=R^{\dagger}R=1 \left(\text{\important{important condition!}}\right), \mathspace R^{\dagger}=R \left(\text{coincidence}\right)$.
        \item \textbf{State after the perfect mirror: }$RU\ket{H}=\frac{1}{\sqrt{2}}\left(R\ket{H}+R\ket{V}\right)=\frac{1}{\sqrt{2}}\left(\ket{V}+\ket{H}\right)$.
@@ -209,12 +215,132 @@
 
            
            Var(Z): $\bra{\psi}Z^2\ket{\psi}-\bra{\psi}Z\ket{\psi}^2=0$.
+       \end{itemize}
+    \subsection{Photon polarization}
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item \textbf{Classical electro-magnetic waves: }
+                \begin{align*}
+                    \text{Linear polarization: } \vec{E} &\propto \vec{E}_0 \begin{pmatrix} \cos \theta \\ \sin \theta \\ 0 \end{pmatrix} e^{i \omega t} e^{i\frac{2\pi}{\lambda}z},\\
+                    \text{Circular polarization: } \vec{E} &\propto \vec{E}_0 \begin{pmatrix} 1 \\ i \\ 0 \end{pmatrix} e^{i\omega t} e^{i\frac{2\pi}{\lambda}z}.
+                \end{align*}
+                \begin{remark}{Remarque}
+                    \begin{tcolorbox}[gris]
+                       The polarization of an electro-magnetic wave indicate how the electrique field oscillate in space and time (it shows the direction).
+                    \end{tcolorbox}
+                \end{remark}
+            \item \textbf{Photon quantum particles: }Photon quantum particles that carry electro-magnetic energy have a polarization state:  
+                
+                $\text{Linear polarization state: } \ket{\theta}&=\cos \theta \ket{x}+\sin \theta \ket{y}, \mathspace
+                 \ket{\theta_{\perp}} &= -\sin \theta \ket{x} + \cos \theta \ket{y}.$
+
+                 Circular polarization state: $\ket{\circlearrowleft} = \frac{1}{\sqrt{2}}\left(\ket{x}+i\ket{y}\right)=\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ i \end{pmatrix}, \mathspace \ket{\circlearrowright}= \frac{1}{\sqrt{2}}\left(\ket{x}-i\ket{y}\right)=\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ -i \end{pmatrix}$.
+            \begin{remark}{Remarque}
+                \begin{tcolorbox}[gris]
+                    A classical electro-magnetic wave can be viewed as a collective state of many photons, each having the same polarization state. This photon polarization state determine the direction and the form of oscillation of the electric field in the corresponding classical wave.
+                \end{tcolorbox}
+                
+            \end{remark}
+            
+        \end{itemize}
+\section{Quantum key distribution (QKD)}
+    Classical protcols rely on some mathematicals problems believed to be hard, but one day, if there is some strong enough computer, the security wouldn't be assured. QKD rely on physics! So it doesn't have this problem, the disavantage is that you should have a quantum channel.
+    \subsection{Key distribution}
+        \begin{enumerate}[left=10pt]
+            \item Suppose Alice wants to send $\vec{m}$. She encodes it as $\vec{m} \oplus \vec{x}=\vec{z}$.
+            \item Bob receives $\vec{z}$. He adds $\vec{x} \implies \vec{z} \oplus \vec{x}= \left(\vec{m} \oplus \vec{x}\right) \oplus \vec{x}=\vec{m}\oplus\left(\vec{x}\oplus\vec{x}\right)=\vec{m}$.
+        \end{enumerate}
+    \subsection{BB84 protocol}
+        For quantum key distribution protocols, we assume that:
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item A, B share a public classical channel that is not spoofable.
+            \item A, B share a public quantum channel that is spoofable.
+        \end{enumerate}
+        \begin{tcolorbox}[vert]
+            Setting: Alice has generated $\left(\vec{x} \in \{0, 1\}\right)$ and wants to share it with Bob.
+            \begin{enumerate}[left=10pt]
+                \item Alice encodes $\vec{x}$ as a quantum state of qubit.
+                \item Bob decodes the q-state back into qbitstring.
+                \item Public communication phase (through the classical channel).
+                \item Generation of the common secret key + security check.
+            \end{enumerate}
+        \end{tcolorbox}
+        
+               \begin{enumerate}[left=10pt]
+            \item \textbf{Step Encoding:}
+
+            Alice encodes each $x \in \{0,1\}$ in a random basis (either X or Z basis):
+            \begin{itemize}[left=10pt, label=\textbullet]
+                \item Z basis: $\ket{0}, \ket{1}, Z=\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} $
+                \item X basis: $\ket{-}=\frac{\ket{0}-\ket{1}}{\sqrt{2}}, \ket{+}\frac{\ket{0}+\ket{1}}{\sqrt{2}}, X=\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} $
+            \end{itemize}
+            \begin{center}
+            \begin{tabular}{c|c}
+                  \textbf{$x_1$}& \textbf{Z basis}\\  % ligne 1
+                  \hline
+                   0 & $\ket{0}$\\  % ligne 2
+                    1 & $\ket{1}$ \\
+                    \hline
+                      & \textbf{X basis} \\
+                      \hline
+                    0 & $\ket{+}$ \\
+                    1 & $\ket{-}$
+            \end{tabular}
+            \end{center}
+            Let define H such that: $H\ket{0}=\ket{+}, \mathspace H\ket{1}=\ket{-}$.
+
+            Alice sends $\ket{0}\ket{+}\ket{-}\ket{0}\ket{1}\ket{1}\ket{+}$, so she sends:
+            \[\ket{\psi_{x_1}}=H^{ei}\ket{x_1} \text{ where ei $\sim$ Unif \{0,1\}} \implies \ket{\psi_{\vec{x}}}= \bigoplus_{j=1}^{m} H^{ei}\ket{x_j}.\]
+            
+            \item \textbf{Step Decoding:}
+
+                Bob recieves $\ket{\psi_{\vec{x}}}=\bigoplus_{j=1}^{m} H^{ei}\ket{x_j}$, he chooses a random basis to measure it. If Bob know the basis, he can decode easily, he doesn't!
+                \begin{itemize}[left=10pt, label=\textbullet]
+                    \item Case 1: Bob measure in the same basis chosen by Alice $\to$ prob(decoding correctly)=1.
+                    \item Case 2: Bob measures in the wrong basis $\to$ prob(decoding correctly)=$\frac{1}{2}$.
+                \end{itemize}
+                $\implies$ prob(decoding correctly)=$\frac{1}{2}\cdot 1 + \frac{1}{2}\cdot \frac{1}{2}=\frac{3}{4}$. 
+                
+            \item \textbf{Step Public communication: }
+                
+                Alice has $\vec{x}:$ original bitstring, $\vec{e}:$ original choice of basis.
+
+                Bob has $\vec{y}:$ decoded bitstring, $\vec{f}:$ Bob's choice of basis.
+
+                They publish over the classical channel their choice of $\vec{e}, \vec{f}$, and for each bit, if the base agree they keep the bit, otherwise they discard it. At the end, Alice has $\widetilde{x} \subset \vec{x}$ and Bob has $\widetilde{y} \subset \vec{y}$.
+            \item \textbf{Step Security check: }
+
+                let $\widetilde{x}, \widetilde{y}$ of length k. Alice and Bob pick a subset of k bits to ``sacrifice'' them: they exchange the bits over the public channel, 
+                \begin{itemize}[left=10pt, label=\textbullet]
+                    \item if they match, we can exclude that there is an eavesdropper,
+                    \item otherwise we can conclude that there is an eavesdropper so we abort the protocol.     
+                \end{itemize}
+                \begin{remark}{Remarque}
+                    \begin{tcolorbox}[gris]
+                        When the eavesdropper look at a qubit on the quantum channel, he has to measure the qubit $\implies$ the state of the particle collapse. So if Alice and Bob have the same basis, but not the same bit, they can assume that an eavesdropper has intercepted and measured a qubit in the wrong basis, and then sent a modified state to Bob.
+                    \end{tcolorbox}
+                    
+                \end{remark}
+                
+                
+            
 
             
-           
-           
             
-       \end{itemize}
+    
+        \end{enumerate}
+        
+        
+       
+        
+        
+            
+
+     
+
+             
+            
+         
+       
         
             
             

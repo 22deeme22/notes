@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.10.24)  10 NOV 2025 23:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.10.24)  11 NOV 2025 13:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -904,547 +904,567 @@ l.76         \begin{tcolorbox}[vert]
 
 [2]
 
-./resume.tex:83: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:80: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.83            \begin{tcolorbox}[rouge]
+l.80             \begin{tcolorbox}[gris]
                                         
 (That was another \errmessage.)
 
-<images/1.png, id=100, 523.9575pt x 402.50375pt>
+
+./resume.tex:85: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85            \begin{tcolorbox}[rouge]
+                                        
+(That was another \errmessage.)
+
+<images/1.png, id=120, 523.9575pt x 402.50375pt>
 File: images/1.png Graphic file (type png)
 <use images/1.png>
-Package pdftex.def Info: images/1.png  used on input line 87.
+Package pdftex.def Info: images/1.png  used on input line 89.
 (pdftex.def)             Requested size: 142.26378pt x 109.28549pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
 []\T1/cmr/m/n/10 Physical sys-tem : Mach-Zehnder in-ter-fe-ro-me-ter :
  []
 
 
-./resume.tex:94: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:96: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.94         \begin{tcolorbox}[vert]
+l.96         \begin{tcolorbox}[vert]
                                     
 (That was another \errmessage.)
 
 
-./resume.tex:98: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:100: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.98             \begin{tcolorbox}[rouge]
-                                         
-(That was another \errmessage.)
-
-
-./resume.tex:105: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.105         \begin{tcolorbox}[vert]
-                                     
-(That was another \errmessage.)
-
-
-./resume.tex:109: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.109             \begin{tcolorbox}[rouge]
+l.100             \begin{tcolorbox}[rouge]
                                           
 (That was another \errmessage.)
 
 
-Overfull \vbox (65.72542pt too high) detected at line 114
+./resume.tex:107: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.107         \begin{tcolorbox}[vert]
+                                     
+(That was another \errmessage.)
+
+
+./resume.tex:111: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.111             \begin{tcolorbox}[rouge]
+                                          
+(That was another \errmessage.)
+
+
+
+[3 <./images/1.png>]
+Package mdframed Info: Not enough space on this page on input line 116.
+
+
+./resume.tex:119: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.119             \begin{tcolorbox}[vert]
+                                         
+(That was another \errmessage.)
+
+
+./resume.tex:129: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.129                 S
+                       pectral Theorem:
+(That was another \errmessage.)
+
+
+./resume.tex:147: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.147             \begin{tcolorbox}[vert]
+                                         
+(That was another \errmessage.)
+
+
+./resume.tex:151: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.151                 \begin{tcolorbox}[gris]
+                                             
+(That was another \errmessage.)
+
+
+./resume.tex:156: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.156                 \begin{tcolorbox}[rouge]
+                                              
+(That was another \errmessage.)
+
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 165.
+
+
+Overfull \vbox (19.8403pt too high) detected at line 165
  []
 
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
-(mdframed)              on input line 114.
+(mdframed)              on input line 165.
 
-Overfull \vbox (66.72542pt too high) detected at line 114
+Overfull \vbox (20.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (67.72542pt too high) detected at line 114
+Overfull \vbox (21.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (68.72542pt too high) detected at line 114
+Overfull \vbox (22.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (69.72542pt too high) detected at line 114
+Overfull \vbox (23.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (70.72542pt too high) detected at line 114
+Overfull \vbox (24.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (71.72542pt too high) detected at line 114
+Overfull \vbox (25.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (72.72542pt too high) detected at line 114
+Overfull \vbox (26.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (73.72542pt too high) detected at line 114
+Overfull \vbox (27.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (74.72542pt too high) detected at line 114
+Overfull \vbox (28.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (75.72542pt too high) detected at line 114
+Overfull \vbox (29.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (76.72542pt too high) detected at line 114
+Overfull \vbox (30.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (77.72542pt too high) detected at line 114
+Overfull \vbox (31.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (78.72542pt too high) detected at line 114
+Overfull \vbox (32.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (79.72542pt too high) detected at line 114
+Overfull \vbox (33.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (80.72542pt too high) detected at line 114
+Overfull \vbox (34.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (81.72542pt too high) detected at line 114
+Overfull \vbox (35.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (82.72542pt too high) detected at line 114
+Overfull \vbox (36.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (83.72542pt too high) detected at line 114
+Overfull \vbox (37.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (84.72542pt too high) detected at line 114
+Overfull \vbox (38.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (85.72542pt too high) detected at line 114
+Overfull \vbox (39.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (86.72542pt too high) detected at line 114
+Overfull \vbox (40.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (87.72542pt too high) detected at line 114
+Overfull \vbox (41.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (88.72542pt too high) detected at line 114
+Overfull \vbox (42.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (89.72542pt too high) detected at line 114
+Overfull \vbox (43.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (90.72542pt too high) detected at line 114
+Overfull \vbox (44.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (91.72542pt too high) detected at line 114
+Overfull \vbox (45.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (92.72542pt too high) detected at line 114
+Overfull \vbox (46.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (93.72542pt too high) detected at line 114
+Overfull \vbox (47.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (94.72542pt too high) detected at line 114
+Overfull \vbox (48.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (95.72542pt too high) detected at line 114
+Overfull \vbox (49.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (96.72542pt too high) detected at line 114
+Overfull \vbox (50.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (97.72542pt too high) detected at line 114
+Overfull \vbox (51.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (98.72542pt too high) detected at line 114
+Overfull \vbox (52.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (99.72542pt too high) detected at line 114
+Overfull \vbox (53.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (100.72542pt too high) detected at line 114
+Overfull \vbox (54.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (101.72542pt too high) detected at line 114
+Overfull \vbox (55.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (102.72542pt too high) detected at line 114
+Overfull \vbox (56.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (103.72542pt too high) detected at line 114
+Overfull \vbox (57.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (104.72542pt too high) detected at line 114
+Overfull \vbox (58.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (105.72542pt too high) detected at line 114
+Overfull \vbox (59.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (106.72542pt too high) detected at line 114
+Overfull \vbox (60.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (107.72542pt too high) detected at line 114
+Overfull \vbox (61.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (108.72542pt too high) detected at line 114
+Overfull \vbox (62.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (109.72542pt too high) detected at line 114
+Overfull \vbox (63.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (110.72542pt too high) detected at line 114
+Overfull \vbox (64.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (111.72542pt too high) detected at line 114
+Overfull \vbox (65.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (112.72542pt too high) detected at line 114
+Overfull \vbox (66.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (113.72542pt too high) detected at line 114
+Overfull \vbox (67.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (114.72542pt too high) detected at line 114
+Overfull \vbox (68.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (115.72542pt too high) detected at line 114
+Overfull \vbox (69.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (116.72542pt too high) detected at line 114
+Overfull \vbox (70.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (117.72542pt too high) detected at line 114
+Overfull \vbox (71.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (118.72542pt too high) detected at line 114
+Overfull \vbox (72.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (119.72542pt too high) detected at line 114
+Overfull \vbox (73.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (120.72542pt too high) detected at line 114
+Overfull \vbox (74.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (121.72542pt too high) detected at line 114
+Overfull \vbox (75.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (122.72542pt too high) detected at line 114
+Overfull \vbox (76.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (123.72542pt too high) detected at line 114
+Overfull \vbox (77.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (124.72542pt too high) detected at line 114
+Overfull \vbox (78.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (125.72542pt too high) detected at line 114
+Overfull \vbox (79.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (126.72542pt too high) detected at line 114
+Overfull \vbox (80.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (127.72542pt too high) detected at line 114
+Overfull \vbox (81.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (128.72542pt too high) detected at line 114
+Overfull \vbox (82.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (129.72542pt too high) detected at line 114
+Overfull \vbox (83.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (130.72542pt too high) detected at line 114
+Overfull \vbox (84.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (131.72542pt too high) detected at line 114
+Overfull \vbox (85.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (132.72542pt too high) detected at line 114
+Overfull \vbox (86.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (133.72542pt too high) detected at line 114
+Overfull \vbox (87.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (134.72542pt too high) detected at line 114
+Overfull \vbox (88.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (135.72542pt too high) detected at line 114
+Overfull \vbox (89.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (136.72542pt too high) detected at line 114
+Overfull \vbox (90.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (137.72542pt too high) detected at line 114
+Overfull \vbox (91.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (138.72542pt too high) detected at line 114
+Overfull \vbox (92.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (139.72542pt too high) detected at line 114
+Overfull \vbox (93.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (140.72542pt too high) detected at line 114
+Overfull \vbox (94.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (141.72542pt too high) detected at line 114
+Overfull \vbox (95.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (142.72542pt too high) detected at line 114
+Overfull \vbox (96.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (143.72542pt too high) detected at line 114
+Overfull \vbox (97.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (144.72542pt too high) detected at line 114
+Overfull \vbox (98.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (145.72542pt too high) detected at line 114
+Overfull \vbox (99.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (146.72542pt too high) detected at line 114
+Overfull \vbox (100.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (147.72542pt too high) detected at line 114
+Overfull \vbox (101.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (148.72542pt too high) detected at line 114
+Overfull \vbox (102.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (149.72542pt too high) detected at line 114
+Overfull \vbox (103.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (150.72542pt too high) detected at line 114
+Overfull \vbox (104.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (151.72542pt too high) detected at line 114
+Overfull \vbox (105.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (152.72542pt too high) detected at line 114
+Overfull \vbox (106.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (153.72542pt too high) detected at line 114
+Overfull \vbox (107.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (154.72542pt too high) detected at line 114
+Overfull \vbox (108.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (155.72542pt too high) detected at line 114
+Overfull \vbox (109.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (156.72542pt too high) detected at line 114
+Overfull \vbox (110.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (157.72542pt too high) detected at line 114
+Overfull \vbox (111.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (158.72542pt too high) detected at line 114
+Overfull \vbox (112.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (159.72542pt too high) detected at line 114
+Overfull \vbox (113.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (160.72542pt too high) detected at line 114
+Overfull \vbox (114.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (161.72542pt too high) detected at line 114
+Overfull \vbox (115.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (162.72542pt too high) detected at line 114
+Overfull \vbox (116.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (163.72542pt too high) detected at line 114
+Overfull \vbox (117.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (164.72542pt too high) detected at line 114
+Overfull \vbox (118.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (165.72542pt too high) detected at line 114
+Overfull \vbox (119.8403pt too high) detected at line 165
  []
 
 
-Overfull \vbox (166.72542pt too high) detected at line 114
+Overfull \vbox (120.8403pt too high) detected at line 165
  []
 
 
 Package mdframed Warning: correct box splittet fails
  It seems you are using a non splittable contents
-(mdframed)                 on input line 114.
+(mdframed)                 on input line 165.
 
 Package mdframed Info: You first box width is to small
  mdframed fixed it
-(mdframed)              on input line 114.
-
-
-[3 <./images/1.png>]
-
-./resume.tex:117: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.117             \begin{tcolorbox}[vert]
-                                         
-(That was another \errmessage.)
-
-
-./resume.tex:127: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.127                 S
-                       pectral Theorem:
-(That was another \errmessage.)
-
-
-./resume.tex:145: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.145             \begin{tcolorbox}[vert]
-                                         
-(That was another \errmessage.)
-
-
-./resume.tex:152: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.152                 \begin{tcolorbox}[rouge]
-                                              
-(That was another \errmessage.)
-
-
-./resume.tex:163: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.163             \begin{tcolorbox}[vert]
-                                         
-(That was another \errmessage.)
-
+(mdframed)              on input line 165.
 
 
 [4]
@@ -1455,16 +1475,27 @@ See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.167                 \begin{tcolorbox}[rouge]
+l.167             \begin{tcolorbox}[vert]
+                                         
+(That was another \errmessage.)
+
+
+./resume.tex:171: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.171                 \begin{tcolorbox}[rouge]
                                               
 (That was another \errmessage.)
 
 File: images/1.png Graphic file (type png)
 <use images/1.png>
-Package pdftex.def Info: images/1.png  used on input line 179.
+Package pdftex.def Info: images/1.png  used on input line 183.
 (pdftex.def)             Requested size: 142.26378pt x 109.28549pt.
-./resume.tex:181: Misplaced alignment tab character &.
-l.181 ... \beta \end{pmatrix}, \mathspace \alpha &
+./resume.tex:185: Misplaced alignment tab character &.
+l.185 ... \beta \end{pmatrix}, \mathspace \alpha &
                                                    \beta \in \mathbb{C}, \le...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1474,40 +1505,557 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Overfull \hbox (15.26576pt too wide) in paragraph at lines 187--188
+./resume.tex:189: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.189                    \begin{tcolorbox}[gris]
+                                                
+(That was another \errmessage.)
+
+
+Overfull \hbox (15.26576pt too wide) in paragraph at lines 193--194
 []\T1/cmr/bx/n/10 Perfect mir-ror :  $\OML/cmm/m/it/10 R \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 ;  RR[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 R[]R \OT1/cmr/m/n/10 = 1 [] \OML/cmm/m/it/10 ;  R[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 R []$\T1/cmr/m/n/10 . 
  []
 
 
 
 [5]
-Overfull \hbox (15.4139pt too wide) in paragraph at lines 208--209
+Overfull \hbox (15.4139pt too wide) in paragraph at lines 214--215
 []\T1/cmr/m/n/10 Expectated va-lue of (Z) : $[] \OML/cmm/m/it/10 Z [] \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 f[] [] [] \OT1/cmr/m/n/10 + [] [] []\OMS/cmsy/m/n/10 g [] \OT1/cmr/m/n/10 =
  []
 
 
+./resume.tex:227: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
-[6] (./resume.aux)
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.227                     \begin{tcolorbox}[gris]
+                                                 
+(That was another \errmessage.)
+
+./resume.tex:233: Misplaced alignment tab character &.
+l.233 ...inear polarization state: } \ket{\theta}&
+                                                  =\cos \theta \ket{x}+\sin ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./resume.tex:234: Misplaced alignment tab character &.
+l.234                  \ket{\theta_{\perp}} &
+                                             = -\sin \theta \ket{x} + \cos \...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
+
+ []
+
+
+./resume.tex:238: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.238                 \begin{tcolorbox}[gris]
+                                             
+(That was another \errmessage.)
+
+
+
+[6]
+
+./resume.tex:257: LaTeX Error: \begin{itemize} on input line 254 ended by \end{enumerate}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.257         \end{enumerate}
+                             
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./resume.tex:258: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.258         \begin{tcolorbox}[vert]
+                                     
+(That was another \errmessage.)
+
+
+./resume.tex:318: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318                     \begin{tcolorbox}[gris]
+                                                 
+(That was another \errmessage.)
+
+
+Overfull \vbox (12.80118pt too high) detected at line 322
+ []
+
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 322.
+
+Overfull \vbox (13.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (14.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (15.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (16.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (17.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (18.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (19.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (20.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (21.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (22.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (23.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (24.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (25.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (26.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (27.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (28.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (29.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (30.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (31.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (32.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (33.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (34.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (35.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (36.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (37.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (38.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (39.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (40.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (41.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (42.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (43.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (44.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (45.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (46.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (47.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (48.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (49.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (50.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (51.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (52.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (53.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (54.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (55.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (56.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (57.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (58.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (59.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (60.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (61.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (62.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (63.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (64.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (65.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (66.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (67.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (68.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (69.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (70.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (71.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (72.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (73.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (74.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (75.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (76.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (77.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (78.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (79.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (80.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (81.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (82.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (83.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (84.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (85.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (86.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (87.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (88.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (89.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (90.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (91.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (92.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (93.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (94.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (95.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (96.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (97.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (98.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (99.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (100.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (101.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (102.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (103.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (104.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (105.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (106.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (107.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (108.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (109.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (110.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (111.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (112.80118pt too high) detected at line 322
+ []
+
+
+Overfull \vbox (113.80118pt too high) detected at line 322
+ []
+
+
+Package mdframed Warning: correct box splittet fails
+ It seems you are using a non splittable contents
+(mdframed)                 on input line 322.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 322.
+
+
+[7]
+
+[8] (./resume.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `resume.out' has not changed.
-(rerunfilecheck)             Checksum: B1F2F6B8FFC33457A951E3C07363F65C;2073.
+(rerunfilecheck)             Checksum: 9F9E65B813525B94D7412915E89879C6;2705.
  ) 
 Here is how much of TeX's memory you used:
- 28016 strings out of 475142
- 548159 string characters out of 5765945
- 998393 words of memory out of 5000000
- 50524 multiletter control sequences out of 15000+600000
+ 28053 strings out of 475142
+ 548682 string characters out of 5765945
+ 998539 words of memory out of 5000000
+ 50545 multiletter control sequences out of 15000+600000
  578983 words of font info for 84 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 131i,14n,135p,506b,1071s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0700.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcti1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on resume.pdf (7 pages, 236381 bytes).
+ 131i,14n,135p,506b,1101s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0700.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcti1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on resume.pdf (9 pages, 283821 bytes).
 PDF statistics:
- 481 PDF objects out of 1000 (max. 8388607)
- 184 compressed objects within 2 object streams
- 31 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 570 PDF objects out of 1000 (max. 8388607)
+ 233 compressed objects within 3 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

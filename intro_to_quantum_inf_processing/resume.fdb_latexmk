@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1762813327.69821 "resume.tex" "resume.pdf" "resume" 1762813328.71165 2
+["pdflatex"] 1762864963.35152 "resume.tex" "resume.pdf" "resume" 1762864964.56725 2
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk" 1761301150.97511 25396 fee705cdff29f2908c9f83425990041e ""
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1761301151.82764 31928 4d1e1ebbdee16d52f05c94ed09d33400 ""
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk" 1761301152.67064 40112 98cd12d84557fa9267ee2b3a8fb68354 ""
@@ -55,11 +55,14 @@
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1755987285 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1755987285 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1755987285 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1755987285 37912 77d683123f92148345f3fc36a38d9ab1 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1755987285 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1755987285 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1755987285 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1755987285 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1755987285 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1755987285 32716 08e384dc442464e7285e891af9f45947 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1755987285 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1755987285 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1755987285 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1755987285 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -217,10 +220,10 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1761301376 2015182 c149464e5ed4b06394ad8d44deca2836 ""
   "images/1.png" 1762701608.1109 72917 fd19e500dd6a41c9d35828de544201c9 ""
   "mystyle.sty" 1762811722.31997 6764 3ca6f913ef934de60b1e1e975020d875 ""
-  "resume.aux" 1762813328.59295 2258 19daec4f2fc7c6e94db8aee2a67446de "pdflatex"
-  "resume.out" 1762813328.594 2073 b1f2f6b8ffc33457a951e3c07363f65c "pdflatex"
-  "resume.tex" 1762813327.26595 15907 b59d13c64ba9700b4f2ac63a27fc9ace ""
-  "resume.toc" 1762813328.594 1006 0da4b0af2e1cbb74f59dc51c4817e6e7 "pdflatex"
+  "resume.aux" 1762864964.42689 2887 4d34484547fa9225a71bb0555ba55e25 "pdflatex"
+  "resume.out" 1762864964.42891 2705 9f9e65b813525b94d7412915e89879c6 "pdflatex"
+  "resume.tex" 1762864962.01189 23494 068615d43b94a81d3006e72b5735cdb5 ""
+  "resume.toc" 1762864964.42891 1338 c4e739db10a50c49017a0c8f76c9413f "pdflatex"
   (generated)
   "resume.aux"
   "resume.log"
