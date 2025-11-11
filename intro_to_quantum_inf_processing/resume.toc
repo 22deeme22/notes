@@ -13,4 +13,7 @@
 \contentsline {subsection}{\numberline {3.2}Photon polarization}{6}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Quantum key distribution (QKD)}{6}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Key distribution}{6}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}BB84 protocol}{7}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.2}BB84 protocol}{6}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Entanglement}{8}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Teleportation}{9}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Dense coding}{10}{subsection.5.2}%
