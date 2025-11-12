@@ -1,6 +1,9 @@
 \documentclass[10 ,titlepage, a4paper]{article}
 \usepackage{mystyle}
 \usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing} % indispensable !
+\usetikzlibrary{positioning}
+\usepackage{varwidth} % dans le préambule
 
 \thispagestyle{fancy}
 \title{Summary of introduction to information processing}
@@ -453,7 +456,7 @@
         \begin{tcolorbox}[vert]
             The goal is to send two classical bits from A to B of information by one use of quantum channel.
         \end{tcolorbox}
-         \begin{center}
+        \begin{center}
         \begin{tikzpicture}[scale=1.2, every node/.style={font=\small}]
             \node[circle, fill=black, inner sep=2pt, label=left:{$1$}] (A1) at (0,0) {};
             \node at (0, 0.5) {A};
@@ -472,10 +475,209 @@
                 11 &\to \text{she applies } Z_1X_1 \otimes \mathbbm{1}_2 \ket{B_{00}}_{12}=\ket{B_{11}}_{12}, \\
             \end{align*}
             Then she sends her obtained qubit so Bob have both qubit $\to$ the total state. So he knows which bits Alice encoded.
-                 
-          
+\section{Bell inequalities}
+    \begin{tcolorbox}[vert]
+        The goal here will be to ensure that A & B share an entangles Bell state (inequality) and as a consequence are able to produce common random secret strings of bits (Ekert 91 QKD protocol).
+    \end{tcolorbox}
+    Let
+    \begin{center}
+    \begin{tikzpicture}[scale=1.2, every node/.style={font=\small}]
+        \node (A) at (0, 0.5) {A};
+        \draw[->, , black, decorate, decoration={snake, amplitude=3pt, segment length=8pt}]
+            (3.8,0) -- (0.1,0.5);
+        \node (B) at (9, 0.5) {B};
+        \draw[->, , black, decorate, decoration={snake, amplitude=3pt, segment length=8pt}]
+            (5.2,0) -- (8.9,0.5);
+        \draw[thin] (4.5,0) ellipse [x radius=0.65, y radius=0.3];
+
+        \node at (4.5, 0) {source}
+        \node[align=center] at (4.5, -1.0) {pairs of photons\\with pol. state. \\ $i=1, \ldots, N$.};
+
+        \node[below=5pt of A,align=left] {
+                \begin{varwidth}{4cm}
+                measure the qubit.\\
+            \begin{itemize}[left=0pt, label=\textbullet]
+                \item basis: $\{\ket{\alpha}, \ket{\alpha_{\perp}}$,
+
+                        record $a=\pm 1$.
+                    \item basis \{$\ket{\alpha'}, \ket{\alpha_{\perp}'}$,\}
+
+                        record $a'=\pm1$.
+            \end{itemize}
+            \end{varwidth}
+            };
+        \node[below=5pt of B,align=left] {
+                \begin{varwidth}{4cm}
+                measure the qubit.\\
+            \begin{itemize}[left=0pt, label=\textbullet]
+                \item basis: $\{\ket{\beta}, \ket{\beta_{\perp}}$,
+
+                        record $b=\pm 1$.
+                    \item basis \{$\ket{\beta'}, \ket{\beta_{\perp}'}$,\}
+
+                        record $b'=\pm1$.
+            \end{itemize}
+            \end{varwidth}
+            };
+    \end{tikzpicture}
+    \end{center}
+    There is four possible measure settings for A and B: $1=\left(\alpha, \beta\right), 2=\left(\alpha', \beta\right), 3=\left(\alpha, \beta'\right), 4=\left(\alpha', \beta'\right)$.
+
+    A and B meet or communcate classically and compute so-called correlation coefficient: 
+    \[X_{exp}=\frac{1}{N_1}\sum_{ i_1 }a_i_1b_i_1+\frac{1}{N_2}\sum_{ i_2 }a_i_2'b_i_2+\frac{1}{N_3}\sum_{ i_3 }a_i_3b_i_3'+\frac{1}{N_4}\sum_{ i_4 }a_i_4'b_i_4'\]
+    \newpage
+    \noindent\textbf{Classical prediction $\left(X_{\text{class. th}}\right)$: }
+    
+    We assume a locality of measurement result, which means that $p_A\left(a\right)$ depends only of Alice's angle and $p_B\left(b\right)$ depends only of Bob's angle, 
+    \[\implies p\left(a,b|\alpha,\beta,\lambda\right)=p_A\left(a|\alpha,\lambda\right)p_B\left(b|\beta,\lambda\right) \text{ with } \lambda = \text{ random variable with distribution }h\left(\lambda\right)d\lambda.\]
+    \begin{tcolorbox}[violet]
+        \textbf{Lemma:} 
+         \[-2 \leq X_{\text{class. th.}} \leq 2 \text{ for } N \to +\infty.\]
+    \end{tcolorbox}
+    \noindent\textbf{Quantum theory:}
+    \[X_{\text{th. quant.}}=\bra{B_{00}}A \otimes B \ket{B_{00}}+\bra{B_{00}}A' \otimes B \ket{B_{00}}-\bra{B_{00}}A \otimes B' \ket{B_{00}}+\bra{B_{00}}A' \otimes B' \ket{B_{00}}.\]
+    Observables: 
+    \[A= \left(+1\right)\ket{\alpha}\bra{\alpha}+\left(-1\right)\ket{\alpha_{\perp}}\bra{\alpha_{\perp}}, \mathspace B = \left(+1\right)\ket{\beta}\bra{\beta}+ \left(-1\right)\ket{\beta_{\perp}}\bra{\beta_{\perp}},
+    \]
+    \[
+    \text{with }   \ket{\alpha}= \cos\alpha\ket{0}+\sin\alpha\ket{1}, \mathspace \ket{\alpha_{\perp}}= -\sin\alpha\ket{0}+\cos\alpha\ket{1} \text{ and same for }\beta.\]
+    \[\implies X_{\text{th. quant.}}= \cos\left(2\left(\alpha-\beta\right)\right)+\cos\left(2\left(\alpha'-\beta\right)\right)-\cos\left(2\left(\alpha-\beta'\right)\right)+\cos\left(2\left(\alpha'-\beta'\right)\right).\]
+    Entanglement induces non-locality, so according to QM:
+\[p\left(a,b|\alpha,\beta\right)=\left|\braket{\text{state after meas.}|B_{00}}\right|^2=\frac{1}{4}\left(1+ab\cos\left(2\left(\alpha-\beta\right)\right)\right)\neq p_A\left(a|\alpha\right)p_B\left(b|\beta\right).
+\]
+    If we choose angles when $X_{\text{th. quant.}}$ is maximal $\left(\beta=\frac{\pi}{8}, \mathspace \alpha=0, \mathspace \beta'=-\frac{\pi}{8}, \mathspace \alpha'=-\frac{\pi}{8}\right)$, then $X_{\text{th. quant.}}= 2 \sqrt{2}$ \textbf{> 2! It violates the Lemma!}
+
+    \vspace{5pt}
+           \noindent If source distribute tensor product state $\ket{\phi_A} \otimes \ket{\phi_B} \in \mathbb{C}^2 \otimes \mathbb{C}^2$ then: 
+           \[p\left(a,b|\alpha, \beta\right)=\left|\braket{\text{state after meas.}|\left(\ket{\phi_a}\otimes \ket{\phi_B}\right)}\right|^2\]
+           \[= \underbrace{\left(\left(\frac{1+a}{2}\right)\left|\braket{\alpha|\phi_A}\right|^2\left(\frac{1-a}{2}\right)\left|\braket{\alpha_{\perp}|\phi_A}\right|^2\right)}_{p_A\left(a|\alpha\right)}\underbrace{\left(\left(\frac{1+b}{2}\right)\left|\braket{\beta|\phi_B}\right|^2\left(\frac{1-b}{2}\right)\left|\braket{\beta_{\perp}|\phi_B}\right|^2\right)}_{p_B\left(b|\beta\right)}.\]
+           \begin{tcolorbox}[vert]
+               If the pair is a product state it can't be greater than 2, $\implies$ if the result violates the Bell inequality it's an entangled state!
+           \end{tcolorbox}
+    \subsection{Ekert 91}
+    Let
+    \begin{center}
+    \begin{tikzpicture}[scale=1.2, every node/.style={font=\small}]
+        \node (A) at (0, 0.5) {A};
+        \draw[->, , black, decorate, decoration={snake, amplitude=3pt, segment length=8pt}]
+            (3.8,0) -- (0.1,0.5);
+        \node (B) at (9, 0.5) {B};
+        \draw[->, , black, decorate, decoration={snake, amplitude=3pt, segment length=8pt}]
+            (5.2,0) -- (8.9,0.5);
+        \draw[thin] (4.5,0) ellipse [x radius=0.65, y radius=0.3];
+
+        \node at (4.5, 0) {source}
+        \node[align=center] at (4.5, -1.0) {EPR pairs,\\ $\ket{B_{00}}$.};
+
+        \node[below=5pt of A,align=left] {
+            \begin{varwidth}{4cm}
+                measure in possible basis:
+            \begin{itemize}[left=0pt, label=\textbullet]
+                \item $\alpha_1=-\frac{\pi}{4}$,
+                \item $\alpha_2=-\frac{\pi}{8}$,
+                \item $\alpha_3=0$,
+            \end{itemize}
+            \end{varwidth}
+            };
+        \node[below=5pt of B,align=left] {
+                \begin{varwidth}{4cm}
+            measure in possible basis:
+            \begin{itemize}[left=0pt, label=\textbullet]
+                \item $\beta_1=-\frac{\pi}{8}$
+                \item $\beta_2=0$
+                \item $\beta_3=\frac{\pi}{8}$
+            \end{itemize}
+            \end{varwidth}
+            };
+    \end{tikzpicture}
+    \end{center}
+    A and B exchange the basis choices at each $1, \ldots, N$ and compute $X_{\text{Bell}}$ using the bits among $\left(x_i, y_i\right)$ only those corresponding to CSHS basis choice, $\left|X_{Bell}\right| \approx 2\sqrt{2}$, otherwise there is an eavesdropper.
+
+    \important{Common key} one time pad is given by $x_i$ and $y_i$ such that A and B choose the same basis, $\left(\alpha_3, \beta_2\right)$ or $\left(\alpha_2, \beta_1\right)$. In this case $x_i=y_i$.
+
+\section{Density matrix}
+    There is two situations where density matrix are useful: 
+    \begin{enumerate}[left=10pt]
+        \item Statistical mixtures.
+        \item Physical systems that are not isolated. 
+    \end{enumerate}
+    \subsection{Statistical mixture}
+        \begin{tcolorbox}[vert]
+            A statistical mixture is a system of N degrees of freedom (quantum particles), where 
+            \begin{align*} 
+                \text{fraction } &p_1 \text{ of degree of freedom is in state } \ket{\phi_1}\in\mathcal{H}, \\
+                \text{fraction } &p_2 \text{ of degree of freedom is in state } \ket{\phi_2}\in\mathcal{H}, \\
+                                 &\ldots \\
+                \text{fraction } &p_k \text{ of degree of freedom is in state } \ket{\phi_k}\in\mathcal{H},
+            \end{align*} 
+            \[0 \leq p_i \leq 1, \sum_{ i=1 } ^{ k }p_i=1.\]
+        \end{tcolorbox}
+        Convenient useful description is through the density matrix: $\rho= \sum_{ i=1 } ^{ k } p_i \ket{\phi_i}\bra{\phi_i}$
+        \begin{remark}{Remarque}
+            \begin{tcolorbox}[gris]
+                Density matrix is a convex linear combination of projections: $\ket{\phi_i}\bra{\phi_i}= \pi_i, \mathspace \pi_i\ket{\psi}= \ket{\phi_i}\braket{\phi_i|\psi},\mathspace \pi_i^+ = \pi_i, \mathspace \pi_i ^2=\pi_i$.
+            \end{tcolorbox}
+        \end{remark}
+        From a statistical mixture, we get a state $\ket{\phi_i}$ with probability $p_i$, then we measure $\ket{\phi_i}$, what's the expectation of A?
+        \begin{remark}{Remarque}
+            \begin{tcolorbox}[gris]
+                \textbf{Cyclicity of Trace:} 
+                \[Tr\left(AB\right)=Tr\left(BA\right), \mathspace Tr\left(ABC\right)=Tr\left(CAB\right)=Tr\left(BCA\right).\]
+            \end{tcolorbox}
+        \end{remark}
+        Expectated value of A notated <A>: 
+        \[\sum_{ i=1 } ^{ k }p_i\bra{\phi_i}A\ket{\phi_i} 
+            = \sum_{ i=1 }^{ k}p_i Tr\left(A\ket{\phi_i}\bra{\phi_i}\right)
+            = Tr \{\sum_{ i=1 } ^{ k }p_iA\ket{\phi_i}\bra{\phi_i}\}
+            = TrA\left(\sum_{ i=1 } ^{ k }p_i\ket{\phi_i}\bra{\phi_i}\right)=Tr\left(A\rho\right).
+        \]
+       $<A> = Tr\left(A\rho\right)=Tr\left(\rho A\right), \mathspace \mathspace \mathspace Var\left(A\right)= <A^2>-<A>^2=Tr\left(A^2\rho\right)-\left(Tr\left(A\rho\right)\right)^2$. 
+       \begin{theoreme}
+           \begin{enumerate}[left=10pt]
+               \item A density matrix satisfies $\rho^{\dagger}=\rho, \mathspace \rho \geq 0, \mathspace Tr\rho=1$.
+               \item Vice-versa any matrix satisfying these 3 proposition is a density matrix.
+           \end{enumerate}
+       \end{theoreme}
+    \subsection{Partial trace}
+        M acts on $\mathcal{H}_1 \otimes \mathcal{H}_2$, orthonormal basis can be $\ket{v_i} \otimes \ket{w_j}$ with $i = 1 \ldots dim\mathcal{H}_1$ and $j = 1 \ldots dim \mathcal{H}_2$.
+        \[M= \sum_{ ij; kl } M_{ij; kl} \left(\ket{v_i}\otimes \ket{w_j}\right)\left(\ket{v_k} \otimes \ket{w_l}\right), \mathspace \mathspace M_{ij;kl}=\left(\ket{v_i} \otimes \ket{w_j}\right)M\left(\ket{v_k} \otimes \ket{w_l}\right).\]
+        Full trace: $TrM=\sum_{ ij }M_{ij;ij}$,   $\mathspace \mathspace \mathspace $ partial trace: $Tr_{\mathcal{H}_1}M=\sum_{ j;l } \left(\sum_{ i } M_{ij; il}\right)\overbrace{\ket{w_j}\bra{w_l}}^{dim\mathcal{H}_2 \cdot dim\mathcal{H}_2}$.
+        \begin{remark}{Remarque}
+            \begin{tcolorbox}[gris]
+                You can vizualize this by thinking that M like a big matrice of size $\left(dim\mathcal{H}_1 dim\mathcal{H}_2\right) \cdot \left(dim\mathcal{H}_1 dim\mathcal{H}_2\right)$ and that the partial trace correspond to slice this matrice in blocs corresponding to $\mathcal{H}_1$ and compute the trace on these blocs.
+            \end{tcolorbox}
+        \end{remark}
+        \textbf{Properties:}
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item $Tr_{\mathcal{H}_1}Tr_{\mathcal{H}_2}M=\overbrace{Tr_{\mathcal{H}_1  \mathcal{H}_2}}^{\text{full trace}}M=Tr_{\mathcal{H}_2}Tr_{\mathcal{H}_1}M$,
+            \item In special case $A \otimes B$: 
+            \[Tr_{\mathcal{H}_1}\left(A \otimes B\right)=\left(Tr_{\mathcal{H}_1}A\right)B, \mathspace \mathspace Tr_{\mathcal{H}_2}\left(A \otimes B\right)=A\left(Tr_{\mathcal{H}_2}B\right), \mathspace \mathspace Tr_{\text{full}}A \otimes B=\left(Tr_{\mathcal{H}_1}A\right)\left(Tr_{\mathcal{H}_2}B\right).\]
+        \end{itemize}
+    \subsection{Partial density matrix}
+        \begin{tcolorbox}[vert]
+            Let $\rho$ be a full system $\mathcal{H}_{\text{full}} = \mathcal{H}_A \otimes \mathcal{H}_B$, then the local description of system A is given by 
+            \[Tr_{\mathcal{H}_B}\rho\equiv\rho_A.\]
+        \end{tcolorbox}
+        When you have a non-isolated system S, it means that the system interact with an environement E, and $\ket{\psi} \in \mathcal{H}_S \otimes \mathcal{H}_E, \mathspace \rho_{S\cup E}=\ket{\psi}\bra{\psi}$.
+        Then to compute the state of the sub-system S, you have to compute 
+        \[\rho_S=Tr_E\ket{\psi}\bra{\psi}.\]
+        Therefore, the general state of a non-isolated systemn is a density matrix!
         
         
         
-           
+         
+       
+
+
+                    
+        
+
+        
+        
+        
+    
+
+    
+        
 \end{document}
+
