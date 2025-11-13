@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.10.24)  12 NOV 2025 19:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.10.24)  13 NOV 2025 13:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -808,6 +808,8 @@ you'd better type `E' or `X' now and fix your file.
 \tikz@lib@dec@box=\box87
 ) (/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/share/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box88
@@ -815,10 +817,10 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@loff=\dimen297
 \@vwid@roff=\dimen298
 )
-./resume.tex:8: Undefined control sequence.
+./resume.tex:9: Undefined control sequence.
 <argument> \undefinedpagestyle 
                                
-l.8 \thispagestyle{fancy}
+l.9 \thispagestyle{fancy}
                          
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -833,24 +835,24 @@ LaTeX Warning: Unused global option(s):
 (./resume.aux)
 \openout1 = `resume.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -906,29 +908,29 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count364
-Package hyperref Info: Link coloring OFF on input line 13.
+Package hyperref Info: Link coloring OFF on input line 14.
  (./resume.out) (./resume.out)
 \@outlinefile=\write4
 \openout4 = `resume.out'.
 
-LaTeX Info: Redefining \degres on input line 13.
+LaTeX Info: Redefining \degres on input line 14.
 
 
 Package french.ldf Warning: Please load the "listings" package
-(french.ldf)                AFTER babel/french; reported on input line 13.
+(french.ldf)                AFTER babel/french; reported on input line 14.
 
 Package french.ldf Info: Setting StandardItemizeEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 13.
+(french.ldf)             reported on input line 14.
 Package french.ldf Info: Setting StandardEnumerateEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 13.
-LaTeX Info: Redefining \up on input line 13.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 15.
+(french.ldf)             reported on input line 14.
+LaTeX Info: Redefining \up on input line 14.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -945,16 +947,16 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.18 \newpage
+l.19 \newpage
               [1]
 
-./resume.tex:21: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:22: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.21     \begin{tcolorbox}[vert]
+l.22     \begin{tcolorbox}[vert]
                                 
 This error message was generated by an \errmessage
 command, so I can't give any explicit help.
@@ -962,40 +964,40 @@ Pretend that you're Hercule Poirot: Examine all clues,
 and deduce the truth by order and method.
 
 
-./resume.tex:58: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:59: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.58 ...                  \begin{tcolorbox}[rouge]
+l.59 ...                  \begin{tcolorbox}[rouge]
                                                   
 (That was another \errmessage.)
 
 Runaway argument?
 {\glueexpr 10pt 
-./resume.tex:62: Paragraph ended before \addvspace was complete.
+./resume.tex:63: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.62                         \end{tcolorbox}
+l.63                         \end{tcolorbox}
                                             
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./resume.tex:62: Missing number, treated as zero.
+./resume.tex:63: Missing number, treated as zero.
 <to be read again> 
                    }
-l.62                         \end{tcolorbox}
+l.63                         \end{tcolorbox}
                                             
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./resume.tex:62: Illegal unit of measure (pt inserted).
+./resume.tex:63: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.62                         \end{tcolorbox}
+l.63                         \end{tcolorbox}
                                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1004,10 +1006,10 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./resume.tex:62: Extra }, or forgotten \endgroup.
+./resume.tex:63: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.62                         \end{tcolorbox}
+l.63                         \end{tcolorbox}
                                             
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1015,18 +1017,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-LaTeX Font Info:    Trying to load font information for U+bbm on input line 71.
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 72.
 (/usr/share/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
 
-./resume.tex:80: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:81: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.80         \begin{tcolorbox}[vert]
+l.81         \begin{tcolorbox}[vert]
                                     
 (That was another \errmessage.)
 
@@ -1034,51 +1036,51 @@ l.80         \begin{tcolorbox}[vert]
 
 [2]
 
-./resume.tex:84: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:85: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.84             \begin{tcolorbox}[gris]
+l.85             \begin{tcolorbox}[gris]
                                         
 (That was another \errmessage.)
 
 
-./resume.tex:89: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:90: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.89            \begin{tcolorbox}[rouge]
+l.90            \begin{tcolorbox}[rouge]
                                         
 (That was another \errmessage.)
 
 Runaway argument?
 {\glueexpr 10pt 
-./resume.tex:97: Paragraph ended before \addvspace was complete.
+./resume.tex:98: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.97            \end{tcolorbox}
+l.98            \end{tcolorbox}
                                
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./resume.tex:97: Missing number, treated as zero.
+./resume.tex:98: Missing number, treated as zero.
 <to be read again> 
                    }
-l.97            \end{tcolorbox}
+l.98            \end{tcolorbox}
                                
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./resume.tex:97: Illegal unit of measure (pt inserted).
+./resume.tex:98: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.97            \end{tcolorbox}
+l.98            \end{tcolorbox}
                                
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1087,10 +1089,10 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./resume.tex:97: Extra }, or forgotten \endgroup.
+./resume.tex:98: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.97            \end{tcolorbox}
+l.98            \end{tcolorbox}
                                
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1099,51 +1101,51 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-./resume.tex:100: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:101: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.100         \begin{tcolorbox}[vert]
+l.101         \begin{tcolorbox}[vert]
                                      
 (That was another \errmessage.)
 
 
-./resume.tex:104: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:105: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.104             \begin{tcolorbox}[rouge]
+l.105             \begin{tcolorbox}[rouge]
                                           
 (That was another \errmessage.)
 
 Runaway argument?
 {\glueexpr 10pt 
-./resume.tex:108: Paragraph ended before \addvspace was complete.
+./resume.tex:109: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.108             \end{tcolorbox}
+l.109             \end{tcolorbox}
                                  
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./resume.tex:108: Missing number, treated as zero.
+./resume.tex:109: Missing number, treated as zero.
 <to be read again> 
                    }
-l.108             \end{tcolorbox}
+l.109             \end{tcolorbox}
                                  
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./resume.tex:108: Illegal unit of measure (pt inserted).
+./resume.tex:109: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.108             \end{tcolorbox}
+l.109             \end{tcolorbox}
                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1152,10 +1154,10 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./resume.tex:108: Extra }, or forgotten \endgroup.
+./resume.tex:109: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.108             \end{tcolorbox}
+l.109             \end{tcolorbox}
                                  
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1164,51 +1166,51 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-./resume.tex:111: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:112: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.111         \begin{tcolorbox}[vert]
+l.112         \begin{tcolorbox}[vert]
                                      
 (That was another \errmessage.)
 
 
-./resume.tex:115: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:116: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.115             \begin{tcolorbox}[rouge]
+l.116             \begin{tcolorbox}[rouge]
                                           
 (That was another \errmessage.)
 
 Runaway argument?
 {\glueexpr 10pt 
-./resume.tex:119: Paragraph ended before \addvspace was complete.
+./resume.tex:120: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.119             \end{tcolorbox}
+l.120             \end{tcolorbox}
                                  
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./resume.tex:119: Missing number, treated as zero.
+./resume.tex:120: Missing number, treated as zero.
 <to be read again> 
                    }
-l.119             \end{tcolorbox}
+l.120             \end{tcolorbox}
                                  
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./resume.tex:119: Illegal unit of measure (pt inserted).
+./resume.tex:120: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.119             \end{tcolorbox}
+l.120             \end{tcolorbox}
                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1217,10 +1219,10 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./resume.tex:119: Extra }, or forgotten \endgroup.
+./resume.tex:120: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.119             \end{tcolorbox}
+l.120             \end{tcolorbox}
                                  
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1229,13 +1231,13 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-./resume.tex:123: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:124: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.123             \begin{tcolorbox}[vert]
+l.124             \begin{tcolorbox}[vert]
                                          
 (That was another \errmessage.)
 
@@ -1243,73 +1245,73 @@ l.123             \begin{tcolorbox}[vert]
 
 [3]
 
-./resume.tex:133: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:134: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.133                 S
+l.134                 S
                        pectral Theorem:
 (That was another \errmessage.)
 
 
-./resume.tex:151: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:152: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.151             \begin{tcolorbox}[vert]
+l.152             \begin{tcolorbox}[vert]
                                          
 (That was another \errmessage.)
 
 
-./resume.tex:155: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:156: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.155                 \begin{tcolorbox}[gris]
+l.156                 \begin{tcolorbox}[gris]
                                              
 (That was another \errmessage.)
 
 
-./resume.tex:160: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:161: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.160                 \begin{tcolorbox}[rouge]
+l.161                 \begin{tcolorbox}[rouge]
                                               
 (That was another \errmessage.)
 
 Runaway argument?
 {\glueexpr 10pt 
-./resume.tex:168: Paragraph ended before \addvspace was complete.
+./resume.tex:169: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.168                 \end{tcolorbox}
+l.169                 \end{tcolorbox}
                                      
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./resume.tex:168: Missing number, treated as zero.
+./resume.tex:169: Missing number, treated as zero.
 <to be read again> 
                    }
-l.168                 \end{tcolorbox}
+l.169                 \end{tcolorbox}
                                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./resume.tex:168: Illegal unit of measure (pt inserted).
+./resume.tex:169: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.168                 \end{tcolorbox}
+l.169                 \end{tcolorbox}
                                      
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1318,10 +1320,10 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./resume.tex:168: Extra }, or forgotten \endgroup.
+./resume.tex:169: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.168                 \end{tcolorbox}
+l.169                 \end{tcolorbox}
                                      
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1330,51 +1332,51 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-./resume.tex:171: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:172: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.171             \begin{tcolorbox}[vert]
+l.172             \begin{tcolorbox}[vert]
                                          
 (That was another \errmessage.)
 
 
-./resume.tex:175: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:176: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.175                 \begin{tcolorbox}[rouge]
+l.176                 \begin{tcolorbox}[rouge]
                                               
 (That was another \errmessage.)
 
 Runaway argument?
 {\glueexpr 10pt 
-./resume.tex:178: Paragraph ended before \addvspace was complete.
+./resume.tex:179: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.178                 \end{tcolorbox}
+l.179                 \end{tcolorbox}
                                      
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./resume.tex:178: Missing number, treated as zero.
+./resume.tex:179: Missing number, treated as zero.
 <to be read again> 
                    }
-l.178                 \end{tcolorbox}
+l.179                 \end{tcolorbox}
                                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./resume.tex:178: Illegal unit of measure (pt inserted).
+./resume.tex:179: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.178                 \end{tcolorbox}
+l.179                 \end{tcolorbox}
                                      
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1383,10 +1385,10 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./resume.tex:178: Extra }, or forgotten \endgroup.
+./resume.tex:179: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.178                 \end{tcolorbox}
+l.179                 \end{tcolorbox}
                                      
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1394,19 +1396,19 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-Package mdframed Info: Not enough space on this page on input line 179.
+Package mdframed Info: Not enough space on this page on input line 180.
 
 
 [4]
-Package mdframed Info: Not enough space on this page on input line 179.
-<images/1.png, id=216, 523.9575pt x 402.50375pt>
+Package mdframed Info: Not enough space on this page on input line 180.
+<images/1.png, id=246, 523.9575pt x 402.50375pt>
 File: images/1.png Graphic file (type png)
 <use images/1.png>
-Package pdftex.def Info: images/1.png  used on input line 187.
+Package pdftex.def Info: images/1.png  used on input line 188.
 (pdftex.def)             Requested size: 142.26378pt x 109.28549pt.
 
-./resume.tex:189: Misplaced alignment tab character &.
-l.189 ... \beta \end{pmatrix}, \mathspace \alpha &
+./resume.tex:190: Misplaced alignment tab character &.
+l.190 ... \beta \end{pmatrix}, \mathspace \alpha &
                                                    \beta \in \mathbb{C}, \le...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1416,23 +1418,23 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-./resume.tex:193: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:194: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.193                    \begin{tcolorbox}[gris]
+l.194                    \begin{tcolorbox}[gris]
                                                 
 (That was another \errmessage.)
 
 
-Overfull \hbox (15.26576pt too wide) in paragraph at lines 197--198
+Overfull \hbox (15.26576pt too wide) in paragraph at lines 198--199
 []\T1/cmr/bx/n/10 Perfect mir-ror :  $\OML/cmm/m/it/10 R \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 ;  RR[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 R[]R \OT1/cmr/m/n/10 = 1 [] \OML/cmm/m/it/10 ;  R[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 R []$\T1/cmr/m/n/10 . 
  []
 
 
-Overfull \hbox (15.4139pt too wide) in paragraph at lines 218--219
+Overfull \hbox (15.4139pt too wide) in paragraph at lines 219--220
 []\T1/cmr/m/n/10 Expectated va-lue of (Z) : $[] \OML/cmm/m/it/10 Z [] \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 f[] [] [] \OT1/cmr/m/n/10 + [] [] []\OMS/cmsy/m/n/10 g [] \OT1/cmr/m/n/10 =
  []
 
@@ -1440,18 +1442,18 @@ Overfull \hbox (15.4139pt too wide) in paragraph at lines 218--219
 
 [5 <./images/1.png>]
 
-./resume.tex:231: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:232: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.231                     \begin{tcolorbox}[gris]
+l.232                     \begin{tcolorbox}[gris]
                                                  
 (That was another \errmessage.)
 
-./resume.tex:237: Misplaced alignment tab character &.
-l.237 ...inear polarization state: } \ket{\theta}&
+./resume.tex:238: Misplaced alignment tab character &.
+l.238 ...inear polarization state: } \ket{\theta}&
                                                   =\cos \theta \ket{x}+\sin ...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1460,8 +1462,8 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-./resume.tex:238: Misplaced alignment tab character &.
-l.238                  \ket{\theta_{\perp}} &
+./resume.tex:239: Misplaced alignment tab character &.
+l.239                  \ket{\theta_{\perp}} &
                                              = -\sin \theta \ket{x} + \cos \...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1471,42 +1473,42 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--241
+Underfull \hbox (badness 10000) in paragraph at lines 241--242
 
  []
 
 
-./resume.tex:242: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:243: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.242                 \begin{tcolorbox}[gris]
+l.243                 \begin{tcolorbox}[gris]
                                              
 (That was another \errmessage.)
 
 
-./resume.tex:261: LaTeX Error: \begin{itemize} on input line 258 ended by \end{enumerate}.
+./resume.tex:262: LaTeX Error: \begin{itemize} on input line 259 ended by \end{enumerate}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.261         \end{enumerate}
+l.262         \end{enumerate}
                              
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./resume.tex:262: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:263: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.262         \begin{tcolorbox}[vert]
+l.263         \begin{tcolorbox}[vert]
                                      
 (That was another \errmessage.)
 
@@ -1514,13 +1516,13 @@ l.262         \begin{tcolorbox}[vert]
 
 [6]
 
-./resume.tex:322: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:323: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.322                     \begin{tcolorbox}[gris]
+l.323                     \begin{tcolorbox}[gris]
                                                  
 (That was another \errmessage.)
 
@@ -1528,18 +1530,18 @@ l.322                     \begin{tcolorbox}[gris]
 
 [7]
 
-./resume.tex:346: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:347: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.346          \begin{tcolorbox}[rouge]
+l.347          \begin{tcolorbox}[rouge]
                                        
 (That was another \errmessage.)
 
-./resume.tex:352: You can't use `macro parameter character #' in horizontal mode.
-l.352                        \item k: actual #
+./resume.tex:353: You can't use `macro parameter character #' in horizontal mode.
+l.353                        \item k: actual #
                                                of bits of information per co...
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -1548,28 +1550,28 @@ return to the right one by typing `I}' or `I$' or `I\par'.
 
 Runaway argument?
 {\glueexpr 10pt 
-./resume.tex:356: Paragraph ended before \addvspace was complete.
+./resume.tex:357: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.356          \end{tcolorbox}
+l.357          \end{tcolorbox}
                               
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./resume.tex:356: Missing number, treated as zero.
+./resume.tex:357: Missing number, treated as zero.
 <to be read again> 
                    }
-l.356          \end{tcolorbox}
+l.357          \end{tcolorbox}
                               
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./resume.tex:356: Illegal unit of measure (pt inserted).
+./resume.tex:357: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.356          \end{tcolorbox}
+l.357          \end{tcolorbox}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1578,10 +1580,10 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./resume.tex:356: Extra }, or forgotten \endgroup.
+./resume.tex:357: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.356          \end{tcolorbox}
+l.357          \end{tcolorbox}
                               
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1590,18 +1592,18 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-./resume.tex:366: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:367: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.366     \begin{tcolorbox}[vert]
+l.367     \begin{tcolorbox}[vert]
                                  
 (That was another \errmessage.)
 
-./resume.tex:367: Misplaced alignment tab character &.
-l.367         Let be 2 parts: $A &
+./resume.tex:368: Misplaced alignment tab character &.
+l.368         Let be 2 parts: $A &
                                    B, \mathspace \mathcal{H}_{\text{total}}=...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1611,18 +1613,18 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-./resume.tex:374: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:375: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.374         \begin{tcolorbox}[rouge]
+l.375         \begin{tcolorbox}[rouge]
                                       
 (That was another \errmessage.)
 
-./resume.tex:383: Undefined control sequence.
-l.383 ...{01}\alpha_{10}=\alpha \gamma \beta \delt
+./resume.tex:384: Undefined control sequence.
+l.384 ...{01}\alpha_{10}=\alpha \gamma \beta \delt
                                                   =- \alpha \delta \beta \ga...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1630,8 +1632,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./resume.tex:383: Undefined control sequence.
-l.383 ...a \beta \delt=- \alpha \delta \beta \gamm
+./resume.tex:384: Undefined control sequence.
+l.384 ...a \beta \delt=- \alpha \delta \beta \gamm
                                                   =0$.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1641,28 +1643,28 @@ and I'll forget about whatever was undefined.
 
 Runaway argument?
 {\glueexpr 10pt 
-./resume.tex:386: Paragraph ended before \addvspace was complete.
+./resume.tex:387: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.386               \end{tcolorbox}
+l.387               \end{tcolorbox}
                                    
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./resume.tex:386: Missing number, treated as zero.
+./resume.tex:387: Missing number, treated as zero.
 <to be read again> 
                    }
-l.386               \end{tcolorbox}
+l.387               \end{tcolorbox}
                                    
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./resume.tex:386: Illegal unit of measure (pt inserted).
+./resume.tex:387: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.386               \end{tcolorbox}
+l.387               \end{tcolorbox}
                                    
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1671,10 +1673,10 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./resume.tex:386: Extra }, or forgotten \endgroup.
+./resume.tex:387: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.386               \end{tcolorbox}
+l.387               \end{tcolorbox}
                                    
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1683,40 +1685,40 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-./resume.tex:390: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:391: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.390         \begin{tcolorbox}[rouge]
+l.391         \begin{tcolorbox}[rouge]
                                       
 (That was another \errmessage.)
 
 Runaway argument?
 {\glueexpr 10pt 
-./resume.tex:407: Paragraph ended before \addvspace was complete.
+./resume.tex:408: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.407         \end{tcolorbox}
+l.408         \end{tcolorbox}
                              
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./resume.tex:407: Missing number, treated as zero.
+./resume.tex:408: Missing number, treated as zero.
 <to be read again> 
                    }
-l.407         \end{tcolorbox}
+l.408         \end{tcolorbox}
                              
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./resume.tex:407: Illegal unit of measure (pt inserted).
+./resume.tex:408: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.407         \end{tcolorbox}
+l.408         \end{tcolorbox}
                              
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1725,10 +1727,10 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./resume.tex:407: Extra }, or forgotten \endgroup.
+./resume.tex:408: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.407         \end{tcolorbox}
+l.408         \end{tcolorbox}
                              
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1739,38 +1741,38 @@ deleted material, e.g., by typing `I$}'.
 
 
 [8]
-Package mdframed Info: Not enough space on this page on input line 408.
+Package mdframed Info: Not enough space on this page on input line 409.
 
 
-./resume.tex:410: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:411: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.410         \begin{tcolorbox}[vert]
+l.411         \begin{tcolorbox}[vert]
                                      
 (That was another \errmessage.)
 
 
-./resume.tex:425: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+./resume.tex:426: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.425             \draw
+l.426             \draw
                        [thin] (1.5,0.8) ellipse [x radius=1.65, y radius=0.3];
 (That was another \errmessage.)
 
 
-./resume.tex:438: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+./resume.tex:439: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.438             \draw
+l.439             \draw
                        [thin] (0,0.4) ellipse [x radius=0.2, y radius=0.6];
 (That was another \errmessage.)
 
@@ -1778,29 +1780,29 @@ l.438             \draw
 
 [9]
 
-./resume.tex:456: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:457: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.456         \begin{tcolorbox}[vert]
+l.457         \begin{tcolorbox}[vert]
                                      
 (That was another \errmessage.)
 
 
-./resume.tex:479: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:480: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.479     \begin{tcolorbox}[vert]
+l.480     \begin{tcolorbox}[vert]
                                  
 (That was another \errmessage.)
 
-./resume.tex:480: Misplaced alignment tab character &.
-l.480 ... The goal here will be to ensure that A &
+./resume.tex:481: Misplaced alignment tab character &.
+l.481 ... The goal here will be to ensure that A &
                                                    B share an entangles Bell...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1810,53 +1812,53 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-./resume.tex:494: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+./resume.tex:495: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.494         \node
+l.495         \node
                    [align=center] at (4.5, -1.0) {pairs of photons\\with pol...
 (That was another \errmessage.)
 
-./resume.tex:527: Double subscript.
-l.527     \[X_{exp}=\frac{1}{N_1}\sum_{ i_1 }a_i_
+./resume.tex:528: Double subscript.
+l.528     \[X_{exp}=\frac{1}{N_1}\sum_{ i_1 }a_i_
                                                  1b_i_1+\frac{1}{N_2}\sum_{ ...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-./resume.tex:527: Double subscript.
-l.527 ..._{exp}=\frac{1}{N_1}\sum_{ i_1 }a_i_1b_i_
+./resume.tex:528: Double subscript.
+l.528 ..._{exp}=\frac{1}{N_1}\sum_{ i_1 }a_i_1b_i_
                                                   1+\frac{1}{N_2}\sum_{ i_2 ...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-./resume.tex:527: Double subscript.
-l.527 ...}a_i_1b_i_1+\frac{1}{N_2}\sum_{ i_2 }a_i_
+./resume.tex:528: Double subscript.
+l.528 ...}a_i_1b_i_1+\frac{1}{N_2}\sum_{ i_2 }a_i_
                                                   2'b_i_2+\frac{1}{N_3}\sum_...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-./resume.tex:527: Double subscript.
-l.527 ...b_i_1+\frac{1}{N_2}\sum_{ i_2 }a_i_2'b_i_
+./resume.tex:528: Double subscript.
+l.528 ...b_i_1+\frac{1}{N_2}\sum_{ i_2 }a_i_2'b_i_
                                                   2+\frac{1}{N_3}\sum_{ i_3 ...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-./resume.tex:527: Double subscript.
-l.527 ...a_i_2'b_i_2+\frac{1}{N_3}\sum_{ i_3 }a_i_
+./resume.tex:528: Double subscript.
+l.528 ...a_i_2'b_i_2+\frac{1}{N_3}\sum_{ i_3 }a_i_
                                                   3b_i_3'+\frac{1}{N_4}\sum_...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-./resume.tex:527: Double subscript.
-l.527 ...'b_i_2+\frac{1}{N_3}\sum_{ i_3 }a_i_3b_i_
+./resume.tex:528: Double subscript.
+l.528 ...'b_i_2+\frac{1}{N_3}\sum_{ i_3 }a_i_3b_i_
                                                   3'+\frac{1}{N_4}\sum_{ i_4...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-./resume.tex:527: Double subscript.
-l.527 ...a_i_3b_i_3'+\frac{1}{N_4}\sum_{ i_4 }a_i_
+./resume.tex:528: Double subscript.
+l.528 ...a_i_3b_i_3'+\frac{1}{N_4}\sum_{ i_4 }a_i_
                                                   4'b_i_4'\]
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-./resume.tex:527: Double subscript.
-l.527 ..._i_3'+\frac{1}{N_4}\sum_{ i_4 }a_i_4'b_i_
+./resume.tex:528: Double subscript.
+l.528 ..._i_3'+\frac{1}{N_4}\sum_{ i_4 }a_i_4'b_i_
                                                   4'\]
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -1864,46 +1866,46 @@ I treat `x_1_2' essentially like `x_1{}_2'.
 
 [10]
 
-./resume.tex:533: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:534: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.533     \begin{tcolorbox}[violet]
+l.534     \begin{tcolorbox}[violet]
                                    
 (That was another \errmessage.)
 
 
-./resume.tex:554: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:555: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.554            \begin{tcolorbox}[vert]
+l.555            \begin{tcolorbox}[vert]
                                         
 (That was another \errmessage.)
 
 
-./resume.tex:570: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+./resume.tex:571: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.570         \node
+l.571         \node
                    [align=center] at (4.5, -1.0) {EPR pairs,\\ $\ket{B_{00}}...
 (That was another \errmessage.)
 
 
-./resume.tex:605: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:606: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.605         \begin{tcolorbox}[vert]
+l.606         \begin{tcolorbox}[vert]
                                      
 (That was another \errmessage.)
 
@@ -1911,46 +1913,46 @@ l.605         \begin{tcolorbox}[vert]
 
 [11]
 
-./resume.tex:617: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:618: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.617             \begin{tcolorbox}[gris]
+l.618             \begin{tcolorbox}[gris]
                                          
 (That was another \errmessage.)
 
 
-./resume.tex:623: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:624: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.623             \begin{tcolorbox}[gris]
+l.624             \begin{tcolorbox}[gris]
                                          
 (That was another \errmessage.)
 
 
-./resume.tex:636: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:637: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.636            \begin
+l.637            \begin
                        {enumerate}[left=10pt]
 (That was another \errmessage.)
 
 
-./resume.tex:646: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:647: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.646             \begin{tcolorbox}[gris]
+l.647             \begin{tcolorbox}[gris]
                                          
 (That was another \errmessage.)
 
@@ -1958,40 +1960,578 @@ l.646             \begin{tcolorbox}[gris]
 
 [12]
 
-./resume.tex:657: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./resume.tex:658: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.657         \begin{tcolorbox}[vert]
+l.658         \begin{tcolorbox}[vert]
                                      
 (That was another \errmessage.)
 
 
+./resume.tex:679: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
-[13] (./resume.aux)
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.679         \begin{tcolorbox}[vert]
+                                     
+(That was another \errmessage.)
+
+
+./resume.tex:685: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.685         \begin{tcolorbox}[vert]
+                                     
+(That was another \errmessage.)
+
+
+./resume.tex:690: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.690             \begin{tcolorbox}[gris]
+                                         
+(That was another \errmessage.)
+
+
+
+[13]
+
+./resume.tex:715: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.715         \begin{tcolorbox}[vert]
+                                     
+(That was another \errmessage.)
+
+./resume.tex:716: You can't use `macro parameter character #' in math mode.
+l.716 ...hcal{H}_{AB}$ is $\rho_{AB}$ with $n_A= #
+                                                  $qubits in A and $n_B = #$...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./resume.tex:716: You can't use `macro parameter character #' in math mode.
+l.716 ...B}$ with $n_A= #$qubits in A and $n_B = #
+                                                  $qubits in B, then
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+./resume.tex:755: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.755             \begin{tcolorbox}[rouge]
+                                          
+(That was another \errmessage.)
+
+Runaway argument?
+{\glueexpr 10pt 
+./resume.tex:806: Paragraph ended before \addvspace was complete.
+<to be read again> 
+                   \par 
+l.806             \end{tcolorbox}
+                                 
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+./resume.tex:806: Missing number, treated as zero.
+<to be read again> 
+                   }
+l.806             \end{tcolorbox}
+                                 
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./resume.tex:806: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.806             \end{tcolorbox}
+                                 
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./resume.tex:806: Extra }, or forgotten \endgroup.
+<recently read> }
+                 
+l.806             \end{tcolorbox}
+                                 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Overfull \vbox (215.11038pt too high) detected at line 807
+ []
+
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 807.
+
+Overfull \vbox (216.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (217.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (218.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (219.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (220.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (221.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (222.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (223.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (224.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (225.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (226.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (227.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (228.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (229.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (230.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (231.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (232.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (233.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (234.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (235.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (236.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (237.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (238.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (239.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (240.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (241.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (242.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (243.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (244.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (245.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (246.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (247.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (248.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (249.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (250.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (251.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (252.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (253.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (254.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (255.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (256.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (257.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (258.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (259.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (260.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (261.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (262.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (263.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (264.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (265.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (266.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (267.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (268.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (269.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (270.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (271.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (272.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (273.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (274.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (275.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (276.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (277.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (278.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (279.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (280.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (281.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (282.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (283.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (284.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (285.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (286.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (287.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (288.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (289.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (290.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (291.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (292.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (293.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (294.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (295.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (296.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (297.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (298.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (299.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (300.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (301.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (302.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (303.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (304.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (305.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (306.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (307.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (308.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (309.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (310.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (311.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (312.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (313.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (314.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (315.11038pt too high) detected at line 807
+ []
+
+
+Overfull \vbox (316.11038pt too high) detected at line 807
+ []
+
+
+Package mdframed Warning: correct box splittet fails
+ It seems you are using a non splittable contents
+(mdframed)                 on input line 807.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 807.
+
+
+[14]
+
+[15] (./resume.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `resume.out' has not changed.
-(rerunfilecheck)             Checksum: E720E75E6511BD420F931C5F3CD2C722;3859.
+(rerunfilecheck)             Checksum: F93B3CC9FB06370CDE3F227946D9099F;4858.
  ) 
 Here is how much of TeX's memory you used:
- 31747 strings out of 475142
- 637748 string characters out of 5765945
- 1095789 words of memory out of 5000000
- 54130 multiletter control sequences out of 15000+600000
- 581895 words of font info for 94 fonts, out of 8000000 for 9000
+ 31847 strings out of 475142
+ 639762 string characters out of 5765945
+ 1106540 words of memory out of 5000000
+ 54216 multiletter control sequences out of 15000+600000
+ 582661 words of font info for 95 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 131i,14n,135p,523b,1082s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0700.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0700.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcti1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on resume.pdf (14 pages, 406131 bytes).
+ 131i,19n,135p,523b,1143s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm7.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0700.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0700.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcti1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on resume.pdf (16 pages, 423389 bytes).
 PDF statistics:
- 812 PDF objects out of 1000 (max. 8388607)
- 350 compressed objects within 4 object streams
- 71 named destinations out of 1000 (max. 500000)
- 354 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 879 PDF objects out of 1000 (max. 8388607)
+ 399 compressed objects within 4 object streams
+ 81 named destinations out of 1000 (max. 500000)
+ 402 words of extra memory for PDF output out of 10000 (max. 10000000)
 
