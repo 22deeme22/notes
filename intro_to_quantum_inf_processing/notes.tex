@@ -710,7 +710,6 @@
         \[\rho'=\begin{pmatrix} \frac{1+\left\|\vec{a}\right\|}{2} & 0 \\ 0 & \frac{1+\left\|\vec{a}\right\|}{2} \end{pmatrix} .\]
         because $\lambda_{1,2}=\frac{1 \pm \left\|\vec{a}\right\|}{2}$. 
         \[\implies S\left(\rho\right)=S\left(\rho'\right)=H\left(\frac{1+\left\|\vec{a}\right\|}{2}, \frac{1-\left\|\vec{a}\right\|}{2}\right).\]
-\section{Entanglement entropy}
     \subsection{Compute a partial density matrix}
         \begin{tcolorbox}[vert]
             If overall state $\in \mathcal{H}_{AB}$ is $\rho_{AB}$ with $n_A= #$qubits in A and $n_B = #$qubits in B, then  
@@ -805,6 +804,43 @@
  
             \end{tcolorbox}
         \end{remark}
+    \subsection{Entanglement entropy}
+        \begin{tcolorbox}[vert]
+            Entanglement entropy answers the question: ``How much entanglement is in this quantum state?'', this is the von Neumann entropy of a reduced density matrix.
+        \end{tcolorbox}
+        We already know a definition of entanglement, but there is another one that use von Neumann entropy.
+        \begin{tcolorbox}[vert]
+            If you look at the reduced density matrix of a product state $\ket{\phi}_{AB}=\ket{\alpha}_A \otimes \ket{\beta}_B$ then you obtain $\rho_A=\ket{\alpha}\bra{\alpha}_A$ which is a pure state $\iff S\left(\rho_A\right)=0$.
+
+            \vspace{5pt}
+            So a general state $\ket{\psi}_{AB}$ is entangled $\iff S\left(\rho_A\right)\neq 0$.
+        \end{tcolorbox}
+
+        \begin{theoreme}
+            If $\rho_A$ and $\rho_B$ come from a pure state, $S\left(\rho_A\right)=S\left(\rho_B\right)$.
+        \end{theoreme}
+        
+        \begin{remark}{Examples}
+            \begin{tcolorbox}[rouge]
+                \begin{enumerate}[left=10pt]
+                    \item \textbf{Product state:}
+                    \[\ket{\psi}=\ket{\alpha}_A \otimes \ket{\phi}_B, \mathspace \mathspace \rho_A= \ket{\alpha}\bra{\alpha}_A, \mathspace \mathspace \rho_B=\ket{\phi}\bra{\phi}_B,\]
+                    \[S\left(\rho_A\right)=S\left(\rho_B\right) \implies \text{theorem is correct.}\]
+                    \item \textbf{Bell state:}
+
+                        \noindent this state is famous being ``maximally entangled''. State on 2 qubits: 
+                        \[\frac{1}{\sqrt{2}}\left(\ket{00}+\ket{11}\right), \text{ let's check if the definition hold:}\]
+                        \[\rho_A=Tr_B\left(\ket{\psi}\bra{\psi}\right)=Tr\left(\frac{1}{2}\begin{pmatrix} 1 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 1 & 0 & 0 & 1 \end{pmatrix} \right)=\frac{1}{2}\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} .\]
+                        $\implies S\left(\rho_A\right)=1$, this Bell state is entangled, this is a maximally entangled state!
+                \end{enumerate}
+                
+            \end{tcolorbox}
+            
+        \end{remark}
+        
+        
+        
+    
         
         
 \end{document}

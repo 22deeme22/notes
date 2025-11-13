@@ -326,6 +326,12 @@ INPUT /usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT /usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT ./notes.out
+INPUT ./notes.out
+INPUT notes.out
+INPUT notes.out
+INPUT ./notes.out
+INPUT ./notes.out
 OUTPUT notes.out
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm1728.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm
@@ -356,8 +362,9 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm
-OUTPUT notes.toc
-INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
+INPUT ./notes.toc
+INPUT ./notes.toc
+INPUT notes.toc
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
@@ -367,6 +374,8 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+OUTPUT notes.toc
+INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm0700.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm0500.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecti1000.tfm
@@ -416,9 +425,9 @@ INPUT /home/deeme/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk
 INPUT /home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk
 INPUT /home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk
 INPUT /home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk
-INPUT /home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk
-INPUT /home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk
 INPUT /home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk
+INPUT /home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk
+INPUT /home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk
 INPUT /home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk
 INPUT /home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk
 INPUT /home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1763038042.01107 "notes.tex" "notes.pdf" "notes" 1763038044.24597 2
+["pdflatex"] 1763045864.80853 "notes.tex" "notes.pdf" "notes" 1763045866.57456 2
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0700.600pk" 1762947738.02018 17356 03bb08e065ef4b5a8cfd45b0ed74b2ae ""
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk" 1761301150.97511 25396 fee705cdff29f2908c9f83425990041e ""
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1761301151.82764 31928 4d1e1ebbdee16d52f05c94ed09d33400 ""
@@ -266,10 +266,10 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1761301376 2015182 c149464e5ed4b06394ad8d44deca2836 ""
   "images/1.png" 1762701608.1109 72917 fd19e500dd6a41c9d35828de544201c9 ""
   "mystyle.sty" 1762877736.93274 6772 a951b391a8deecc6a48590066f94e730 ""
-  "notes.aux" 1763038044.02561 5061 cd6fb7e07451bc817bd34dbcb444b9c5 "pdflatex"
-  "notes.out" 1763038044.02761 4858 f93b3cc9fb06370cde3f227946d9099f "pdflatex"
-  "notes.tex" 1763038007.40359 54549 c10e8fb505e2ab1555f3ab356e39220c ""
-  "notes.toc" 1763038044.02761 2549 3afe829e84f6213236e8927970bf1034 "pdflatex"
+  "notes.aux" 1763045866.38693 5115 4a83d84c7a26ddf36f9564b5dc0c0e1b "pdflatex"
+  "notes.out" 1763045866.38793 4872 e3bd8e9ad3802cb216f2377430a32fc3 "pdflatex"
+  "notes.tex" 1763045863.86093 56714 6190e1ed176e19bcfd6992821faf7ed2 ""
+  "notes.toc" 1763045866.38793 2559 72251c85be3486a6291bce1a56a63080 "pdflatex"
   (generated)
   "notes.aux"
   "notes.log"
