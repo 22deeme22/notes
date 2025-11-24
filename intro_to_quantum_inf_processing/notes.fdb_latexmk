@@ -1,5 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1763046334.61349 "notes.tex" "notes.pdf" "notes" 1763046336.68764 2
+["pdflatex"] 1763997376.24563 "notes.tex" "notes.pdf" "notes" 1763997378.11872 2
+  "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1000.600pk" 1761301040.59481 34088 98662e84c6dcd5a05068d867b0fb0404 ""
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0700.600pk" 1762947738.02018 17356 03bb08e065ef4b5a8cfd45b0ed74b2ae ""
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk" 1761301150.97511 25396 fee705cdff29f2908c9f83425990041e ""
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1761301151.82764 31928 4d1e1ebbdee16d52f05c94ed09d33400 ""
@@ -262,14 +263,14 @@
   "/usr/share/texmf-dist/tex/latex/zref/zref-abspage.sty" 1755987285 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "/usr/share/texmf-dist/tex/latex/zref/zref-base.sty" 1755987285 20785 f7d1133a287929598a897c93f8f4c44b ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1755987285 42087 b0f9697c952c8f5a8eede4134282cb0d ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1761301389 5011268 d3749bcc8c6b0033f8e65f51b5f9a711 ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1761301376 2015182 c149464e5ed4b06394ad8d44deca2836 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1763380653 5011268 d3749bcc8c6b0033f8e65f51b5f9a711 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1763380628 2015190 cc2b6964cf6da24adb546816349ae517 ""
   "images/1.png" 1762701608.1109 72917 fd19e500dd6a41c9d35828de544201c9 ""
   "mystyle.sty" 1762877736.93274 6772 a951b391a8deecc6a48590066f94e730 ""
-  "notes.aux" 1763046336.50691 5115 4a83d84c7a26ddf36f9564b5dc0c0e1b "pdflatex"
-  "notes.out" 1763046336.50923 4872 e3bd8e9ad3802cb216f2377430a32fc3 "pdflatex"
-  "notes.tex" 1763046332.69991 56702 f1e36b7aee9723f695da55dc439bc780 ""
-  "notes.toc" 1763046336.50923 2559 72251c85be3486a6291bce1a56a63080 "pdflatex"
+  "notes.aux" 1763997377.9148 5503 70fe6fb74b2f86befe752409e6f2f230 "pdflatex"
+  "notes.out" 1763997377.91661 5236 632daea261a6be394f7ac04cfe53e013 "pdflatex"
+  "notes.tex" 1763997374.5538 59942 fe31fc1162caf82bb6dde896e766a722 ""
+  "notes.toc" 1763997377.91661 2733 4f634f4f43f902815a13258b1cd9eca4 "pdflatex"
   (generated)
   "notes.aux"
   "notes.log"

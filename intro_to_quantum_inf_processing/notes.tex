@@ -1,5 +1,5 @@
 \documentclass[10 ,titlepage, a4paper]{article}
-\usepackage{mystyle}
+    \usepackage{mystyle}
 \usepackage{tikz}
 \usetikzlibrary{decorations.pathmorphing} % indispensable !
 \usetikzlibrary{positioning}
@@ -364,6 +364,7 @@
           \item Then because $\vec{c}\mathspace' = \vec{c} \oplus \text{errors}$, Bob can recover $\vec{c}$ with the ECC and compute $m \oplus \vec{c}= \left(\widetilde{x}\oplus\vec{c}\right)\oplus\vec{c}=\widetilde{x}$.
       \end{itemize}
 \section{Entanglement}
+    \hypertarget{defentro1}{}
     \begin{tcolorbox}[vert]
         Let be 2 parts: $A & B, \mathspace \mathcal{H}_{\text{total}}=\mathcal{H}_A \otimes \mathcal{H}_B$, then there is two types of states: 
         \begin{align*} 
@@ -643,6 +644,7 @@
         M acts on $\mathcal{H}_1 \otimes \mathcal{H}_2$, orthonormal basis can be $\ket{v_i} \otimes \ket{w_j}$ with $i = 1 \ldots dim\mathcal{H}_1$ and $j = 1 \ldots dim \mathcal{H}_2$.
         \[M= \sum_{ ij; kl } M_{ij; kl} \left(\ket{v_i}\otimes \ket{w_j}\right)\left(\ket{v_k} \otimes \ket{w_l}\right), \mathspace \mathspace M_{ij;kl}=\left(\ket{v_i} \otimes \ket{w_j}\right)M\left(\ket{v_k} \otimes \ket{w_l}\right).\]
         Full trace: $TrM=\sum_{ ij }M_{ij;ij}$,   $\mathspace \mathspace \mathspace $ partial trace: $Tr_{\mathcal{H}_1}M=\sum_{ j;l } \left(\sum_{ i } M_{ij; il}\right)\overbrace{\ket{w_j}\bra{w_l}}^{dim\mathcal{H}_2 \cdot dim\mathcal{H}_2}$.
+
         \begin{remark}{Remarque}
             \begin{tcolorbox}[gris]
                 You can vizualize this by thinking that M like a big matrice of size $\left(dim\mathcal{H}_1 dim\mathcal{H}_2\right) \cdot \left(dim\mathcal{H}_1 dim\mathcal{H}_2\right)$ and that the partial trace correspond to slice this matrice in blocs corresponding to $\mathcal{H}_1$ and compute the trace on these blocs.
@@ -809,6 +811,7 @@
             Entanglement entropy answers the question: ``How much entanglement is in this quantum state?'', this is the von Neumann entropy of a reduced density matrix.
         \end{tcolorbox}
         We already know a definition of entanglement, but there is another one that use von Neumann entropy.
+        \hypertarget{defentro2}{}
         \begin{tcolorbox}[vert]
             If you look at the reduced density matrix of a product state $\ket{\phi}_{AB}=\ket{\alpha}_A \otimes \ket{\beta}_B$ then you obtain $\rho_A=\ket{\alpha}\bra{\alpha}_A$ which is a pure state $\iff S\left(\rho_A\right)=0$.
 
@@ -835,13 +838,53 @@
                 \end{enumerate}
             \end{tcolorbox}
         \end{remark}
+        \begin{remark}{Remarque}
+            \begin{tcolorbox}[gris]
+               A unique thing about quantum mechanics is that there existe some $\rho_{AB}$ such that $S\left(\rho_{AB}\right) < S\left(\rho_A\right)$. For example: $\rho_{AB}=\ket{B_{00}}\bra{B_{00}}$. 
+            \end{tcolorbox}
+        \end{remark}
+        \begin{theoreme}
+            \important{The Schmidt decomposition theorem} says that any state $\ket{\psi}_{AB}$ can be express as 
+            \[\sum_{ i }p_i\ket{\phi_A}_i \otimes \ket{\phi_B}_i, \mathspace \mathspace p_i \geq 0.\]
+            $\{\ket{\phi_A}_i\}$ is orthonormal for A and $\{\ket{\phi_B}_i\}$ is orthonormal for B, but they don't need to form a basis.
+        \end{theoreme}
+        \begin{remark}{Remarque}
+            \begin{tcolorbox}[gris]
+                If $r=1$, then $\ket{\phi}_{AB}$ is factorizable!
+            \end{tcolorbox}
+        \end{remark}
         
-        
-        
-        
-        
-    
-        
+        Now, let's prove that : \hyperlink{defentro1}{\textit{first definition of entanglement}} $\iff$ \hyperlink{defentro2}{\textit{second definition of entropy}}.
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item \textbf{Definition 1 $ \implies $ definition 2:} 
+
+                If $\ket{\psi}_{AB}$ can be factorized, then $S\left(\rho_A\right)$. So by contraposition, definition 1 $ \implies $ definition 2. 
+                \item \textbf{Definition 2 $\implies$ definition 1:}
+
+                    We can reformulize: if $\nexists$ a factorization then $S\left(\rho\right) > 0$. 
+
+                    So by the Schmidt theorem, we can assume that: if $\nexists$ a way to write $\ket{AB}_{AB}= \ket{\phi}_A \otimes \ket{\sigma}_B \implies r > 1$. So $\ket{\psi}_{AB}= p_1\ket{\phi_1}_A \otimes \ket{\phi_1}_B+p_2\ket{\phi_2}_A\otimes \ket{\phi_2}_B+\ldots$
+
+                    Then $p_1 > 0, \mathspace p_2 > 0 \implies \rho_A= p_1^2 \ket{\phi_1}\bra{\phi_1}+p_2\ket{\phi_2}\bra{\phi_2}+ \ldots$ because $\rho_A = \sum_{ i }\left(\mathbbm{1}_A \otimes \ket{\alpha_i}_B\right)\ket{\psi}\bra{\psi}_{AB}\left(\mathbbm{1}_A \otimes \ket{\alpha_i}_B\right)$ with $\{\ket{\alpha}_i\}\{\ket{\phi_B}_i\}$.
+
+                    You can get then $\rho_A= \sum_{ i=1 } ^{ r }p_i^2\ket{\phi_i}\bra{\phi_i}_A, \mathspace \rho_B= \sum_{ i=1 } ^{ r }p_i^2\ket{\phi_i}\bra{\phi_i}_B$.
+
+                    Then $S\left(\rho_A\right)= -\sum_{ i }p_i^2\log\left(p_i^2\right)=-p_1^2\log\left(p_1^2\right)-p_2^2\log\left(p_2^2\right)-\ldots > 0$.
+        \end{itemize}
+\section{Quantum error correction}
+    Why do we use quantum error correction? Classical computers have some errors but quantum computers have much higher rates of errors (noise).
+    \subsection{Classical error correction}
+        One solution is \important{redundancy}: you encode n bits of information in m bits (m > n).
+        \begin{remark}{Example}
+            \begin{tcolorbox}[rouge]
+                Let's suppose I want to send 1 bit over a noisy channel. A possible solution would be to encode 
+                \begin{align*} 
+                    1 &\to 111 \\
+                    0 &\to 000.
+                \end{align*}
+                Here $n =1$ and $m=3$.
+            \end{tcolorbox}
+        \end{remark}
         
 \end{document}
 

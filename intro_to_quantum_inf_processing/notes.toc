@@ -29,3 +29,5 @@
 \contentsline {subsection}{\numberline {8.3}Entropy of a single qubit}{14}{subsection.8.3}%
 \contentsline {subsection}{\numberline {8.4}Compute a partial density matrix}{14}{subsection.8.4}%
 \contentsline {subsection}{\numberline {8.5}Entanglement entropy}{15}{subsection.8.5}%
+\contentsline {section}{\numberline {9}Quantum error correction}{17}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Classical error correction}{17}{subsection.9.1}%
