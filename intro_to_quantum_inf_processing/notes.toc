@@ -31,3 +31,6 @@
 \contentsline {subsection}{\numberline {8.5}Entanglement entropy}{15}{subsection.8.5}%
 \contentsline {section}{\numberline {9}Quantum error correction}{17}{section.9}%
 \contentsline {subsection}{\numberline {9.1}Classical error correction}{17}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Model of quantum communication}{17}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Types of (single-qubit) quantum errors}{17}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Detection and correction of bitflip errors}{18}{subsection.9.4}%

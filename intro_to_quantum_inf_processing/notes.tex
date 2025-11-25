@@ -877,14 +877,86 @@
         One solution is \important{redundancy}: you encode n bits of information in m bits (m > n).
         \begin{remark}{Example}
             \begin{tcolorbox}[rouge]
-                Let's suppose I want to send 1 bit over a noisy channel. A possible solution would be to encode 
+                Let's suppose I want to send 1 bit over a noisy channel. 
+
+                \textbf{Encoding:}
                 \begin{align*} 
                     1 &\to 111 \\
                     0 &\to 000.
                 \end{align*}
                 Here $n =1$ and $m=3$.
+
+                \textbf{Decoding:}
+                
+                Majority vote, $\bar{m}=abc \to $ output, whichevere bit is in the majority.
             \end{tcolorbox}
         \end{remark}
-        
-\end{document}
+    \subsection{Model of quantum communication}
+        \begin{center}
+        \begin{tikzpicture}
+            \draw[thin] (-1,0) ellipse [x radius=1.5, y radius=1];
+            \node at (-1, 0.25) {logical quantum};
+            \node at (-1, -0.25) {state};
+            \draw[thin] (4,0) ellipse [x radius=1.5, y radius=1];
+            \node at (4, 0) {encoder};
+            \draw[thin] (9,0) ellipse [x radius=1.5, y radius=1];
+            \node at (9, 0.25) {noisy quantum};
+            \node at (9, -0.25) {channel};
+            \draw[thin] (14,0) ellipse [x radius=1.5, y radius=1];
+            \node at (14, 0) {decoder};
+            \draw[->, black] (0.5,0) -- (2.5,0);
+            \node[blue] at (1.5, 0.25) {n qubits};
+            \draw[->, black] (5.5,0) -- (7.5,0);
+            \node[blue] at (6.5, 0.25) {m qubits};
+            \draw[->, black] (10.5,0) -- (12.5,0);
+            \node[blue] at (11.5, 0.7) {noisy state};
+            \node[blue] at (11.5, 0.25) {$\ket{\bar{\psi}}$};
+        \end{tikzpicture}
+        \end{center}
+    \subsection{Types of (single-qubit) quantum errors}
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item \textbf{X = bit flip error:} 
+            \[X=\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \mathspace \mathspace X\ket{0}=\ket{1}, \mathspace\mathspace X \ket{1}=\ket{0}, \mathspace\mathspace X\left(\alpha\ket{0}+\beta\ket{1}\right) = \alpha\ket{1}+\beta\ket{0}.\]
+            
+            \item \textbf{Z = phase flip error:}
+                \[Z\ket{0}=\ket{0}, \mathspace\mathspace Z\ket{1}=-\ket{1}, \mathspace\mathspace Z\left(\alpha\ket{0}+\beta\ket{1}\right)=\alpha\ket{0}-\beta\ket{1}.\]
+                \item \textbf{$R_{\theta}$ = Phase rotation:}
+                    \[R_{\theta}=\begin{pmatrix} e^{-i\theta} & 0 \\ 0 & e^{i\theta} \end{pmatrix} .\]
+        \end{itemize}
+        \textbf{How des quantum error correction differ form classical error correction:}
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item  The no-cloning theorem forbids copying information. 
+            \item We can't look at quantum states and figure out which copy is wrong.
+            \item There are infinately many types of quantum errors. For example 
+                \[R_{\theta}, \mathspace\mathspace \theta \sim \left[0,2\pi\left[  \mathspace\mathspace \to \text{ continuous}\]
+                    \item We have Y errors on top of X and Z errors. Recall: 
+                    \[X =\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \mathspace \mathspace Y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \mathspaces \mathspace Z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} .\]
+        \end{itemize}
 
+
+    \subsection{Detection and correction of bitflip errors}
+        \textbf{Encoding:} Quantum repetition code 
+        \begin{align*} 
+            \ket{0} \mathspace &\to \mathspace \ket{000}, \\
+            \ket{1} \mathspace &\to \mathspace \ket{000}, \\
+            \ket{\psi} = \alpha\ket{0}+\beta\ket{1} \mathspace &\to \mathspace \alpha\ket{000}+ \beta\ket{111}.
+        \end{align*}
+        \begin{center}\includegraphics[width=5cm]{images/2.png} \end{center}
+        \textbf{Decoding:} The idea is to check parity of every neibhouring pair
+        \begin{center}\includegraphics[width=9cm]{images/3.png} \end{center}
+
+        We assume that there was at most one error.
+        \begin{center}
+            \begin{tabular}{c|c|c}
+                \textbf{a}& {\textbf{b}} & which qubit had error\\  % ligne 1
+                  \hline
+                0 & 0 & none \\  
+                    \hline
+                0 & 1  & 3 \\
+                    \hline
+                1 & 0 & 1  \\
+                      \hline
+                1 & 1 & 2
+            \end{tabular}
+            \end{center}
+\end{document}
