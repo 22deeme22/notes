@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1763985578.43656 "main.tex" "main.pdf" "main" 1763985580.36245 2
+["pdflatex"] 1764340757.21692 "main.tex" "main.pdf" "main" 1764340760.221 2
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi0800.600pk" 1761301045.95013 26024 7918afccafaeb39c04361c0dfa11f3e1 ""
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1000.600pk" 1761301040.59481 34088 98662e84c6dcd5a05068d867b0fb0404 ""
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk" 1761301150.97511 25396 fee705cdff29f2908c9f83425990041e ""
@@ -7,6 +7,7 @@
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk" 1761301152.67064 40112 98cd12d84557fa9267ee2b3a8fb68354 ""
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk" 1761301153.51464 58988 536affab0da93b4d6b1256984eda3d51 ""
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk" 1761301155.34264 72264 68f6f94000a1b88a69c7f717dbcff16a ""
+  "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk" 1762077894.90809 16976 c72640652701574d5dd236a44ea5a306 ""
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk" 1761301154.35787 23784 ecd0f9fd65fc87ce49182643e3933121 ""
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk" 1761301156.18164 28416 a185be44024d077d30a5beb223ad6d32 ""
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk" 1761301160.50964 42496 5ca00fa31ec503bc86a42a938969e18b ""
@@ -225,12 +226,14 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1755987285 42087 b0f9697c952c8f5a8eede4134282cb0d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1763380653 5011268 d3749bcc8c6b0033f8e65f51b5f9a711 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1763380628 2015190 cc2b6964cf6da24adb546816349ae517 ""
-  "chapitres/chapitre1.tex" 1762691832.89347 66480 c97b8fab850f21158045e838ec97561a ""
+  "chapitres/chapitre1.tex" 1764268770.40473 67099 1ed31d6dc67b42f033eded19c3c91ad9 ""
+  "chapitres/chapitre2.tex" 1764340756.82194 11461 a46b62a211c611c62111c813d6a6b7ce ""
   "images/1.png" 1761643922.64596 52654 7eb775678a087139a76c0056845bd623 ""
-  "main.aux" 1763985580.18398 7410 e31f72e3d551ce3e2b56574e609d1f60 "pdflatex"
-  "main.out" 1763985580.186 6238 f4b94d9c35a34dd8548215110b19e1ec "pdflatex"
-  "main.tex" 1763037926.48153 294 0c7a4300b6c8efc5714017cede1d107f ""
-  "main.toc" 1763985580.186 3889 f83080fe5d89e456d7f9c2a715d8142d "pdflatex"
+  "images/2.png" 1764337804.06176 53914 71525baeeba1fb097e68cd0d5443d221 ""
+  "main.aux" 1764340759.94465 8764 52f0ad16236764dd8531fb93850e22cc "pdflatex"
+  "main.out" 1764340759.94765 7903 e75facf507f57806642bfd2a09d8ac1a "pdflatex"
+  "main.tex" 1764269815.63515 328 85deaf359dad9a6a7e1cc52a85d2225d ""
+  "main.toc" 1764340759.94765 4708 2222809541770522072fbcc451bedea6 "pdflatex"
   "mystyle.sty" 1762629501.48796 5205 0e27239276ddf8f70bc92cf7b248a18c ""
   (generated)
   "main.aux"

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.11.17)  24 NOV 2025 12:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.11.17)  28 NOV 2025 15:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2228,7 +2228,7 @@ l.653                                 L
                                        et $\lambda > 0$, and $X \sim \text{E...
 (That was another \errmessage.)
 
-<images/1.png, id=356, 543.02875pt x 427.5975pt>
+<images/1.png, id=401, 543.02875pt x 427.5975pt>
 File: images/1.png Graphic file (type png)
 <use images/1.png>
 Package pdftex.def Info: images/1.png  used on input line 661.
@@ -3192,29 +3192,671 @@ Package mdframed Info: You first box width is to small
 (mdframed)              on input line 777.
 
 
-[21])
+[21]
 
-[22] (./main.aux)
+./chapitres/chapitre1.tex:781: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.781                             L
+                                   et $I \subset \mathbb{R}$ be an interval....
+(That was another \errmessage.)
+
+./chapitres/chapitre1.tex:782: Undefined control sequence.
+l.782 ...     \[E\left(g\left(X\right)\right)\geqg
+                                                  \left(E\left(X\right)\righ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+) (./chapitres/chapitre2.tex
+
+[22]
+Chapitre 2.
+
+./chapitres/chapitre2.tex:6: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6             L
+                 et $X, X_1, X_2, \ldots : \Omega \to \mathbb{R}$ be random ...
+(That was another \errmessage.)
+
+
+./chapitres/chapitre2.tex:18: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18             L
+                  et $X, X_1, X_2, \ldots: \Omega \to \mathbb{R}$ be random ...
+(That was another \errmessage.)
+
+./chapitres/chapitre2.tex:19: Undefined control sequence.
+l.19 ...X_i}\right) < + \infty \mathspace \foralli
+                                                   \geq 1,\]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./chapitres/chapitre2.tex:27: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27             \begin{tcolorbox}[gris]
+                                        
+(That was another \errmessage.)
+
+
+Overfull \hbox (4.97641pt too wide) detected at line 32
+\OML/cmm/m/it/10 P [] \OT1/cmr/m/n/10 = [] \U/bbm/m/n/10 1[] \OT1/cmr/m/n/10 + [] \U/bbm/m/n/10 1[] [] \OML/cmm/m/it/10 F[] [] :
+ []
+
+
+Overfull \vbox (156.12747pt too high) detected at line 39
+ []
+
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 39.
+
+Overfull \vbox (157.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (158.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (159.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (160.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (161.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (162.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (163.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (164.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (165.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (166.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (167.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (168.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (169.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (170.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (171.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (172.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (173.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (174.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (175.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (176.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (177.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (178.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (179.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (180.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (181.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (182.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (183.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (184.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (185.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (186.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (187.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (188.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (189.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (190.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (191.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (192.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (193.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (194.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (195.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (196.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (197.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (198.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (199.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (200.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (201.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (202.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (203.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (204.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (205.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (206.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (207.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (208.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (209.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (210.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (211.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (212.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (213.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (214.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (215.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (216.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (217.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (218.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (219.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (220.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (221.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (222.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (223.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (224.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (225.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (226.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (227.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (228.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (229.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (230.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (231.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (232.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (233.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (234.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (235.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (236.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (237.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (238.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (239.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (240.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (241.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (242.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (243.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (244.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (245.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (246.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (247.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (248.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (249.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (250.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (251.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (252.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (253.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (254.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (255.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (256.12747pt too high) detected at line 39
+ []
+
+
+Overfull \vbox (257.12747pt too high) detected at line 39
+ []
+
+
+Package mdframed Warning: correct box splittet fails
+ It seems you are using a non splittable contents
+(mdframed)                 on input line 39.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 39.
+
+
+[23
+
+]
+
+./chapitres/chapitre2.tex:41: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41             L
+                  et $X : \Omega \to \mathbb{R}$ be a random variable with $...
+(That was another \errmessage.)
+
+
+./chapitres/chapitre2.tex:51: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51             L
+                  et $X, X_1, X_2, \ldots : \Omega \to \mathbb{R}$ be random...
+(That was another \errmessage.)
+
+
+./chapitres/chapitre2.tex:56: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.56             L
+                  et $X, X_1, X_2, \ldots : \Omega \to \mathbb{R}$ be random...
+(That was another \errmessage.)
+
+
+./chapitres/chapitre2.tex:60: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60             $
+                  P\left(\lim_{n \to \infty} X_n = X\right)=1$ is equivalent to
+(That was another \errmessage.)
+
+
+./chapitres/chapitre2.tex:64: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.64             L
+                  et $p \in \left(0, + \infty\right)$. Let $X, X_1, X_2, \ld...
+(That was another \errmessage.)
+
+
+
+[24]
+
+./chapitres/chapitre2.tex:69: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69             L
+                  et $X, X_1, X_2, \ldots : \Omega \to \mathbb{R}$ be essent...
+(That was another \errmessage.)
+
+<images/2.png, id=467, 973.6375pt x 559.08875pt>
+File: images/2.png Graphic file (type png)
+<use images/2.png>
+Package pdftex.def Info: images/2.png  used on input line 75.
+(pdftex.def)             Requested size: 341.43306pt x 196.05934pt.
+
+./chapitres/chapitre2.tex:95: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.95             L
+                  et $X, X_1, X_2, \ldots$ be an independent family of ident...
+(That was another \errmessage.)
+
+
+
+[25 <./images/2.png>]
+
+./chapitres/chapitre2.tex:101: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.101             L
+                   et $X, X_1, X_2, \ldots$ be an independent family of iden...
+(That was another \errmessage.)
+
+
+./chapitres/chapitre2.tex:107: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.107             L
+                   et $X, X_1, X_2, \ldots$ be an independent family of iden...
+(That was another \errmessage.)
+
+
+./chapitres/chapitre2.tex:113: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.113             L
+                   et $X, X_1, X_2, \ldots$ be an independent family of iden...
+(That was another \errmessage.)
+
+
+./chapitres/chapitre2.tex:120: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.120             L
+                   et $X, X_1, X_2, \ldots$ be an independent family of iden...
+(That was another \errmessage.)
+
+
+./chapitres/chapitre2.tex:127: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.127             L
+                   et $X, X_1, X_2, \ldots$ be an independent family of iden...
+(That was another \errmessage.)
+
+
+
+[26])
+
+[27] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F4B94D9C35A34DD8548215110B19E1EC;6238.
+(rerunfilecheck)             Checksum: E75FACF507F57806642BFD2A09D8AC1A;7903.
  ) 
 Here is how much of TeX's memory you used:
- 28313 strings out of 475142
- 552775 string characters out of 5765945
- 994531 words of memory out of 5000000
- 50687 multiletter control sequences out of 15000+600000
+ 28398 strings out of 475142
+ 554090 string characters out of 5765945
+ 994634 words of memory out of 5000000
+ 50728 multiletter control sequences out of 15000+600000
  581212 words of font info for 87 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 131i,14n,135p,517b,1160s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0700.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcti1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi0800.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (23 pages, 364470 bytes).
+ 131i,17n,135p,548b,1160s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0700.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcti1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi0800.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on main.pdf (28 pages, 427903 bytes).
 PDF statistics:
- 923 PDF objects out of 1000 (max. 8388607)
- 475 compressed objects within 5 object streams
- 153 named destinations out of 1000 (max. 500000)
- 274 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1065 PDF objects out of 1200 (max. 8388607)
+ 575 compressed objects within 6 object streams
+ 193 named destinations out of 1000 (max. 500000)
+ 351 words of extra memory for PDF output out of 10000 (max. 10000000)
 

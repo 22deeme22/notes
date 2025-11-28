@@ -1,0 +1,151 @@
+\chapter{Convergence of random variables}
+\section{What does converge mean?}
+    \subsection{Modes of converges}
+        The weakest notion of convergence is the convergence in law. In words, convergence in law means that the statistical properties of the sequence approach the statistcal properties of the limiting random variable as we go further and further in the sequence.
+        \begin{definition}
+            Let $X, X_1, X_2, \ldots : \Omega \to \mathbb{R}$ be random variables. Say that $\left(X_i\right)_{i\geq 1}$ \important{converges in law} towards X, denoted $X_n \to X$, if one of the two following equivalent conditions is fulfilled. 
+            \begin{enumerate}[left=10pt]
+                \item $F_{X_n}\left(t\right)\to F_X \left(t\right)$ for all $t \in \mathbb{R}$ such that $F_X$ is continuous at t. 
+                \item $E_P\left(\phi\left(X_n\right)\right)\to E_P\left(\phi\left(X\right)\right)$ for all $\phi: \mathbb{R}\to\mathbb{R}$ continuous and bounded.
+            \end{enumerate}
+        \end{definition}
+        \begin{remark}{Remarque}
+            Note thate in the particular case of X being a continuous random variable, $F_X$ is continuous (primitive of the density function). Moreover, still for X continuous, as $P\left(X=x\right)=0$ for all x, we have that $P\left(X \in \left(a,b\right)\right)=P\left(X \in \left[a,b\right]\right)$ for all $a < b \in \mathbb{R}$. In particular, if X is a continuous random variable, convergence in law of $X_n$ towards X is equivalent to: for any interval $I \subset \mathbb{R}$, 
+            \[P\left(X_n \in I\right) \xrightarrow{n\to \infty}P\left(X \in I\right).\]
+        \end{remark}
+        \hypertarget{thm30}{}
+        \begin{theoreme}
+            Let $X, X_1, X_2, \ldots: \Omega \to \mathbb{R}$ be random variables. Suppose that there is $\delta  > 0$ such that  
+            \[sup_{\left|t\right|<\delta}E\left(e^{tX}\right)<+ \infty, \mathspace sup_{\left|t\right|<\delta}E\left(e^{tX_i}\right) < + \infty \mathspace \foralli \geq 1,\] 
+            \[E\left(e^{tX_n}\right) \xrightarrow{n \to \infty} E \left(e^{tX}\right) \mathspace \forall \left|t\right| < \delta.\]
+            Then, 
+            \[X_n \xrightarrow{\text{Law}} X \mathspace as  \mathspace n \to \infty,\]
+            and for any $p \geq 1$, 
+            \[E\left(X_n^p\right) \xrightarrow{n \to \infty} E\left(X^p\right).\]
+        \end{theoreme}
+        \begin{remark}{Examples}
+            \begin{tcolorbox}[gris]
+                \begin{enumerate}[left=10pt]
+                    \item Let $X_n \sim \text{Bern}\left(p+n ^{-1}\right)$, and $X \sim \text{Bern}\left(p\right)$. Then, $X_n \xrightarrow{\text{Law}} X$. Indeed, we have $F_X\left(t\right)= \left(1-p\right)\mathbbm{1}_{t \geq 0} + p\mathbbm{1}_{t\geq 1}$ is continuous everywhere except at 0 and 1. 
+
+                        For $t \in \mathbb{R} \backslash \{0, 1\}$, 
+                        \[P\left(X_n \leq t\right) = \left(1-p+n^{-1}\right)\mathbbm{1}_{t \geq0} + \left(p+ n^{-1}\right)\mathbbm{1}_{t \geq 1} \xrightarrow{n \to \infty} F_X \left(t\right).\]
+                        
+                    \item Let $X_n \sim \mathcal{N}\left(0, n^{-1}\right)$, and $X \sim \delta_0$. Then,  $X_n \xrightarrow{\text{Law}} X$. Indeed, we have $E\left(e^{tX}\right)=1$, and for any $t \in \mathbb{R}$, 
+                        \[E\left(e^{tX_n}\right)=e^{t^2\backslash \left(2n\right)} \xrightarrow{n \to \infty}1.\]
+                        So \hyperlink{thm30}{Theorem 30} implies $ X_n \xrightarrow{\text{Law}} X$. This is a particular instance of: Gaussian random variables with 0 variance are Dirac random variables.
+                \end{enumerate}
+            \end{tcolorbox}
+        \end{remark}
+        \begin{theoreme}
+            Let $X : \Omega \to \mathbb{R}$ be a random variable with $\text{Image}\left(X\right) \subset \mathbb{Z}$. Let $X_1, X_2, \ldots: \Omega \to \mathbb{R}$ be random variables. Then, the two following conditions are equivalent.
+            \begin{enumerate}[left=10pt]
+                \item $X_n \xrightarrow{\text{Law}} X$. 
+                \item For every $ k \in \mathbb{Z}$, 
+                \[\lim_{\epsilon \to 0^+} \lim_{n \to \infty} P\left(X_n \in \left(k - \epsilon, k +\epsilon\right)\right) = P\left(X=k\right).\]
+            \end{enumerate}
+        \end{theoreme}
+
+        Now, let's see the second mode of convergence, it is saying: if I allow a small probability of failure $\epsilon$, and a small error of approximation $\epsilon'$, I can fing a rank in the sequence which approximate the limit object up to an error $\epsilon'$ with probability of success at least $1-\epsilon$.
+        \begin{definition}
+            Let $X, X_1, X_2, \ldots : \Omega \to \mathbb{R}$ be random variables. Say that $\left(X_n\right)_{n \geq1}$ \important{converges in probability} towards X, denoted $X_n \xrightarrow{\text{Proba}} X$, if for any $\epsilon >0$, 
+            \[\lim_{n \to \infty} P\left(\left|X-X_n\right| \geq \epsilon\right) =0. \]
+        \end{definition}
+        The third mode of convergence states that the sequence of random variables converge with probability one. 
+        \begin{definition}
+            Let $X, X_1, X_2, \ldots : \Omega \to \mathbb{R}$ be random variable. We say that the sequence $\left(X_n\right)_{n \geq 1}$ \important{converges almost surely} towards X, denoted $X_n \xrightarrow{\text{a.s.}}X$, if 
+            \[P\left(\lim_{n \to \infty} X_n = X\right)=1.\]
+        \end{definition}
+        \begin{theoreme}
+            $P\left(\lim_{n \to \infty} X_n = X\right)=1$ is equivalent to 
+            \[\forall\epsilon \mathspace > 0, \lim_{n \to \infty} P\left(sup_{m \geq n}\left|X_m -X\right| \geq \epsilon\right)=0.\]
+        \end{theoreme}
+        \begin{definition}
+            Let $p \in \left(0, + \infty\right)$. Let $X, X_1, X_2, \ldots : \Omega \to \mathbb{R}$ be random variables admitting a moment of order p. We say that the sequence $\left(X_n\right)_{n \geq1}$ \important{converges in $L^p$} towards X, denoted $X_n \xrightarrow{L^p}X$, if 
+            \[\lim_{n \to \infty} E\left(\left|X_n-X\right|^p\right)=0.\]
+        \end{definition}
+        And there is a $p=\infty$ version of this definition: 
+        \begin{definition}
+            Let $X, X_1, X_2, \ldots : \Omega \to \mathbb{R}$ be essentially bounded random variables. We say that $\left(X_n\right)_{n \geq1}$ \important{converges enssentially uniformly} towards X, denoted $X_n \xrightarrow{L^\infty}X$, if 
+            \[\lim_{n \to \infty} \left\|X-X_n\right\|_{\infty}=0,\]
+            where $\left\|Y\right\|_{\infty}=inf\{M \geq 0: \mathspace P\left(\left|Y\right|\leq M\right) =1\}.$
+        \end{definition}
+    \subsection{Relations between convergence modes}
+        \begin{center}
+        \includegraphics[width=12cm]{images/2.png}
+        \end{center}
+\section{Limit theorems}
+    We will now study the two fundamentals results on which most of statistics are based: the \important{law of large number} which formalizes the fact that the probability of an event represents its occurence frequency; and the \important{central limit theorem} which quantifies the typical deviations of frequency in a long sequence of experiments. Both will be about independent sequences of identically random variables: the setup will be as follows. 
+    \begin{itemize}[left=10pt, label=\textbullet]
+        \item Take a random variable X. For example, some measurement in a random experiment. 
+        \item Take a sequence $X_1, X_2, \ldots$ of random variables such that 
+            \begin{enumerate}[left=10pt]
+                \item $\left(X_i\right)_{i=1,2, \ldots}$ is an independent family, 
+                \item $X_i$ has the same law as X for every $i \geq 1$. 
+            \end{enumerate}
+            This will be the repeated measurement in sequence of repetitions of our random experiment.
+        \item The goal: for n large, study
+            \begin{enumerate}[left=10pt]
+                \item whether $\frac{1}{n}\sum_{ i=1 } ^{ n }X_i$ gets typically close or not to $E\left(X\right)$ as $ n \to \infty$, 
+                \item quantify how far from $E\left(X\right)\frac{1}{n}\sum_{ i=1 } ^{ n }X_i$ typically is.
+            \end{enumerate}
+    \end{itemize}
+    \subsection{Weak Law of Large Numbers}
+        \begin{theoreme}
+            Let $X, X_1, X_2, \ldots$ be an independent family of identically distributed random variables. Then, if $E\left(\left|X\right|\right)< \infty$, for any $\epsilon>0$, 
+            \[\lim_{n \to \infty} P\left(\left|\frac{1}{n}\sum_{ i=1 } ^{ n }X_i-E\left(X\right)\right|\geq \epsilon\right)=0.\]
+            In other words, $\frac{1}{n}\sum_{ i=1 } ^{ n }X_i \xrightarrow{\text{Proba}}E\left(X\right)$ as $n \to \infty$.
+        \end{theoreme}
+        Another version of this theorem: 
+        \begin{theoreme}
+            Let $X, X_1, X_2, \ldots$ be an independent family of identically distributed random variables. Then, if $E\left(X^2\right)< \infty$, for any $\epsilon >0$, and any $ n \geq 1$, 
+            
+            \[\lim_{n \to \infty} P\left(\left|\frac{1}{n}\sum_{ i=1 } ^{ n }X_i-E\left(X\right)\right|\geq \epsilon\right)\leq\frac{\text{Var}\left(X\right)}{\epsilon^2n}.\]
+        \end{theoreme}
+    \subsection{Strong Law of Large numbers}
+        \begin{theoreme}
+            Let $X, X_1, X_2, \ldots$ be an independent family of identically distributed random variables. Then, if $E\left(\left|X\right|\right)< \infty$, 
+            \[\frac{1}{n}\sum_{ i=1 } ^{ n }X_i \xrightarrow{\text{a.s.}}E\left(X\right)\]
+            as $n \to \infty$.
+        \end{theoreme}
+    \subsection{Central limit theorem}
+        \begin{theoreme}
+            Let $X, X_1, X_2, \ldots$ be an independent family of identically distributed random variables. Then, if $E\left(X^2\right)<\infty$, 
+            \[\frac{1}{\sqrt{\sigma ^2_X n}}\sum_{ i=1 } ^{ n }\left(X_i-\mu\right)\xrightarrow{\text{Law}}\mathcal{N}\left(0,1\right)\]
+            as $n \to \infty$, where 
+            \[\mu = E\left(X\right), \sigma_X^2=\text{Var}\left(X\right).\]
+        \end{theoreme}
+        Another version of this theorem: 
+        \begin{theoreme}
+            Let $X, X_1, X_2, \ldots$ be an independent family of identically distributed random variables. Then, if $E\left(\left|X\right|^3\right)<\infty$, for any $n \geq 1$, 
+            \[sup_{t \in \mathbb{R}}\left|P\left(\frac{1}{\sqrt{\sigma ^2_X n}}\sum_{ i=1 } ^{ n }\left(X_i-\mu\right)\leq t\right)-P\left(Z \leq t\right)\right| \leq \frac{0.5E\left(\left|X\right|^3\right)}{\sqrt{n}},\]
+            where $Z \sim \mathcal{N}\left(0,1\right)$, and 
+            \[\mu=E\left(X\right), \mathspace \sigma_X^2=\text{Var}\left(X\right).\]
+        \end{theoreme}
+        Now, let's see a more restrictive version of CLT.
+        \begin{theoreme}
+            Let $X, X_1, X_2, \ldots$ be an independent family of identically distributed random variables. Then, if for some $\delta > 0, E\left(e^{\delta\left|X\right|}\right)<\infty$,
+            \[\frac{1}{\sqrt{\sigma ^2_X n}}\sum_{ i=1 } ^{ n }\left(X_i-\mu\right)\xrightarrow{\text{Law}}\mathcal{N}\left(0,1\right)\]
+            as $n \to \infty$, where 
+            \[\mu = E\left(X\right), \sigma_X^2=\text{Var}\left(X\right).\]
+        \end{theoreme}
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    
