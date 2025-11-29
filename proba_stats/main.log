@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.11.17)  28 NOV 2025 15:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.11.17)  29 NOV 2025 19:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -861,7 +861,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 l.14 \newpage
               [1
 
-] (./chapitres/chapitre1.tex
+]
+
+[2] (./chapitres/chapitre1.tex
 Chapitre 1.
 
 ./chapitres/chapitre1.tex:6: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
@@ -890,7 +892,7 @@ l.23                     L
 
 
 
-[2
+[3
 
 ]
 ./chapitres/chapitre1.tex:55: Missing \right. inserted.
@@ -954,7 +956,7 @@ LaTeX Font Info:    Trying to load font information for U+bbm on input line 75.
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
 
-[3]
+[4]
 
 ./chapitres/chapitre1.tex:90: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -1012,7 +1014,7 @@ l.125                     A
 
 
 
-[4]
+[5]
 
 ./chapitres/chapitre1.tex:133: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -1478,7 +1480,7 @@ Package mdframed Info: You first box width is to small
 (mdframed)              on input line 164.
 
 
-[5]
+[6]
 ./chapitres/chapitre1.tex:170: Extra }, or forgotten \right.
 <template> }
             $}\ifmeasuring@ \savefieldlength@ \fi \set@field \hfil \endtempl...
@@ -1591,7 +1593,7 @@ l.195                    L
 
 
 
-[6]
+[7]
 
 ./chapitres/chapitre1.tex:199: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -1668,7 +1670,7 @@ l.254                     \textbf
 
 
 
-[7]
+[8]
 
 ./chapitres/chapitre1.tex:272: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -1763,7 +1765,7 @@ my insertion and my current dilemma will both disappear.
 
 
 
-[8]
+[9]
 ./chapitres/chapitre1.tex:296: Missing \right. inserted.
 <inserted text> 
                 \right .
@@ -1821,7 +1823,7 @@ l.327                     L
 
 
 
-[9]
+[10]
 
 ./chapitres/chapitre1.tex:335: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -1867,7 +1869,7 @@ l.362                     L
 
 
 
-[10]
+[11]
 
 ./chapitres/chapitre1.tex:368: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -1920,7 +1922,7 @@ l.410                     L
 
 
 
-[11]
+[12]
 
 ./chapitres/chapitre1.tex:423: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -1965,7 +1967,7 @@ and I'll forget about whatever was undefined.
 
 
 
-[12]
+[13]
 
 ./chapitres/chapitre1.tex:457: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -2028,7 +2030,7 @@ l.481                     L
 
 
 
-[13]
+[14]
 
 ./chapitres/chapitre1.tex:492: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -2086,7 +2088,7 @@ l.522                 L
 
 
 
-[14]
+[15]
 
 ./chapitres/chapitre1.tex:532: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -2122,7 +2124,7 @@ l.546                  F
 
 
 
-[15]
+[16]
 
 ./chapitres/chapitre1.tex:570: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -2169,7 +2171,7 @@ l.600                            L
 
 
 
-[16]
+[17]
 
 ./chapitres/chapitre1.tex:611: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -2205,7 +2207,7 @@ l.632                             L
 
 
 
-[17]
+[18]
 
 ./chapitres/chapitre1.tex:640: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -2228,14 +2230,14 @@ l.653                                 L
                                        et $\lambda > 0$, and $X \sim \text{E...
 (That was another \errmessage.)
 
-<images/1.png, id=401, 543.02875pt x 427.5975pt>
+<images/1.png, id=432, 543.02875pt x 427.5975pt>
 File: images/1.png Graphic file (type png)
 <use images/1.png>
 Package pdftex.def Info: images/1.png  used on input line 661.
 (pdftex.def)             Requested size: 264.61333pt x 208.36975pt.
 
 
-[18]
+[19]
 
 ./chapitres/chapitre1.tex:665: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -2679,7 +2681,7 @@ Package mdframed Info: You first box width is to small
 (mdframed)              on input line 686.
 
 
-[19 <./images/1.png>]
+[20 <./images/1.png>]
 
 ./chapitres/chapitre1.tex:690: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -2704,7 +2706,7 @@ l.708                            L
 
 
 
-[20]
+[21]
 
 ./chapitres/chapitre1.tex:721: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -3192,7 +3194,7 @@ Package mdframed Info: You first box width is to small
 (mdframed)              on input line 777.
 
 
-[21]
+[22]
 
 ./chapitres/chapitre1.tex:781: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -3204,18 +3206,9 @@ l.781                             L
                                    et $I \subset \mathbb{R}$ be an interval....
 (That was another \errmessage.)
 
-./chapitres/chapitre1.tex:782: Undefined control sequence.
-l.782 ...     \[E\left(g\left(X\right)\right)\geqg
-                                                  \left(E\left(X\right)\righ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 ) (./chapitres/chapitre2.tex
 
-[22]
+[23]
 Chapitre 2.
 
 ./chapitres/chapitre2.tex:6: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
@@ -3238,15 +3231,6 @@ Type  H <return>  for immediate help.
 l.18             L
                   et $X, X_1, X_2, \ldots: \Omega \to \mathbb{R}$ be random ...
 (That was another \errmessage.)
-
-./chapitres/chapitre2.tex:19: Undefined control sequence.
-l.19 ...X_i}\right) < + \infty \mathspace \foralli
-                                                   \geq 1,\]
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
 
 ./chapitres/chapitre2.tex:27: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
@@ -3685,7 +3669,7 @@ Package mdframed Info: You first box width is to small
 (mdframed)              on input line 39.
 
 
-[23
+[24
 
 ]
 
@@ -3745,7 +3729,7 @@ l.64             L
 
 
 
-[24]
+[25]
 
 ./chapitres/chapitre2.tex:69: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -3757,7 +3741,7 @@ l.69             L
                   et $X, X_1, X_2, \ldots : \Omega \to \mathbb{R}$ be essent...
 (That was another \errmessage.)
 
-<images/2.png, id=467, 973.6375pt x 559.08875pt>
+<images/2.png, id=496, 973.6375pt x 559.08875pt>
 File: images/2.png Graphic file (type png)
 <use images/2.png>
 Package pdftex.def Info: images/2.png  used on input line 75.
@@ -3775,7 +3759,7 @@ l.95             L
 
 
 
-[25 <./images/2.png>]
+[26 <./images/2.png>]
 
 ./chapitres/chapitre2.tex:101: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -3833,30 +3817,185 @@ l.127             L
 
 
 
-[26])
+[27]) (./chapitres/chapitre3.tex
 
-[27] (./main.aux)
+[28]
+Chapitre 3.
+
+./chapitres/chapitre3.tex:5: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5             L
+                 et P be a probability measure on $\mathbb{R}^d$. Let $n\geq...
+(That was another \errmessage.)
+
+
+./chapitres/chapitre3.tex:8: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8             A
+                  \important{statistic} on a size n sample $X_1, \ldots, X_n...
+(That was another \errmessage.)
+
+
+./chapitres/chapitre3.tex:12: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12             W
+                  e are interested in \important{parametric estimation}. We ...
+(That was another \errmessage.)
+
+
+./chapitres/chapitre3.tex:15: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15             \begin{tcolorbox}[gris]
+                                        
+(That was another \errmessage.)
+
+
+./chapitres/chapitre3.tex:31: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31             L
+                  et $X_1, \ldots, X_n$ be a n-sample of law $\mathbb{P}_{\t...
+(That was another \errmessage.)
+
+
+
+[29
+
+]
+
+./chapitres/chapitre3.tex:35: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35             F
+                  or $n \geq 1$, let $X_1, \ldots, X_n$ be a n-sample of law...
+(That was another \errmessage.)
+
+
+./chapitres/chapitre3.tex:40: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40             L
+                  et $X_1, \ldots, X_n$ be an n-sample of law $\mathbb{P}_{\...
+(That was another \errmessage.)
+
+
+./chapitres/chapitre3.tex:45: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.45             F
+                  or $n \geq 1$, let $X_1, \ldots, X_n$ be a n-sample of law...
+(That was another \errmessage.)
+
+
+./chapitres/chapitre3.tex:49: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49             F
+                  or $n \geq 1$, let $X_1, \ldots, X_n$ be a n-sample of law...
+(That was another \errmessage.)
+
+
+./chapitres/chapitre3.tex:54: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54             F
+                  or $n \geq 1$, let $X_1, \ldots, X_n$ be a n-sample of law...
+(That was another \errmessage.)
+
+
+
+[30]
+./chapitres/chapitre3.tex:70: Undefined control sequence.
+l.70             \[P\left(X\leqM
+                                \right)=P\left(X\geq M\right)=\frac{1}{2}.\]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+
+[31]
+
+./chapitres/chapitre3.tex:102: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.102             \begin{tcolorbox}[gris]
+                                         
+(That was another \errmessage.)
+
+)
+
+[32] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E75FACF507F57806642BFD2A09D8AC1A;7903.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: A8CB871E7B3771154D411EC4468E5DEA;8631
+(rerunfilecheck)             After:  B1528B5CCEB2E54910ACEB9B66C2AC42;8939.
  ) 
 Here is how much of TeX's memory you used:
- 28398 strings out of 475142
- 554090 string characters out of 5765945
- 994634 words of memory out of 5000000
- 50728 multiletter control sequences out of 15000+600000
+ 28462 strings out of 475142
+ 555028 string characters out of 5765945
+ 994685 words of memory out of 5000000
+ 50751 multiletter control sequences out of 15000+600000
  581212 words of font info for 87 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 131i,17n,135p,548b,1160s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 131i,17n,135p,571b,1160s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0700.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcti1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi0800.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 ></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (28 pages, 427903 bytes).
+Output written on main.pdf (33 pages, 447682 bytes).
 PDF statistics:
- 1065 PDF objects out of 1200 (max. 8388607)
- 575 compressed objects within 6 object streams
- 193 named destinations out of 1000 (max. 500000)
- 351 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1156 PDF objects out of 1200 (max. 8388607)
+ 653 compressed objects within 7 object streams
+ 231 named destinations out of 1000 (max. 500000)
+ 391 words of extra memory for PDF output out of 10000 (max. 10000000)
 

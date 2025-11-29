@@ -374,6 +374,10 @@ INPUT ./images/2.png
 INPUT images/2.png
 INPUT ./images/2.png
 INPUT ./images/2.png
+INPUT ./chapitres/chapitre3.tex
+INPUT chapitres/chapitre3.tex
+INPUT ./chapitres/chapitre3.tex
+INPUT chapitres/chapitre3.tex
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out

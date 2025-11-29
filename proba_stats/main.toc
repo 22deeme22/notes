@@ -1,53 +1,64 @@
 \babel@toc {french}{}\relax 
-\contentsline {chapter}{\numberline {1}Probabilities: starter guide}{2}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Probabilities spaces and measures}{2}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Probability spaces}{2}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Discrete probability measures}{3}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}Continuous probability measures}{3}{subsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.1.4}Genreal probability spaces and measures}{4}{subsection.1.1.4}%
-\contentsline {subsection}{\numberline {1.1.5}Inclusion-Exclusion}{5}{subsection.1.1.5}%
-\contentsline {section}{\numberline {1.2}Random variables and expectation}{5}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Random variables}{5}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Expectation}{8}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Transfer Theorem}{9}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4}Random vectors}{9}{subsection.1.2.4}%
-\contentsline {subsection}{\numberline {1.2.5}Change of variable formula}{10}{subsection.1.2.5}%
-\contentsline {subsection}{\numberline {1.2.6}Moments, and Moment Generating Function}{11}{subsection.1.2.6}%
-\contentsline {section}{\numberline {1.3}Conditional probability independence}{12}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Conditional probability}{12}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Independence}{12}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Bayes law, formula of total probability}{13}{subsection.1.3.3}%
-\contentsline {subsection}{\numberline {1.3.4}Almost sure properties}{14}{subsection.1.3.4}%
-\contentsline {section}{\numberline {1.4}Correlation}{14}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Variance, Covariance}{14}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Pearson correlation coefficient}{15}{subsection.1.4.2}%
-\contentsline {section}{\numberline {1.5}Classical example of random variables}{15}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Discrete random variables}{16}{subsection.1.5.1}%
-\contentsline {subsubsection}{Constant random variable}{16}{section*.2}%
-\contentsline {subsubsection}{Bernoulli random variable}{16}{section*.3}%
-\contentsline {subsubsection}{Binomiale random variable}{16}{section*.4}%
-\contentsline {subsubsection}{Geometric random variable}{16}{section*.5}%
-\contentsline {subsubsection}{Poisson random variable}{17}{section*.6}%
-\contentsline {subsubsection}{Uniform random variable (finite case)}{17}{section*.7}%
-\contentsline {subsection}{\numberline {1.5.2}Continuous random variables}{17}{subsection.1.5.2}%
-\contentsline {subsubsection}{Uniform random variable on an interval}{17}{section*.8}%
-\contentsline {subsubsection}{Gaussian random variables}{18}{section*.9}%
-\contentsline {subsubsection}{Expononential random variable}{18}{section*.10}%
-\contentsline {subsubsection}{Cauchy random variable}{18}{section*.11}%
-\contentsline {subsubsection}{Summary of usual random variables}{19}{section*.12}%
-\contentsline {section}{\numberline {1.6}Probabilistic inequalities and applications}{19}{section.1.6}%
-\contentsline {subsection}{\numberline {1.6.1}Markov's inequality}{19}{subsection.1.6.1}%
-\contentsline {subsection}{\numberline {1.6.2}First moment method}{19}{subsection.1.6.2}%
-\contentsline {subsection}{\numberline {1.6.3}Chebychev's inequality}{20}{subsection.1.6.3}%
-\contentsline {subsection}{\numberline {1.6.4}A weak Law of Large Numbers}{20}{subsection.1.6.4}%
-\contentsline {subsection}{\numberline {1.6.5}Cauchy-Schwartz and Hölder's inequalities}{21}{subsection.1.6.5}%
-\contentsline {subsection}{\numberline {1.6.6}Second moment method}{21}{subsection.1.6.6}%
-\contentsline {subsection}{\numberline {1.6.7}Jensen's inequality}{22}{subsection.1.6.7}%
-\contentsline {chapter}{\numberline {2}Convergence of random variables}{23}{chapter.2}%
-\contentsline {section}{\numberline {2.1}What does converge mean?}{23}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Modes of converges}{23}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Relations between convergence modes}{25}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}Limit theorems}{25}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Weak Law of Large Numbers}{26}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Strong Law of Large numbers}{26}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Central limit theorem}{26}{subsection.2.2.3}%
+\contentsline {chapter}{\numberline {1}Probabilities: starter guide}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Probabilities spaces and measures}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Probability spaces}{3}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Discrete probability measures}{4}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Continuous probability measures}{4}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Genreal probability spaces and measures}{5}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}Inclusion-Exclusion}{6}{subsection.1.1.5}%
+\contentsline {section}{\numberline {1.2}Random variables and expectation}{6}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Random variables}{6}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Expectation}{9}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Transfer Theorem}{10}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Random vectors}{10}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.5}Change of variable formula}{11}{subsection.1.2.5}%
+\contentsline {subsection}{\numberline {1.2.6}Moments, and Moment Generating Function}{12}{subsection.1.2.6}%
+\contentsline {section}{\numberline {1.3}Conditional probability independence}{13}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Conditional probability}{13}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Independence}{13}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Bayes law, formula of total probability}{14}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}Almost sure properties}{15}{subsection.1.3.4}%
+\contentsline {section}{\numberline {1.4}Correlation}{15}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Variance, Covariance}{15}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Pearson correlation coefficient}{16}{subsection.1.4.2}%
+\contentsline {section}{\numberline {1.5}Classical example of random variables}{16}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Discrete random variables}{17}{subsection.1.5.1}%
+\contentsline {subsubsection}{Constant random variable}{17}{section*.2}%
+\contentsline {subsubsection}{Bernoulli random variable}{17}{section*.3}%
+\contentsline {subsubsection}{Binomiale random variable}{17}{section*.4}%
+\contentsline {subsubsection}{Geometric random variable}{17}{section*.5}%
+\contentsline {subsubsection}{Poisson random variable}{18}{section*.6}%
+\contentsline {subsubsection}{Uniform random variable (finite case)}{18}{section*.7}%
+\contentsline {subsection}{\numberline {1.5.2}Continuous random variables}{18}{subsection.1.5.2}%
+\contentsline {subsubsection}{Uniform random variable on an interval}{18}{section*.8}%
+\contentsline {subsubsection}{Gaussian random variables}{19}{section*.9}%
+\contentsline {subsubsection}{Expononential random variable}{19}{section*.10}%
+\contentsline {subsubsection}{Cauchy random variable}{19}{section*.11}%
+\contentsline {subsubsection}{Summary of usual random variables}{20}{section*.12}%
+\contentsline {section}{\numberline {1.6}Probabilistic inequalities and applications}{20}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Markov's inequality}{20}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}First moment method}{20}{subsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.6.3}Chebychev's inequality}{21}{subsection.1.6.3}%
+\contentsline {subsection}{\numberline {1.6.4}A weak Law of Large Numbers}{21}{subsection.1.6.4}%
+\contentsline {subsection}{\numberline {1.6.5}Cauchy-Schwartz and Hölder's inequalities}{22}{subsection.1.6.5}%
+\contentsline {subsection}{\numberline {1.6.6}Second moment method}{22}{subsection.1.6.6}%
+\contentsline {subsection}{\numberline {1.6.7}Jensen's inequality}{23}{subsection.1.6.7}%
+\contentsline {chapter}{\numberline {2}Convergence of random variables}{24}{chapter.2}%
+\contentsline {section}{\numberline {2.1}What does converge mean?}{24}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Modes of converges}{24}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Relations between convergence modes}{26}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Limit theorems}{26}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Weak Law of Large Numbers}{27}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Strong Law of Large numbers}{27}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Central limit theorem}{27}{subsection.2.2.3}%
+\contentsline {chapter}{\numberline {3}Statistics: starter guide}{29}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Basic objects}{29}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Statistics}{29}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Estimators}{29}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Some examples of estimators}{31}{subsection.3.1.3}%
+\contentsline {subsubsection}{Empirical mean}{31}{section*.13}%
+\contentsline {subsubsection}{Empirical median}{31}{section*.14}%
+\contentsline {subsubsection}{Empirical variance}{31}{section*.15}%
+\contentsline {subsubsection}{Empirical covariance}{31}{section*.16}%
+\contentsline {section}{\numberline {3.2}Constructing estimators}{32}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Moments method}{32}{subsection.3.2.1}%
