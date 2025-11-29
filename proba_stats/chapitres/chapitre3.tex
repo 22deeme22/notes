@@ -1,0 +1,131 @@
+\chapter{Statistics: starter guide}
+\section{Basic objects}
+    \subsection{Statistics}
+        \begin{definition}
+            Let P be a probability measure on $\mathbb{R}^d$. Let $n\geq1$. A \important{size n sample} of law P is an i.i.d. sequence $X_1, \ldots, X_n$ of random variables/vectors having law P. A \important{realisation} of a size n sample is a sequence of values of the random variables: that is a sequence $\left(x_1, \ldots, x_n\right) \in \left(\mathbb{R}^d\right)^n$.
+        \end{definition}
+        \begin{definition}
+            A \important{statistic} on a size n sample $X_1, \ldots, X_n$ with values in $\mathbb{R}^d$ is a random variable $Y:\left(\mathbb{R}^d\right)^n \to \mathbb{R}$.
+        \end{definition}
+    \subsection{Estimators}
+        \begin{definition}
+            We are interested in \important{parametric estimation}. We will denote $\mathbb{P}_{\theta}$ the law that we are trying to approximate, $\mathbb{P}_{\theta}$ is thus a probability measure on $\mathbb{R}^d$. We will suppose that it is entirely determined by a parameter $\theta \in \Theta$, where $\Theta \subset \mathbb{R}^m$ for some $ m\geq1$ is the \important{parameter space}.
+        \end{definition}
+        \begin{remark}{Examples}
+            \begin{tcolorbox}[gris]
+                We could for example look at 
+                \begin{enumerate}[left=10pt]
+                    \item a squence of height measurements in the Swiss population, 
+                    \item a sequence of life duration for computers in a company ,
+                    \item the number of blue cars exiting the highway at Ecublens during a day.
+                \end{enumerate}
+                We can now chose an apprriate family of probability measures as candidates for approximating each of these situations.
+                \begin{enumerate}[left=10pt]
+                    \item One can use a Gaussian law $\mathbb{P}_{\theta} = \mathcal{N}\left(\mu, \sigma ^2\right)$. The parameter defining the law is $\theta = \left(\mu, \sigma\right)$. It leads to the parameter space $\Theta = \mathbb{R} x \left[0, +\infty\right).$ 
+                    \item One can use an exponential law $\mathbb{P}_{\theta} = \text{Exp}\left(\lambda\right)$. The parameter is then $\theta = \lambda$, and the parameter space is $\Theta = \left(0, +\infty\right)$. 
+                    \item One can use a Poisson law $\mathbb{P}_{\theta}=\text{Poi}\left(\lambda\right)$. The parameter is then $\theta = \lambda$, and the parameter space is $\Theta = \left[0, +\infty\right)$.
+                \end{enumerate}
+            \end{tcolorbox}
+        \end{remark}
+        \begin{definition}
+            Let $X_1, \ldots, X_n$ be a n-sample of law $\mathbb{P}_{\theta}$. For $f : \Theta \to \mathbb{R}$, an \important{estimator} of $f\left(\theta\right)$ is a statistic $\hat{f}:\left(\mathbb{R}^d\right)^n \to f\left(\Theta\right)$, which does not depend on the parameter $\theta$. In words, an estimator is a way to probe the parameter space without prior knowledge of the parameter value to approximate the parameter defining our probability law $\mathbb{P}_{\theta}$.
+        \end{definition}
+        The first notion makes precise the idea that as we increase a sample size, we can find better and better approximations of our parameter.
+        \begin{definition}
+            For $n \geq 1$, let $X_1, \ldots, X_n$ be a n-sample of law $\mathbb{P}_{\theta}$, and let $\hat{f}_n$ be an estimator of $f\left(\theta\right)$. We say that the sequence of estimators $\left(\hat{f}_n\right)_{n >=1}$ is \important{convergent} if $\hat{f}_n$ converges in probability towards $f\left(\theta\right): $ for any $\epsilon >0$ and for any $\theta \in \Theta$, 
+            \[\lim_{n \to \infty} P\left(\left|\hat{f}_n\left(X_1, \ldots, X_n\right)-f\left(\theta\right)\right| \geq \epsilon\right)=0\]
+        \end{definition}
+        The next notions ar formalizations of the estimator gives the correct value on average.
+        \begin{definition}
+            Let $X_1, \ldots, X_n$ be an n-sample of law $\mathbb{P}_{\theta}$. Let $\hat{f}$ be an estimator of $f\left(\theta\right)$. The \important{bias of }$\hat{f}$ is the difference between the expected value of $\hat{f}$ and $f\left(\theta\right)$: 
+            \[\text{Bias}_{\theta}\left(\hat{f}\right)=E\left(\hat{f}\left(X_1, \ldots, X_n\right)\right)-f\left(\theta\right).\]
+            $\hat{f}$ is called \important{unbiased} if for any $\theta \in \Theta$, $\text{Bias}_{\theta}\left(\hat{f}\right)=0$. Otherwise, it is called \important{biased}.
+        \end{definition}
+        \begin{definition}
+            For $n \geq 1$, let $X_1, \ldots, X_n$ be a n-sample of law $\mathbb{P}_{\theta}$, and let $\hat{f}_n$ be an estimator of $f\left(\theta\right)$. We say that the sequence of estimators $\left(\hat{f}_n\right)_{n \geq1}$ is \important{asymptotically unbiased} if for any $\theta \in \Theta$, 
+            \[\lim_{n \to \infty} \text{Bias}_{\theta}\left(\hat{f}_n\right)=0.\]
+        \end{definition}
+        \begin{definition}
+            For $n \geq 1$, let $X_1, \ldots, X_n$ be a n-sample of law $\mathbb{P}_{\theta}$, and let $\hat{f}_n$ be an estimator of $f\left(\theta\right)$. The \important{variance} of $\hat{f}_n$, denoted $\text{Var}_{\theta}\left(\hat{f}_n\right)$, is simply the variance of the random variable $\hat{f}_n\left(X_1, \ldots, X_n\right)$: 
+            \[\text{Var}_{\theta}\left(\hat{f}_n\right)=\text{Var}\left(\hat{f}_n\left(X_1, \ldots, X_n\right)\right).\]
+        \end{definition}
+        We can give a first example of criterion guaranteeing that a sequence of estimators converges.
+        \begin{theoreme}
+            For $n \geq 1$, let $X_1, \ldots, X_n$ be a n-sample of law $\mathbb{P}_{\theta}$, and let $\hat{f}_n$ be an estimator of $f\left(\theta\right)$. Suppose that
+            \begin{enumerate}[left=10pt]
+                \item $\hat{f}_n$ is asymptotically unbiased, 
+                \item Var$\left(\hat{f}_n\right) \xrightarrow{n \to \infty} 0.$
+            \end{enumerate}
+            Then, $\hat{f}_n$ is a convergent sequence of estimators.
+        \end{theoreme}
+    \subsection{Some examples of estimators}
+        \subsubsection{Empirical mean}
+            The empirical mean is the estimator we already encountered several times. It is an estimator for the expected value and it is given by 
+            \[\bar{X}_n = \frac{1}{n}\sum_{ i=1 } ^{ n }X_i.\]
+            It is so widelyused that is got its own standard notation. It is diret to see that this estimator is unbiased: 
+            \[E\left(\frac{1}{n}\sum_{ i=1 } ^{ n }X_i\right)=\frac{1}{n}\sum_{ i=1 } ^{ n }E\left(X_i\right)=E\left(X_1\right),\]
+            as the $X_i$'s are identically distributed. Moreover, the weak Law of Large Numbers implies that it is a convergent estimator as soon as $E\left(X_1\right)$ is well defined.        
+        \subsubsection{Empirical median}
+            A median for a random variable X is a number M such that 
+            \[P\left(X\leqM\right)=P\left(X\geq M\right)=\frac{1}{2}.\]
+            The empirical median is obtained as follows.
+            \begin{enumerate}[left=10pt]
+                \item Order the sample $X_1, \ldots, X_n$ in a non-decreasing fashion: let $\left(\widetilde{X}_1, \ldots, \widetilde{X}_n\right)$ be a permutation of $X_1, \ldots, X_n$ such that $\widetilde{X}_{i+1}\geq \widetilde{X}_i$ for all i's.
+                \item Define the empirical median of $X_1, \ldots, X_n$ to be 
+                \[
+                \begin{functionbypart}{}
+                    \widetilde{X}_{\frac{n+1}{2}} \mathspace \mathspace \mathspace \mathspace \text{ if } n \text{ is odd,}  \\
+                    \frac{1}{2}\left(\widetilde{X}_{\frac{n}{2}}+\widetilde{X}_{1+\frac{n}{2}}\right) \mathspace \text{ if } n \text{ is even.}
+                \end{functionbypart}
+            \]
+            \end{enumerate}
+            One can show that when the law $\mathbb{P}_{\theta}$ is symmetric around its mean (if it is a continuous law with density $f_{\theta}$, this means $f_{\theta}\left(\mu+x\right)=f_{\theta}\left(\mu-x\right)$ with $\mu=\int_{-\infty}^{+\infty}xf_{\theta}\left(x\right)dx$, the median is an unbiased estimator of the mean.
+        \subsubsection{Empirical variance}
+            We already have an estimator for the expectation: $\bar{X}_n$. A natural thing to do is to define the empirical variance as 
+            \[\sigma_n ^2=\frac{1}{n}\sum_{ i=1 } ^{ n }\left(X_i-\bar{X}_n\right)^2=\frac{1}{n}\sum_{ i=1 } ^{ n }X_i ^2-\bar{X}^2_n=\bar{X}^2_n-\bar{X}^2_n.\]
+            I.e: take the difference between the empirical mean of $X_1^2, \ldots, X^2_n$ and the square of the empirical mean of $X_1, \ldots, X_n$.
+        \subsubsection{Empirical covariance}
+            Consider an n-sample $\left(X_1, Y_1\right), \ldots, \left(X_n, Y_n\right)$ of random vectors of law $\mathbb{P}_{\theta}$. The goal is to estimate the covariance $\text{Cov}\left(X,Y\right)$ where $\left(X,Y\right) \sim \mathbb{P}_{\theta}$. Define the estimator 
+            \[\hat{\tau}_n\left(\left(X_1, Y_1\right), \ldots, \left(X_n, Y_n\right)\right)=\frac{1}{n}\sum_{ i=1 } ^{ n }X_iY_i-\frac{1}{n}\left(\sum_{ i=1 } ^{ n }X_i\right)\frac{1}{n}\left(\sum_{ i=1 } ^{ n }Y_i\right)=\bar{XY}_n - \bar{X}_n\bar{Y}_n.\]
+\section{Constructing estimators}
+    \subsection{Moments method}
+        Suppose one wants to estimate a parameter $\theta$ from a sample $X_1, \ldots, X_n$ of law $\mathbb{P}_{\theta}$. The general idea is 
+        \begin{enumerate}[left=10pt]
+            \item find functions h,g such that we have the relation 
+            \[\theta = h\left(E\left(g\left(X\right)\right)\right)\]
+            with $X \sim \mathbb{P}_{\theta}$; 
+            \item use the empirical mean $\frac{1}{n}\sum_{ i=1 } ^{ n }g\left(X_i\right)$ to estimate $E\left(g\left(X\right)\right)$; 
+            \item use the estimator of $\theta$ given by 
+            \[\hat{\theta}_n = h\left(\frac{1}{n}\sum_{ i=1 } ^{ n }g\left(X_i\right)\right).\]
+        \end{enumerate}
+        \begin{remark}{Example}
+            \begin{tcolorbox}[gris]
+                We can look at the case of $\mathbb{P}_{\theta}=\text{Geo}\left(p\right)\left(\text{ so that } \theta =p, \Theta = \left[0,1\right]\right)$.
+
+                We know that if $X \sim \text{Geo}\left(p\right)$, 
+                \[E\left(X\right)=\frac{1}{p}, \mathspace E\left(X^2\right)=\frac{2-p}{p^2}.\]
+                Each of these give rise to estimator via the moment method.
+                \begin{itemize}[left=10pt, label=\textbullet]
+                    \item First consider the first moment. We can use $h\left(x\right)=x^{-1}$ and $g\left(x\right)=x$. This gives the estimator of p 
+                    \[\hat{p}_n\left(X_1, \ldots, X_n\right)=\frac{n}{\sum_{ i=1 } ^{ n }X_i}.\]
+                    
+                    \item Then consider the second moment. We can use $h\left(x\right)=\frac{\sqrt{1+8x}-1}{2x}$ and $g\left(x\right)=x^2$.
+
+                        This gives the estimator of p 
+                        \[\hat{p}_n\left(X_1, \ldots, X_n\right)=\frac{n}{2 \sum_{ i=1 } ^{ n }X_i^2}\left(\left(1+\frac{8}{n}\sum_{ i=1 } ^{ n }X_i^2\right)^{\frac{1}{2}}-1\right).\]
+                        
+                \end{itemize}
+                
+            \end{tcolorbox}
+            
+        \end{remark}
+        
+        
+             
+        
+            
+         
+            
+        
+        
+
