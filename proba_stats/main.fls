@@ -378,6 +378,16 @@ INPUT ./chapitres/chapitre3.tex
 INPUT chapitres/chapitre3.tex
 INPUT ./chapitres/chapitre3.tex
 INPUT chapitres/chapitre3.tex
+INPUT ./images/3.png
+INPUT ./images/3.png
+INPUT images/3.png
+INPUT ./images/3.png
+INPUT ./images/3.png
+INPUT ./images/4.png
+INPUT ./images/4.png
+INPUT images/4.png
+INPUT ./images/4.png
+INPUT ./images/4.png
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out

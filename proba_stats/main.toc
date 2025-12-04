@@ -62,3 +62,6 @@
 \contentsline {subsubsection}{Empirical covariance}{31}{section*.16}%
 \contentsline {section}{\numberline {3.2}Constructing estimators}{32}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Moments method}{32}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Maximum likelihood estimator}{32}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Quantile tables}{33}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Confidence intervals}{34}{section.3.4}%

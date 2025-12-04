@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1764440528.94796 "main.tex" "main.pdf" "main" 1764440530.9994 2
+["pdflatex"] 1764853544.08722 "main.tex" "main.pdf" "main" 1764853547.72224 2
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi0800.600pk" 1761301045.95013 26024 7918afccafaeb39c04361c0dfa11f3e1 ""
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1000.600pk" 1761301040.59481 34088 98662e84c6dcd5a05068d867b0fb0404 ""
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk" 1761301150.97511 25396 fee705cdff29f2908c9f83425990041e ""
@@ -228,13 +228,15 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1763380628 2015190 cc2b6964cf6da24adb546816349ae517 ""
   "chapitres/chapitre1.tex" 1764343907.58192 67100 69b4a9bbfeffa20c02d718fa4ce97731 ""
   "chapitres/chapitre2.tex" 1764346655.61082 11462 74cbf72d723c10b7991ee68dbf99f1e3 ""
-  "chapitres/chapitre3.tex" 1764440527.01376 11472 7146a66042a1a94f20490852074d55da ""
+  "chapitres/chapitre3.tex" 1764853542.37475 17603 fb1f2696014bba90ab5ae2eb8400d3cd ""
   "images/1.png" 1761643922.64596 52654 7eb775678a087139a76c0056845bd623 ""
   "images/2.png" 1764337804.06176 53914 71525baeeba1fb097e68cd0d5443d221 ""
-  "main.aux" 1764440530.78076 10235 f192687dac2c3dd630626373f5a7d1bd "pdflatex"
-  "main.out" 1764440530.78276 8939 b1528b5cceb2e54910aceb9b66c2ac42 "pdflatex"
-  "main.tex" 1764435881.54492 363 cda13cea7f039872846f09af39b84d34 ""
-  "main.toc" 1764440530.78276 5563 13efe307609b2da2195a59529d7e29c7 "pdflatex"
+  "images/3.png" 1764849698.80689 17215 82db082a0928172ea4e3247ee5151f57 ""
+  "images/4.png" 1764849708.64589 21375 631d1b5192fd9f1d01a3fad2690e83e7 ""
+  "main.aux" 1764853547.40175 10704 44d34f8334cdc9b122b7a4cfcb3211f9 "pdflatex"
+  "main.out" 1764853547.40275 9438 15ba1f3d38fe550b042ea07a38a78dfd "pdflatex"
+  "main.tex" 1764440546.49319 363 cda13cea7f039872846f09af39b84d34 ""
+  "main.toc" 1764853547.40275 5819 c16f46f5a55ba5a0b631410602393612 "pdflatex"
   "mystyle.sty" 1762629501.48796 5205 0e27239276ddf8f70bc92cf7b248a18c ""
   (generated)
   "main.aux"

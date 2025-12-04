@@ -115,10 +115,76 @@
                         \[\hat{p}_n\left(X_1, \ldots, X_n\right)=\frac{n}{2 \sum_{ i=1 } ^{ n }X_i^2}\left(\left(1+\frac{8}{n}\sum_{ i=1 } ^{ n }X_i^2\right)^{\frac{1}{2}}-1\right).\]
                         
                 \end{itemize}
-                
             \end{tcolorbox}
-            
         \end{remark}
+    \subsection{Maximum likelihood estimator}
+        This estimator is deeply linked to the Bayes formula: imagine that you have a realisation $x_1, \ldots, x_n$ of a sample $X_1, \ldots, X_n$ of law $\mathbb{P}_{\theta}$. The idea is to look for the value of $\theta$ which maximises the probability to observe the realisation $x_1, \ldots, x_n$.
+        \begin{definition}
+            Let $n >=1$, and a sample $X_1, \ldots, X_n$ of law $\mathbb{P}_{\theta}$. For a realisation $x_1, \ldots, x_n$ of $X_1, \ldots, X_n$, the \important{likelihood} of $x_1, \ldots, x_n$ given $\theta, \mathspace\mathcal{L}\left(x_1, \ldots, x_n | \theta\right)$, is defined by 
+            \begin{itemize}[left=10pt, label=\textbullet]
+                \item if $\mathbb{P}_{\theta}$ is a discrete probability measure (i.e.: the $X_i$'s are discrete random variables), 
+                    \[\mathcal{L}\left(x_1, \ldots, x_n|\theta\right)=P\left(X_1=x_1, \ldots, X_n = x_n\right)= \prod_{i=1}^{ n } P\left(X_i =x_i\right)=\prod_{i=1}^{ n } \mathbb{P}_{\theta}\left(\{x_i\}\right)\]
+                as the $X_i$'s are independent and of law $\mathbb{P}_{\theta}$; 
+                \item if $\mathbb{P}_{\theta}$ is a continuous probability measure (i.e.: the $X_i$'s are continuous random variables), 
+                \[\mathcal{L}\left(x_1, \ldots, x_n|\theta\right)=\prod_{i=1}^{ n } f_{X_i}\left(x_i\right)=\prod_{i=1}^{ n } f_{\theta}\left(x_i\right)\]
+                where $f_{\theta}$ is the density function associated to $\mathbb{P}_{\theta}$.
+            \end{itemize}
+        \end{definition}
+        \begin{definition}
+            The \important{maximum likelihood estimator} of $\theta$ is given by 
+        \[MLE\left(X_1, \ldots, X_n\right) =argmax_{\theta}\mathcal{L}\left(X_1, \ldots, X_n|\theta\right),\]
+            the point $\theta$ at which $\mathcal{L}\left(X_1, \ldots, X_n|\theta\right)$ is maximized.
+        \end{definition}
+        \begin{remark}{Example}
+            \begin{tcolorbox}[gris]
+                Consider the case $X_1, \ldots, X_n$ is a n-sample of law $\mathcal{N}\left(\mu, \sigma ^2\right)$ (and take $\theta=\left(\mu, \sigma ^2\right)$). The likelihood function of a realisation $x_1, \ldots, x_n \in \mathbb{N}^*$ is given by 
+                \[\mathcal{L}\left(x_1, \ldots, x_n| \mu, \sigma ^2\right) = \prod_{i=1}^{ n } \frac{e^{-\left(x_i-\mu\right)^2 \slash 2\sigma ^2}}{\sqrt{2\pi\sigma ^2}}.\]
+                Maximizing $\mathcal{L}$ is equivalent to minimizing $-\ln\left(\mathcal{L}\right)$. 
+                \[-\mathcal{L}\left(x_1, \ldots, x_n | \mu, \sigma ^2\right) =\frac{n}{2}\ln\left(2\pi\sigma ^2\right) + \sum_{ i =1  } ^{ n }\frac{\left(x_i - \mu\right)^2}{2\sigma ^2}.\]
+                For any fixed $\sigma ^2$, the minima of this expression is reached at the empirical mean: $\mu_* = \frac{1}{n}\sum_{ i=1 } ^{ n }x_i$ (which is found by finding the critical ponts as a function of $\mu$). Then, the minima is reached at the empirical variance: $\sigma ^2 =\frac{1}{n}\sum_{ i=1 } ^{ n }\left(x_i - \mu_* \right)^2$ (which is again found by finding the critical points as a function of $\sigmag$). The maximum likelihood estimator of $\left(\mu, \sigma ^2\right)$ is thus given by 
+                \[MLE\left(X_1, \ldots, X_n\right)=\left(\bar{X}_n, \hat{\sigma}_n^2\right).\]
+            \end{tcolorbox}
+        \end{remark}
+\section{Quantile tables}
+    In the topic of the next section, we will often be confronted to problem of this form: 
+    \[P\left(X \leq t\right)=0.95,\]
+    To avoid doing computations every time, people have computed thes values and made quantile tables.\
+    \begin{definition}
+        Let X be a random variables, $q > 0$ be an integer. For integer $k\geq1, t \in \mathbb{R}$ is a \important{kth q-quantile} of X if 
+        \[P\left(X <t\right) \leq \frac{k}{q} \text{ AND } P\left(X\leqy\right)\geq\frac{k}{q}.\]
+        Of X is a continuous random variabl with strictly positive density, there is only one kth q-quantile of X. Sometimes, one speaks about v-quantiles with v $\in \left(0,1\right)$. In this case, a kth v-quantile of X is a number $t \in \mathbb{R}$ such that 
+        \[P\left(X <t\right) \leq kv \text{ AND } P\left(X \leq t\right) \geq kv.\]
+    \end{definition}
+    \begin{remark}{Example}
+        \begin{tcolorbox}[gris]
+            The 10-quantiles of the $\mathcal{N}\left(0,1\right)$ distribution are given in the next table. See the graph after for an illustration of the concept. In the table, $t_k$ is the number such that $P\left(X \leq t\right)=\frac{k}{10}$ where $ X \sim \mathcal{N}\left(0,1\right)$.
+        \end{tcolorbox}
+        \begin{center}
+        \includegraphics[width=10cm]{images/3.png}
+        \includegraphics[width=8cm]{images/4.png}
+        \end{center}
+    \end{remark}
+\section{Confidence intervals}
+    Confidence intervals will allow to state things such as ``given the measurements $X_1, \ldots, X_n$, the parameter $\theta$ belongs to the interval $I\left(X_1, \ldots, X_n\right)$ with probability $p\left(X_1, \ldots, X_n\right)$'', where I, p, are to be sepcified. One is typically interested in finding intervals with very short length (precise estimation) with p close to 1 (small probability of error).
+    \begin{definition}
+        Let $X_1, \ldots, X_n$ be a sample of law $\mathbb{P}_{\theta}$. Let $\alpha \in \left(0,1\right)$. A ranndom interval $ I = I\left(X_1, \ldots, X_n\right)$ note depending on $\theta$ is called a \important{level $1- \alpha$ confidence interval fo $f\left(\theta\right)$} if for every $\theta \in \Theta$, 
+        \[P\left(f\left(\theta\right) \in I \left(X_1, \ldots, X_n\right)\right)=1-\alpha.\]
+        $1-\alpha$ is called the \important{confidence level} of the estimation.
+    \end{definition}
+    \begin{definition}
+        A confidence interval $I = I \left(X_1, \ldots, X_n\right)$ is an \important{excess confidence interval for $f\left(\theta\right)$ at level $1 -\alpha$} if 
+        \[P\left(f\left(\theta\right) \in I \left(X_1, \ldots, X_n\right)\right) \geq 1- \alpha.\]
+        
+    \end{definition}
+    
+    
+    
+    
+    
+        
+        
+        
+        
         
         
              
