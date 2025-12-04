@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1764252836.13601 "notes.tex" "notes.pdf" "notes" 1764252838.04697 2
+["pdflatex"] 1764887427.41467 "notes.tex" "notes.pdf" "notes" 1764887429.60608 2
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1000.600pk" 1761301040.59481 34088 98662e84c6dcd5a05068d867b0fb0404 ""
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0700.600pk" 1762947738.02018 17356 03bb08e065ef4b5a8cfd45b0ed74b2ae ""
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk" 1761301150.97511 25396 fee705cdff29f2908c9f83425990041e ""
@@ -268,11 +268,12 @@
   "images/1.png" 1762701608.1109 72917 fd19e500dd6a41c9d35828de544201c9 ""
   "images/2.png" 1764068383.47532 14964 cb8959bffae0a9631a544be5edeff019 ""
   "images/3.png" 1764068614.23831 28660 d3900215e42e3eded9ddccede97674b4 ""
-  "mystyle.sty" 1762877736.93274 6772 a951b391a8deecc6a48590066f94e730 ""
-  "notes.aux" 1764252837.85889 5937 531ae1c64872118060015c5c6dd33c5f "pdflatex"
-  "notes.out" 1764252837.86071 6002 26ea19cf484d88b00e61c2469b44e120 "pdflatex"
-  "notes.tex" 1764252835.46889 63845 c8300412492cf57abd870dc94dff3420 ""
-  "notes.toc" 1764252837.86071 3044 0810eabf7d82aa40a77e24b9f2fd2a63 "pdflatex"
+  "images/4.png" 1764887051.49267 41909 7cc173ce61365db1869743412af8ab30 ""
+  "mystyle.sty" 1764255947.33799 6772 a951b391a8deecc6a48590066f94e730 ""
+  "notes.aux" 1764887429.36665 6214 6dc40334a277525897cf70ff62163b51 "pdflatex"
+  "notes.out" 1764887429.3692 6444 f2ea8509851ca5edfd8978069d72c640 "pdflatex"
+  "notes.tex" 1764887427.26665 66321 dd348d9ca737a0ec17abb7aa3203c9ad ""
+  "notes.toc" 1764887429.3692 3239 0cf2b4ae3ec3d4eb647fe4fe07ceed7b "pdflatex"
   (generated)
   "notes.aux"
   "notes.log"

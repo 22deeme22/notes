@@ -420,6 +420,11 @@ INPUT ./images/3.png
 INPUT ./images/3.png
 INPUT ./images/3.png
 INPUT ./images/3.png
+INPUT ./images/4.png
+INPUT ./images/4.png
+INPUT ./images/4.png
+INPUT ./images/4.png
+INPUT ./images/4.png
 INPUT notes.aux
 INPUT ./notes.out
 INPUT ./notes.out

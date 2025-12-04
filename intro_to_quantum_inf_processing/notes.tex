@@ -959,4 +959,49 @@
                 1 & 1 & 2
             \end{tabular}
             \end{center}
+        But at the end, this QECC is not satisfying, because
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item It only handles one error out of 3 possible error locations. 
+            \item You use 3 qubits to protect one 1 qubit (inefficient). 
+            \item It only works for one type of error (bitflip).
+        \end{itemize}
+        To counter the third point, we will see phaseflip code a 9-qubit Shor code.
+    \subsection{Detection and correction of phaseflip errors}
+        The key fact in phaseflip detection and correction error is that phaseflip is a bitflip in a different basis.
+
+        We already seen the effect of Pauli's matrices X and Z on base $\{\ket{0}; \ket{1}\}$, now let's see the effect on Hadamard basis $\{\ket{+}; \ket{-}\}$:
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item $X\ket{+} = X\left(\frac{\ket{0}+\ket{1}}{\sqrt{2}}\right)=\frac{\ket{1}+\ket{0}}{\sqrt{2}}=\ket{+}$, 
+            \item $X\ket{-} = X\left(\frac{\ket{0}-\ket{1}}{\sqrt{2}}\right)=\frac{\ket{1}-\ket{0}}{\sqrt{2}}=-\ket{-}$, 
+            \item $Z\ket{+} = Z\left(\frac{\ket{0}+\ket{1}}{\sqrt{2}}\right)=\frac{\ket{0}-\ket{1}}{\sqrt{2}}=\ket{-}$, 
+            \item $Z\ket{-} = Z\left(\frac{\ket{0}-\ket{1}}{\sqrt{2}}\right)=\frac{\ket{0}+\ket{1}}{\sqrt{2}}=\ket{+}$, 
+        \end{itemize}
+        Phaseflip error is a bitflip error in Hadamard basis!
+        \newpage
+        \begin{tcolorbox}[vert]
+            Let H be the change matrice between $\ket{0}\slash \ket{1}$ basis and $\ket{+} \slash \ket{-}$ basis, then 
+            \begin{itemize}[left=10pt, label=\textbullet]
+                \item $H\ket{0}=\ket{+}$, 
+                \item $H\ket{1}=\ket{-}$, 
+                \item $H\ket{+}=\ket{0}$, 
+                \item $H\ket{-}=\ket{1}$,
+                \item $HXH = Z$, 
+                \item $HZH = X$.
+            \end{itemize}
+        \end{tcolorbox}
+        \begin{center}
+        \includegraphics[width=10cm]{images/4.png}
+        \end{center}
+        $\text{E}_{\text{phase}} =$ phase where phaseflip error occurs.   
+        
+       \noindent \textbf{Explanation:} The idea here is to apply bitflip encoding circuit, then change in Hadamard basis before the error phase, change in normal basis and apply bitflip decoding circuit.
+
+       But what if we have both bitflip and phaseflip errors at the same time?
+    \subsection{9-qubit Shor code}
+        
+        
+        
+           
+        
+        
 \end{document}
