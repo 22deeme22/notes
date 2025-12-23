@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.12.15)  23 DEC 2025 15:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.12.15)  23 DEC 2025 15:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2446,28 +2446,26 @@ Package mdframed Info: Not enough space on this page on input line 699.
 Package mdframed Info: Not enough space on this page on input line 699.
 
 
-[14]
-
-./notes.tex:716: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./notes.tex:715: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.716         \begin{tcolorbox}[vert]
+l.715         \begin{tcolorbox}[vert]
                                      
 (That was another \errmessage.)
 
-./notes.tex:717: You can't use `macro parameter character #' in math mode.
-l.717 ...hcal{H}_{AB}$ is $\rho_{AB}$ with $n_A= #
+./notes.tex:716: You can't use `macro parameter character #' in math mode.
+l.716 ...hcal{H}_{AB}$ is $\rho_{AB}$ with $n_A= #
                                                   $qubits in A and $n_B = #$...
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
-./notes.tex:717: You can't use `macro parameter character #' in math mode.
-l.717 ...B}$ with $n_A= #$qubits in A and $n_B = #
+./notes.tex:716: You can't use `macro parameter character #' in math mode.
+l.716 ...B}$ with $n_A= #$qubits in A and $n_B = #
                                                   $qubits in B, then
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -2475,40 +2473,40 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 
-./notes.tex:756: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./notes.tex:755: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.756             \begin{tcolorbox}[rouge]
+l.755             \begin{tcolorbox}[rouge]
                                           
 (That was another \errmessage.)
 
 Runaway argument?
 {\glueexpr 10pt 
-./notes.tex:807: Paragraph ended before \addvspace was complete.
+./notes.tex:806: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.807             \end{tcolorbox}
+l.806             \end{tcolorbox}
                                  
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./notes.tex:807: Missing number, treated as zero.
+./notes.tex:806: Missing number, treated as zero.
 <to be read again> 
                    }
-l.807             \end{tcolorbox}
+l.806             \end{tcolorbox}
                                  
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./notes.tex:807: Illegal unit of measure (pt inserted).
+./notes.tex:806: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.807             \end{tcolorbox}
+l.806             \end{tcolorbox}
                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2517,10 +2515,10 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./notes.tex:807: Extra }, or forgotten \endgroup.
+./notes.tex:806: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.807             \end{tcolorbox}
+l.806             \end{tcolorbox}
                                  
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2528,496 +2526,80 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
+Package mdframed Info: Not enough space on this page on input line 807.
 
-Overfull \vbox (188.47763pt too high) detected at line 808
- []
 
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 808.
+[14]
+Package mdframed Info: Not enough space on this page on input line 807.
 
-Overfull \vbox (189.47763pt too high) detected at line 808
- []
 
-
-Overfull \vbox (190.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (191.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (192.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (193.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (194.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (195.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (196.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (197.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (198.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (199.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (200.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (201.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (202.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (203.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (204.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (205.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (206.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (207.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (208.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (209.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (210.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (211.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (212.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (213.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (214.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (215.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (216.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (217.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (218.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (219.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (220.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (221.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (222.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (223.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (224.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (225.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (226.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (227.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (228.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (229.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (230.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (231.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (232.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (233.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (234.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (235.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (236.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (237.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (238.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (239.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (240.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (241.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (242.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (243.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (244.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (245.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (246.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (247.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (248.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (249.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (250.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (251.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (252.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (253.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (254.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (255.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (256.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (257.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (258.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (259.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (260.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (261.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (262.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (263.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (264.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (265.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (266.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (267.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (268.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (269.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (270.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (271.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (272.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (273.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (274.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (275.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (276.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (277.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (278.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (279.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (280.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (281.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (282.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (283.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (284.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (285.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (286.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (287.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (288.47763pt too high) detected at line 808
- []
-
-
-Overfull \vbox (289.47763pt too high) detected at line 808
- []
-
-
-Package mdframed Warning: correct box splittet fails
- It seems you are using a non splittable contents
-(mdframed)                 on input line 808.
-
-Package mdframed Info: You first box width is to small
- mdframed fixed it
-(mdframed)              on input line 808.
-
-
-[15]
-
-./notes.tex:810: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./notes.tex:809: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.810         \begin{tcolorbox}[vert]
+l.809         \begin{tcolorbox}[vert]
                                      
 (That was another \errmessage.)
 
 
-./notes.tex:815: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./notes.tex:814: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.815         \begin{tcolorbox}[vert]
+l.814         \begin{tcolorbox}[vert]
                                      
 (That was another \errmessage.)
 
 
-./notes.tex:823: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./notes.tex:822: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.823             I
+l.822             I
                    f $\rho_A$ and $\rho_B$ come from a pure state, $S\left(\...
 (That was another \errmessage.)
 
 
-./notes.tex:827: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./notes.tex:826: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.827             \begin{tcolorbox}[rouge]
+l.826             \begin{tcolorbox}[rouge]
                                           
 (That was another \errmessage.)
 
 Runaway argument?
 {\glueexpr 10pt 
-./notes.tex:839: Paragraph ended before \addvspace was complete.
+./notes.tex:838: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.839             \end{tcolorbox}
+l.838             \end{tcolorbox}
                                  
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./notes.tex:839: Missing number, treated as zero.
+./notes.tex:838: Missing number, treated as zero.
 <to be read again> 
                    }
-l.839             \end{tcolorbox}
+l.838             \end{tcolorbox}
                                  
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./notes.tex:839: Illegal unit of measure (pt inserted).
+./notes.tex:838: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.839             \end{tcolorbox}
+l.838             \end{tcolorbox}
                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -3026,10 +2608,10 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./notes.tex:839: Extra }, or forgotten \endgroup.
+./notes.tex:838: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.839             \end{tcolorbox}
+l.838             \end{tcolorbox}
                                  
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -3038,503 +2620,503 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-Overfull \vbox (96.26498pt too high) detected at line 840
+Overfull \vbox (96.26498pt too high) detected at line 839
  []
 
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
-(mdframed)              on input line 840.
+(mdframed)              on input line 839.
 
-Overfull \vbox (97.26498pt too high) detected at line 840
+Overfull \vbox (97.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (98.26498pt too high) detected at line 840
+Overfull \vbox (98.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (99.26498pt too high) detected at line 840
+Overfull \vbox (99.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (100.26498pt too high) detected at line 840
+Overfull \vbox (100.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (101.26498pt too high) detected at line 840
+Overfull \vbox (101.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (102.26498pt too high) detected at line 840
+Overfull \vbox (102.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (103.26498pt too high) detected at line 840
+Overfull \vbox (103.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (104.26498pt too high) detected at line 840
+Overfull \vbox (104.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (105.26498pt too high) detected at line 840
+Overfull \vbox (105.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (106.26498pt too high) detected at line 840
+Overfull \vbox (106.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (107.26498pt too high) detected at line 840
+Overfull \vbox (107.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (108.26498pt too high) detected at line 840
+Overfull \vbox (108.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (109.26498pt too high) detected at line 840
+Overfull \vbox (109.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (110.26498pt too high) detected at line 840
+Overfull \vbox (110.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (111.26498pt too high) detected at line 840
+Overfull \vbox (111.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (112.26498pt too high) detected at line 840
+Overfull \vbox (112.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (113.26498pt too high) detected at line 840
+Overfull \vbox (113.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (114.26498pt too high) detected at line 840
+Overfull \vbox (114.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (115.26498pt too high) detected at line 840
+Overfull \vbox (115.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (116.26498pt too high) detected at line 840
+Overfull \vbox (116.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (117.26498pt too high) detected at line 840
+Overfull \vbox (117.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (118.26498pt too high) detected at line 840
+Overfull \vbox (118.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (119.26498pt too high) detected at line 840
+Overfull \vbox (119.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (120.26498pt too high) detected at line 840
+Overfull \vbox (120.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (121.26498pt too high) detected at line 840
+Overfull \vbox (121.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (122.26498pt too high) detected at line 840
+Overfull \vbox (122.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (123.26498pt too high) detected at line 840
+Overfull \vbox (123.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (124.26498pt too high) detected at line 840
+Overfull \vbox (124.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (125.26498pt too high) detected at line 840
+Overfull \vbox (125.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (126.26498pt too high) detected at line 840
+Overfull \vbox (126.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (127.26498pt too high) detected at line 840
+Overfull \vbox (127.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (128.26498pt too high) detected at line 840
+Overfull \vbox (128.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (129.26498pt too high) detected at line 840
+Overfull \vbox (129.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (130.26498pt too high) detected at line 840
+Overfull \vbox (130.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (131.26498pt too high) detected at line 840
+Overfull \vbox (131.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (132.26498pt too high) detected at line 840
+Overfull \vbox (132.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (133.26498pt too high) detected at line 840
+Overfull \vbox (133.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (134.26498pt too high) detected at line 840
+Overfull \vbox (134.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (135.26498pt too high) detected at line 840
+Overfull \vbox (135.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (136.26498pt too high) detected at line 840
+Overfull \vbox (136.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (137.26498pt too high) detected at line 840
+Overfull \vbox (137.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (138.26498pt too high) detected at line 840
+Overfull \vbox (138.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (139.26498pt too high) detected at line 840
+Overfull \vbox (139.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (140.26498pt too high) detected at line 840
+Overfull \vbox (140.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (141.26498pt too high) detected at line 840
+Overfull \vbox (141.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (142.26498pt too high) detected at line 840
+Overfull \vbox (142.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (143.26498pt too high) detected at line 840
+Overfull \vbox (143.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (144.26498pt too high) detected at line 840
+Overfull \vbox (144.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (145.26498pt too high) detected at line 840
+Overfull \vbox (145.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (146.26498pt too high) detected at line 840
+Overfull \vbox (146.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (147.26498pt too high) detected at line 840
+Overfull \vbox (147.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (148.26498pt too high) detected at line 840
+Overfull \vbox (148.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (149.26498pt too high) detected at line 840
+Overfull \vbox (149.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (150.26498pt too high) detected at line 840
+Overfull \vbox (150.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (151.26498pt too high) detected at line 840
+Overfull \vbox (151.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (152.26498pt too high) detected at line 840
+Overfull \vbox (152.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (153.26498pt too high) detected at line 840
+Overfull \vbox (153.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (154.26498pt too high) detected at line 840
+Overfull \vbox (154.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (155.26498pt too high) detected at line 840
+Overfull \vbox (155.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (156.26498pt too high) detected at line 840
+Overfull \vbox (156.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (157.26498pt too high) detected at line 840
+Overfull \vbox (157.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (158.26498pt too high) detected at line 840
+Overfull \vbox (158.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (159.26498pt too high) detected at line 840
+Overfull \vbox (159.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (160.26498pt too high) detected at line 840
+Overfull \vbox (160.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (161.26498pt too high) detected at line 840
+Overfull \vbox (161.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (162.26498pt too high) detected at line 840
+Overfull \vbox (162.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (163.26498pt too high) detected at line 840
+Overfull \vbox (163.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (164.26498pt too high) detected at line 840
+Overfull \vbox (164.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (165.26498pt too high) detected at line 840
+Overfull \vbox (165.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (166.26498pt too high) detected at line 840
+Overfull \vbox (166.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (167.26498pt too high) detected at line 840
+Overfull \vbox (167.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (168.26498pt too high) detected at line 840
+Overfull \vbox (168.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (169.26498pt too high) detected at line 840
+Overfull \vbox (169.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (170.26498pt too high) detected at line 840
+Overfull \vbox (170.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (171.26498pt too high) detected at line 840
+Overfull \vbox (171.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (172.26498pt too high) detected at line 840
+Overfull \vbox (172.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (173.26498pt too high) detected at line 840
+Overfull \vbox (173.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (174.26498pt too high) detected at line 840
+Overfull \vbox (174.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (175.26498pt too high) detected at line 840
+Overfull \vbox (175.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (176.26498pt too high) detected at line 840
+Overfull \vbox (176.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (177.26498pt too high) detected at line 840
+Overfull \vbox (177.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (178.26498pt too high) detected at line 840
+Overfull \vbox (178.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (179.26498pt too high) detected at line 840
+Overfull \vbox (179.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (180.26498pt too high) detected at line 840
+Overfull \vbox (180.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (181.26498pt too high) detected at line 840
+Overfull \vbox (181.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (182.26498pt too high) detected at line 840
+Overfull \vbox (182.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (183.26498pt too high) detected at line 840
+Overfull \vbox (183.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (184.26498pt too high) detected at line 840
+Overfull \vbox (184.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (185.26498pt too high) detected at line 840
+Overfull \vbox (185.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (186.26498pt too high) detected at line 840
+Overfull \vbox (186.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (187.26498pt too high) detected at line 840
+Overfull \vbox (187.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (188.26498pt too high) detected at line 840
+Overfull \vbox (188.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (189.26498pt too high) detected at line 840
+Overfull \vbox (189.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (190.26498pt too high) detected at line 840
+Overfull \vbox (190.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (191.26498pt too high) detected at line 840
+Overfull \vbox (191.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (192.26498pt too high) detected at line 840
+Overfull \vbox (192.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (193.26498pt too high) detected at line 840
+Overfull \vbox (193.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (194.26498pt too high) detected at line 840
+Overfull \vbox (194.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (195.26498pt too high) detected at line 840
+Overfull \vbox (195.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (196.26498pt too high) detected at line 840
+Overfull \vbox (196.26498pt too high) detected at line 839
  []
 
 
-Overfull \vbox (197.26498pt too high) detected at line 840
+Overfull \vbox (197.26498pt too high) detected at line 839
  []
 
 
 Package mdframed Warning: correct box splittet fails
  It seems you are using a non splittable contents
-(mdframed)                 on input line 840.
+(mdframed)                 on input line 839.
 
 Package mdframed Info: You first box width is to small
  mdframed fixed it
-(mdframed)              on input line 840.
+(mdframed)              on input line 839.
 
 
-[16]
+[15]
 
-./notes.tex:842: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./notes.tex:841: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.842             \begin{tcolorbox}[gris]
+l.841             \begin{tcolorbox}[gris]
                                          
 (That was another \errmessage.)
 
 
-./notes.tex:847: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./notes.tex:846: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.847             \important
+l.846             \important
                             {The Schmidt decomposition theorem} says that an...
 (That was another \errmessage.)
 
 
-./notes.tex:852: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./notes.tex:851: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.852             \begin{tcolorbox}[gris]
+l.851             \begin{tcolorbox}[gris]
                                          
 (That was another \errmessage.)
 
 
-Overfull \hbox (75.78711pt too wide) in paragraph at lines 868--869
+Overfull \hbox (75.78711pt too wide) in paragraph at lines 867--868
 []\T1/cmr/m/n/10 Then $\OML/cmm/m/it/10 p[] > \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ;  p[] > \OT1/cmr/m/n/10 0  =[]\OMS/cmsy/m/n/10 )  \OML/cmm/m/it/10 ^^Z[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 p[] [] [] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 p[] [] [] \OT1/cmr/m/n/10 + []$ \T1/cmr/m/n/10 because $\OML/cmm/m/it/10 ^^Z[] \OT1/cmr/m/n/10 = [][] [] [] [][] []$
  []
 
 
 
-[17]
+[16]
 
-./notes.tex:879: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./notes.tex:878: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.879             \begin{tcolorbox}[rouge]
+l.878             \begin{tcolorbox}[rouge]
                                           
 (That was another \errmessage.)
 
 Runaway argument?
 {\glueexpr 10pt 
-./notes.tex:892: Paragraph ended before \addvspace was complete.
+./notes.tex:891: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.892             \end{tcolorbox}
+l.891             \end{tcolorbox}
                                  
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./notes.tex:892: Missing number, treated as zero.
+./notes.tex:891: Missing number, treated as zero.
 <to be read again> 
                    }
-l.892             \end{tcolorbox}
+l.891             \end{tcolorbox}
                                  
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./notes.tex:892: Illegal unit of measure (pt inserted).
+./notes.tex:891: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.892             \end{tcolorbox}
+l.891             \end{tcolorbox}
                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -3543,10 +3125,10 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./notes.tex:892: Extra }, or forgotten \endgroup.
+./notes.tex:891: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.892             \end{tcolorbox}
+l.891             \end{tcolorbox}
                                  
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -3555,14 +3137,14 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-Overfull \hbox (71.53163pt too wide) in paragraph at lines 914--915
+Overfull \hbox (71.53163pt too wide) in paragraph at lines 913--914
  [] 
  []
 
-./notes.tex:931: Missing \right. inserted.
+./notes.tex:930: Missing \right. inserted.
 <inserted text> 
                 \right .
-l.931 ...hspace\mathspace \to \text{ continuous}\]
+l.930 ...hspace\mathspace \to \text{ continuous}\]
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3570,10 +3152,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./notes.tex:931: Missing \right. inserted.
+./notes.tex:930: Missing \right. inserted.
 <inserted text> 
                 \right .
-l.931 ...hspace\mathspace \to \text{ continuous}\]
+l.930 ...hspace\mathspace \to \text{ continuous}\]
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3581,8 +3163,8 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./notes.tex:933: Undefined control sequence.
-l.933 ... & -i \\ i & 0 \end{pmatrix}, \mathspaces
+./notes.tex:932: Undefined control sequence.
+l.932 ... & -i \\ i & 0 \end{pmatrix}, \mathspaces
                                                    \mathspace Z = \begin{pma...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3592,95 +3174,95 @@ and I'll forget about whatever was undefined.
 
 
 
-[18]
-<images/2.png, id=412, 499.8675pt x 236.885pt>
+[17]
+<images/2.png, id=407, 499.8675pt x 236.885pt>
 File: images/2.png Graphic file (type png)
 <use images/2.png>
-Package pdftex.def Info: images/2.png  used on input line 944.
+Package pdftex.def Info: images/2.png  used on input line 943.
 (pdftex.def)             Requested size: 142.26378pt x 67.41895pt.
-<images/3.png, id=413, 923.45pt x 273.02pt>
+<images/3.png, id=408, 923.45pt x 273.02pt>
 File: images/3.png Graphic file (type png)
 <use images/3.png>
-Package pdftex.def Info: images/3.png  used on input line 946.
+Package pdftex.def Info: images/3.png  used on input line 945.
 (pdftex.def)             Requested size: 256.0748pt x 75.7077pt.
 
 
-[19 <./images/2.png> <./images/3.png>]
+[18 <./images/2.png> <./images/3.png>]
 
-./notes.tex:981: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./notes.tex:980: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.981         \begin{tcolorbox}[vert]
+l.980         \begin{tcolorbox}[vert]
                                      
 (That was another \errmessage.)
 
-<images/4.png, id=420, 765.86125pt x 214.8025pt>
+<images/4.png, id=416, 765.86125pt x 214.8025pt>
 File: images/4.png Graphic file (type png)
 <use images/4.png>
-Package pdftex.def Info: images/4.png  used on input line 993.
+Package pdftex.def Info: images/4.png  used on input line 992.
 (pdftex.def)             Requested size: 284.52756pt x 79.80344pt.
-<images/5.png, id=421, 602.25pt x 465.74pt>
+<images/5.png, id=417, 602.25pt x 465.74pt>
 File: images/5.png Graphic file (type png)
 <use images/5.png>
-Package pdftex.def Info: images/5.png  used on input line 1021.
+Package pdftex.def Info: images/5.png  used on input line 1020.
 (pdftex.def)             Requested size: 341.43306pt x 264.05324pt.
 
 
-[20 <./images/4.png>]
-Overfull \hbox (88.42491pt too wide) detected at line 1037
+[19 <./images/4.png>]
+Overfull \hbox (88.42491pt too wide) detected at line 1036
 [] \OML/cmm/m/it/10 ^^R [] [][] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 i [] ^^RZ [] [][] \OMS/cmsy/m/n/10 ! [] !\OT1/cmr/m/n/10 = []
  []
 
 
-Overfull \hbox (7.79178pt too wide) in paragraph at lines 1056--1057
+Overfull \hbox (7.79178pt too wide) in paragraph at lines 1055--1056
 []\T1/cmr/m/n/10 Check for bitflip error \TS1/cmr/m/n/10 ^^Y\T1/cmr/m/n/10 correct the bitflip error : $[] [] []$. 
  []
 
 
 
-[21 <./images/5.png>]
-Overfull \hbox (47.31651pt too wide) detected at line 1065
+[20 <./images/5.png>]
+Overfull \hbox (47.31651pt too wide) detected at line 1064
 []
  []
 
 
-./notes.tex:1071: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./notes.tex:1070: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1071             \begin{tcolorbox}[rouge]
+l.1070             \begin{tcolorbox}[rouge]
                                            
 (That was another \errmessage.)
 
 Runaway argument?
 {\glueexpr 10pt 
-./notes.tex:1074: Paragraph ended before \addvspace was complete.
+./notes.tex:1073: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.1074             \end{tcolorbox}
+l.1073             \end{tcolorbox}
                                   
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./notes.tex:1074: Missing number, treated as zero.
+./notes.tex:1073: Missing number, treated as zero.
 <to be read again> 
                    }
-l.1074             \end{tcolorbox}
+l.1073             \end{tcolorbox}
                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./notes.tex:1074: Illegal unit of measure (pt inserted).
+./notes.tex:1073: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.1074             \end{tcolorbox}
+l.1073             \end{tcolorbox}
                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -3689,10 +3271,10 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./notes.tex:1074: Extra }, or forgotten \endgroup.
+./notes.tex:1073: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.1074             \end{tcolorbox}
+l.1073             \end{tcolorbox}
                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -3701,51 +3283,51 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-./notes.tex:1076: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./notes.tex:1075: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1076         \begin{tcolorbox}[vert]
+l.1075         \begin{tcolorbox}[vert]
                                       
 (That was another \errmessage.)
 
 
-./notes.tex:1088: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./notes.tex:1087: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1088             \begin{tcolorbox}[rouge]
+l.1087             \begin{tcolorbox}[rouge]
                                            
 (That was another \errmessage.)
 
 Runaway argument?
 {\glueexpr 10pt 
-./notes.tex:1096: Paragraph ended before \addvspace was complete.
+./notes.tex:1095: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.1096             \end{tcolorbox}
+l.1095             \end{tcolorbox}
                                   
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./notes.tex:1096: Missing number, treated as zero.
+./notes.tex:1095: Missing number, treated as zero.
 <to be read again> 
                    }
-l.1096             \end{tcolorbox}
+l.1095             \end{tcolorbox}
                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./notes.tex:1096: Illegal unit of measure (pt inserted).
+./notes.tex:1095: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.1096             \end{tcolorbox}
+l.1095             \end{tcolorbox}
                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -3754,10 +3336,10 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./notes.tex:1096: Extra }, or forgotten \endgroup.
+./notes.tex:1095: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.1096             \end{tcolorbox}
+l.1095             \end{tcolorbox}
                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -3767,58 +3349,58 @@ deleted material, e.g., by typing `I$}'.
 
 
 
-[22]
+[21]
 
-./notes.tex:1107: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./notes.tex:1106: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1107             I
+l.1106             I
                     f $\left(U, \Sigma\right)$ is a QECC then $\left(U, span...
 (That was another \errmessage.)
 
 
-./notes.tex:1114: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./notes.tex:1113: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1114         \begin{tcolorbox}[rouge]
+l.1113         \begin{tcolorbox}[rouge]
                                        
 (That was another \errmessage.)
 
 
-Overfull \hbox (7.69058pt too wide) detected at line 1118
+Overfull \hbox (7.69058pt too wide) detected at line 1117
 [] \OMS/cmsy/m/n/10 ! [] ! [] ! [] ! [] ! \OML/cmm/m/it/10 H \OMS/cmsy/m/n/10 ! [] ! [] ! [] ! [] \OML/cmm/m/it/10 :
  []
 
 Runaway argument?
 {\glueexpr 10pt 
-./notes.tex:1122: Paragraph ended before \addvspace was complete.
+./notes.tex:1121: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.1122         \end{tcolorbox}
+l.1121         \end{tcolorbox}
                               
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./notes.tex:1122: Missing number, treated as zero.
+./notes.tex:1121: Missing number, treated as zero.
 <to be read again> 
                    }
-l.1122         \end{tcolorbox}
+l.1121         \end{tcolorbox}
                               
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./notes.tex:1122: Illegal unit of measure (pt inserted).
+./notes.tex:1121: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.1122         \end{tcolorbox}
+l.1121         \end{tcolorbox}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -3827,10 +3409,10 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./notes.tex:1122: Extra }, or forgotten \endgroup.
+./notes.tex:1121: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.1122         \end{tcolorbox}
+l.1121         \end{tcolorbox}
                               
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -3839,34 +3421,45 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-./notes.tex:1205: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./notes.tex:1204: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1205     \begin{tcolorbox}[vert]
+l.1204     \begin{tcolorbox}[vert]
                                   
 (That was another \errmessage.)
 
 
 
-[23]
+[22]
 
-./notes.tex:1215: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./notes.tex:1214: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1215         \begin{tcolorbox}[gris]
+l.1214         \begin{tcolorbox}[gris]
                                       
 (That was another \errmessage.)
 
 
-Overfull \hbox (27.39253pt too wide) detected at line 1227
+Overfull \hbox (27.39253pt too wide) detected at line 1226
 []\OML/cmm/m/it/10 ^^MB \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 ![];   [] \OT1/cmr/m/n/10 = []  =[]\OMS/cmsy/m/n/10 )  \OML/cmm/m/it/10 H \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 ^^M[]B \OMS/cmsy/m/n/10 ^^A \OML/cmm/m/it/10 ^^[[] \OT1/cmr/m/n/10 = [] []  =[]\OMS/cmsy/m/n/10 )  []  \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 ) 
  []
+
+
+./notes.tex:1232: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1232             \draw
+                         (-0.05,-1.4) -- (0.05, -1.4)
+(That was another \errmessage.)
 
 
 ./notes.tex:1233: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
@@ -3875,8 +3468,8 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1233             \draw
-                         (-0.05,-1.4) -- (0.05, -1.4)
+l.1233             \node
+                         at (-0.4, 0.4) {$+\frac{\hbar \omega}{2}$}
 (That was another \errmessage.)
 
 
@@ -3887,18 +3480,18 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.1234             \node
-                         at (-0.4, 0.4) {$+\frac{\hbar \omega}{2}$}
+                         at (1.2, 0.4) {$\ket{\downarrow}$ Excited state}
 (That was another \errmessage.)
 
 
-./notes.tex:1235: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+./notes.tex:1236: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1235             \node
-                         at (1.2, 0.4) {$\ket{\downarrow}$ Excited state}
+l.1236             \node
+                         at (1.2, -1.4) {$\ket{\uparrow}$ Ground state}
 (That was another \errmessage.)
 
 
@@ -3909,7 +3502,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.1237             \node
-                         at (1.2, -1.4) {$\ket{\uparrow}$ Ground state}
+                         at (-0.4, -1.4) {$-\frac{\hbar \omega}{2}$}
 (That was another \errmessage.)
 
 
@@ -3919,36 +3512,25 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1238             \node
-                         at (-0.4, -1.4) {$-\frac{\hbar \omega}{2}$}
-(That was another \errmessage.)
-
-
-./notes.tex:1239: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1239         \end{tikzpicture}
+l.1238         \end{tikzpicture}
                                 
 (That was another \errmessage.)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1247--1248
+Underfull \hbox (badness 10000) in paragraph at lines 1246--1247
 
  []
 
 
-Overfull \hbox (28.09782pt too wide) detected at line 1253
+Overfull \hbox (28.09782pt too wide) detected at line 1252
 []
  []
 
 
 
-[24]
+[23]
 
-[25] (./notes.aux)
+[24] (./notes.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -3957,19 +3539,19 @@ Package rerunfilecheck Info: File `notes.out' has not changed.
 (rerunfilecheck)             Checksum: 96247A61F98BE481FA34C29727947729;7167.
  ) 
 Here is how much of TeX's memory you used:
- 31971 strings out of 475171
- 641716 string characters out of 5767094
- 1106884 words of memory out of 5000000
+ 31970 strings out of 475171
+ 641709 string characters out of 5767094
+ 1103884 words of memory out of 5000000
  54296 multiletter control sequences out of 15000+600000
  582661 words of font info for 95 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  131i,19n,135p,522b,1143s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm7.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf-dist/fonts/type1/public/
 cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on notes.pdf (26 pages, 763077 bytes).
+Output written on notes.pdf (25 pages, 762357 bytes).
 PDF statistics:
- 642 PDF objects out of 1000 (max. 8388607)
- 501 compressed objects within 6 object streams
- 114 named destinations out of 1000 (max. 500000)
+ 637 PDF objects out of 1000 (max. 8388607)
+ 498 compressed objects within 5 object streams
+ 113 named destinations out of 1000 (max. 500000)
  510 words of extra memory for PDF output out of 10000 (max. 10000000)
 
