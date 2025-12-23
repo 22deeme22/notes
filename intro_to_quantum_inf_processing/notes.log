@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.12.15)  23 DEC 2025 11:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.12.15)  23 DEC 2025 15:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1411,7 +1411,7 @@ Package mdframed Info: Not enough space on this page on input line 180.
 
 [4]
 Package mdframed Info: Not enough space on this page on input line 180.
-<images/1.png, id=286, 523.9575pt x 402.50375pt>
+<images/1.png, id=301, 523.9575pt x 402.50375pt>
 File: images/1.png Graphic file (type png)
 <use images/1.png>
 Package pdftex.def Info: images/1.png  used on input line 188.
@@ -3593,12 +3593,12 @@ and I'll forget about whatever was undefined.
 
 
 [18]
-<images/2.png, id=397, 499.8675pt x 236.885pt>
+<images/2.png, id=412, 499.8675pt x 236.885pt>
 File: images/2.png Graphic file (type png)
 <use images/2.png>
 Package pdftex.def Info: images/2.png  used on input line 944.
 (pdftex.def)             Requested size: 142.26378pt x 67.41895pt.
-<images/3.png, id=398, 923.45pt x 273.02pt>
+<images/3.png, id=413, 923.45pt x 273.02pt>
 File: images/3.png Graphic file (type png)
 <use images/3.png>
 Package pdftex.def Info: images/3.png  used on input line 946.
@@ -3617,12 +3617,12 @@ l.981         \begin{tcolorbox}[vert]
                                      
 (That was another \errmessage.)
 
-<images/4.png, id=405, 765.86125pt x 214.8025pt>
+<images/4.png, id=420, 765.86125pt x 214.8025pt>
 File: images/4.png Graphic file (type png)
 <use images/4.png>
 Package pdftex.def Info: images/4.png  used on input line 993.
 (pdftex.def)             Requested size: 284.52756pt x 79.80344pt.
-<images/5.png, id=406, 602.25pt x 465.74pt>
+<images/5.png, id=421, 602.25pt x 465.74pt>
 File: images/5.png Graphic file (type png)
 <use images/5.png>
 Package pdftex.def Info: images/5.png  used on input line 1021.
@@ -3780,29 +3780,196 @@ l.1107             I
 (That was another \errmessage.)
 
 
+./notes.tex:1114: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
-[23] (./notes.aux)
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1114         \begin{tcolorbox}[rouge]
+                                       
+(That was another \errmessage.)
+
+
+Overfull \hbox (7.69058pt too wide) detected at line 1118
+[] \OMS/cmsy/m/n/10 ! [] ! [] ! [] ! [] ! \OML/cmm/m/it/10 H \OMS/cmsy/m/n/10 ! [] ! [] ! [] ! [] \OML/cmm/m/it/10 :
+ []
+
+Runaway argument?
+{\glueexpr 10pt 
+./notes.tex:1122: Paragraph ended before \addvspace was complete.
+<to be read again> 
+                   \par 
+l.1122         \end{tcolorbox}
+                              
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+./notes.tex:1122: Missing number, treated as zero.
+<to be read again> 
+                   }
+l.1122         \end{tcolorbox}
+                              
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./notes.tex:1122: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.1122         \end{tcolorbox}
+                              
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./notes.tex:1122: Extra }, or forgotten \endgroup.
+<recently read> }
+                 
+l.1122         \end{tcolorbox}
+                              
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+./notes.tex:1205: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1205     \begin{tcolorbox}[vert]
+                                  
+(That was another \errmessage.)
+
+
+
+[23]
+
+./notes.tex:1215: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1215         \begin{tcolorbox}[gris]
+                                      
+(That was another \errmessage.)
+
+
+Overfull \hbox (27.39253pt too wide) detected at line 1227
+[]\OML/cmm/m/it/10 ^^MB \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 ![];   [] \OT1/cmr/m/n/10 = []  =[]\OMS/cmsy/m/n/10 )  \OML/cmm/m/it/10 H \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 ^^M[]B \OMS/cmsy/m/n/10 ^^A \OML/cmm/m/it/10 ^^[[] \OT1/cmr/m/n/10 = [] []  =[]\OMS/cmsy/m/n/10 )  []  \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 ) 
+ []
+
+
+./notes.tex:1233: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1233             \draw
+                         (-0.05,-1.4) -- (0.05, -1.4)
+(That was another \errmessage.)
+
+
+./notes.tex:1234: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1234             \node
+                         at (-0.4, 0.4) {$+\frac{\hbar \omega}{2}$}
+(That was another \errmessage.)
+
+
+./notes.tex:1235: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1235             \node
+                         at (1.2, 0.4) {$\ket{\downarrow}$ Excited state}
+(That was another \errmessage.)
+
+
+./notes.tex:1237: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1237             \node
+                         at (1.2, -1.4) {$\ket{\uparrow}$ Ground state}
+(That was another \errmessage.)
+
+
+./notes.tex:1238: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1238             \node
+                         at (-0.4, -1.4) {$-\frac{\hbar \omega}{2}$}
+(That was another \errmessage.)
+
+
+./notes.tex:1239: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1239         \end{tikzpicture}
+                                
+(That was another \errmessage.)
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1247--1248
+
+ []
+
+
+Overfull \hbox (28.09782pt too wide) detected at line 1253
+[]
+ []
+
+
+
+[24]
+
+[25] (./notes.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `notes.out' has not changed.
-(rerunfilecheck)             Checksum: 87F2EB1C152D10C76230176160CEEB2E;6613.
+(rerunfilecheck)             Checksum: 96247A61F98BE481FA34C29727947729;7167.
  ) 
 Here is how much of TeX's memory you used:
- 31942 strings out of 475171
- 641265 string characters out of 5767094
- 1106786 words of memory out of 5000000
- 54274 multiletter control sequences out of 15000+600000
+ 31971 strings out of 475171
+ 641716 string characters out of 5767094
+ 1106884 words of memory out of 5000000
+ 54296 multiletter control sequences out of 15000+600000
  582661 words of font info for 95 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  131i,19n,135p,522b,1143s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm7.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/s
-fti0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on notes.pdf (24 pages, 726812 bytes).
+ </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm7.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf-dist/fonts/type1/public/
+cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on notes.pdf (26 pages, 763077 bytes).
 PDF statistics:
- 598 PDF objects out of 1000 (max. 8388607)
- 466 compressed objects within 5 object streams
- 107 named destinations out of 1000 (max. 500000)
- 486 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 642 PDF objects out of 1000 (max. 8388607)
+ 501 compressed objects within 6 object streams
+ 114 named destinations out of 1000 (max. 500000)
+ 510 words of extra memory for PDF output out of 10000 (max. 10000000)
 

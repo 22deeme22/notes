@@ -1104,18 +1104,164 @@
         \newpage
         Let $\left(U, \Sigma\right)$ be a QECC where $U: \mathcal{H}_K \to \mathcal{H}_N$ a map and $\Sigma$ is a set of correctable errors s.t. $\forall E \in \Sigma, \forall \ket{ \psi} \in \mathcal{H}_K$, there is a decoding map that restores the errored state: $D\left(EU\ket{\psi}\bra{\psi}U^{\dagger}E^{\dagger}\right) \propto \ket{\psi}\bra{\psi}$. 
         \begin{theoreme}
-            If $\left(U, \Sigma\right)$ is a QECC then $\left(U, span\left(\Sigma\right)\right)$ is also a QECC. Then, to correct arbitrary errors like $\alpha E+ \beta F$, it suffices to correct $E,F \implies$ \important{quantum errors can be disretized!}
+            If $\left(U, \Sigma\right)$ is a QECC then $\left(U, span\left(\Sigma\right)\right)$ is also a QECC. Then, to correct arbitrary errors like $\alpha E+ \beta F$, it suffices to correct $E,F \implies$ \important{quantum errors can be discretized!}
         \end{theoreme}
+    \subsection{Fault tolerance and error propagation}
+        We've seen ways to encode quantum states such that any error can be detected and corrected. But how do we act with gates in a way that doesn't propagate errors? \textrightarrow $\mathspace$\important{fault tolerance}.
+
+    \noindent Moreover, we've assumed that encoding/decoding are noiseless, but they also suffer from noise. The main idea will be: we only decode information when absolutely necesseray.
+    \begin{remark}{Example}
+        \begin{tcolorbox}[rouge]
+            Suppose I want to carry out $\ket{0}\xrightarrow{H}\ket{+}$.
+
+            \textbf{Silly way:} 
+            \[\ket{0}\to \text{Enc} \to \ket{\bar{0}} \to \text{Noise} \to \text{Dec} \to H \to \text{Enc} \to \text{Noise} \to \text{Dec} \to \ket{+}.\]
+            \noindent \textbf{Instead:} 
+            \[\ket{0}\to\text{Enc}\to\ket{\bar{0}}\to \bar{H}\to\ket{\bar{+}} \to \text{Dec}\to \ket{+}.\]
+            This saves one cycle of decoding and encoding.
+        \end{tcolorbox}
+    \end{remark}
+    Recall that encoding means going to a larger Hilbert space. So encoded operations also have to act on a larger Hilbert space.
+
+    \noindent Key idea: we encode gates in a way that doesn't spread errors.
+
+    Let 
+    \begin{center}
+    \begin{tikzpicture}[scale=1.2, every node/.style={font=\small}]
+        \draw [draw=black] (1.1,1.5) rectangle (0.3,0.3);
+        \node at (0.7, 0.9) {H};
+        \draw[->, black]
+            (-0.2,1.3) -- (0.2,1.3);
+        \draw[->, black]
+            (-0.2,0.5) -- (0.2,0.5);
+        \draw[->, black]
+            (-0.2,0.9) -- (0.2,0.9);
+        \node at (-0.6, 0.9) {$\ket{\bar{\psi}}\Biggl\{$ };
+        \draw[->, black]
+            (1.2,0.9) -- (1.6,0.9);
+        \draw[->, black]
+            (1.2,1.3) -- (1.6,1.3);
+        \draw[->, black]
+            (1.2,0.5) -- (1.6,0.5);
+        \node at (2.2, 0.9) {$\Biggr\}\ket{H\ket{\bar{\psi}}}$};
+    \end{tikzpicture}
+    \end{center}
+    What operations should go insinde the box?
+
+    Option 1: 
+    \begin{center}
+    \begin{tikzpicture}[scale=1.2, every node/.style={font=\small}]
+         \draw[->, black]
+            (-0.8,-0.1) -- (-0.4,-0.1);
+        \draw [draw=black] (0.3,0.1) rectangle (-0.3,-0.3);
+        \draw[->, black]
+            (0.4,-0.1) -- (0.8,-0.1);
+
+        \draw[->, black]
+            (-0.8,-0.7) -- (-0.4,-0.7);
+        \draw [draw=black] (0.3,-0.5) rectangle (-0.3,-0.9);
+        \draw[->, black]
+            (0.4,-0.7) -- (0.8,-0.7);
+
+
+        \draw[->, black]
+            (-0.8,-1.3) -- (-0.4,-1.3);
+        \draw [draw=black] (0.3,-1.1) rectangle (-0.3,-1.5);
+        \draw[->, black]
+            (0.4,-1.3) -- (0.8,-1.3);
+    \end{tikzpicture}
+    \end{center}
+    Option 2:
+    \begin{center}
+    \begin{tikzpicture}[scale=1.2, every node/.style={font=\small}]
+         \draw[->, black]
+            (-0.8,-0.1) -- (-0.4,-0.1);
+        \draw [draw=black] (0.3,0.1) rectangle (-0.3,-0.9);
+        \draw[->, black]
+            (0.4,-0.1) -- (1.8,-0.1);
+        \draw[->, black]
+            (-0.8,-0.7) -- (-0.4,-0.7);
+        \draw[->, black]
+            (0.4,-0.7) -- (0.8,-0.7);
+
+        \draw[->, black]
+            (-0.8,-1.3) -- (0.8,-1.3);
+        \draw [draw=black] (0.9,-0.5) rectangle (1.5,-1.5);
+        
+        \draw[->, black]
+            (1.6,-0.7) -- (1.8,-0.7);
+        \draw[->, black]
+            (1.6,-1.3) -- (1.8,-1.3);
+    \end{tikzpicture}
+    \end{center}
+    \textbf{Reasons to prefer option 1:}
+    \begin{itemize}[left=10pt, label=\textbullet]
+        \item Most hardware platforms ahve much higher fidelity for single qubit gates than for multiple qubit gates. 
+        \item Transversal gates are ``better'' for preventing propagation.
+    \end{itemize}
+    \textbf{Transversal gates:}
+
+    Defining a code block $\left[\left[n,k,d\right]\right]$,
+    \begin{tcolorbox}[vert]
+        Transversality means that each encoded gate touches 1 qubit from each code block.
+    \end{tcolorbox}
+    Transversality ensures that if any error occurs, the gate can propagate it to at most one error per block.
+
+\section{Quantum magnetic moment}
+    The energy of the interaction of classical magnetic moment with magnetic field is $\propto - \vec{B}\cdot  \vec{M}$.
+    But electrons, protons, etc\ldots posses also intrensic $\vec{M}$ (magnetic moment) with a \important{quantum observable}. Let's see the quantum magnetic moment of type spin$\frac{1}{2}$. 
+    \[\text{Energy observable } H = -\gamma \frac{\hbar}{2}\vec{B}\cdot \vec{\sigma}, \mathspace \text{  where } \vec{\sigma}=\left(\sigma_x, \sigma_y, \sigma_z\right), \mathspace \hbar = \frac{h}{2\pi} \text{ (Planck constant)}.\]
+    \begin{remark}{Remarque}
+        \begin{tcolorbox}[gris]
+            Note that for 
+            \begin{itemize}[left=10pt, label=\textbullet]
+                \item spin$\frac{1}{2}$: $\sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} , \mathspace \sigma_x =\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} , \mathspace \sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} $, 
+                \item spin: matrices are 3 x 3, 
+                \item spin$\frac{3}{2}$: matrices are 4 x 4,
+                \item in general: spin s: matrices are $\left(2s+1\right)$ x $\left(2s+1\right)$.
+            \end{itemize}
+        \end{tcolorbox}
+    \end{remark}
+    \[H = -\gamma\frac{\hbar}{2}\vec{B}\cdot \vec{\sigma}= -\gamma \frac{\hbar}{2}\left(B_x\sigma_x+B_y\sigma_y+B_z\sigma_z\right)=-\gamma\frac{\hbar}{2}\begin{pmatrix} B_z & B_x-iB_y \\ B_x+iB_y & -B_z \end{pmatrix} ,\]
+    this is a Hermitian matrix, $H^{\dagger}=H \to $ the spectrum of eigenvalues is real, eigenvectors form an orthogonal basis of $\mathbb{C}^2$. Without loss of genrality, we have the same physical situation for 
+    \[\text{with } \gamma B = \omega \text{ (unit of frequency)}, \mathspace \mathspace\vec{B}=\left(0,0,B\right) \implies H=-\gamma \frac{\hbar}{2}B\cdot \sigma_z= \frac{\hbar \omega}{2}\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \implies \text{ diagonal !} \implies\]
+    \begin{center}
+        \begin{tikzpicture}[scale=1.2, every node/.style={font=\small}]
+            \draw[->, black]
+                (0,-2.0) -- (0,1);
+            \draw (-0.05,0.4) -- (0.05, 0.4)
+            \draw (-0.05,-1.4) -- (0.05, -1.4)
+            \node at (-0.4, 0.4) {$+\frac{\hbar \omega}{2}$}
+            \node at (1.2, 0.4) {$\ket{\downarrow}$ Excited state}
+
+            \node at (1.2, -1.4) {$\ket{\uparrow}$ Ground state}
+            \node at (-0.4, -1.4) {$-\frac{\hbar \omega}{2}$}
+        \end{tikzpicture}
+    \end{center}
+    In general $\omega = \gamma \sqrt{B_x^2+B_y^2+B_z^2} \implies$ energy depends only of norm of $\vec{B}$.
+
+    \noindent Eigenvectors: $\begin{pmatrix} 1 \\ 0 \end{pmatrix} = \ket{0} =\ket{\uparrow}, \mathspace \begin{pmatrix} 0 \\ 1 \end{pmatrix} =\ket{1}=\ket{\downarrow}$.
+    \subsection{Time evolution}
+        If we only have $\vec{B}=\left(0,0,B_0\right), \mathspace B_0>0$,
+        \begin{enumerate}[left=10pt]
+            \item Compute time evolution: $U\left(t\right)=\ket{\psi_0}=\ket{\psi_t}$,\\
+            \item Schrodinger equation: 
+            \begin{align*} 
+                i\hbar\frac{d}{dt}\ket{\psi_t}=H\ket{\psi_t} &\iff i\hbar \frac{d}{dt} U_t = HU_t, \\
+                U_t = \exp\left(\frac{it}{\hbar}H\right)=\exp\left(\frac{it}{\hbar}\frac{\hbar \omega_0 \sigma_z}{2}\right) &\implies U_t = \exp \left[\frac{-it \omega_0}{2}\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}\right] = \begin{pmatrix} e^{\frac{-it\omega_0}{2}} & 0 \\ 0 & e^{\frac{it\omega_0}{2}}  \end{pmatrix}, \\
+                \ket{\psi_0} = \left(\cos\frac{\theta}{2}\right)\ket{0}+e^{i\phi}\left(\sin\frac{\theta}{2}\right)\ket{1} &\implies \ket{\psi_t}=U_t\ket{\psi_0} = e^{\frac{-i^\omega_0}{2}} \left[\left(\cos\frac{\theta}{2}\right)\ket{0}+e^{i\left(\phi-\omega_0t\right)}\left(\sin\frac{\theta}{2}\ket{1}\right)\right].
+            \end{align*}
+         
+        \end{enumerate}
+    
         
         
-        
-        
-        
-        
-        
-        
-        
-        
+
+    
+    
+   
+    
+    
 
         
         

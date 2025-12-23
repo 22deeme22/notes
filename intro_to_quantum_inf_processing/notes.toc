@@ -37,3 +37,6 @@
 \contentsline {subsection}{\numberline {9.5}Detection and correction of phaseflip errors}{19}{subsection.9.5}%
 \contentsline {subsection}{\numberline {9.6}9-qubit Shor code}{20}{subsection.9.6}%
 \contentsline {subsection}{\numberline {9.7}Quantum code distance}{22}{subsection.9.7}%
+\contentsline {subsection}{\numberline {9.8}Fault tolerance and error propagation}{23}{subsection.9.8}%
+\contentsline {section}{\numberline {10}Quantum magnetic moment}{24}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Time evolution}{24}{subsection.10.1}%
