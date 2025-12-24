@@ -108,7 +108,7 @@
 
 \RequirePackage[utf8]{inputenc}   % UTF-8
 \RequirePackage[T1]{fontenc}      % encodage font
-\RequirePackage[french]{babel}    % langue française
+\RequirePackage[english]{babel}    % langue française
 \RequirePackage{amsmath, amssymb, amsfonts} % maths
 \RequirePackage{graphicx}  % inclure des images
 \RequirePackage[colorlinks=true, linkcolor=blue, urlcolor=cyan]{hyperref}
@@ -158,7 +158,7 @@
         boxrule=0.4pt,            % épaisseur de la bordure
         left=4mm, right=4mm, top=2mm, bottom=2mm,
         breakable,
-        title=Théorème~\refstepcounter{theoremecounter}\thetheoremecounter       
+        title=Theorem~\refstepcounter{theoremecounter}\thetheoremecounter       
     }
 }
 \tcbset{
@@ -210,6 +210,20 @@
     violet/.style={
         colback=violet,     % fond
         colframe=violetb,  % bordure
+        fonttitle=\bfseries,      % titre en gras
+        coltitle=black,           % couleur du titre
+        sharp corners=none,       % coins arrondis
+        arc=1mm,                  % rayon des coins
+        boxrule=0.4pt,            % épaisseur de la bordure
+        left=4mm, right=4mm, top=2mm, bottom=2mm,
+        before skip=10pt,
+        after skip=10pt
+    }
+}
+\tcbset{
+    bleu/.style={
+        colback=orange,     % fond
+        colframe=bleu,  % bordure
         fonttitle=\bfseries,      % titre en gras
         coltitle=black,           % couleur du titre
         sharp corners=none,       % coins arrondis

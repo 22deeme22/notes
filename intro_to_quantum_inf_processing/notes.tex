@@ -8,8 +8,9 @@
 
 \thispagestyle{fancy}
 \title{Notes of introduction to information processing}
-\author{Dario Marcone}
-\date{Samedi 08 novembre 2025}
+\author{Dario Marcone \\
+Prof. Nicolas Macris, Yihui Quek}
+\date{Saturday 08 november 2025}
 
 \begin{document}
 \maketitle
@@ -18,6 +19,19 @@
 \tableofcontents
 \newpage
 
+\section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
+These notes correspond to the course Introduction to Information Processing (COM-309).
+This document was written using LaTeX and Neovim. The overall structure and style are directly inspired by the notes of Arthur Herbette, with a few personal modifications. He also helped me significantly with my Neovim setup, for which I am grateful.
+
+\noindent Regarding note-taking methodology, I refer the reader to
+\url{https://castel.dev/post/lecture-notes-1/}
+, which provides an excellent and well-structured explanation of how to take effective lecture notes.
+
+\noindent The course is taught entirely on the blackboard. The content of this PDF therefore corresponds to what was written by the instructors on the board during the lectures, with minor reorganizations and clarifications when necessary. The material presented here originates from the lectures themselves and from the instructors’ explanations.
+
+\noindent Despite my efforts, errors or inaccuracies may remain. Readers are therefore encouraged to approach these notes with appropriate caution.
+\newpage
 \section{Linear algebra in Dirac notation}
     \begin{tcolorbox}[vert]
         \begin{itemize}[left=10pt, label=\textbullet]
@@ -81,7 +95,7 @@
         \begin{tcolorbox}[vert]
             The state of an \important{isolated} system is a vector $\ket{\phi} \in \mathcal{H}$ in Hilbert space $\mathcal{H}$ w.r.t the normalization condition $\braket{\phi|\phi}=1$.       
         \end{tcolorbox}
-        \begin{remark}{Remarque}
+        \begin{remark}{Remark}
             \begin{tcolorbox}[gris]
                 $\ket{\phi}$ and $e^{i\lambda}\ket{\phi}, \lambda \in \mathbb{R}$ are physically equivalent.
             \end{tcolorbox}
@@ -152,7 +166,7 @@
             \begin{tcolorbox}[vert]
                 The composite system of $\mathcal{H}_A$ and $\mathcal{H}_B$ is equal to $\mathcal{H}_{A\cup B}= \mathcal{H}_A \otimes \mathcal{H}_B$.
             \end{tcolorbox}
-            \begin{remark}{Remarque}
+            \begin{remark}{Remark}
                 \begin{tcolorbox}[gris]
                     $dim\left(\mathcal{H}_A \otimes \mathcal{H}_B\right)=\left(dim\mathcal{H}_A\right)\left(dim\mathcal{H}_B\right)$.
                 \end{tcolorbox}
@@ -190,7 +204,7 @@
            \item \textbf{Space:} $\mathcal{H}=\mathbb{C}^2=\{\begin{pmatrix} \alpha \\ \beta \end{pmatrix}, \mathspace \alpha & \beta \in \mathbb{C}, \left|\alpha\right|^2+\left|\beta\right|^2=1\}$.
            \item \textbf{Basis:} $\begin{pmatrix} 1 \\ 0 \end{pmatrix} = \ket{H}, \mathspace \begin{pmatrix} 0 \\ 1 \end{pmatrix} = \ket{V}, \mathspace \alpha\ket{H}+\beta\ket{V}=\ket{\psi}$.
            \item \textbf{Beam splitter:} $U = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \left(\text{ Hadamard matrix}\right)$.
-           \item \textbf{State after the beam splitter: }$U\ket{H}= \frac{1}{\sqrt{2}}\left(\ket{H}+\ket{V}\right)$. \begin{remark}{Remarque}
+           \item \textbf{State after the beam splitter: }$U\ket{H}= \frac{1}{\sqrt{2}}\left(\ket{H}+\ket{V}\right)$. \begin{remark}{Remark}
                    \begin{tcolorbox}[gris]
                         It's a very srange state that is at the same time horizontal and vertical. If it wasn't a qubit, it would either be completely reflected or it would go through. 
                    \end{tcolorbox}
@@ -228,7 +242,7 @@
                     \text{Linear polarization: } \vec{E} &\propto \vec{E}_0 \begin{pmatrix} \cos \theta \\ \sin \theta \\ 0 \end{pmatrix} e^{i \omega t} e^{i\frac{2\pi}{\lambda}z},\\
                     \text{Circular polarization: } \vec{E} &\propto \vec{E}_0 \begin{pmatrix} 1 \\ i \\ 0 \end{pmatrix} e^{i\omega t} e^{i\frac{2\pi}{\lambda}z}.
                 \end{align*}
-                \begin{remark}{Remarque}
+                \begin{remark}{Remark}
                     \begin{tcolorbox}[gris]
                        The polarization of an electro-magnetic wave indicate how the electrique field oscillate in space and time (it shows the direction).
                     \end{tcolorbox}
@@ -239,7 +253,7 @@
                  \ket{\theta_{\perp}} &= -\sin \theta \ket{x} + \cos \theta \ket{y}.$
 
                  Circular polarization state: $\ket{\circlearrowleft} = \frac{1}{\sqrt{2}}\left(\ket{x}+i\ket{y}\right)=\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ i \end{pmatrix}, \mathspace \ket{\circlearrowright}= \frac{1}{\sqrt{2}}\left(\ket{x}-i\ket{y}\right)=\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ -i \end{pmatrix}$.
-            \begin{remark}{Remarque}
+            \begin{remark}{Remark}
                 \begin{tcolorbox}[gris]
                     A classical electro-magnetic wave can be viewed as a collective state of many photons, each having the same polarization state. This photon polarization state determine the direction and the form of oscillation of the electric field in the corresponding classical wave.
                 \end{tcolorbox}
@@ -319,7 +333,7 @@
                     \item if they match, we can exclude that there is an eavesdropper,
                     \item otherwise we can conclude that there is an eavesdropper so we abort the protocol.     
                 \end{itemize}
-                \begin{remark}{Remarque}
+                \begin{remark}{Remark}
                     \begin{tcolorbox}[gris]
                         When the eavesdropper look at a qubit on the quantum channel, he has to measure the qubit $\implies$ the state of the particle collapse. So if Alice and Bob have the same basis, but not the same bit, they can assume that an eavesdropper has intercepted and measured a qubit in the wrong basis, and then sent a modified state to Bob.
                     \end{tcolorbox}
@@ -615,13 +629,13 @@
             \[0 \leq p_i \leq 1, \sum_{ i=1 } ^{ k }p_i=1.\]
         \end{tcolorbox}
         Convenient useful description is through the density matrix: $\rho= \sum_{ i=1 } ^{ k } p_i \ket{\phi_i}\bra{\phi_i}$
-        \begin{remark}{Remarque}
+        \begin{remark}{Remark}
             \begin{tcolorbox}[gris]
                 Density matrix is a convex linear combination of projections: $\ket{\phi_i}\bra{\phi_i}= \pi_i, \mathspace \pi_i\ket{\psi}= \ket{\phi_i}\braket{\phi_i|\psi},\mathspace \pi_i^+ = \pi_i, \mathspace \pi_i ^2=\pi_i$.
             \end{tcolorbox}
         \end{remark}
         From a statistical mixture, we get a state $\ket{\phi_i}$ with probability $p_i$, then we measure $\ket{\phi_i}$, what's the expectation of A?
-        \begin{remark}{Remarque}
+        \begin{remark}{Remark}
             \begin{tcolorbox}[gris]
                 \textbf{Cyclicity of Trace:} 
                 \[Tr\left(AB\right)=Tr\left(BA\right), \mathspace Tr\left(ABC\right)=Tr\left(CAB\right)=Tr\left(BCA\right).\]
@@ -645,7 +659,7 @@
         \[M= \sum_{ ij; kl } M_{ij; kl} \left(\ket{v_i}\otimes \ket{w_j}\right)\left(\ket{v_k} \otimes \ket{w_l}\right), \mathspace \mathspace M_{ij;kl}=\left(\ket{v_i} \otimes \ket{w_j}\right)M\left(\ket{v_k} \otimes \ket{w_l}\right).\]
         Full trace: $TrM=\sum_{ ij }M_{ij;ij}$,   $\mathspace \mathspace \mathspace $ partial trace: $Tr_{\mathcal{H}_1}M=\sum_{ j;l } \left(\sum_{ i } M_{ij; il}\right)\overbrace{\ket{w_j}\bra{w_l}}^{dim\mathcal{H}_2 \cdot dim\mathcal{H}_2}$.
 
-        \begin{remark}{Remarque}
+        \begin{remark}{Remark}
             \begin{tcolorbox}[gris]
                 You can vizualize this by thinking that M like a big matrice of size $\left(dim\mathcal{H}_1 dim\mathcal{H}_2\right) \cdot \left(dim\mathcal{H}_1 dim\mathcal{H}_2\right)$ and that the partial trace correspond to slice this matrice in blocs corresponding to $\mathcal{H}_1$ and compute the trace on these blocs.
             \end{tcolorbox}
@@ -688,7 +702,7 @@
             Let $\rho$ be a density matrix, its Von Neumann entropy is 
             \[S\left(\rho\right):= -Tr\left(\rho\log\left(\rho\right)\right).\]
         \end{tcolorbox}
-        \begin{remark}{Remarque}
+        \begin{remark}{Remark}
             \begin{tcolorbox}[gris]
                 Diagonal elements of $\rho$ are a classical probability distribution, $Tr\left(\rho\log\rho\right)$ means:
                 \begin{itemize}[left=10pt, label=\textbullet]
@@ -837,7 +851,7 @@
                 \end{enumerate}
             \end{tcolorbox}
         \end{remark}
-        \begin{remark}{Remarque}
+        \begin{remark}{Remark}
             \begin{tcolorbox}[gris]
                A unique thing about quantum mechanics is that there existe some $\rho_{AB}$ such that $S\left(\rho_{AB}\right) < S\left(\rho_A\right)$. For example: $\rho_{AB}=\ket{B_{00}}\bra{B_{00}}$. 
             \end{tcolorbox}
@@ -847,7 +861,7 @@
             \[\sum_{ i }p_i\ket{\phi_A}_i \otimes \ket{\phi_B}_i, \mathspace \mathspace p_i \geq 0.\]
             $\{\ket{\phi_A}_i\}$ is orthonormal for A and $\{\ket{\phi_B}_i\}$ is orthonormal for B, but they don't need to form a basis.
         \end{theoreme}
-        \begin{remark}{Remarque}
+        \begin{remark}{Remark}
             \begin{tcolorbox}[gris]
                 If $r=1$, then $\ket{\phi}_{AB}$ is factorizable!
             \end{tcolorbox}
@@ -1210,7 +1224,7 @@
     The energy of the interaction of classical magnetic moment with magnetic field is $\propto - \vec{B}\cdot  \vec{M}$.
     But electrons, protons, etc\ldots posses also intrensic $\vec{M}$ (magnetic moment) with a \important{quantum observable}. Let's see the quantum magnetic moment of type spin$\frac{1}{2}$. 
     \[\text{Energy observable } H = -\gamma \frac{\hbar}{2}\vec{B}\cdot \vec{\sigma}, \mathspace \text{  where } \vec{\sigma}=\left(\sigma_x, \sigma_y, \sigma_z\right), \mathspace \hbar = \frac{h}{2\pi} \text{ (Planck constant)}.\]
-    \begin{remark}{Remarque}
+    \begin{remark}{Remark}
         \begin{tcolorbox}[gris]
             Note that for 
             \begin{itemize}[left=10pt, label=\textbullet]
@@ -1250,8 +1264,71 @@
                 U_t = \exp\left(\frac{it}{\hbar}H\right)=\exp\left(\frac{it}{\hbar}\frac{\hbar \omega_0 \sigma_z}{2}\right) &\implies U_t = \exp \left[\frac{-it \omega_0}{2}\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}\right] = \begin{pmatrix} e^{\frac{-it\omega_0}{2}} & 0 \\ 0 & e^{\frac{it\omega_0}{2}}  \end{pmatrix}, \\
                 \ket{\psi_0} = \left(\cos\frac{\theta}{2}\right)\ket{0}+e^{i\phi}\left(\sin\frac{\theta}{2}\right)\ket{1} &\implies \ket{\psi_t}=U_t\ket{\psi_0} = e^{\frac{-i^\omega_0}{2}} \left[\left(\cos\frac{\theta}{2}\right)\ket{0}+e^{i\left(\phi-\omega_0t\right)}\left(\sin\frac{\theta}{2}\ket{1}\right)\right].
             \end{align*}
-         
         \end{enumerate}
+        But now, if we have a rotating magnetic field in (xy) plane: $\vec{B}\left(t\right)=\left(B_1\cos\omega t, B_1\sin\omega t, B_0\right)$, the time evolution of $\ket{\psi_t} \in \mathbb{C}^2$ generated by Hamiltonian: 
+        \[H = -\frac{\gamma \hbar}{2}\vec{B}\left(t\right)\cdot \vec{\sigma}, \mathspace \mathspace \vec{\sigma}=\left(\sigma_x,\sigma_y,\sigma_z\right), \mathspace\mathspace \ket{\psi_t}=U_t\ket{\psi}.\]
+        To find $U_t$, we use Schrodinger equation
+        \begin{enumerate}[left=10pt]
+            \item For the constant case $\vec{B}=\left(0,0,B_0\right)$, the solution is time independant $\implies$ is a constant. 
+            \begin{align*} 
+                &i \hbar \frac{d}{dt}U_t =H\left(t\right)U_t, \\
+                &H\left(t\right)=-\gamma\frac{\hbar}{2}B_0\sigma_z, \text{ (H(t) is time independant!)} \\
+                &U_t=\exp\left(-\frac{it}{\hbar}H\right).
+            \end{align*}
+            
+            \item For the rotating (xy) plan $\vec{B}=\left(B_1\cos\omega t, B_1\sin\omega t, B_0\right)$, we have 
+            \[i\hbar\frac{d}{dt}U_t=H\left(t\right)U_t=-\gamma\frac{\hbar}{2}\vec{B}\left(t\right)\cdot \vec{\sigma}U_t = \left[-\frac{\hbar \omega_1}{2}\left(\left(\cos\omega t\right)\sigma_x +\left(\sin\omega t\right)\sigma_y\right)-\frac{\hbar\omega_0}{2}\sigma_z\right]U_t.\] 
+            \[\text{With } \gamma B_1=\omega_1, \gamma B_0=\omega_0.\]
+        \end{enumerate}
+    \subsection{Change of reference frame}
+        We are going to a rotating frame to have an independant $H\left(t\right)$. 
+        
+        \noindent State in rotating frame: $\ket{\widetilde{\psi}}=e^{-i\frac{\omega t}{2}\sigma_z}$,
+
+        \noindent State in lab frame: $\ket{\psi_t}=e^{\frac{it}{\hbar}K}\ket{\psi_t}$,     
+        
+        \noindent New hamiltonian in rotating frame: $\ket{\widetilde{\psi}_t}=\underbrace{e^{i\frac{t}{\hbar}K}U_t}_{\widetilde{U}_t}\underbrace{\ket{\psi_0}}_{\ket{\widetilde{\psi}_0}}$. 
+        \begin{align*} 
+            i\hbar\frac{d}{dt}\widetilde{U}_t=i\hbar \frac{d}{dt}\left(e^{i\frac{t}{\hbar}K}U_t\right)=-Ke^{i\frac{t}{\hbar}K}U_t+e^{i\frac{t}{\hbar}K}\underbrace{\left(i\hbar\frac{d}{dt}U_t\right)}_{H\left(t\right)U_t} = \\
+            \left[-Ke^{it\frac{K}{\hbar}}+e^{it\frac{K}{\hbar}}H\left(t\right)\right]=\left[-K+e^{it\frac{K}{\hbar}}H\left(t\right)e^{-it\frac{K}{\hbar}}\right]\underbrace{e^{it\frac{K}{\hbar}}U_t}_{\widetilde{U}_t}.
+        \end{align*}
+        \begin{tcolorbox}[bleu]
+        Then, in rotating frame: 
+        \[i\hbar \frac{d}{dt}\widetilde{U}_t=\widetilde{H}\left(t\right)\widetilde{U}_t, \mathspace \mathspace \widetilde{H}\left(t\right)=\left[-K+e^{it\frac{K}{\hbar}}H\left(t\right)e^{-it\frac{K}{\hbar}}\right],\]
+        \[K = -\hbar\frac{\omega_0}{2}\sigma_z=i\frac{\omega_0}{2}\hbar \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}, \mathspace \mathspace e^{it\frac{K}{\hbar}}= \begin{pmatrix} e^{-i\frac{\omega_0t}{2}} & 0 \\ 0 & e^{i\frac{\omega_0t}{2}} \end{pmatrix} .\]
+        \end{tcolorbox}
+        \begin{remark}{Remark}
+           \begin{tcolorbox}[gris]
+                \[\widetilde{H}\left(t\right)=\frac{\hbar}{2}\delta\sigma_z-\frac{\hbar\omega}{2}\sigma_x, \mathspace \mathspace \delta=\omega-\omega_0 \leftarrow \text{ time independant!}\]
+           \end{tcolorbox}
+        \end{remark}
+        Let's compute evolution matrix in rotating frame: 
+        $\widetilde{U}_t=\exp\left(-\frac{it}{2}\left[\delta\sigma_z-\omega_1\sigma_x\right]\right)$.
+
+        \noindent Recall generalized Euler (type) formula $e^{i\alpha\hat{m}\cdot \vec{\sigma}} =\left(\cos\alpha\right)I+i\left(\sin\alpha\right)\hat{m}\cdot \vec{\sigma}$. with 
+        \[\alpha= -\frac{t}{2}\sqrt{\delta ^2 +\omega_1^2}, \mathspace \mathspace m_z=\frac{\delta}{\sqrt{\delta ^2 +\omega_1^2}}, \mathspace \mathspace m_x=\frac{-\omega_1}{\sqrt{\delta ^2+\omega_1^2}}, \mathspace \mathspace m_y = 0,\]
+        we find 
+        \[U_t= \begin{pmatrix} u_{\uparrow \uparrow}\left(t\right) & u_{\uparrow \downarrow}\left(t\right) \\ u_{\downarrow \uparrow}\left(t\right) & u_{\downarrow \downarrow}\left(t\right) \end{pmatrix} .\]
+    To go back to the lab frame: $\widetilde{U}_t: e^{i\frac{t}{\hbar}K}U_t \implies U_t=e^{-i\frac{t}{\hbar}K}\widetilde{U}_t=\begin{pmatrix} u_{\uparrow \uparrow}\left(t\right) & u_{\uparrow \downarrow}\left(t\right) \\ u_{\downarrow \uparrow}\left(t\right) & u_{\downarrow \downarrow}\left(t\right) \end{pmatrix}$ .
+
+    \noindent We can look at some probabilitie: 
+    \begin{align*} 
+        &u_{\downarrow \uparrow}=\bra{\downarrow}U\ket{\uparrow}, \mathspace \mathspace \ket{\uparrow}=\ket{0}, \mathspace \mathspace \ket{\downarrow}=\ket{1}, \\
+        &\left|u_{\uparrow \downarrow}\right|^2=\left|\bra{\downarrow}U_t\ket{\uparrow}\right|^2=prob\left(\ket{\uparrow}\to\ket{\downarrow}\right), \\
+        &\left|u_{\downarrow \uparrow}\right|^2 = \ldots  \\
+        prob\left(\ket{\uparrow} \text{ initially} &\to \frac{\ket{\uparrow}+\ket{\downarrow}}{\sqrt{2}} \text{ at time t}\right) =\left|\left(\frac{\ket{\uparrow}+\ket{\downarrow}}{\sqrt{2}}\right)U_t\ket{\downarrow}\right|^2=\frac{1}{2}\left|u_{\uparrow \uparrow}\left(t\right)+u_{\downarrow \uparrow}\left(t\right)\right|^2.
+    \end{align*}
+    
+    
+    
+    
+$
+        
+        
+            
+        
+        
+        
     
         
         
