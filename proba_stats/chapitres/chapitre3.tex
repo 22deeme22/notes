@@ -272,6 +272,32 @@
         Then, the random vector 
         \[\left(\sum_{ i=1 } ^{ n }\mathbbm{1}_{A_1}\left(X_i\right),\sum_{ i=1 } ^{ n }\mathbbm{1}_{A_2}\left(X_i\right), \ldots,\sum_{ i=1 } ^{ n }\mathbbm{1}_{A_k}\left(X_i\right)\right),\]
         which simply counts the number of measurements which fell into each class, follows a multinomila distribution with parameters $\left(n, k; P\left(X \inA_1\right), \ldots, P\left(X_1 \in A_k\right)\right)$. 
+    \subsection{$\mathcal{X}^2$ tests}
+        \subsubsection{Adequacy tests}
+            Adequacy tests are a way to check whether the observed realisation of the sample was obtain from a given law or not. Consider an experiment with a certain realisation space $\Omega$. Suppose that you can partition $\Omega$ into disjoint classes $\Omega_1, \ldots, \Omega_k$. If we let $\mathbb{P}$ be the lae of the sample (which we do not know), we then have the probability of falling in each of the classes is a number $p_i = \mathbb{P}\left(\Omega_i\right) \in \left[0,1\right]$, and that $\sum_{ i=1 } ^{ k }p_i=1$. Observing a realisation of a n-sample $X_1, \ldots, X_n$, we can associate the numbers of times weobserved a realisation in the class $\Omega_i$: 
+            \[N_{n,i}\left(x_1, \ldots, x_n\right)=\sum_{ j=1 } ^{ n }\mathbbm{1}_{\Omega_i}\left(x_j\right).\]
+            If we assume that the law of the sample is $\mathbb{P}$, we have thtat the vector $\left(N_{n,1}, \ldots, N_{n,k}\right)$ folllows a \important{multinomial distribution} of parameters $\left(n,k ; p_1, \ldots, p_k\right)$: recall that it is a discrete random vector with, for $m_1, \ldots, m_k \in \mathbb{N}$, 
+            \[P\left(\left(N_{n,1}, \ldots, N_{n,k}\right)=\left(m_1, \ldots, m_k\right)\right)=\mathbbm{1}_{m_1+\ldots+m_k=n}\frac{n!}{m_1!\ldots m_k!}p_1^{m_1}\ldots p_k^{m_k}.\]
+            We can now describe the idea of the test. Our goal is to test wether $\mathbb{P}$, the law of the sample, is a certain law $\mathbb{Q}$ or not. We thus introduce 
+            \[q_i=\mathbb{Q}\left(\Omega_i\right), \mathspace i=1, \ldots, k.\]
+            We then have that if $\mathbb{P}=\mathbb{Q}, \mathspace p_i=q_i$ for every $i=1, \ldots,k$ \ldots but if $p_i \neq q_i$ for some i, then we know for sure that $\mathbb{P}\neq\mathbb{Q}$! We will therefore test the null hypotheses $H_0$: ``$p_i=q_i$ for $i =1, \ldots,k$'' against the alternative hypotheses $H_1$ `` there is $i \in \left\{1, \ldots, k\right\}$ such that $p_i \neq q_i$''. 
+
+            \noindent Under $H_0$, the $q_i$'s should be well approximated by the empirical frequencues: $q_i \approx N_{n,i} \backslash n$. We just transformed a non-parametric question ``is $\mathbb{P}$ equal to $\mathbb{Q}$? into a parametric one about the parameters of a multinomial law!
+
+            We now need to construct our rejection region. Introduce the statistic 
+            \[Z_n\left(X_1, \ldots, X_n\right)=\sum_{ i=1 } ^{ k }\frac{\left(N_{n,i}\left(X_1, \ldots, X_n\right)-nq_i\right)^2}{nq_i}=n \sum_{ i=1 } ^{ k }\frac{\left(\frac{N_{n,i}\left(X_1, \ldots, X_n\right)}{n}-q_i\right)^2}{q_i}.\]
+            It is some measure of the difference between the observed frequencies $\frac{N_{n,i}\left(X_1, \ldots, X_n\right)}{n}$ and the ones we should see under the null hypotheses. The reason to chose this particular statistic is the lemma thats, in our setup, says that, under the null Hypotheses $H_0$, 
+            \[Z_n\left(X_1, \ldots, X_n\right)\xrightarrow{\text{Law}} \mathcal{X}_{k-1}^2.\]
+            From this Lemma, we have on the one hand under $H_0, Z_n$ follows asymptotically a $\mathcal{X}^2$ law with $k-1$ degrees of freedom. On the onther hand, under $H_1$, there is $i_{*} \in \left\{1, \ldots, k\right\}$ such that 
+            \[\left(\frac{N_{n,i_{*}}}{n}-q_{i_*}\right)^2 \xrightarrow{\text{a.s.}}\left(p_{i_*}-q_{i_*}\right)^2 >0,\]
+            as $n\to \infty$, which implies that $Z_n \xrightarrow{\text{a,s,}} +\infty$. If we want a risk level $\alpha$ for our test, we can thus take a rejection region of the form $D=\left\{Z_n >C\right\}$ with C such that, with $Z \sim \mathcal{X}_{k-1}^2$, 
+            \[P\left(Z>C\right)=\alpha.\]
+            This gives a region with risk level $\alpha$ asymptotically as, under $H_0$, 
+            \[P\left(Z_n>C\right)\xrightarrow{n\to \infty}P\left(Z>C\right).\]
+            
+            
+  
+        
         
         
         
