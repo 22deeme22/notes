@@ -1,0 +1,59 @@
+\section{Linear algebra in Dirac notation}
+    \begin{tcolorbox}[vert]
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item A \important{Hilbert space} is a vector space on complex numbers with an inner product stucture. 
+            \item $\mathcal{H},\mathspace dim\mathcal{H}=d, \mathspace \text{colon vectors: } \vec{\psi}=\begin{pmatrix} \psi_1 \\ \ldots \\ \psi_d \end{pmatrix}, \mathspace \psi \in \mathbb{C}$, line vectors: $\vec{\psi}^{T, *} = \left(\psi_1^*, \psi_2^*, \ldots, \psi_d^*\right)$, scalar product: $\vec{\phi}^{T, *}\cdot \vec{\psi}=\sum_{ i=1 } ^{ d } \phi_i^*\psi_i$. 
+
+                \textit{(* means conjugate)}
+        \end{itemize}
+    \end{tcolorbox}
+    \subsection{Dirac notation}
+    Ket: $\vec{\psi} = \ket{\psi}$, Bra: $\vec{\psi}^{T, *} = \bra{\psi}$, $\implies$ braket: $\vec{\phi}^{T, *} \vec{\psi} = \braket{\phi|\psi}$.
+    \subsection{Propreties of Dirac}
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item \textbf{Linearity:} $\left(\alpha^*\bra{\psi_1}+\beta^*\bra{\psi_2}\right)\ket{\phi}=\alpha^*\braket{\psi_1|\phi}+\beta^*\braket{\psi_2|\phi}$ .
+            \item \textbf{Dirac conjugate:} $\left(\ket{\phi}\right)^{T, *}=\bra{\phi}$.
+            \item \textbf{Skew symmetry:} $\braket{\phi|\psi}^* = \braket{\psi|\phi}$.
+            \item \textbf{Norm:} $\left\|\psi\right\|=\sqrt{\braket{\psi|\psi}}$ with properties:
+                \begin{enumerate}[left=10pt]
+                    \item $\left\|\psi\right\|\geq 0, \left\|\psi\right\|=0 \leftrightarrow \ket{\psi}=0$,
+                    \item $\left\|\psi_1\right\|-\left\|\psi_2\right\|\leq \left|\ket{\psi_1}+\ket{\psi_2}\right| \leq \left\|\psi_1\right\| + \left\|\psi_2\right\|$ ,
+                    \item  $\left|\braket{\phi|\psi}\right| \leq \left\|\phi\right\|\cdot \left\|\psi\right\|$.
+                \end{enumerate}
+                
+            \item \textbf{Basis:}
+                \begin{enumerate}
+                    \item Orthonormal Basis: $\{\ket{v_1}, \ket{v_2}, \ldots, \ket{v_d}\}$, then $\braket{v_i|v_j}=\begin{functionbypart}{\delta_{ij}}
+                        1, \mathspace i = j  \\
+                        0, \mathspace i \neq j
+                    \end{functionbypart}.
+                    $
+                    \item Other basis: $\frac{\ket{0}+\ket{1}}{\sqrt{2}}=\frac{1}{\sqrt{2}}=\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \end{pmatrix} \equiv \ket{+}, \mathspace \frac{\ket{0}-\ket{1}}{\sqrt{2}}=\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ -1 \end{pmatrix} \equiv \ket{-}$.
+                \end{enumerate}
+                
+                \item \textbf{Tensor product:} 
+
+                   Linear:
+                    $\left(\alpha\ket{0}+\beta\ket{1}\right)\otimes\left(\gamma\ket{0}+\delta\ket{1}\right)=\alpha \gamma\ket{0}\otimes\ket{0}+\alpha\delta\ket{0}\otimes\ket{1}+\beta \gamma\ket{1}\otimes\ket{0}+\beta\delta\ket{1}\otimes\ket{1}$.
+                    \begin{remark}{Example}
+                        \begin{tcolorbox}[rouge]
+                            Let $\mathcal{H}=\mathbb{C}^2, \mathspace \ket{0}= \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \ket{1}=\begin{pmatrix} 0 \\ 1 \end{pmatrix} $, then
+                            \[\ket{0} \otimes \ket{0} = \ket{00} = \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}, \mathspace \ket{0} \otimes \ket{1} = \ket{01}= \begin{pmatrix} 0 \\ 1 \\ 0 \\ 0 \end{pmatrix},\] 
+                            \[\ket{1} \otimes \ket{0} = \ket{10}= \begin{pmatrix} 0 \\ 0 \\ 1 \\ 0 \end{pmatrix}, \mathspace \ket{1} \otimes \ket{1} = \ket{11} = \begin{pmatrix} 0 \\ 0 \\ 0 \\ 1 \end{pmatrix} .\]
+                        \end{tcolorbox}
+                    \end{remark}
+                        
+                    
+            \item \textbf{Matrices:}
+                \begin{itemize}[left=10pt, label=\textendash]
+                    \item Dagger: $A^{T, *} = A^{\dagger}, \mathspace \left(A\ket{\psi}\right)^{T, *}=\left(A\ket{\psi}\right)^{\dagger} = \left(\ket{\psi}\right)^{\dagger}A^{\dagger}=\ket{\psi}A^{\dagger}$.
+                    \item Notation: Let $\{\ket{v_1}, \ldots, \ket{v_3}\}$ an orthonormal basis and $A_{ij}=\bra{v_i}A\ket{v_j}$ ((i,j)th element of the matrice), then $A = \sum_{ i,j = 1 } ^{ d }A_{ij}\ket{v_i}\bra{v_j}$. 
+                    \item Hermitian matrices: $A^{\dagger}=A$ (self-adjoint), i.e. $\begin{pmatrix} 1 & i  \\ -i &  0 \end{pmatrix}$. 
+                    \item Unitary matrices: $U^{\dagger}U=UU^{\dagger}=\mathbbm{1}, \mathspace U^{\dagger}=U^{-1}$, with properties:
+                        \begin{enumerate}[left=10pt]
+                            \item $\left\|U\ket{\psi}\right\|=\left\|\ket{\psi}\right\|$,
+                            \item $\left(\bra{\phi}U^{\dagger}\right)\left(U\ket{\psi}\right)=\braket{\phi|\psi}$.
+                        \end{enumerate}
+                \end{itemize}
+        \end{itemize}
+

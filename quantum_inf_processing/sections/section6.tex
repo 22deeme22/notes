@@ -1,0 +1,120 @@
+\section{Bell inequalities}
+    \begin{tcolorbox}[vert]
+        The goal here will be to ensure that A & B share an entangles Bell state (inequality) and as a consequence are able to produce common random secret strings of bits (Ekert 91 QKD protocol).
+    \end{tcolorbox}
+    Let
+    \begin{center}
+    \begin{tikzpicture}[scale=1.2, every node/.style={font=\small}]
+        \node (A) at (0, 0.5) {A};
+        \draw[->, , black, decorate, decoration={snake, amplitude=3pt, segment length=8pt}]
+            (3.8,0) -- (0.1,0.5);
+        \node (B) at (9, 0.5) {B};
+        \draw[->, , black, decorate, decoration={snake, amplitude=3pt, segment length=8pt}]
+            (5.2,0) -- (8.9,0.5);
+        \draw[thin] (4.5,0) ellipse [x radius=0.65, y radius=0.3];
+
+        \node at (4.5, 0) {source}
+        \node[align=center] at (4.5, -1.0) {pairs of photons\\with pol. state. \\ $i=1, \ldots, N$.};
+
+        \node[below=5pt of A,align=left] {
+                \begin{varwidth}{4cm}
+                measure the qubit.\\
+            \begin{itemize}[left=0pt, label=\textbullet]
+                \item basis: $\{\ket{\alpha}, \ket{\alpha_{\perp}}$,
+
+                        record $a=\pm 1$.
+                    \item basis \{$\ket{\alpha'}, \ket{\alpha_{\perp}'}$,\}
+
+                        record $a'=\pm1$.
+            \end{itemize}
+            \end{varwidth}
+            };
+        \node[below=5pt of B,align=left] {
+                \begin{varwidth}{4cm}
+                measure the qubit.\\
+            \begin{itemize}[left=0pt, label=\textbullet]
+                \item basis: $\{\ket{\beta}, \ket{\beta_{\perp}}$,
+
+                        record $b=\pm 1$.
+                    \item basis \{$\ket{\beta'}, \ket{\beta_{\perp}'}$,\}
+
+                        record $b'=\pm1$.
+            \end{itemize}
+            \end{varwidth}
+            };
+    \end{tikzpicture}
+    \end{center}
+    There is four possible measure settings for A and B: $1=\left(\alpha, \beta\right), 2=\left(\alpha', \beta\right), 3=\left(\alpha, \beta'\right), 4=\left(\alpha', \beta'\right)$.
+
+    A and B meet or communcate classically and compute so-called correlation coefficient: 
+    \[X_{exp}=\frac{1}{N_1}\sum_{ i_1 }a_i_1b_i_1+\frac{1}{N_2}\sum_{ i_2 }a_i_2'b_i_2+\frac{1}{N_3}\sum_{ i_3 }a_i_3b_i_3'+\frac{1}{N_4}\sum_{ i_4 }a_i_4'b_i_4'\]
+    \noindent\textbf{Classical prediction $\left(X_{\text{class. th}}\right)$: }
+    
+    We assume a locality of measurement result, which means that $p_A\left(a\right)$ depends only of Alice's angle and $p_B\left(b\right)$ depends only of Bob's angle, 
+    \[\implies p\left(a,b|\alpha,\beta,\lambda\right)=p_A\left(a|\alpha,\lambda\right)p_B\left(b|\beta,\lambda\right) \text{ with } \lambda = \text{ random variable with distribution }h\left(\lambda\right)d\lambda.\]
+    \begin{tcolorbox}[violet]
+        \textbf{Lemma:} 
+         \[-2 \leq X_{\text{class. th.}} \leq 2 \text{ for } N \to +\infty.\]
+    \end{tcolorbox}
+    \noindent\textbf{Quantum theory:}
+    \[X_{\text{th. quant.}}=\bra{B_{00}}A \otimes B \ket{B_{00}}+\bra{B_{00}}A' \otimes B \ket{B_{00}}-\bra{B_{00}}A \otimes B' \ket{B_{00}}+\bra{B_{00}}A' \otimes B' \ket{B_{00}}.\]
+    Observables: 
+    \[A= \left(+1\right)\ket{\alpha}\bra{\alpha}+\left(-1\right)\ket{\alpha_{\perp}}\bra{\alpha_{\perp}}, \mathspace B = \left(+1\right)\ket{\beta}\bra{\beta}+ \left(-1\right)\ket{\beta_{\perp}}\bra{\beta_{\perp}},
+    \]
+    \[
+    \text{with }   \ket{\alpha}= \cos\alpha\ket{0}+\sin\alpha\ket{1}, \mathspace \ket{\alpha_{\perp}}= -\sin\alpha\ket{0}+\cos\alpha\ket{1} \text{ and same for }\beta.\]
+    \[\implies X_{\text{th. quant.}}= \cos\left(2\left(\alpha-\beta\right)\right)+\cos\left(2\left(\alpha'-\beta\right)\right)-\cos\left(2\left(\alpha-\beta'\right)\right)+\cos\left(2\left(\alpha'-\beta'\right)\right).\]
+    Entanglement induces non-locality, so according to QM:
+\[p\left(a,b|\alpha,\beta\right)=\left|\braket{\text{state after meas.}|B_{00}}\right|^2=\frac{1}{4}\left(1+ab\cos\left(2\left(\alpha-\beta\right)\right)\right)\neq p_A\left(a|\alpha\right)p_B\left(b|\beta\right).
+\]
+    If we choose angles when $X_{\text{th. quant.}}$ is maximal $\left(\beta=\frac{\pi}{8}, \mathspace \alpha=0, \mathspace \beta'=-\frac{\pi}{8}, \mathspace \alpha'=-\frac{\pi}{8}\right)$, then $X_{\text{th. quant.}}= 2 \sqrt{2}$ \textbf{> 2! It violates the Lemma!}
+
+    \vspace{5pt}
+           \noindent If source distribute tensor product state $\ket{\phi_A} \otimes \ket{\phi_B} \in \mathbb{C}^2 \otimes \mathbb{C}^2$ then: 
+           \[p\left(a,b|\alpha, \beta\right)=\left|\braket{\text{state after meas.}|\left(\ket{\phi_a}\otimes \ket{\phi_B}\right)}\right|^2\]
+           \[= \underbrace{\left(\left(\frac{1+a}{2}\right)\left|\braket{\alpha|\phi_A}\right|^2\left(\frac{1-a}{2}\right)\left|\braket{\alpha_{\perp}|\phi_A}\right|^2\right)}_{p_A\left(a|\alpha\right)}\underbrace{\left(\left(\frac{1+b}{2}\right)\left|\braket{\beta|\phi_B}\right|^2\left(\frac{1-b}{2}\right)\left|\braket{\beta_{\perp}|\phi_B}\right|^2\right)}_{p_B\left(b|\beta\right)}.\]
+           \begin{tcolorbox}[vert]
+               If the pair is a product state it can't be greater than 2, $\implies$ if the result violates the Bell inequality it's an entangled state!
+           \end{tcolorbox}
+    \subsection{Ekert 91}
+    Let
+    \begin{center}
+    \begin{tikzpicture}[scale=1.2, every node/.style={font=\small}]
+        \node (A) at (0, 0.5) {A};
+        \draw[->, , black, decorate, decoration={snake, amplitude=3pt, segment length=8pt}]
+            (3.8,0) -- (0.1,0.5);
+        \node (B) at (9, 0.5) {B};
+        \draw[->, , black, decorate, decoration={snake, amplitude=3pt, segment length=8pt}]
+            (5.2,0) -- (8.9,0.5);
+        \draw[thin] (4.5,0) ellipse [x radius=0.65, y radius=0.3];
+
+        \node at (4.5, 0) {source}
+        \node[align=center] at (4.5, -1.0) {EPR pairs,\\ $\ket{B_{00}}$.};
+
+        \node[below=5pt of A,align=left] {
+            \begin{varwidth}{4cm}
+                measure in possible basis:
+            \begin{itemize}[left=0pt, label=\textbullet]
+                \item $\alpha_1=-\frac{\pi}{4}$,
+                \item $\alpha_2=-\frac{\pi}{8}$,
+                \item $\alpha_3=0$,
+            \end{itemize}
+            \end{varwidth}
+            };
+        \node[below=5pt of B,align=left] {
+                \begin{varwidth}{4cm}
+            measure in possible basis:
+            \begin{itemize}[left=0pt, label=\textbullet]
+                \item $\beta_1=-\frac{\pi}{8}$
+                \item $\beta_2=0$
+                \item $\beta_3=\frac{\pi}{8}$
+            \end{itemize}
+            \end{varwidth}
+            };
+    \end{tikzpicture}
+    \end{center}
+    A and B exchange the basis choices at each $1, \ldots, N$ and compute $X_{\text{Bell}}$ using the bits among $\left(x_i, y_i\right)$ only those corresponding to CSHS basis choice, $\left|X_{Bell}\right| \approx 2\sqrt{2}$, otherwise there is an eavesdropper.
+
+    \important{Common key} one time pad is given by $x_i$ and $y_i$ such that A and B choose the same basis, $\left(\alpha_3, \beta_2\right)$ or $\left(\alpha_2, \beta_1\right)$. In this case $x_i=y_i$.
+
+

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.12.15)  24 DEC 2025 13:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.12.15)  26 DEC 2025 15:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**notes.tex
-(./notes.tex
+**main.tex
+(./main.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/share/texmf-dist/tex/latex/base/article.cls
@@ -770,7 +770,7 @@ and I'll forget about whatever was undefined.
 )
 Runaway argument?
 \@checkend {tcb@savebox}\endgroup \UseHook {env/tcb@savebox/after}\if@ignore \ETC.
-./notes.tex:3: File ended while scanning use of \@iiiparbox.
+./main.tex:3: File ended while scanning use of \@iiiparbox.
 <inserted text> 
                 \par 
 l.3 \usepackage
@@ -780,33 +780,33 @@ to read past where you wanted me to stop.
 I'll try to recover; but if the error is serious,
 you'd better type `E' or `X' now and fix your file.
 
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen281
-\pgfdecoratedremainingdistance=\dimen282
-\pgfdecoratedinputsegmentcompleteddistance=\dimen283
-\pgfdecoratedinputsegmentremainingdistance=\dimen284
-\pgf@decorate@distancetomove=\dimen285
-\pgf@decorate@repeatstate=\count349
-\pgfdecorationsegmentamplitude=\dimen286
-\pgfdecorationsegmentlength=\dimen287
+(/usr/share/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box87
+\sift@deathcycles=\count349
+\@vwid@loff=\dimen281
+\@vwid@roff=\dimen282
+) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen283
+\pgfdecoratedremainingdistance=\dimen284
+\pgfdecoratedinputsegmentcompleteddistance=\dimen285
+\pgfdecoratedinputsegmentremainingdistance=\dimen286
+\pgf@decorate@distancetomove=\dimen287
+\pgf@decorate@repeatstate=\count350
+\pgfdecorationsegmentamplitude=\dimen288
+\pgfdecorationsegmentlength=\dimen289
 )
-\tikz@lib@dec@box=\box87
+\tikz@lib@dec@box=\box88
 ) (/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
 File: tikzlibraryfit.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/share/texmf-dist/tex/latex/varwidth/varwidth.sty
-Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box88
-\sift@deathcycles=\count350
-\@vwid@loff=\dimen288
-\@vwid@roff=\dimen289
 )
-./notes.tex:9: Undefined control sequence.
+./main.tex:10: Undefined control sequence.
 <argument> \undefinedpagestyle 
                                
-l.9 \thispagestyle{fancy}
-                         
+l.10 \thispagestyle{fancy}
+                          
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -817,27 +817,27 @@ and I'll forget about whatever was undefined.
 LaTeX Warning: Unused global option(s):
     [10].
 
-(./notes.aux)
-\openout1 = `notes.aux'.
+(./main.aux)
+\openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -893,25 +893,25 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count357
-Package hyperref Info: Link coloring OFF on input line 15.
- (./notes.out) (./notes.out)
+Package hyperref Info: Link coloring OFF on input line 16.
+ (./main.out) (./main.out)
 \@outlinefile=\write4
-\openout4 = `notes.out'.
+\openout4 = `main.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 19.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./notes.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./main.toc)
 \tf@toc=\write5
-\openout5 = `notes.toc'.
+\openout5 = `main.toc'.
 
 
 
@@ -919,64 +919,64 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.20 \newpage
+l.21 \newpage
               [1]
-Overfull \hbox (13.7037pt too wide) in paragraph at lines 27--30
+Overfull \hbox (13.7037pt too wide) in paragraph at lines 28--31
 \T1/cmr/m/n/10 Regarding note-taking method-ol-ogy, I re-fer the reader to []$\T1/cmtt/m/n/10 https : / / castel . dev / post / lecture-[]notes-[]1/$[]
  []
 
 
 
-[2]
+[2] (./sections/section1.tex
 
-./notes.tex:36: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section1.tex:2: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.36     \begin{tcolorbox}[vert]
-                                
+l.2     \begin{tcolorbox}[vert]
+                               
 This error message was generated by an \errmessage
 command, so I can't give any explicit help.
 Pretend that you're Hercule Poirot: Examine all clues,
 and deduce the truth by order and method.
 
 
-./notes.tex:73: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section1.tex:39: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.73 ...                  \begin{tcolorbox}[rouge]
+l.39 ...                  \begin{tcolorbox}[rouge]
                                                   
 (That was another \errmessage.)
 
 Runaway argument?
 {\glueexpr 10pt 
-./notes.tex:77: Paragraph ended before \addvspace was complete.
+./sections/section1.tex:43: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.77                         \end{tcolorbox}
+l.43                         \end{tcolorbox}
                                             
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./notes.tex:77: Missing number, treated as zero.
+./sections/section1.tex:43: Missing number, treated as zero.
 <to be read again> 
                    }
-l.77                         \end{tcolorbox}
+l.43                         \end{tcolorbox}
                                             
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./notes.tex:77: Illegal unit of measure (pt inserted).
+./sections/section1.tex:43: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.77                         \end{tcolorbox}
+l.43                         \end{tcolorbox}
                                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -985,10 +985,10 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./notes.tex:77: Extra }, or forgotten \endgroup.
+./sections/section1.tex:43: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.77                         \end{tcolorbox}
+l.43                         \end{tcolorbox}
                                             
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -999,67 +999,132 @@ deleted material, e.g., by typing `I$}'.
 
 
 [3{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-LaTeX Font Info:    Trying to load font information for U+bbm on input line 86.
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 52.
  (/usr/share/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-)
+)) (./sections/section2.tex
 
-./notes.tex:95: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section2.tex:3: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.95         \begin{tcolorbox}[vert]
+l.3         \begin{tcolorbox}[vert]
+                                   
+(That was another \errmessage.)
+
+
+./sections/section2.tex:7: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7             \begin{tcolorbox}[gris]
+                                       
+(That was another \errmessage.)
+
+
+./sections/section2.tex:12: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12            \begin{tcolorbox}[rouge]
+                                        
+(That was another \errmessage.)
+
+Runaway argument?
+{\glueexpr 10pt 
+./sections/section2.tex:20: Paragraph ended before \addvspace was complete.
+<to be read again> 
+                   \par 
+l.20            \end{tcolorbox}
+                               
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+./sections/section2.tex:20: Missing number, treated as zero.
+<to be read again> 
+                   }
+l.20            \end{tcolorbox}
+                               
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./sections/section2.tex:20: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.20            \end{tcolorbox}
+                               
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./sections/section2.tex:20: Extra }, or forgotten \endgroup.
+<recently read> }
+                 
+l.20            \end{tcolorbox}
+                               
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+./sections/section2.tex:23: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23         \begin{tcolorbox}[vert]
                                     
 (That was another \errmessage.)
 
 
-./notes.tex:99: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section2.tex:27: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.99             \begin{tcolorbox}[gris]
-                                        
-(That was another \errmessage.)
-
-
-./notes.tex:104: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.104            \begin{tcolorbox}[rouge]
+l.27             \begin{tcolorbox}[rouge]
                                          
 (That was another \errmessage.)
 
 Runaway argument?
 {\glueexpr 10pt 
-./notes.tex:112: Paragraph ended before \addvspace was complete.
+./sections/section2.tex:31: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.112            \end{tcolorbox}
+l.31             \end{tcolorbox}
                                 
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./notes.tex:112: Missing number, treated as zero.
+./sections/section2.tex:31: Missing number, treated as zero.
 <to be read again> 
                    }
-l.112            \end{tcolorbox}
+l.31             \end{tcolorbox}
                                 
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./notes.tex:112: Illegal unit of measure (pt inserted).
+./sections/section2.tex:31: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.112            \end{tcolorbox}
+l.31             \end{tcolorbox}
                                 
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1068,10 +1133,10 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./notes.tex:112: Extra }, or forgotten \endgroup.
+./sections/section2.tex:31: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.112            \end{tcolorbox}
+l.31             \end{tcolorbox}
                                 
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1080,52 +1145,52 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-./notes.tex:115: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section2.tex:34: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.115         \begin{tcolorbox}[vert]
-                                     
+l.34         \begin{tcolorbox}[vert]
+                                    
 (That was another \errmessage.)
 
 
-./notes.tex:119: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section2.tex:38: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.119             \begin{tcolorbox}[rouge]
-                                          
+l.38             \begin{tcolorbox}[rouge]
+                                         
 (That was another \errmessage.)
 
 Runaway argument?
 {\glueexpr 10pt 
-./notes.tex:123: Paragraph ended before \addvspace was complete.
+./sections/section2.tex:42: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.123             \end{tcolorbox}
-                                 
+l.42             \end{tcolorbox}
+                                
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./notes.tex:123: Missing number, treated as zero.
+./sections/section2.tex:42: Missing number, treated as zero.
 <to be read again> 
                    }
-l.123             \end{tcolorbox}
-                                 
+l.42             \end{tcolorbox}
+                                
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./notes.tex:123: Illegal unit of measure (pt inserted).
+./sections/section2.tex:42: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.123             \end{tcolorbox}
-                                 
+l.42             \end{tcolorbox}
+                                
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1133,76 +1198,11 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./notes.tex:123: Extra }, or forgotten \endgroup.
+./sections/section2.tex:42: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.123             \end{tcolorbox}
-                                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-./notes.tex:126: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.126         \begin{tcolorbox}[vert]
-                                     
-(That was another \errmessage.)
-
-
-./notes.tex:130: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.130             \begin{tcolorbox}[rouge]
-                                          
-(That was another \errmessage.)
-
-Runaway argument?
-{\glueexpr 10pt 
-./notes.tex:134: Paragraph ended before \addvspace was complete.
-<to be read again> 
-                   \par 
-l.134             \end{tcolorbox}
-                                 
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-./notes.tex:134: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.134             \end{tcolorbox}
-                                 
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./notes.tex:134: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.134             \end{tcolorbox}
-                                 
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./notes.tex:134: Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.134             \end{tcolorbox}
-                                 
+l.42             \end{tcolorbox}
+                                
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -1212,88 +1212,88 @@ deleted material, e.g., by typing `I$}'.
 
 
 [4]
-Package mdframed Info: Not enough space on this page on input line 135.
+Package mdframed Info: Not enough space on this page on input line 43.
 
 
-./notes.tex:138: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section2.tex:46: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.138             \begin{tcolorbox}[vert]
-                                         
+l.46             \begin{tcolorbox}[vert]
+                                        
 (That was another \errmessage.)
 
 
-./notes.tex:148: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section2.tex:56: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.148                 S
-                       pectral Theorem:
+l.56                 S
+                      pectral Theorem:
 (That was another \errmessage.)
 
 
-./notes.tex:166: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section2.tex:74: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.166             \begin{tcolorbox}[vert]
-                                         
+l.74             \begin{tcolorbox}[vert]
+                                        
 (That was another \errmessage.)
 
 
-./notes.tex:170: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section2.tex:78: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.170                 \begin{tcolorbox}[gris]
+l.78                 \begin{tcolorbox}[gris]
+                                            
+(That was another \errmessage.)
+
+
+./sections/section2.tex:83: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83                 \begin{tcolorbox}[rouge]
                                              
 (That was another \errmessage.)
 
-
-./notes.tex:175: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.175                 \begin{tcolorbox}[rouge]
-                                              
-(That was another \errmessage.)
-
 Runaway argument?
 {\glueexpr 10pt 
-./notes.tex:183: Paragraph ended before \addvspace was complete.
+./sections/section2.tex:91: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.183                 \end{tcolorbox}
-                                     
+l.91                 \end{tcolorbox}
+                                    
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./notes.tex:183: Missing number, treated as zero.
+./sections/section2.tex:91: Missing number, treated as zero.
 <to be read again> 
                    }
-l.183                 \end{tcolorbox}
-                                     
+l.91                 \end{tcolorbox}
+                                    
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./notes.tex:183: Illegal unit of measure (pt inserted).
+./sections/section2.tex:91: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.183                 \end{tcolorbox}
-                                     
+l.91                 \end{tcolorbox}
+                                    
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1301,69 +1301,69 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./notes.tex:183: Extra }, or forgotten \endgroup.
+./sections/section2.tex:91: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.183                 \end{tcolorbox}
-                                     
+l.91                 \end{tcolorbox}
+                                    
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-Package mdframed Info: Not enough space on this page on input line 184.
+Package mdframed Info: Not enough space on this page on input line 92.
 
 
 [5]
-Package mdframed Info: Not enough space on this page on input line 184.
+Package mdframed Info: Not enough space on this page on input line 92.
 
 
-./notes.tex:186: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section2.tex:94: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.186             \begin{tcolorbox}[vert]
-                                         
+l.94             \begin{tcolorbox}[vert]
+                                        
 (That was another \errmessage.)
 
 
-./notes.tex:190: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section2.tex:98: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.190                 \begin{tcolorbox}[rouge]
-                                              
+l.98                 \begin{tcolorbox}[rouge]
+                                             
 (That was another \errmessage.)
 
 Runaway argument?
 {\glueexpr 10pt 
-./notes.tex:193: Paragraph ended before \addvspace was complete.
+./sections/section2.tex:101: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.193                 \end{tcolorbox}
+l.101                 \end{tcolorbox}
                                      
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./notes.tex:193: Missing number, treated as zero.
+./sections/section2.tex:101: Missing number, treated as zero.
 <to be read again> 
                    }
-l.193                 \end{tcolorbox}
+l.101                 \end{tcolorbox}
                                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./notes.tex:193: Illegal unit of measure (pt inserted).
+./sections/section2.tex:101: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.193                 \end{tcolorbox}
+l.101                 \end{tcolorbox}
                                      
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1372,10 +1372,10 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./notes.tex:193: Extra }, or forgotten \endgroup.
+./sections/section2.tex:101: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.193                 \end{tcolorbox}
+l.101                 \end{tcolorbox}
                                      
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1383,13 +1383,15 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
+) (./sections/section3.tex
 <images/1.png, id=317, 523.9575pt x 402.50375pt>
 File: images/1.png Graphic file (type png)
 <use images/1.png>
-Package pdftex.def Info: images/1.png  used on input line 202.
+Package pdftex.def Info: images/1.png  used on input line 3.
 (pdftex.def)             Requested size: 142.26378pt x 109.28549pt.
-./notes.tex:204: Misplaced alignment tab character &.
-l.204 ... \beta \end{pmatrix}, \mathspace \alpha &
+
+./sections/section3.tex:5: Misplaced alignment tab character &.
+l.5 ...\\ \beta \end{pmatrix}, \mathspace \alpha &
                                                    \beta \in \mathbb{C}, \le...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1399,41 +1401,41 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-./notes.tex:208: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section3.tex:9: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.208                    \begin{tcolorbox}[gris]
-                                                
+l.9                    \begin{tcolorbox}[gris]
+                                              
 (That was another \errmessage.)
 
 
-Overfull \hbox (14.36993pt too wide) in paragraph at lines 212--213
+Overfull \hbox (14.36993pt too wide) in paragraph at lines 13--14
 []\T1/cmr/bx/n/10 Perfect mir-ror:  $\OML/cmm/m/it/10 R \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 ;  RR[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 R[]R \OT1/cmr/m/n/10 = 1 [] \OML/cmm/m/it/10 ;  R[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 R []$\T1/cmr/m/n/10 . 
  []
 
 
 
 [6 <./images/1.png>]
-Overfull \hbox (13.19331pt too wide) in paragraph at lines 233--234
+Overfull \hbox (13.19331pt too wide) in paragraph at lines 34--35
 []\T1/cmr/m/n/10 Expectated value of (Z): $[] \OML/cmm/m/it/10 Z [] \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 f[] [] [] \OT1/cmr/m/n/10 + [] [] []\OMS/cmsy/m/n/10 g [] \OT1/cmr/m/n/10 =
  []
 
 
-./notes.tex:246: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section3.tex:47: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.246                     \begin{tcolorbox}[gris]
-                                                 
+l.47                     \begin{tcolorbox}[gris]
+                                                
 (That was another \errmessage.)
 
-./notes.tex:252: Misplaced alignment tab character &.
-l.252 ...inear polarization state: } \ket{\theta}&
+./sections/section3.tex:53: Misplaced alignment tab character &.
+l.53 ...Linear polarization state: } \ket{\theta}&
                                                   =\cos \theta \ket{x}+\sin ...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1442,9 +1444,9 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-./notes.tex:253: Misplaced alignment tab character &.
-l.253                  \ket{\theta_{\perp}} &
-                                             = -\sin \theta \ket{x} + \cos \...
+./sections/section3.tex:54: Misplaced alignment tab character &.
+l.54                  \ket{\theta_{\perp}} &
+                                            = -\sin \theta \ket{x} + \cos \t...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1453,75 +1455,75 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--256
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
 
-./notes.tex:257: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section3.tex:58: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.257                 \begin{tcolorbox}[gris]
-                                             
+l.58                 \begin{tcolorbox}[gris]
+                                            
 (That was another \errmessage.)
 
-
+) (./sections/section4.tex
 
 [7]
 
-./notes.tex:276: LaTeX Error: \begin{itemize} on input line 273 ended by \end{enumerate}.
+./sections/section4.tex:13: LaTeX Error: \begin{itemize} on input line 10 ended by \end{enumerate}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.276         \end{enumerate}
-                             
+l.13         \end{enumerate}
+                            
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./notes.tex:277: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section4.tex:14: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.277         \begin{tcolorbox}[vert]
-                                     
+l.14         \begin{tcolorbox}[vert]
+                                    
 (That was another \errmessage.)
 
 
 
 [8]
 
-./notes.tex:337: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section4.tex:74: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.337                     \begin{tcolorbox}[gris]
-                                                 
+l.74                     \begin{tcolorbox}[gris]
+                                                
 (That was another \errmessage.)
 
 
-./notes.tex:361: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section4.tex:98: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.361          \begin{tcolorbox}[rouge]
-                                       
+l.98          \begin{tcolorbox}[rouge]
+                                      
 (That was another \errmessage.)
 
-./notes.tex:367: You can't use `macro parameter character #' in horizontal mode.
-l.367                        \item k: actual #
+./sections/section4.tex:104: You can't use `macro parameter character #' in horizontal mode.
+l.104                        \item k: actual #
                                                of bits of information per co...
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -1530,28 +1532,28 @@ return to the right one by typing `I}' or `I$' or `I\par'.
 
 Runaway argument?
 {\glueexpr 10pt 
-./notes.tex:371: Paragraph ended before \addvspace was complete.
+./sections/section4.tex:108: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.371          \end{tcolorbox}
+l.108          \end{tcolorbox}
                               
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./notes.tex:371: Missing number, treated as zero.
+./sections/section4.tex:108: Missing number, treated as zero.
 <to be read again> 
                    }
-l.371          \end{tcolorbox}
+l.108          \end{tcolorbox}
                               
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./notes.tex:371: Illegal unit of measure (pt inserted).
+./sections/section4.tex:108: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.371          \end{tcolorbox}
+l.108          \end{tcolorbox}
                               
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1560,10 +1562,10 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./notes.tex:371: Extra }, or forgotten \endgroup.
+./sections/section4.tex:108: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.371          \end{tcolorbox}
+l.108          \end{tcolorbox}
                               
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1571,20 +1573,21 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
+) (./sections/section5.tex
 
-./notes.tex:382: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section5.tex:3: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.382     \begin{tcolorbox}[vert]
-                                 
+l.3     \begin{tcolorbox}[vert]
+                               
 (That was another \errmessage.)
 
-./notes.tex:383: Misplaced alignment tab character &.
-l.383         Let be 2 parts: $A &
-                                   B, \mathspace \mathcal{H}_{\text{total}}=...
+./sections/section5.tex:4: Misplaced alignment tab character &.
+l.4         Let be 2 parts: $A &
+                                 B, \mathspace \mathcal{H}_{\text{total}}=\m...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1596,18 +1599,18 @@ might try typing `S' now just to see what is salvageable.
 
 [9]
 
-./notes.tex:390: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section5.tex:11: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.390         \begin{tcolorbox}[rouge]
-                                      
+l.11         \begin{tcolorbox}[rouge]
+                                     
 (That was another \errmessage.)
 
-./notes.tex:399: Undefined control sequence.
-l.399 ...{01}\alpha_{10}=\alpha \gamma \beta \delt
+./sections/section5.tex:20: Undefined control sequence.
+l.20 ..._{01}\alpha_{10}=\alpha \gamma \beta \delt
                                                   =- \alpha \delta \beta \ga...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1615,8 +1618,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./notes.tex:399: Undefined control sequence.
-l.399 ...a \beta \delt=- \alpha \delta \beta \gamm
+./sections/section5.tex:20: Undefined control sequence.
+l.20 ...ma \beta \delt=- \alpha \delta \beta \gamm
                                                   =0$.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1626,29 +1629,29 @@ and I'll forget about whatever was undefined.
 
 Runaway argument?
 {\glueexpr 10pt 
-./notes.tex:402: Paragraph ended before \addvspace was complete.
+./sections/section5.tex:23: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.402               \end{tcolorbox}
-                                   
+l.23               \end{tcolorbox}
+                                  
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./notes.tex:402: Missing number, treated as zero.
+./sections/section5.tex:23: Missing number, treated as zero.
 <to be read again> 
                    }
-l.402               \end{tcolorbox}
-                                   
+l.23               \end{tcolorbox}
+                                  
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./notes.tex:402: Illegal unit of measure (pt inserted).
+./sections/section5.tex:23: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.402               \end{tcolorbox}
-                                   
+l.23               \end{tcolorbox}
+                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1656,11 +1659,11 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./notes.tex:402: Extra }, or forgotten \endgroup.
+./sections/section5.tex:23: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.402               \end{tcolorbox}
-                                   
+l.23               \end{tcolorbox}
+                                  
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -1668,41 +1671,41 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-./notes.tex:406: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section5.tex:27: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.406         \begin{tcolorbox}[rouge]
-                                      
+l.27         \begin{tcolorbox}[rouge]
+                                     
 (That was another \errmessage.)
 
 Runaway argument?
 {\glueexpr 10pt 
-./notes.tex:423: Paragraph ended before \addvspace was complete.
+./sections/section5.tex:44: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.423         \end{tcolorbox}
-                             
+l.44         \end{tcolorbox}
+                            
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./notes.tex:423: Missing number, treated as zero.
+./sections/section5.tex:44: Missing number, treated as zero.
 <to be read again> 
                    }
-l.423         \end{tcolorbox}
-                             
+l.44         \end{tcolorbox}
+                            
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./notes.tex:423: Illegal unit of measure (pt inserted).
+./sections/section5.tex:44: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.423         \end{tcolorbox}
-                             
+l.44         \end{tcolorbox}
+                            
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1710,11 +1713,11 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./notes.tex:423: Extra }, or forgotten \endgroup.
+./sections/section5.tex:44: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.423         \end{tcolorbox}
-                             
+l.44         \end{tcolorbox}
+                            
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -1722,65 +1725,66 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-./notes.tex:426: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section5.tex:47: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.426         \begin{tcolorbox}[vert]
-                                     
+l.47         \begin{tcolorbox}[vert]
+                                    
 (That was another \errmessage.)
 
 
-./notes.tex:441: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+./sections/section5.tex:62: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.441             \draw
-                       [thin] (1.5,0.8) ellipse [x radius=1.65, y radius=0.3];
+l.62             \draw
+                      [thin] (1.5,0.8) ellipse [x radius=1.65, y radius=0.3];
 (That was another \errmessage.)
 
 
 
 [10]
 
-./notes.tex:454: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+./sections/section5.tex:75: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.454             \draw
-                       [thin] (0,0.4) ellipse [x radius=0.2, y radius=0.6];
+l.75             \draw
+                      [thin] (0,0.4) ellipse [x radius=0.2, y radius=0.6];
 (That was another \errmessage.)
 
 
-./notes.tex:472: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section5.tex:93: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.472         \begin{tcolorbox}[vert]
-                                     
+l.93         \begin{tcolorbox}[vert]
+                                    
 (That was another \errmessage.)
 
+) (./sections/section6.tex
 
-./notes.tex:495: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section6.tex:2: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.495     \begin{tcolorbox}[vert]
-                                 
+l.2     \begin{tcolorbox}[vert]
+                               
 (That was another \errmessage.)
 
-./notes.tex:496: Misplaced alignment tab character &.
-l.496 ... The goal here will be to ensure that A &
+./sections/section6.tex:3: Misplaced alignment tab character &.
+l.3 ...   The goal here will be to ensure that A &
                                                    B share an entangles Bell...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1793,660 +1797,229 @@ might try typing `S' now just to see what is salvageable.
 
 [11]
 
-./notes.tex:510: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+./sections/section6.tex:17: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.510         \node
-                   [align=center] at (4.5, -1.0) {pairs of photons\\with pol...
+l.17         \node
+                  [align=center] at (4.5, -1.0) {pairs of photons\\with pol....
 (That was another \errmessage.)
 
-./notes.tex:543: Double subscript.
-l.543     \[X_{exp}=\frac{1}{N_1}\sum_{ i_1 }a_i_
-                                                 1b_i_1+\frac{1}{N_2}\sum_{ ...
+./sections/section6.tex:50: Double subscript.
+l.50     \[X_{exp}=\frac{1}{N_1}\sum_{ i_1 }a_i_
+                                                1b_i_1+\frac{1}{N_2}\sum_{ i...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-./notes.tex:543: Double subscript.
-l.543 ..._{exp}=\frac{1}{N_1}\sum_{ i_1 }a_i_1b_i_
+./sections/section6.tex:50: Double subscript.
+l.50 ...X_{exp}=\frac{1}{N_1}\sum_{ i_1 }a_i_1b_i_
                                                   1+\frac{1}{N_2}\sum_{ i_2 ...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-./notes.tex:543: Double subscript.
-l.543 ...}a_i_1b_i_1+\frac{1}{N_2}\sum_{ i_2 }a_i_
+./sections/section6.tex:50: Double subscript.
+l.50 ... }a_i_1b_i_1+\frac{1}{N_2}\sum_{ i_2 }a_i_
                                                   2'b_i_2+\frac{1}{N_3}\sum_...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-./notes.tex:543: Double subscript.
-l.543 ...b_i_1+\frac{1}{N_2}\sum_{ i_2 }a_i_2'b_i_
+./sections/section6.tex:50: Double subscript.
+l.50 ...1b_i_1+\frac{1}{N_2}\sum_{ i_2 }a_i_2'b_i_
                                                   2+\frac{1}{N_3}\sum_{ i_3 ...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-./notes.tex:543: Double subscript.
-l.543 ...a_i_2'b_i_2+\frac{1}{N_3}\sum_{ i_3 }a_i_
+./sections/section6.tex:50: Double subscript.
+l.50 ...}a_i_2'b_i_2+\frac{1}{N_3}\sum_{ i_3 }a_i_
                                                   3b_i_3'+\frac{1}{N_4}\sum_...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-./notes.tex:543: Double subscript.
-l.543 ...'b_i_2+\frac{1}{N_3}\sum_{ i_3 }a_i_3b_i_
+./sections/section6.tex:50: Double subscript.
+l.50 ...2'b_i_2+\frac{1}{N_3}\sum_{ i_3 }a_i_3b_i_
                                                   3'+\frac{1}{N_4}\sum_{ i_4...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-./notes.tex:543: Double subscript.
-l.543 ...a_i_3b_i_3'+\frac{1}{N_4}\sum_{ i_4 }a_i_
+./sections/section6.tex:50: Double subscript.
+l.50 ...}a_i_3b_i_3'+\frac{1}{N_4}\sum_{ i_4 }a_i_
                                                   4'b_i_4'\]
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-./notes.tex:543: Double subscript.
-l.543 ..._i_3'+\frac{1}{N_4}\sum_{ i_4 }a_i_4'b_i_
+./sections/section6.tex:50: Double subscript.
+l.50 ...b_i_3'+\frac{1}{N_4}\sum_{ i_4 }a_i_4'b_i_
                                                   4'\]
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 
-
-[12]
-
-./notes.tex:549: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section6.tex:55: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.549     \begin{tcolorbox}[violet]
-                                   
+l.55     \begin{tcolorbox}[violet]
+                                  
 (That was another \errmessage.)
 
 
-Overfull \hbox (0.54042pt too wide) in paragraph at lines 563--565
+Overfull \hbox (0.54042pt too wide) in paragraph at lines 69--71
 \T1/cmr/m/n/10 If we choose an-gles when $\OML/cmm/m/it/10 X[]$ \T1/cmr/m/n/10 is max-i-mal $[]$, then $\OML/cmm/m/it/10 X[] \OT1/cmr/m/n/10 =
  []
 
 
-./notes.tex:570: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section6.tex:76: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.570            \begin{tcolorbox}[vert]
-                                        
+l.76            \begin{tcolorbox}[vert]
+                                       
 (That was another \errmessage.)
 
 
-./notes.tex:586: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+./sections/section6.tex:92: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.586         \node
-                   [align=center] at (4.5, -1.0) {EPR pairs,\\ $\ket{B_{00}}...
+l.92         \node
+                  [align=center] at (4.5, -1.0) {EPR pairs,\\ $\ket{B_{00}}$.};
 (That was another \errmessage.)
 
 
-./notes.tex:621: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+[12]) (./sections/section7.tex
+
+./sections/section7.tex:8: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.621         \begin{tcolorbox}[vert]
-                                     
+l.8         \begin{tcolorbox}[vert]
+                                   
+(That was another \errmessage.)
+
+
+./sections/section7.tex:20: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20             \begin{tcolorbox}[gris]
+                                        
+(That was another \errmessage.)
+
+
+Underfull \hbox (badness 1178) in paragraph at lines 21--22
+[]\T1/cmr/m/n/10 Density ma-trix is a con-vex lin-ear com-bi-na-tion of pro-jec-tions:
+ []
+
+
+./sections/section7.tex:26: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26             \begin{tcolorbox}[gris]
+                                        
+(That was another \errmessage.)
+
+
+./sections/section7.tex:39: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39            \begin
+                      {enumerate}[left=10pt]
 (That was another \errmessage.)
 
 
 
 [13]
 
-./notes.tex:633: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section7.tex:50: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.633             \begin{tcolorbox}[gris]
-                                         
+l.50             \begin{tcolorbox}[gris]
+                                        
 (That was another \errmessage.)
 
 
-Underfull \hbox (badness 1178) in paragraph at lines 634--635
-[]\T1/cmr/m/n/10 Density ma-trix is a con-vex lin-ear com-bi-na-tion of pro-jec-tions:
- []
-
-
-./notes.tex:639: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section7.tex:61: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.639             \begin{tcolorbox}[gris]
-                                         
+l.61         \begin{tcolorbox}[vert]
+                                    
 (That was another \errmessage.)
 
+) (./sections/section8.tex
 
-./notes.tex:652: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section8.tex:3: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.652            \begin
-                       {enumerate}[left=10pt]
+l.3         \begin{tcolorbox}[vert]
+                                   
 (That was another \errmessage.)
 
-
-./notes.tex:663: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.663             \begin{tcolorbox}[gris]
-                                         
-(That was another \errmessage.)
-
-
-Package mdframed Warning: You got a bad break
-(mdframed)                because the last box will be empty
-(mdframed)                you have to change it manually
-(mdframed)                by changing the text, the space
-(mdframed)                or something else on input line 666.
-
-
-Overfull \vbox (13.2948pt too high) detected at line 666
- []
-
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 666.
-
-Overfull \vbox (14.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (15.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (16.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (17.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (18.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (19.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (20.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (21.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (22.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (23.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (24.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (25.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (26.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (27.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (28.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (29.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (30.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (31.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (32.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (33.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (34.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (35.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (36.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (37.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (38.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (39.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (40.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (41.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (42.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (43.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (44.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (45.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (46.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (47.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (48.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (49.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (50.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (51.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (52.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (53.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (54.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (55.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (56.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (57.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (58.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (59.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (60.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (61.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (62.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (63.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (64.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (65.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (66.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (67.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (68.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (69.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (70.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (71.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (72.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (73.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (74.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (75.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (76.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (77.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (78.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (79.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (80.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (81.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (82.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (83.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (84.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (85.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (86.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (87.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (88.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (89.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (90.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (91.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (92.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (93.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (94.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (95.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (96.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (97.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (98.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (99.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (100.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (101.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (102.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (103.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (104.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (105.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (106.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (107.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (108.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (109.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (110.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (111.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (112.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (113.2948pt too high) detected at line 666
- []
-
-
-Overfull \vbox (114.2948pt too high) detected at line 666
- []
-
-
-Package mdframed Warning: correct box splittet fails
- It seems you are using a non splittable contents
-(mdframed)                 on input line 666.
-
-Package mdframed Info: You first box width is to small
- mdframed fixed it
-(mdframed)              on input line 666.
 
 
 [14]
 
-./notes.tex:674: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section8.tex:9: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.674         \begin{tcolorbox}[vert]
-                                     
+l.9         \begin{tcolorbox}[vert]
+                                   
 (That was another \errmessage.)
 
 
-./notes.tex:695: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section8.tex:14: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.695         \begin{tcolorbox}[vert]
-                                     
+l.14             \begin{tcolorbox}[gris]
+                                        
 (That was another \errmessage.)
 
 
-./notes.tex:701: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section8.tex:37: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.701         \begin{tcolorbox}[vert]
-                                     
+l.37         \begin{tcolorbox}[vert]
+                                    
 (That was another \errmessage.)
 
-
-./notes.tex:706: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.706             \begin{tcolorbox}[gris]
-                                         
-(That was another \errmessage.)
-
-Package mdframed Info: Not enough space on this page on input line 713.
-
-
-[15]
-Package mdframed Info: Not enough space on this page on input line 713.
-
-
-./notes.tex:729: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.729         \begin{tcolorbox}[vert]
-                                     
-(That was another \errmessage.)
-
-./notes.tex:730: You can't use `macro parameter character #' in math mode.
-l.730 ...hcal{H}_{AB}$ is $\rho_{AB}$ with $n_A= #
+./sections/section8.tex:38: You can't use `macro parameter character #' in math mode.
+l.38 ...thcal{H}_{AB}$ is $\rho_{AB}$ with $n_A= #
                                                   $qubits in A and $n_B = #$...
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
-./notes.tex:730: You can't use `macro parameter character #' in math mode.
-l.730 ...B}$ with $n_A= #$qubits in A and $n_B = #
+./sections/section8.tex:38: You can't use `macro parameter character #' in math mode.
+l.38 ...AB}$ with $n_A= #$qubits in A and $n_B = #
                                                   $qubits in B, then
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -2454,40 +2027,43 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 
-./notes.tex:769: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+[15]
+
+./sections/section8.tex:77: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.769             \begin{tcolorbox}[rouge]
-                                          
+l.77             \begin{tcolorbox}[rouge]
+                                         
 (That was another \errmessage.)
 
 Runaway argument?
 {\glueexpr 10pt 
-./notes.tex:820: Paragraph ended before \addvspace was complete.
+./sections/section8.tex:128: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.820             \end{tcolorbox}
+l.128             \end{tcolorbox}
                                  
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./notes.tex:820: Missing number, treated as zero.
+./sections/section8.tex:128: Missing number, treated as zero.
 <to be read again> 
                    }
-l.820             \end{tcolorbox}
+l.128             \end{tcolorbox}
                                  
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./notes.tex:820: Illegal unit of measure (pt inserted).
+./sections/section8.tex:128: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.820             \end{tcolorbox}
+l.128             \end{tcolorbox}
                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2496,90 +2072,88 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./notes.tex:820: Extra }, or forgotten \endgroup.
+./sections/section8.tex:128: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.820             \end{tcolorbox}
+l.128             \end{tcolorbox}
                                  
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
+
+
+./sections/section8.tex:131: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.131         \begin{tcolorbox}[vert]
+                                     
+(That was another \errmessage.)
+
+
+./sections/section8.tex:136: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136         \begin{tcolorbox}[vert]
+                                     
+(That was another \errmessage.)
 
 
 
 [16]
-Package mdframed Info: Not enough space on this page on input line 821.
 
-
-./notes.tex:823: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section8.tex:144: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.823         \begin{tcolorbox}[vert]
-                                     
-(That was another \errmessage.)
-
-
-./notes.tex:828: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.828         \begin{tcolorbox}[vert]
-                                     
-(That was another \errmessage.)
-
-
-./notes.tex:836: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.836             I
+l.144             I
                    f $\rho_A$ and $\rho_B$ come from a pure state, $S\left(\...
 (That was another \errmessage.)
 
 
-./notes.tex:840: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section8.tex:148: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.840             \begin{tcolorbox}[rouge]
+l.148             \begin{tcolorbox}[rouge]
                                           
 (That was another \errmessage.)
 
 Runaway argument?
 {\glueexpr 10pt 
-./notes.tex:852: Paragraph ended before \addvspace was complete.
+./sections/section8.tex:160: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.852             \end{tcolorbox}
+l.160             \end{tcolorbox}
                                  
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./notes.tex:852: Missing number, treated as zero.
+./sections/section8.tex:160: Missing number, treated as zero.
 <to be read again> 
                    }
-l.852             \end{tcolorbox}
+l.160             \end{tcolorbox}
                                  
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./notes.tex:852: Illegal unit of measure (pt inserted).
+./sections/section8.tex:160: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.852             \end{tcolorbox}
+l.160             \end{tcolorbox}
                                  
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2588,10 +2162,10 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./notes.tex:852: Extra }, or forgotten \endgroup.
+./sections/section8.tex:160: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.852             \end{tcolorbox}
+l.160             \end{tcolorbox}
                                  
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2600,504 +2174,82 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-Overfull \vbox (100.82144pt too high) detected at line 853
- []
-
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 853.
-
-Overfull \vbox (101.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (102.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (103.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (104.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (105.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (106.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (107.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (108.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (109.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (110.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (111.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (112.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (113.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (114.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (115.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (116.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (117.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (118.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (119.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (120.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (121.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (122.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (123.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (124.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (125.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (126.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (127.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (128.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (129.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (130.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (131.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (132.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (133.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (134.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (135.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (136.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (137.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (138.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (139.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (140.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (141.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (142.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (143.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (144.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (145.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (146.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (147.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (148.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (149.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (150.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (151.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (152.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (153.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (154.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (155.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (156.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (157.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (158.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (159.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (160.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (161.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (162.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (163.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (164.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (165.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (166.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (167.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (168.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (169.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (170.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (171.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (172.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (173.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (174.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (175.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (176.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (177.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (178.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (179.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (180.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (181.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (182.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (183.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (184.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (185.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (186.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (187.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (188.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (189.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (190.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (191.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (192.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (193.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (194.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (195.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (196.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (197.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (198.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (199.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (200.82144pt too high) detected at line 853
- []
-
-
-Overfull \vbox (201.82144pt too high) detected at line 853
- []
-
-
-Package mdframed Warning: correct box splittet fails
- It seems you are using a non splittable contents
-(mdframed)                 on input line 853.
-
-Package mdframed Info: You first box width is to small
- mdframed fixed it
-(mdframed)              on input line 853.
-
-
-[17]
-
-./notes.tex:855: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section8.tex:163: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.855             \begin{tcolorbox}[gris]
+l.163             \begin{tcolorbox}[gris]
                                          
 (That was another \errmessage.)
 
 
-./notes.tex:860: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section8.tex:168: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.860             \important
+l.168             \important
                             {The Schmidt decomposition theorem} says that an...
 (That was another \errmessage.)
 
 
-./notes.tex:865: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section8.tex:173: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.865             \begin{tcolorbox}[gris]
+l.173             \begin{tcolorbox}[gris]
                                          
 (That was another \errmessage.)
 
 
-Overfull \hbox (75.78711pt too wide) in paragraph at lines 881--882
+
+[17]
+Overfull \hbox (75.78711pt too wide) in paragraph at lines 189--190
 []\T1/cmr/m/n/10 Then $\OML/cmm/m/it/10 p[] > \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ;  p[] > \OT1/cmr/m/n/10 0  =[]\OMS/cmsy/m/n/10 )  \OML/cmm/m/it/10 ^^Z[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 p[] [] [] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 p[] [] [] \OT1/cmr/m/n/10 + []$ \T1/cmr/m/n/10 be-cause $\OML/cmm/m/it/10 ^^Z[] \OT1/cmr/m/n/10 = [][] [] [] [][] []$
  []
 
+) (./sections/section9.tex
 
-
-[18]
-
-./notes.tex:892: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section9.tex:6: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.892             \begin{tcolorbox}[rouge]
-                                          
+l.6             \begin{tcolorbox}[rouge]
+                                        
 (That was another \errmessage.)
 
 Runaway argument?
 {\glueexpr 10pt 
-./notes.tex:905: Paragraph ended before \addvspace was complete.
+./sections/section9.tex:19: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.905             \end{tcolorbox}
-                                 
+l.19             \end{tcolorbox}
+                                
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./notes.tex:905: Missing number, treated as zero.
+./sections/section9.tex:19: Missing number, treated as zero.
 <to be read again> 
                    }
-l.905             \end{tcolorbox}
-                                 
+l.19             \end{tcolorbox}
+                                
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./notes.tex:905: Illegal unit of measure (pt inserted).
+./sections/section9.tex:19: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.905             \end{tcolorbox}
-                                 
+l.19             \end{tcolorbox}
+                                
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -3105,11 +2257,11 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./notes.tex:905: Extra }, or forgotten \endgroup.
+./sections/section9.tex:19: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.905             \end{tcolorbox}
-                                 
+l.19             \end{tcolorbox}
+                                
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -3117,14 +2269,14 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-Overfull \hbox (71.53163pt too wide) in paragraph at lines 927--928
+Overfull \hbox (71.53163pt too wide) in paragraph at lines 41--42
  [] 
  []
 
-./notes.tex:944: Missing \right. inserted.
+./sections/section9.tex:58: Missing \right. inserted.
 <inserted text> 
                 \right .
-l.944 ...hspace\mathspace \to \text{ continuous}\]
+l.58 ...thspace\mathspace \to \text{ continuous}\]
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3132,10 +2284,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./notes.tex:944: Missing \right. inserted.
+./sections/section9.tex:58: Missing \right. inserted.
 <inserted text> 
                 \right .
-l.944 ...hspace\mathspace \to \text{ continuous}\]
+l.58 ...thspace\mathspace \to \text{ continuous}\]
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3143,8 +2295,11 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./notes.tex:946: Undefined control sequence.
-l.946 ... & -i \\ i & 0 \end{pmatrix}, \mathspaces
+
+
+[18]
+./sections/section9.tex:60: Undefined control sequence.
+l.60 ...0 & -i \\ i & 0 \end{pmatrix}, \mathspaces
                                                    \mathspace Z = \begin{pma...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3152,98 +2307,95 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-
-[19]
-<images/2.png, id=428, 499.8675pt x 236.885pt>
+<images/2.png, id=424, 499.8675pt x 236.885pt>
 File: images/2.png Graphic file (type png)
 <use images/2.png>
-Package pdftex.def Info: images/2.png  used on input line 957.
+Package pdftex.def Info: images/2.png  used on input line 71.
 (pdftex.def)             Requested size: 142.26378pt x 67.41895pt.
-<images/3.png, id=429, 923.45pt x 273.02pt>
+<images/3.png, id=425, 923.45pt x 273.02pt>
 File: images/3.png Graphic file (type png)
 <use images/3.png>
-Package pdftex.def Info: images/3.png  used on input line 959.
+Package pdftex.def Info: images/3.png  used on input line 73.
 (pdftex.def)             Requested size: 256.0748pt x 75.7077pt.
 
-
-[20 <./images/2.png> <./images/3.png>]
-
-./notes.tex:994: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section9.tex:107: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.994         \begin{tcolorbox}[vert]
+l.107         \begin{tcolorbox}[vert]
                                      
 (That was another \errmessage.)
 
-<images/4.png, id=436, 765.86125pt x 214.8025pt>
+
+
+[19 <./images/2.png> <./images/3.png>]
+<images/4.png, id=432, 765.86125pt x 214.8025pt>
 File: images/4.png Graphic file (type png)
 <use images/4.png>
-Package pdftex.def Info: images/4.png  used on input line 1006.
+Package pdftex.def Info: images/4.png  used on input line 119.
 (pdftex.def)             Requested size: 284.52756pt x 79.80344pt.
-<images/5.png, id=437, 602.25pt x 465.74pt>
+<images/5.png, id=433, 602.25pt x 465.74pt>
 File: images/5.png Graphic file (type png)
 <use images/5.png>
-Package pdftex.def Info: images/5.png  used on input line 1034.
+Package pdftex.def Info: images/5.png  used on input line 147.
 (pdftex.def)             Requested size: 341.43306pt x 264.05324pt.
 
 
-[21 <./images/4.png>]
-Overfull \hbox (89.53575pt too wide) detected at line 1050
+[20 <./images/4.png>]
+Overfull \hbox (89.53575pt too wide) detected at line 163
 [] \OML/cmm/m/it/10 ^^R [] [][] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 i [] ^^RZ [] [][] \OMS/cmsy/m/n/10 ! [] !\OT1/cmr/m/n/10 = []
  []
 
 
-Overfull \hbox (7.23303pt too wide) in paragraph at lines 1069--1070
+Overfull \hbox (7.23303pt too wide) in paragraph at lines 182--183
 []\T1/cmr/m/n/10 Check for bit-flip er-ror \TS1/cmr/m/n/10 ^^Y\T1/cmr/m/n/10 correct the bit-flip er-ror: $[] [] []$. 
  []
 
 
 
-[22 <./images/5.png>]
-Overfull \hbox (43.984pt too wide) detected at line 1078
+[21 <./images/5.png>]
+Overfull \hbox (43.984pt too wide) detected at line 191
 []
  []
 
 
-./notes.tex:1084: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section9.tex:197: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1084             \begin{tcolorbox}[rouge]
-                                           
+l.197             \begin{tcolorbox}[rouge]
+                                          
 (That was another \errmessage.)
 
 Runaway argument?
 {\glueexpr 10pt 
-./notes.tex:1087: Paragraph ended before \addvspace was complete.
+./sections/section9.tex:200: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.1087             \end{tcolorbox}
-                                  
+l.200             \end{tcolorbox}
+                                 
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./notes.tex:1087: Missing number, treated as zero.
+./sections/section9.tex:200: Missing number, treated as zero.
 <to be read again> 
                    }
-l.1087             \end{tcolorbox}
-                                  
+l.200             \end{tcolorbox}
+                                 
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./notes.tex:1087: Illegal unit of measure (pt inserted).
+./sections/section9.tex:200: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.1087             \end{tcolorbox}
-                                  
+l.200             \end{tcolorbox}
+                                 
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -3251,11 +2403,11 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./notes.tex:1087: Extra }, or forgotten \endgroup.
+./sections/section9.tex:200: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.1087             \end{tcolorbox}
-                                  
+l.200             \end{tcolorbox}
+                                 
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -3263,125 +2415,125 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-./notes.tex:1089: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section9.tex:202: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1089         \begin{tcolorbox}[vert]
+l.202         \begin{tcolorbox}[vert]
+                                     
+(That was another \errmessage.)
+
+
+./sections/section9.tex:214: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.214             \begin{tcolorbox}[rouge]
+                                          
+(That was another \errmessage.)
+
+Runaway argument?
+{\glueexpr 10pt 
+./sections/section9.tex:222: Paragraph ended before \addvspace was complete.
+<to be read again> 
+                   \par 
+l.222             \end{tcolorbox}
+                                 
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+./sections/section9.tex:222: Missing number, treated as zero.
+<to be read again> 
+                   }
+l.222             \end{tcolorbox}
+                                 
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./sections/section9.tex:222: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.222             \end{tcolorbox}
+                                 
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./sections/section9.tex:222: Extra }, or forgotten \endgroup.
+<recently read> }
+                 
+l.222             \end{tcolorbox}
+                                 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+
+[22]
+
+./sections/section9.tex:233: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.233             I
+                   f $\left(U, \Sigma\right)$ is a QECC then $\left(U, span\...
+(That was another \errmessage.)
+
+
+./sections/section9.tex:240: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.240         \begin{tcolorbox}[rouge]
                                       
 (That was another \errmessage.)
 
 
-./notes.tex:1101: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1101             \begin{tcolorbox}[rouge]
-                                           
-(That was another \errmessage.)
-
-Runaway argument?
-{\glueexpr 10pt 
-./notes.tex:1109: Paragraph ended before \addvspace was complete.
-<to be read again> 
-                   \par 
-l.1109             \end{tcolorbox}
-                                  
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-./notes.tex:1109: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.1109             \end{tcolorbox}
-                                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./notes.tex:1109: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.1109             \end{tcolorbox}
-                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./notes.tex:1109: Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.1109             \end{tcolorbox}
-                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-
-[23]
-
-./notes.tex:1120: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1120             I
-                    f $\left(U, \Sigma\right)$ is a QECC then $\left(U, span...
-(That was another \errmessage.)
-
-
-./notes.tex:1127: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1127         \begin{tcolorbox}[rouge]
-                                       
-(That was another \errmessage.)
-
-
-Overfull \hbox (7.69058pt too wide) detected at line 1131
+Overfull \hbox (7.69058pt too wide) detected at line 244
 [] \OMS/cmsy/m/n/10 ! [] ! [] ! [] ! [] ! \OML/cmm/m/it/10 H \OMS/cmsy/m/n/10 ! [] ! [] ! [] ! [] \OML/cmm/m/it/10 :
  []
 
 Runaway argument?
 {\glueexpr 10pt 
-./notes.tex:1135: Paragraph ended before \addvspace was complete.
+./sections/section9.tex:248: Paragraph ended before \addvspace was complete.
 <to be read again> 
                    \par 
-l.1135         \end{tcolorbox}
-                              
+l.248         \end{tcolorbox}
+                             
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./notes.tex:1135: Missing number, treated as zero.
+./sections/section9.tex:248: Missing number, treated as zero.
 <to be read again> 
                    }
-l.1135         \end{tcolorbox}
-                              
+l.248         \end{tcolorbox}
+                             
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./notes.tex:1135: Illegal unit of measure (pt inserted).
+./sections/section9.tex:248: Illegal unit of measure (pt inserted).
 <to be read again> 
                    }
-l.1135         \end{tcolorbox}
-                              
+l.248         \end{tcolorbox}
+                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -3389,11 +2541,11 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
-./notes.tex:1135: Extra }, or forgotten \endgroup.
+./sections/section9.tex:248: Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.1135         \end{tcolorbox}
-                              
+l.248         \end{tcolorbox}
+                             
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -3401,313 +2553,305 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-./notes.tex:1218: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section9.tex:331: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1218     \begin{tcolorbox}[vert]
-                                  
+l.331     \begin{tcolorbox}[vert]
+                                 
 (That was another \errmessage.)
 
 
 
-[24]
+[23]) (./sections/section10.tex
 
-./notes.tex:1228: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+./sections/section10.tex:6: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
 See the pgfkeys package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1228         \begin{tcolorbox}[gris]
-                                      
+l.6         \begin{tcolorbox}[gris]
+                                   
 (That was another \errmessage.)
 
 
-Overfull \hbox (29.05879pt too wide) detected at line 1240
+Overfull \hbox (29.05879pt too wide) detected at line 18
 []\OML/cmm/m/it/10 ^^MB \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 ![];   [] \OT1/cmr/m/n/10 = []  =[]\OMS/cmsy/m/n/10 )  \OML/cmm/m/it/10 H \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 ^^M[]B \OMS/cmsy/m/n/10 ^^A \OML/cmm/m/it/10 ^^[[] \OT1/cmr/m/n/10 = [] []  =[]\OMS/cmsy/m/n/10 )  []  \OT1/cmr/m/n/10 =[]\OMS/cmsy/m/n/10 ) 
  []
 
 
-./notes.tex:1246: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+./sections/section10.tex:24: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1246             \draw
-                         (-0.05,-1.4) -- (0.05, -1.4)
+l.24             \draw
+                       (-0.05,-1.4) -- (0.05, -1.4)
 (That was another \errmessage.)
 
 
-./notes.tex:1247: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+./sections/section10.tex:25: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1247             \node
-                         at (-0.4, 0.4) {$+\frac{\hbar \omega}{2}$}
+l.25             \node
+                       at (-0.4, 0.4) {$+\frac{\hbar \omega}{2}$}
 (That was another \errmessage.)
 
 
-./notes.tex:1248: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+./sections/section10.tex:26: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1248             \node
-                         at (1.2, 0.4) {$\ket{\downarrow}$ Excited state}
+l.26             \node
+                       at (1.2, 0.4) {$\ket{\downarrow}$ Excited state}
 (That was another \errmessage.)
 
 
-./notes.tex:1250: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+./sections/section10.tex:28: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1250             \node
-                         at (1.2, -1.4) {$\ket{\uparrow}$ Ground state}
+l.28             \node
+                       at (1.2, -1.4) {$\ket{\uparrow}$ Ground state}
 (That was another \errmessage.)
 
 
-./notes.tex:1251: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+./sections/section10.tex:29: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1251             \node
-                         at (-0.4, -1.4) {$-\frac{\hbar \omega}{2}$}
+l.29             \node
+                       at (-0.4, -1.4) {$-\frac{\hbar \omega}{2}$}
 (That was another \errmessage.)
 
 
-./notes.tex:1252: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
+./sections/section10.tex:30: Package tikz Error: Giving up on this path. Did you forget a semicolon?.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1252         \end{tikzpicture}
-                                
+l.30         \end{tikzpicture}
+                              
 (That was another \errmessage.)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1260--1261
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
 
-Overfull \hbox (28.09782pt too wide) detected at line 1266
+Overfull \hbox (28.09782pt too wide) detected at line 44
 []
  []
 
 
 
+[24]
+
+./sections/section10.tex:73: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73         \begin{tcolorbox}[bleu]
+                                    
+(That was another \errmessage.)
+
+
+./sections/section10.tex:79: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.79            \begin{tcolorbox}[gris]
+                                       
+(That was another \errmessage.)
+
+Package mdframed Info: Not enough space on this page on input line 82.
+
+
 [25]
+Package mdframed Info: Not enough space on this page on input line 82.
 
-./notes.tex:1295: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1295         \begin{tcolorbox}[bleu]
-                                      
-(That was another \errmessage.)
-
-
-./notes.tex:1301: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1301            \begin{tcolorbox}[gris]
-                                         
-(That was another \errmessage.)
-
-Package mdframed Info: Not enough space on this page on input line 1304.
-
-
-[26]
-Package mdframed Info: Not enough space on this page on input line 1304.
-
-./notes.tex:1320: Extra }, or forgotten \right.
+./sections/section10.tex:98: Extra }, or forgotten \right.
 <template> }
             $}\ifmeasuring@ \savefieldlength@ \fi \set@field \endtemplate 
-l.1320     \end{align*}
-                       
+l.98     \end{align*}
+                     
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./notes.tex:1320: Missing \right. inserted.
+./sections/section10.tex:98: Missing \right. inserted.
 <inserted text> 
                 \right .
-l.1320     \end{align*}
-                       
+l.98     \end{align*}
+                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./notes.tex:1320: Missing } inserted.
+./sections/section10.tex:98: Missing } inserted.
 <inserted text> 
                 }
-l.1320     \end{align*}
-                       
+l.98     \end{align*}
+                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./notes.tex:1320: Missing } inserted.
+./sections/section10.tex:98: Missing } inserted.
 <inserted text> 
                 }
-l.1320     \end{align*}
-                       
+l.98     \end{align*}
+                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./notes.tex:1320: Extra \right.
+./sections/section10.tex:98: Extra \right.
 <argument> ...sqrt {2}} \text { at time t}\right )
                                                    =\left |\left (\frac {\ke...
-l.1320     \end{align*}
-                       
+l.98     \end{align*}
+                     
 I'm ignoring a \right that had no matching \left.
 
-./notes.tex:1320: Missing { inserted.
+./sections/section10.tex:98: Missing { inserted.
 <inserted text> 
                 {
-l.1320     \end{align*}
-                       
+l.98     \end{align*}
+                     
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-./notes.tex:1320: Extra }, or forgotten \right.
+./sections/section10.tex:98: Extra }, or forgotten \right.
 <template> }
             $}\ifmeasuring@ \savefieldlength@ \fi \set@field \endtemplate 
-l.1320     \end{align*}
-                       
+l.98     \end{align*}
+                     
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./notes.tex:1320: Missing \right. inserted.
+./sections/section10.tex:98: Missing \right. inserted.
 <inserted text> 
                 \right .
-l.1320     \end{align*}
-                       
+l.98     \end{align*}
+                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./notes.tex:1320: Missing } inserted.
+./sections/section10.tex:98: Missing } inserted.
 <inserted text> 
                 }
-l.1320     \end{align*}
-                       
+l.98     \end{align*}
+                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./notes.tex:1320: Missing } inserted.
+./sections/section10.tex:98: Missing } inserted.
 <inserted text> 
                 }
-l.1320     \end{align*}
-                       
+l.98     \end{align*}
+                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./notes.tex:1320: Extra \right.
+./sections/section10.tex:98: Extra \right.
 <argument> ...sqrt {2}} \text { at time t}\right )
                                                    =\left |\left (\frac {\ke...
-l.1320     \end{align*}
-                       
+l.98     \end{align*}
+                     
 I'm ignoring a \right that had no matching \left.
 
-./notes.tex:1320: Missing \endgroup inserted.
+./sections/section10.tex:98: Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.1320     \end{align*}
-                       
+l.98     \end{align*}
+                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./notes.tex:1320: Misplaced \omit.
+./sections/section10.tex:98: Misplaced \omit.
 \math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
                                                   \kern -\alignsep@ \iftag@ ...
-l.1320     \end{align*}
-                       
+l.98     \end{align*}
+                     
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-./notes.tex:1320: Missing { inserted.
+./sections/section10.tex:98: Missing { inserted.
 <inserted text> 
                 {
-l.1320     \end{align*}
-                       
+l.98     \end{align*}
+                     
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-./notes.tex:1326: Missing $ inserted.
-<inserted text> 
-                $
-l.1326 
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+)
 
-
-
-[27] (./notes.aux)
+[26] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `notes.out' has not changed.
+Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 78BF60009166210A188A40F7F1BE873A;7466.
  ) 
 Here is how much of TeX's memory you used:
- 31105 strings out of 475171
- 624904 string characters out of 5767094
- 1089146 words of memory out of 5000000
- 53427 multiletter control sequences out of 15000+600000
+ 31174 strings out of 475171
+ 626338 string characters out of 5767094
+ 1095475 words of memory out of 5000000
+ 53457 multiletter control sequences out of 15000+600000
  582974 words of font info for 96 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 131i,19n,135p,522b,1138s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 131i,19n,135p,530b,1220s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm7.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf-dist/fonts/typ
 e1/public/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on notes.pdf (28 pages, 812209 bytes).
+Output written on main.pdf (27 pages, 811668 bytes).
 PDF statistics:
- 679 PDF objects out of 1000 (max. 8388607)
- 530 compressed objects within 6 object streams
- 120 named destinations out of 1000 (max. 500000)
+ 675 PDF objects out of 1000 (max. 8388607)
+ 527 compressed objects within 6 object streams
+ 119 named destinations out of 1000 (max. 500000)
  526 words of extra memory for PDF output out of 10000 (max. 10000000)
 

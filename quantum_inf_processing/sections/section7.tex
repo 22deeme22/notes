@@ -1,0 +1,80 @@
+\section{Density matrix}
+    There is two situations where density matrix are useful: 
+    \begin{enumerate}[left=10pt]
+        \item Statistical mixtures.
+        \item Physical systems that are not isolated. 
+    \end{enumerate}
+    \subsection{Statistical mixture}
+        \begin{tcolorbox}[vert]
+            A statistical mixture is a system of N degrees of freedom (quantum particles), where 
+            \begin{align*} 
+                \text{fraction } &p_1 \text{ of degree of freedom is in state } \ket{\phi_1}\in\mathcal{H}, \\
+                \text{fraction } &p_2 \text{ of degree of freedom is in state } \ket{\phi_2}\in\mathcal{H}, \\
+                                 &\ldots \\
+                \text{fraction } &p_k \text{ of degree of freedom is in state } \ket{\phi_k}\in\mathcal{H},
+            \end{align*} 
+            \[0 \leq p_i \leq 1, \sum_{ i=1 } ^{ k }p_i=1.\]
+        \end{tcolorbox}
+        Convenient useful description is through the density matrix: $\rho= \sum_{ i=1 } ^{ k } p_i \ket{\phi_i}\bra{\phi_i}$
+        \begin{remark}{Remark}
+            \begin{tcolorbox}[gris]
+                Density matrix is a convex linear combination of projections: $\ket{\phi_i}\bra{\phi_i}= \pi_i, \mathspace \pi_i\ket{\psi}= \ket{\phi_i}\braket{\phi_i|\psi},\mathspace \pi_i^+ = \pi_i, \mathspace \pi_i ^2=\pi_i$.
+            \end{tcolorbox}
+        \end{remark}
+        From a statistical mixture, we get a state $\ket{\phi_i}$ with probability $p_i$, then we measure $\ket{\phi_i}$, what's the expectation of A?
+        \begin{remark}{Remark}
+            \begin{tcolorbox}[gris]
+                \textbf{Cyclicity of Trace:} 
+                \[Tr\left(AB\right)=Tr\left(BA\right), \mathspace Tr\left(ABC\right)=Tr\left(CAB\right)=Tr\left(BCA\right).\]
+            \end{tcolorbox}
+        \end{remark}
+        Expectated value of A notated <A>: 
+        \[\sum_{ i=1 } ^{ k }p_i\bra{\phi_i}A\ket{\phi_i} 
+            = \sum_{ i=1 }^{ k}p_i Tr\left(A\ket{\phi_i}\bra{\phi_i}\right)
+            = Tr \{\sum_{ i=1 } ^{ k }p_iA\ket{\phi_i}\bra{\phi_i}\}
+            = TrA\left(\sum_{ i=1 } ^{ k }p_i\ket{\phi_i}\bra{\phi_i}\right)=Tr\left(A\rho\right).
+        \]
+       $<A> = Tr\left(A\rho\right)=Tr\left(\rho A\right), \mathspace \mathspace \mathspace Var\left(A\right)= <A^2>-<A>^2=Tr\left(A^2\rho\right)-\left(Tr\left(A\rho\right)\right)^2$. 
+       \begin{theoreme}
+           \begin{enumerate}[left=10pt]
+               \item A density matrix satisfies $\rho^{\dagger}=\rho, \mathspace \rho \geq 0, \mathspace Tr\rho=1$.
+               \item Vice-versa any matrix satisfying these 3 proposition is a density matrix.
+           \end{enumerate}
+       \end{theoreme}
+    \subsection{Partial trace}
+        M acts on $\mathcal{H}_1 \otimes \mathcal{H}_2$, orthonormal basis can be $\ket{v_i} \otimes \ket{w_j}$ with $i = 1 \ldots dim\mathcal{H}_1$ and $j = 1 \ldots dim \mathcal{H}_2$.
+        \[M= \sum_{ ij; kl } M_{ij; kl} \left(\ket{v_i}\otimes \ket{w_j}\right)\left(\ket{v_k} \otimes \ket{w_l}\right), \mathspace \mathspace M_{ij;kl}=\left(\ket{v_i} \otimes \ket{w_j}\right)M\left(\ket{v_k} \otimes \ket{w_l}\right).\]
+        Full trace: $TrM=\sum_{ ij }M_{ij;ij}$,   $\mathspace \mathspace \mathspace $ partial trace: $Tr_{\mathcal{H}_1}M=\sum_{ j;l } \left(\sum_{ i } M_{ij; il}\right)\overbrace{\ket{w_j}\bra{w_l}}^{dim\mathcal{H}_2 \cdot dim\mathcal{H}_2}$.
+
+        \begin{remark}{Remark}
+            \begin{tcolorbox}[gris]
+                You can vizualize this by thinking that M like a big matrice of size $\left(dim\mathcal{H}_1 dim\mathcal{H}_2\right) \cdot \left(dim\mathcal{H}_1 dim\mathcal{H}_2\right)$ and that the partial trace correspond to slice this matrice in blocs corresponding to $\mathcal{H}_1$ and compute the trace on these blocs.
+            \end{tcolorbox}
+        \end{remark}
+        \textbf{Properties:}
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item $Tr_{\mathcal{H}_1}Tr_{\mathcal{H}_2}M=\overbrace{Tr_{\mathcal{H}_1  \mathcal{H}_2}}^{\text{full trace}}M=Tr_{\mathcal{H}_2}Tr_{\mathcal{H}_1}M$,
+            \item In special case $A \otimes B$: 
+            \[Tr_{\mathcal{H}_1}\left(A \otimes B\right)=\left(Tr_{\mathcal{H}_1}A\right)B, \mathspace \mathspace Tr_{\mathcal{H}_2}\left(A \otimes B\right)=A\left(Tr_{\mathcal{H}_2}B\right), \mathspace \mathspace Tr_{\text{full}}A \otimes B=\left(Tr_{\mathcal{H}_1}A\right)\left(Tr_{\mathcal{H}_2}B\right).\]
+        \end{itemize}
+    \subsection{Partial density matrix}
+        \begin{tcolorbox}[vert]
+            Let $\rho$ be a full system $\mathcal{H}_{\text{full}} = \mathcal{H}_A \otimes \mathcal{H}_B$, then the local description of system A is given by 
+            \[Tr_{\mathcal{H}_B}\rho\equiv\rho_A.\]
+        \end{tcolorbox}
+        When you have a non-isolated system S, it means that the system interact with an environement E, and $\ket{\psi} \in \mathcal{H}_S \otimes \mathcal{H}_E, \mathspace \rho_{S\cup E}=\ket{\psi}\bra{\psi}$.
+        Then to compute the state of the sub-system S, you have to compute 
+        \[\rho_S=Tr_E\ket{\psi}\bra{\psi}.\]
+        Therefore, the general state of a non-isolated systemn is a density matrix!
+
+        \noindent\textbf{Computation:}
+        \begin{enumerate}[left=10pt]
+            \item Choose an orthonormal basis on B: $\{\ket{i_B}\}, \mathspace i_B \in \{0,1\}^{n_B}$.
+            \item $\rho_A=\sum_{ i_B }\left(\mathbbm{1}_A \otimes \bra{i_B}\right)\rho_{AB}\left(\mathbbm{1}_A \otimes \ket{i_B}\right)$.
+        \end{enumerate}
+        \textbf{Properties:}
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item If $M=A \otimes B$ thne $M_B = Tr\left(A\right)\cdot B$, 
+            \item If $M$ a density matrix $= \rho_A \otimes \rho_B$ then $M_B= \underbrace{Tr\left(\rho_A\right)}_{=1}\rho_B=\rho_B$.
+        \end{itemize}
+

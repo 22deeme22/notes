@@ -1,0 +1,117 @@
+\section{Quantum key distribution (QKD)}
+    Classical protcols rely on some mathematicals problems believed to be hard, but one day, if there is some strong enough computer, the security wouldn't be assured. QKD rely on physics! So it doesn't have this problem, the disavantage is that you should have a quantum channel.
+    \subsection{Key distribution}
+        \begin{enumerate}[left=10pt]
+            \item Suppose Alice wants to send $\vec{m}$. She encodes it as $\vec{m} \oplus \vec{x}=\vec{z}$.
+            \item Bob receives $\vec{z}$. He adds $\vec{x} \implies \vec{z} \oplus \vec{x}= \left(\vec{m} \oplus \vec{x}\right) \oplus \vec{x}=\vec{m}\oplus\left(\vec{x}\oplus\vec{x}\right)=\vec{m}$.
+        \end{enumerate}
+    \subsection{BB84 protocol}
+        For quantum key distribution protocols, we assume that:
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item A, B share a public classical channel that is not spoofable.
+            \item A, B share a public quantum channel that is spoofable.
+        \end{enumerate}
+        \begin{tcolorbox}[vert]
+            Setting: Alice has generated $\left(\vec{x} \in \{0, 1\}\right)$ and wants to share it with Bob.
+            \begin{enumerate}[left=10pt]
+                \item Alice encodes $\vec{x}$ as a quantum state of qubit.
+                \item Bob decodes the q-state back into qbitstring.
+                \item Public communication phase (through the classical channel).
+                \item Generation of the common secret key + security check.
+            \end{enumerate}
+        \end{tcolorbox}
+        
+               \begin{enumerate}[left=10pt]
+            \item \textbf{Step Encoding:}
+
+            Alice encodes each $x \in \{0,1\}$ in a random basis (either X or Z basis):
+            \begin{itemize}[left=10pt, label=\textbullet]
+                \item Z basis: $\ket{0}, \ket{1}, Z=\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} $
+                \item X basis: $\ket{-}=\frac{\ket{0}-\ket{1}}{\sqrt{2}}, \ket{+}\frac{\ket{0}+\ket{1}}{\sqrt{2}}, X=\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} $
+            \end{itemize}
+            \begin{center}
+            \begin{tabular}{c|c}
+                  \textbf{$x_1$}& \textbf{Z basis}\\  % ligne 1
+                  \hline
+                   0 & $\ket{0}$\\  % ligne 2
+                    1 & $\ket{1}$ \\
+                    \hline
+                      & \textbf{X basis} \\
+                      \hline
+                    0 & $\ket{+}$ \\
+                    1 & $\ket{-}$
+            \end{tabular}
+            \end{center}
+            Let define H such that: $H\ket{0}=\ket{+}, \mathspace H\ket{1}=\ket{-}$.
+
+            Alice sends $\ket{0}\ket{+}\ket{-}\ket{0}\ket{1}\ket{1}\ket{+}$, so she sends:
+            \[\ket{\psi_{x_1}}=H^{ei}\ket{x_1} \text{ where ei $\sim$ Unif \{0,1\}} \implies \ket{\psi_{\vec{x}}}= \bigoplus_{j=1}^{m} H^{ei}\ket{x_j}.\]
+            
+            \item \textbf{Step Decoding:}
+
+                Bob recieves $\ket{\psi_{\vec{x}}}=\bigoplus_{j=1}^{m} H^{ei}\ket{x_j}$, he chooses a random basis to measure it. If Bob know the basis, he can decode easily, he doesn't!
+                \begin{itemize}[left=10pt, label=\textbullet]
+                    \item Case 1: Bob measure in the same basis chosen by Alice $\to$ prob(decoding correctly)=1.
+                    \item Case 2: Bob measures in the wrong basis $\to$ prob(decoding correctly)=$\frac{1}{2}$.
+                \end{itemize}
+                $\implies$ prob(decoding correctly)=$\frac{1}{2}\cdot 1 + \frac{1}{2}\cdot \frac{1}{2}=\frac{3}{4}$. 
+                
+            \item \textbf{Step Public communication: }
+                
+                Alice has $\vec{x}:$ original bitstring, $\vec{e}:$ original choice of basis.
+
+                Bob has $\vec{y}:$ decoded bitstring, $\vec{f}:$ Bob's choice of basis.
+
+                They publish over the classical channel their choice of $\vec{e}, \vec{f}$, and for each bit, if the base agree they keep the bit, otherwise they discard it. At the end, Alice has $\widetilde{x} \subset \vec{x}$ and Bob has $\widetilde{y} \subset \vec{y}$.
+            \item \textbf{Step Security check: }
+
+                Let $\widetilde{x}, \widetilde{y}$ be of length k. Alice and Bob pick a subset of k bits to ``sacrifice'' them: they exchange the bits over the public channel, 
+                \begin{itemize}[left=10pt, label=\textbullet]
+                    \item if they match, we can exclude that there is an eavesdropper,
+                    \item otherwise we can conclude that there is an eavesdropper so we abort the protocol.     
+                \end{itemize}
+                \begin{remark}{Remark}
+                    \begin{tcolorbox}[gris]
+                        When the eavesdropper look at a qubit on the quantum channel, he has to measure the qubit $\implies$ the state of the particle collapse. So if Alice and Bob have the same basis, but not the same bit, they can assume that an eavesdropper has intercepted and measured a qubit in the wrong basis, and then sent a modified state to Bob.
+                    \end{tcolorbox}
+                \end{remark}
+        \end{enumerate}
+        Let now see what is the probability that Alice and Bob have the same bit knowing that an eavesdropper (Eve) intercept it.
+        
+        \[
+        \begin{functionbypart}{\text{prob(Eve's measured bit agrees)}}
+            \text{case 1: correct base} \implies \text{prob(correct)}=1 \\
+            \text{case 2: wrong base}\implies \text{prob(correct)}=\frac{1}{2}
+        \end{functionbypart}
+      \]
+            $\implies \text{prob(Eve's measured bit agrees)}=\frac{3}{4}$. 
+            \[\begin{functionbypart}{\text{prob(Bob correct | Eve's intercepted)}}
+                \text{case 1: Eve was correct} \implies \frac{3}{4}\cdot \frac{3}{4}=\frac{9}{16} \\
+                \text{case 2: Eve was wrong} \implies \frac{1}{4}\cdot \frac{1}{2}\cdot \frac{1}{2}=\frac{1}{16}
+            \end{functionbypart}
+            \]
+            $\implies$ prob(Bob correct | Eve intercepted)$=\frac{9}{16}+\frac{1}{16}=\frac{5}{8}$.
+            \vspace{15pt}
+            
+            Maybe sometimes bits of Alice and Bob can disagree not because of an eavesdropper but because of \important{noise}! To deal with noise we can use some classical error connection.
+      \begin{remark}{Example}
+         \begin{tcolorbox}[rouge]
+            \textbf{Repetition code:} Suppose noise flips with probability $\frac{1}{3}$. If i want to send a bit b over a noisy channel instead i'll send $bb\bar{b}$.
+            \begin{itemize}[left=10pt, label=\textbullet]
+                \item Binary linear code: $C \subset \mathbb{F}_2^m, \mathspace \left|C\right|=2^k, \left[m,k,d\right]$ with 
+                   \begin{itemize}[left=10pt, label=\textendash]
+                       \item m: length of the codeword,
+                       \item k: actual # of bits of information per codeword, 
+                       \item d: minimum distance of the code (minimum number of bits differing between 2 vectors in C, in general d=m).
+                   \end{itemize}
+            \end{itemize}
+         \end{tcolorbox}
+      \end{remark}
+      In the BB84 protocol, we can apply this by supposing that we expect $\epsilon$ fraction of bits to differ between $\widetilde{x}$ and $\widetilde{y}$ because of noise. 
+      \begin{itemize}[left=10pt, label=\textbullet]
+          \item After step 3, Alice chooses an ECC C that corrects $\epsilon'$ fraction of the bits and compute $\vec{c}$ ($\epsilon' > \epsilon$).
+          \item She sends $m=\widetilde{x}\oplus\vec{c}$ to Bob over the classical channel.
+          \item Bob compute $\vec{c} \mathspace'=\widetilde{y}\oplus m=\left(\widetilde{x}\oplus\widetilde{y}\right)\oplus  \vec{c}$, where $\widetilde{x} \oplus \widetilde{y}=$ errors.
+          \item Then because $\vec{c}\mathspace' = \vec{c} \oplus \text{errors}$, Bob can recover $\vec{c}$ with the ECC and compute $m \oplus \vec{c}= \left(\widetilde{x}\oplus\vec{c}\right)\oplus\vec{c}=\widetilde{x}$.
+      \end{itemize}
+
