@@ -176,6 +176,112 @@
         \[P\left(f\left(\theta\right) \in I \left(X_1, \ldots, X_n\right)\right) \geq 1- \alpha.\]
         
     \end{definition}
+\section{Hypothese testing}
+    \subsection{General principle}
+        Let's start with an example.
+        \begin{remark}{Example}
+            \begin{tcolorbox}[gris]
+                Let 
+                \begin{itemize}[left=10pt, label=\textbullet]
+                    \item $p_1$ be the probability that a pipe frome company 1 breaks,
+                    \item $p_2$ be the probability that a pipe frome company 2 breaks.
+                \end{itemize}
+                The parameter is $\theta=\left(p_1, p_2\right)$ with parameter space $\Theta=\left[0,1\right]^2$. Our goal is not to estimate $\theta$ precisely but to determine which region of the parameter space it belongs to.
+
+                \noindent\textbf{Hypotheses:}
+                \begin{itemize}[left=10pt, label=\textbullet]
+                    \item Null hypothesis $H_0: \theta \in \Theta_0=\left\{\left(p_1,p_2\right):p_1>p_2\right\}$, 
+
+                        (company 1 produces less safes pipes). 
+                    \item Alternative hypothesis $H_1: \theta \in \Theta = \left\{\left(p_1, p_2\right): p_1 \leq p_2\right\}$.
+
+                        (company 1 is at least as safe as company 2).
+                \end{itemize}
+                Based on the data, we decide whether to reject $H_0$. Two types of error may occur: 
+                \begin{itemize}[left=10pt, label=\textbullet]
+                    \item \textbf{Type I error:} Rejecting $H_0$ when it is true \textrightarrow serious consequence.
+                    \item \textbf{Type II error:} not rejecting $H_0$ when it is false \textrightarrow minor consequence.
+                \end{itemize}
+            \end{tcolorbox}
+        \end{remark}
+        \textbf{General framework:} we are trying to decide whether a parameter $\theta$ belongs to a region $\Theta_0 \subset \Theta$ or not, based on a sample $X_1, \ldots, X_n$ of law $\mathbb{P_\theta}$.
+        \begin{definition}
+            The hypotheses ``$\theta \in \Theta_0$'', usually denotes $H_0$, is called the \important{null hypotheses}, Its complement, the hypotheses ``$\theta\in\Theta \backslash \Theta_0$'', usually denoted $H_1$, is called the \important{alternative hypotheses}.
+        \end{definition}
+        \begin{definition}
+            A \important{rejection region D} is an event for the random variables $X_1, \ldots, X_n$. I.e: if the $X_i$ take values in $\mathbb{R}^d, \mathspace D \subset \left(\mathbb{R}^d\right)^n$. In practice, one usually takes 
+            \[D = \left\{\left(x_1, \ldots, x_n\right):T\left(x_1, \ldots, x_n\right)\in \left[a,b\right]\right\}\]
+            for some statistic T and real numbers $a \leq b$.
+        \end{definition}
+        \begin{definition}
+            Given D a rejection region, and $H_0, H_1$ two hypotheses that are tested one against the other, a \important{test procedure} corresponds to 
+            \begin{enumerate}[left=10pt]
+                \item reject $H_0$ if $\left(X_1, \ldots, X_n\right) \in D$; 
+                \item do not reject $H_0$ if $\left(X_1, \ldots, X_n\right) \in D$.
+            \end{enumerate}
+            Failure of prediciton are divided into two classes:
+            \begin{itemize}[left=10pt, label=\textbullet]
+                \item \important{Type-I error}: we reject $H_0$ whereas it was correct. 
+                \item \important{Type-II error}: we do not reject $H_0$ whereas it was false.
+            \end{itemize}
+        \end{definition}
+        \begin{definition}
+            Let $\alpha \in \left[0,1\right]$. We say that the test procedure has a \important{risk level $\alpha$}, or a \important{confidence level $1-\alpha$} if 
+            \[sup_{\theta\in\Theta_0}P\left(\left(X_1, \ldots, X_n\right)\inD\right)=\alpha.\]
+        \end{definition}
+        \begin{definition}
+            The \important{power} of a test is given by 
+           \[inf_{\theta \in \Theta_1}P\left(\left(X_1, \ldots, X_n\right) \in D\right) = 1-\beta.\]
+           In particular, 
+           \[\beta = sup_{\theta \in \Theta_1}P\left(\left(X_1, \ldots, X_n\right) \notin D\right).\]
+        \end{definition}
+        In words: the risk level $\alpha$ is the ``worst case scenario'' of the probability to fall in the rejection region whilst having a value of the parameter satisfying $H_0$ (type-I error), and the $\beta$ in the power of a test is the ``worst case scenario'' of the probability to fall outside of the rejection region whilst having a value of the parameter not satisfying $H_0$ (type-II error).
+    
+    \subsection{Chi-square distribution}
+        \begin{definition}
+            Let $k \in \mathbb{N}^*$ be a positive integer. A random variable X follows the $\mathcal{X}^2$ \important{distribution with k degrees of freedom}, denoted $X \sim \mathcal{X}_k^2$, if it is a continuous random variable with density given by 
+            \[f_X\left(x\right) = \mathbbm{1}_{\left[0, +\infty\right)}\left(x\right)\frac{x^{\frac{k}{2}-1}e^{-\frac{x}{2}}}{2^{\frac{k}{2}}\Gamma\left(\frac{k}{2}\right)}.\]
+            Recall the Gamma functiong $\Gamma\left(z\right)=\int^\infty_0 x^{z-1}e^{-x}dx$. For $n \in \mathbb{N}^*$, we have $\Gamma\left(n\right)=\left(n-1\right)$!
+        \end{definition}
+        This law have links with the Gaussian random variables,
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item if $k\geq1$ is an integer, and $X_1, \ldots, X_k$ are independent $\mathcal{N}\left(0,1\right)$ random variables, then 
+            \[\sum_{ i=k } ^{ k }X_i^2\sim X_k^2.\]
+            
+            \item if $k\geq1$ is an integer, $\mu \in \mathbb{R}, \sigma ^2 >0$, and $X_1, \ldots, X_k$ are independent $\mathcal{N}\left(\mu, \sigma ^2\right)$ random variables, then the following rescaling of the emprical variance follows a $X_{k-1}^2$ law:
+                \[\frac{1}{\sigma ^2}\sum_{ i=1 } ^{ k }\left(X_i=\frac{1}{k}\sum_{ i=1 } ^{ k }X_i\right)^2 \sim X_{k-1}^2.\]      
+        \end{itemize}
+        \begin{definition}
+            Let $k\geq2$ be a positive integer. Let $n\geq1$. Let $p_1, \ldots, p_k \in \left[0,1\right]$ be such that $\sum_{ i=1 } ^{ k }p_i=1$. A random vector $X=\left(X_1, \ldots, X_k\right)$ follows the \important{multinomial distribution with parameters} $\left(k;n;p_1, \ldots, p_k\right)$ if it is a discrete random vector with mass function given by 
+            \[\begin{functionbypart}{P\left(X=\left(x_1, \ldots,x_k\right)\right)}
+                \frac{n!}{x_1!\ldots x_k!}p_1^{x_1} \ldots p_k^{x_k} \text{   if } x_1, \ldots, x_k \in \mathbb{N}, \sum_{ i=1 } ^{ k }x_i=n,  \\
+                0 \mathspace \mathspace \mathspace \text{    else.}
+            \end{functionbypart}
+            \]
+            When $k=2$, its reduces to the binomial distribution.
+        \end{definition}
+        The convergence result we will use is the following.
+        \begin{theoreme}
+            Let $k \geq 2, \mathspace p_1, \ldots, p_k \in \left(0,1\right)$ such that $p_1+\ldots+p_k=1$. For $n\geq1$, let $\left(N_{n,1}, \ldots, N_{n,k}\right)$ be a multinomial random vector with parameters $\left(n,k; \mathspace p_1, \ldots, p_k\right)$. Then the random variable 
+            \[\sum_{ i=1 } ^{ k }\frac{\left(N_{n,i}-np_i\right)^2}{p_i}\]
+            converges in law to a $\mathcal{X}^2$ with $k-1$ degrees of freedom: 
+            \[\sum_{ i-1 } ^{ k }\frac{\left(N_{n,i}-np_i\right)^2}{p_i} \xrightarrow{\text{Law}} \mathcal{X}_{k-1}^2, \text{ as } n\to \infty.\]
+        \end{theoreme}
+        This is used as follows. Let $X_1, \ldots, X_n:\Omega\to\mathbb{R}$ be some independent sequence of i.i.d. Let $A_1, \ldots, A_k \subset \mathbb{R}$ be a partition of $\mathbb{R}$: 
+        \[A_i \cap A_j = \emptyset \text{ if } i \neq j, \mathspace \mathspace \cup^k_{i=1}A_i=\mathbb{R}.\]
+        Then, the random vector 
+        \[\left(\sum_{ i=1 } ^{ n }\mathbbm{1}_{A_1}\left(X_i\right),\sum_{ i=1 } ^{ n }\mathbbm{1}_{A_2}\left(X_i\right), \ldots,\sum_{ i=1 } ^{ n }\mathbbm{1}_{A_k}\left(X_i\right)\right),\]
+        which simply counts the number of measurements which fell into each class, follows a multinomila distribution with parameters $\left(n, k; P\left(X \inA_1\right), \ldots, P\left(X_1 \in A_k\right)\right)$. 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
     
     

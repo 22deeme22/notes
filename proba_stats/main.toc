@@ -21,7 +21,7 @@
 \contentsline {section}{\numberline {1.4}Correlation}{15}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}Variance, Covariance}{15}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}Pearson correlation coefficient}{16}{subsection.1.4.2}%
-\contentsline {section}{\numberline {1.5}Classical example of random variables}{16}{section.1.5}%
+\contentsline {section}{\numberline {1.5}Classical example of random variables}{17}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}Discrete random variables}{17}{subsection.1.5.1}%
 \contentsline {subsubsection}{Constant random variable}{17}{section*.2}%
 \contentsline {subsubsection}{Bernoulli random variable}{17}{section*.3}%
@@ -65,3 +65,6 @@
 \contentsline {subsection}{\numberline {3.2.2}Maximum likelihood estimator}{32}{subsection.3.2.2}%
 \contentsline {section}{\numberline {3.3}Quantile tables}{33}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Confidence intervals}{34}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Hypothese testing}{34}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}General principle}{34}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Chi-square distribution}{36}{subsection.3.5.2}%
