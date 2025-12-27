@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1766757723.9624 "main.tex" "main.pdf" "main" 1766757726.17923 2
+["pdflatex"] 1766857569.56393 "main.tex" "main.pdf" "main" 1766857571.94394 2
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk" 1761301046.71765 6964 b52c2ce397f3e193614dc209ed08453d ""
   "/home/deeme/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm7.600pk" 1763030702.78744 4840 00629356b459b26330bf2618a6cc13ae ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1755987285 2971 def0b6c1f0b107b3b936def894055589 ""
@@ -275,11 +275,12 @@
   "images/3.png" 1764068614.23831 28660 d3900215e42e3eded9ddccede97674b4 ""
   "images/4.png" 1764887051.49267 41909 7cc173ce61365db1869743412af8ab30 ""
   "images/5.png" 1764957045.30999 82288 7e58c376a060d51cb7eb7ff1833505c4 ""
-  "main.aux" 1766757725.97546 7155 2f81760dff2c379f3b3718f78431a353 "pdflatex"
-  "main.out" 1766757725.9778 7466 78bf60009166210a188a40f7f1be873a "pdflatex"
-  "main.tex" 1766757722.05246 1934 f8f6408be23d2a0aed4363d71cf004de ""
-  "main.toc" 1766757725.9778 3747 12e9738fdbdd43e6c05e834cf48f2f52 "pdflatex"
+  "main.aux" 1766857571.74747 7155 2f81760dff2c379f3b3718f78431a353 "pdflatex"
+  "main.out" 1766857571.74956 7466 78bf60009166210a188a40f7f1be873a "pdflatex"
+  "main.tex" 1766857559.30847 829 31635185aa72630217e9ccefcb1aae80 ""
+  "main.toc" 1766857571.74956 3747 12e9738fdbdd43e6c05e834cf48f2f52 "pdflatex"
   "mystyle.sty" 1766577520.27081 7241 34c2f77839a0beceb609ee04c9ca3894 ""
+  "sections/intro.tex" 1766857544.43347 1134 3d15fe9b49d84f12622733186c8c7484 ""
   "sections/section1.tex" 1766756580.7515 4876 3e9cc1604b0e50beeb9bc206f1f066a3 ""
   "sections/section10.tex" 1766757525.28847 9112 eecacdc85ef200ac5a6c11b1a32b9e9b ""
   "sections/section2.tex" 1766756780.70849 7439 6d7dc0a1be59bb43f3f88dcca790ec4f ""

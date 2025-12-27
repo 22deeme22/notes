@@ -82,7 +82,7 @@
             One can show that when the law $\mathbb{P}_{\theta}$ is symmetric around its mean (if it is a continuous law with density $f_{\theta}$, this means $f_{\theta}\left(\mu+x\right)=f_{\theta}\left(\mu-x\right)$ with $\mu=\int_{-\infty}^{+\infty}xf_{\theta}\left(x\right)dx$, the median is an unbiased estimator of the mean.
         \subsubsection{Empirical variance}
             We already have an estimator for the expectation: $\bar{X}_n$. A natural thing to do is to define the empirical variance as 
-            \[\sigma_n ^2=\frac{1}{n}\sum_{ i=1 } ^{ n }\left(X_i-\bar{X}_n\right)^2=\frac{1}{n}\sum_{ i=1 } ^{ n }X_i ^2-\bar{X}^2_n=\bar{X}^2_n-\bar{X}^2_n.\]
+            \[\sigma_n ^2=\frac{1}{n}\sum_{ i=1 } ^{ n }\left(X_i-\bar{X}_n\right)^2=\frac{1}{n}\sum_{ i=1 } ^{ n }X_i ^2-\bar{X}^2_n=\bar{X^2}_n-\bar{X}^2_n.\]
             I.e: take the difference between the empirical mean of $X_1^2, \ldots, X^2_n$ and the square of the empirical mean of $X_1, \ldots, X_n$.
         \subsubsection{Empirical covariance}
             Consider an n-sample $\left(X_1, Y_1\right), \ldots, \left(X_n, Y_n\right)$ of random vectors of law $\mathbb{P}_{\theta}$. The goal is to estimate the covariance $\text{Cov}\left(X,Y\right)$ where $\left(X,Y\right) \sim \mathbb{P}_{\theta}$. Define the estimator 
@@ -294,6 +294,56 @@
             \[P\left(Z>C\right)=\alpha.\]
             This gives a region with risk level $\alpha$ asymptotically as, under $H_0$, 
             \[P\left(Z_n>C\right)\xrightarrow{n\to \infty}P\left(Z>C\right).\]
+        \subsubsection{Independence test}
+            We will only consider an example of this test and not describe the general theory. The
+            goal of the test is to test the hypotheses ``are property A and property B independent?''.
+            Here are the measures of hairs and eyes colour in a group of people.
+            \begin{center}
+            \includegraphics[width=10cm]{images/5.png}
+            \end{center}
+            We then want to test wether the colour of the eyes is independent of the colour of the hairs. Let the null hypotheses be ``the eyes and hairs colours are independent'' against the alternative hypotheses.
+            
+            Denote the eyes colours by 
+            \[1 \equiv \text{ blue, } \mathspace 2 \equiv \text{ grey, } \mathspace 3 \equiv \text{ brown.}\]
+            and the hair colours by 
+            \[1 \equiv \text{ blond, } \mathspace 2 \equiv \text{   brown, }\mathspace 3 \equiv\text{ black, } \mathspace 4 \equiv\text{ ginger.}\]
+            Denote then $p_{ij}$ the probability that an individual has eyes colour i and hair colour j and set 
+            \[p_{i*} = \sum_{ i=1 } ^{ 4 }P_{ik}, \mathspace p_{*j}=\sum_{ j=1 } ^{ 3 }p_{kj},\]
+            the probability that an individual has eye colour i, hair colour j. Under the null hypotheses, we have that hair and eyes colours are independent, which translates into 
+            \[p_{ij}=p_{i*}p_{*j}, \mathspace i =1,2,3, \mathspace j=1,2,3,4.\]
+            We therefore have that the null hypotheses can be re-phrased ``$p_{ij}=p_{i*}p_{*j}$ for every $i \in \left\{1,2,3\right\}$, and every $j \in \left\{1,2,3,4\right\}$'', which turns out to be a parametric hypotheses.
+
+            Under the null hypotheses, we have that the number of individual with eye colour
+            i and hair colour j in a sample of n people is on average 
+            \[np_{ij}=np_{i*}p_{*j}.\]
+            Also, we know from the LLN that $p_{i*}$ is well approximated by the empirical frequency. We can then test this hypotheses as before by introducing the statistic 
+            \[Z_n = \sum_{ i=1 } ^{ 3 }\sum_{ j=1 } ^{ 4 }\frac{\left(N_{ij}-n\frac{N_{i*}N_{*j}}{n^2}\right)^2}{n\frac{N_{i*}N_{*j}}{n^2}}=n \sum_{ i=1 } ^{ 3 }\sum_{ j=1 } ^{ 4 }\frac{\left(\frac{N_{ij}}{n}-\frac{N_{i*}N_{*j}}{n^2}\right)^2}{\frac{N_{i*}N_{*j}}{n^2}}\]
+            Where $N_{ij}$ counts the number of individual eye colour i and hair colour j, $N_{i*}$ counts the number of individual with eye colour i, and $N_{*j}$ with haire colour j. Under the null hypotheses, $Z_n$ converges to a $\mathcal{X}_6^2$ law. 
+
+            Using our data in $Z_{124}$ with a rejection region at risk $5\%$, we obtain that we should reject the null hypotheses (so no independence).
+    \section{t-test}
+        \begin{definition}
+            Let $v \in \left(0,+\infty\right)$ be a positive real. A random variable X follows the \important{Student's t-distribution with parameter $\nu$}, denoted $X\sim \text{Student}_t\left(\nu\right)$, if it is a continuous random variable with density given by 
+            \[f_X\left(x\right)=\frac{\Gamma\left(\frac{\nu+1}{2}\right)}{\sqrt{\pi\nu}\Gamma\left(\frac{\nu}{2}\right)}\left(1+\frac{x^2}{\nu}\right)^{-\frac{\nu+1}{2}}.\]
+            Often, one takes $\nu \in \mathbb{N}^*$. In this case, we call $\text{Student}_t\left(\nu\right)$ the \important{Student's t-distribution with $\nu$ degrees of freedom}.       
+        \end{definition}
+        \begin{theoreme}
+            Let $Z,V$ be two independent random variables with 
+            \[Z \sim \mathcal{N}\left(0,1\right), \mathspace V\sim\mathcal{X}_k^2, \mathspace k \in \left\{2,3,4, \ldots\right\}.\]
+            Then, the random variable $Z\sqrt{\frac{k}{V}}$ follows a Student's t-distribution with parameter k: 
+            \[Z\sqrt{\frac{k}{V}}\sim \text{Student}_t\left(k\right). \]
+        \end{theoreme}
+        \subsubsection{One-sample t-test}
+            It is used to test the null Hypotheses thatt the mean of a sample is given by a fixed value.
+            
+            \textbf{Setup:} we have a sample $X_1, \ldots, X_n$ of a law $\mathbb{P}$. We want to test the Hypotheses $H_0$``$E\left(X_1\right)=\mu_0$ for a fixed $\mu_0 \in \mathbb{R}$.
+        
+        
+        
+            
+            
+            
+            
             
             
   

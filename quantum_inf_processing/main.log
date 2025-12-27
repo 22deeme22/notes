@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.12.15)  26 DEC 2025 15:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.12.15)  27 DEC 2025 18:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -920,14 +920,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 <to be read again> 
                    \relax 
 l.21 \newpage
-              [1]
-Overfull \hbox (13.7037pt too wide) in paragraph at lines 28--31
+              [1] (./sections/intro.tex
+Overfull \hbox (13.7037pt too wide) in paragraph at lines 6--9
 \T1/cmr/m/n/10 Regarding note-taking method-ol-ogy, I re-fer the reader to []$\T1/cmtt/m/n/10 https : / / castel . dev / post / lecture-[]notes-[]1/$[]
  []
 
 
 
-[2] (./sections/section1.tex
+[2]) (./sections/section1.tex
 
 ./sections/section1.tex:2: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -2839,10 +2839,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 78BF60009166210A188A40F7F1BE873A;7466.
  ) 
 Here is how much of TeX's memory you used:
- 31174 strings out of 475171
- 626338 string characters out of 5767094
- 1095475 words of memory out of 5000000
- 53457 multiletter control sequences out of 15000+600000
+ 31180 strings out of 475171
+ 626460 string characters out of 5767094
+ 1095473 words of memory out of 5000000
+ 53460 multiletter control sequences out of 15000+600000
  582974 words of font info for 96 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  131i,19n,135p,530b,1220s stack positions out of 10000i,1000n,20000p,200000b,200000s

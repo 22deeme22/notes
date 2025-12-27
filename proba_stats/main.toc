@@ -70,3 +70,6 @@
 \contentsline {subsection}{\numberline {3.5.2}Chi-square distribution}{36}{subsection.3.5.2}%
 \contentsline {subsection}{\numberline {3.5.3}$\mathcal {X}^2$ tests}{37}{subsection.3.5.3}%
 \contentsline {subsubsection}{Adequacy tests}{37}{section*.17}%
+\contentsline {subsubsection}{Independence test}{38}{section*.18}%
+\contentsline {section}{\numberline {3.6}t-test}{39}{section.3.6}%
+\contentsline {subsubsection}{One-sample t-test}{39}{section*.19}%

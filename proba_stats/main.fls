@@ -393,6 +393,11 @@ INPUT ./images/4.png
 INPUT /usr/share/texmf-dist/fonts/tfm/public/bbm/bbm12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/bbm/bbm8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/bbm/bbm6.tfm
+INPUT ./images/5.png
+INPUT ./images/5.png
+INPUT images/5.png
+INPUT ./images/5.png
+INPUT ./images/5.png
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
