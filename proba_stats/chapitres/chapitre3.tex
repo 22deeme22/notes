@@ -360,6 +360,19 @@
             \[\frac{\sqrt{n}}{\sigma ^2}\left(\bar{X}_n-\bar{Y}_n\right)\sim \mathcal{N}\left(0,1\right), \mathspace \mathspace \frac{n-1}{\sigma ^2}\left(s^2_X+s_Y^2\right)\sim\mathcal{X}_{2n-2}^2,\]
             and $T_n \sim \text{ Student}_t\left(2n-2\right)$. On the other hand, if $H_0$ does not hold, $\bar{X}_n-\bar{Y}_n \xrightarrow{\text{a.s.}}\delta\neq0$ as $n\to \infty$, which implies that $T_n$ takes extremely large values for large n. We thus take a rejection region of the form $\left\{\left|T_n\right|\geq C\right\}$ with C to be chosen depending on the wanted confidence level.
 
+    \subsection{F-tests}
+        \subsubsection{Fisher distribution}
+            F-tests are designed to compare variances.
+            \begin{definition}
+                Let $k_1, k_2>0$ be two positive integers. A random variable X follows the \important{Fisher's law with degrees of freedom $\left(k_1, k_2\right)$}, denoted $X\sim F\left(k_1,k_2\right)$, if it is a continuous random variable with density given by 
+                \[f_X\left(x\right)=\mathbbm{1}_{\left[0,+\infty\right)}\left(x\right)\frac{1}{xB\left(k_1\slash2, k_2 \slash2\right)}\left(\frac{k_1x}{k_1x+k_2}\right)^{k_1 \slash2} \left(1-\frac{k_1x}{k_1x+k_2}\right)^{k_2 \slash2}\].
+            \end{definition}
+            If $X\sim \mathcal{X}^2_{k_1}$ and $Y\sim\mathcal{X}^2_{k_2}$ are independent, then, 
+            \[\frac{X \slash k_1}{Y \slash k_2}\sim F\left(k_1, k_2\right).\]
+            
+            
+        
+
 \section{Comparing estimators}
     \subsection{Mean square error}
         \begin{definition}
@@ -383,48 +396,5 @@
                 \item there is $C\geq0$ such that $\sqrt{n}\left(\hat{f}_n-f\left(\theta\right)\right)\xrightarrow{\text{Law}}\mathcal{N}\left(0,C\right) \text{ as } n\to \infty$.
             \end{enumerate}
         \end{definition}
-        
-        
-        
-        
-            
-        
-        
-        
-            
-            
-            
-            
-            
-            
-  
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-    
-    
-    
-    
-        
-        
-        
-        
-        
-        
-             
-        
-            
-         
-            
-        
         
 

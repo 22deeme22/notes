@@ -74,6 +74,8 @@
 \contentsline {section}{\numberline {3.6}t-test}{39}{section.3.6}%
 \contentsline {subsubsection}{One-sample t-test}{39}{section*.19}%
 \contentsline {subsubsection}{Two-samples t-test}{39}{section*.20}%
+\contentsline {subsection}{\numberline {3.6.1}F-tests}{40}{subsection.3.6.1}%
+\contentsline {subsubsection}{Fisher distribution}{40}{section*.21}%
 \contentsline {section}{\numberline {3.7}Comparing estimators}{40}{section.3.7}%
 \contentsline {subsection}{\numberline {3.7.1}Mean square error}{40}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Asymptotic normality}{40}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.2}Asymptotic normality}{41}{subsection.3.7.2}%
