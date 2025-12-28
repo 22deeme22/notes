@@ -337,6 +337,57 @@
             It is used to test the null Hypotheses thatt the mean of a sample is given by a fixed value.
             
             \textbf{Setup:} we have a sample $X_1, \ldots, X_n$ of a law $\mathbb{P}$. We want to test the Hypotheses $H_0$``$E\left(X_1\right)=\mu_0$ for a fixed $\mu_0 \in \mathbb{R}$.
+
+            \textbf{Assumptions:} to be an exact test, we assume that there are $\mu \in \mathbb{R}, \mathspace \sigma ^2 >0$ such that $\mathbb{P}= \mathcal{N}\left(\mu, \sigma ^2\right)$. One can make approximate versions of this in applications. 
+
+            \textbf{Running the test:} we want to test the null Hypotheses ``$E\left(X_1\right)=\mu_0$'' using the test statistic 
+            \[\frac{\sqrt{n}\left(\bar{X}_n-\mu_0\right)}{\sqrt{\frac{1}{n-1}\sum_{ i=1 } ^{ n }\left(X_i-\bar{X}_n\right)^2}}.\]
+            Under the null Hypotheses, our assumptions and $\left(3.2\right)$ imply that $\frac{\sqrt{n}}{\sigma ^2}\left(\bar{X}_n - \mu_0\right) \sim \mathcal{N}\left(0,1\right)$, and thus that 
+            \[T=\frac{\sqrt{n}\left(\bar{X}_n-\mu_0\right)}{\sqrt{\frac{1}{n-1}\sum_{ i=1 } ^{ n }\left(X_i-\bar{X}_n\right)^2}} \sim \text{Student}_t\left(n-1\right).\]
+            The rejection region is then taken to be of the form $\left\{\left|T\right|\geq C\right\}$ with $C>0$ depending on the wanted confidence level.
+        \subsubsection{Two-samples t-test}
+            It is used to check whether two independent samples have the same mean or not.
+
+            \textbf{Setup:} we have two samples of the same size $X_1, \ldots, X_n$ of law $\mathbb{P}, \mathspace Y_1, \ldots, Y_n$ of a law $\mathbb{Q}$. We want to test the Hypotheses $H_0 \mathspace ``E\left(X_1\right)=E\left(Y_1\right)"$.
+
+            \textbf{Assumptions:} to be an exact test, we assum that $\mathbb{P}=\mathcal{N}\left(\mu_X, \sigma ^2\right)$, and that $\mathbb{Q}=\mathcal{N}\left(\mu_Y, \sigma ^2\right)$ for some $\mu_X, \mu_Y \in \mathbb{R}, \mathspace \sigma ^2 >0$. Note that we in particular assume that the variance is the same in both sample $\left(\sigma ^2\right)$.
+
+            \textbf{Running the test:} we will use the test statistic 
+            \[T_n\left(X_1, \ldots, X_n, Y_1, \ldots, Y_n\right)=\frac{\sqrt{n}\left(\bar{X}_n-\bar{Y}_n\right)}{\sqrt{s_X^2+s_Y^2}}\]
+            where 
+            \[s_X^2= \frac{1}{n-1}\sum_{ i=1 } ^{ n }\left(X_i-\bar{X}_n\right)^2, \mathspace \mathspace s_Y^2=\frac{1}{n-1}\sum_{ i=1 } ^{ n }\left(Y_i-\bar{Y}_n\right)^2,\]
+            are the un-biased versions of the empirical variances. Under our assumptions, if $H_0$ holds (i.e: if $\mu_X=\mu_Y$), 
+            \[\frac{\sqrt{n}}{\sigma ^2}\left(\bar{X}_n-\bar{Y}_n\right)\sim \mathcal{N}\left(0,1\right), \mathspace \mathspace \frac{n-1}{\sigma ^2}\left(s^2_X+s_Y^2\right)\sim\mathcal{X}_{2n-2}^2,\]
+            and $T_n \sim \text{ Student}_t\left(2n-2\right)$. On the other hand, if $H_0$ does not hold, $\bar{X}_n-\bar{Y}_n \xrightarrow{\text{a.s.}}\delta\neq0$ as $n\to \infty$, which implies that $T_n$ takes extremely large values for large n. We thus take a rejection region of the form $\left\{\left|T_n\right|\geq C\right\}$ with C to be chosen depending on the wanted confidence level.
+
+\section{Comparing estimators}
+    \subsection{Mean square error}
+        \begin{definition}
+            Let $n\geq1, X_1, \ldots, X_n$ be an n-sample of law $\mathbb{P}_{\theta}$, and let $\hat{f}$ be an estimator of $f\left(\theta\right)$. The \important{mean square error} of $\hat{f}$ is 
+            \[MSE_{\theta}\left(\hat{f}\right)=E\left(\left(\hat{f}\left(X_1, \ldots, X_n\right)-f\left(\theta\right)\right)^2\right).\]
+        \end{definition}
+        \begin{remark}{Remarque}
+            \[MSE_{\theta}\left(\hat{f}\right)=Var_{\theta}\left(\hat{f}\right)+\left(Bias_{\theta}\left(\hat{f}\right)\right)^2.\]
+        \end{remark}
+        Minimizing the mean square error is yet another way to construct an estimator.
+        \begin{definition}
+            Let $n\geq1, X_1, \ldots, X_n$ be an n-sample of law $\mathbb{P}_{\theta}$, and $f\left(\theta\right)$ be a quantity to estimate. The \important{minimal mean square error estimator} of $f\left(\theta\right)$ is 
+            \[MMSE_{f\left(\theta\right)}\left(X_1, \ldots,X_n\right)=argmin_{\hat{f}}E\left(\left(\hat{f}\left(X_1, \ldots, X_n\right)-f\left(\theta\right)\right)^2\right).\]
+            where the minimum is over all estimators $\hat{f}\left(X_1, \ldots, X_n\right)$ of $f\left(\theta\right)$. The existence of this estimator is a non-trivial fact of probability theory. It is in general not so easy to compute.
+        \end{definition}
+    \subsection{Asymptotic normality}
+        \begin{definition}
+            For $n\geq1$, let $X_1, \ldots, X_n$ be an n-sample of law $\mathbb{P}_{\theta}$, and let $\hat{f}_n$ be an estimator of $f\left(\theta\right)$. We say that $\hat{f}_n$ is an \important{asymptotically normal} sequence of estimators if 
+            \begin{enumerate}[left=10pt]
+                \item $\hat{f}_n$ is convergent;
+                \item there is $C\geq0$ such that $\sqrt{n}\left(\hat{f}_n-f\left(\theta\right)\right)\xrightarrow{\text{Law}}\mathcal{N}\left(0,C\right) \text{ as } n\to \infty$.
+            \end{enumerate}
+        \end{definition}
+        
+        
+        
+        
+            
         
         
         
