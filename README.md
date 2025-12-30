@@ -5,7 +5,7 @@
 
 
 ## Remark
-I started taking structured notes only in the third semester of my bachelor’s degree. I am completing my bachelor with a specialization in sports management over four years, which explains why I am following courses from different academic years at the same time. I take my notes using Neovim and rely on snippets to improve efficiency and speed. I would like to thank Arthur Herbette for his help with the entire setup. These notes are not original course material: the explanations and most of the figures are taken directly from the courses and remain the property of their respective authors.
+I started taking structured notes only in the third semester of my bachelor’s degree. I am completing my bachelor with a school arrangement with sport over four years, which explains why I am following courses from different academic years at the same time. I take my notes using Neovim and rely on snippets to improve efficiency and speed. I would like to thank Arthur Herbette for his help with the entire setup. These notes are not original course material: the explanations and most of the figures are taken directly from the courses and remain the property of their respective authors.
 
 # Notes
 
