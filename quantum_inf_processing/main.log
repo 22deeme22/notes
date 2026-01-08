@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.12.15)  6 JAN 2026 09:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.12.15)  6 JAN 2026 15:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1383,7 +1383,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ) (./sections/section3.tex
-<images/1.png, id=317, 523.9575pt x 402.50375pt>
+<images/1.png, id=111, 523.9575pt x 402.50375pt>
 File: images/1.png Graphic file (type png)
 <use images/1.png>
 Package pdftex.def Info: images/1.png  used on input line 3.
@@ -2306,12 +2306,12 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<images/2.png, id=424, 499.8675pt x 236.885pt>
+<images/2.png, id=243, 499.8675pt x 236.885pt>
 File: images/2.png Graphic file (type png)
 <use images/2.png>
 Package pdftex.def Info: images/2.png  used on input line 71.
 (pdftex.def)             Requested size: 142.26378pt x 67.41895pt.
-<images/3.png, id=425, 923.45pt x 273.02pt>
+<images/3.png, id=244, 923.45pt x 273.02pt>
 File: images/3.png Graphic file (type png)
 <use images/3.png>
 Package pdftex.def Info: images/3.png  used on input line 73.
@@ -2330,12 +2330,12 @@ l.107         \begin{tcolorbox}[vert]
 
 
 [19 <./images/2.png> <./images/3.png>]
-<images/4.png, id=432, 765.86125pt x 214.8025pt>
+<images/4.png, id=253, 765.86125pt x 214.8025pt>
 File: images/4.png Graphic file (type png)
 <use images/4.png>
 Package pdftex.def Info: images/4.png  used on input line 119.
 (pdftex.def)             Requested size: 284.52756pt x 79.80344pt.
-<images/5.png, id=433, 602.25pt x 465.74pt>
+<images/5.png, id=254, 602.25pt x 465.74pt>
 File: images/5.png Graphic file (type png)
 <use images/5.png>
 Package pdftex.def Info: images/5.png  used on input line 147.
@@ -2834,23 +2834,33 @@ Try to go on, since this might almost work.
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 78BF60009166210A188A40F7F1BE873A;7466.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  78BF60009166210A188A40F7F1BE873A;7466.
  ) 
 Here is how much of TeX's memory you used:
- 31180 strings out of 475171
- 626460 string characters out of 5767094
- 1095473 words of memory out of 5000000
- 53460 multiletter control sequences out of 15000+600000
+ 31136 strings out of 475171
+ 625821 string characters out of 5767094
+ 1093992 words of memory out of 5000000
+ 53416 multiletter control sequences out of 15000+600000
  582974 words of font info for 96 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  131i,19n,135p,530b,1220s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm7.600pk> </home/deeme/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf-dist/fonts/typ
 e1/public/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (27 pages, 811828 bytes).
+Output written on main.pdf (27 pages, 803651 bytes).
 PDF statistics:
- 675 PDF objects out of 1000 (max. 8388607)
- 527 compressed objects within 6 object streams
+ 500 PDF objects out of 1000 (max. 8388607)
+ 354 compressed objects within 4 object streams
  119 named destinations out of 1000 (max. 500000)
- 526 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 182 words of extra memory for PDF output out of 10000 (max. 10000000)
 

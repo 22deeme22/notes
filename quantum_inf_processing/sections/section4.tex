@@ -45,11 +45,11 @@
             Let define H such that: $H\ket{0}=\ket{+}, \mathspace H\ket{1}=\ket{-}$.
 
             Alice sends $\ket{0}\ket{+}\ket{-}\ket{0}\ket{1}\ket{1}\ket{+}$, so she sends:
-            \[\ket{\psi_{x_1}}=H^{ei}\ket{x_1} \text{ where ei $\sim$ Unif \{0,1\}} \implies \ket{\psi_{\vec{x}}}= \bigoplus_{j=1}^{m} H^{ei}\ket{x_j}.\]
+            \[\ket{\psi_{x_1}}=H^{e_i}\ket{x_1} \text{ where $e_i$ $\sim$ Unif \{0,1\}} \implies \ket{\psi_{\vec{x}}}= \bigoplus_{j=1}^{m} H^{e_i}\ket{x_j}.\]
             
             \item \textbf{Step Decoding:}
 
-                Bob recieves $\ket{\psi_{\vec{x}}}=\bigoplus_{j=1}^{m} H^{ei}\ket{x_j}$, he chooses a random basis to measure it. If Bob know the basis, he can decode easily, he doesn't!
+                Bob recieves $\ket{\psi_{\vec{x}}}=\bigoplus_{j=1}^{m} H^{e_i}\ket{x_j}$, he chooses a random basis to measure it. If Bob know the basis, he can decode easily, he doesn't!
                 \begin{itemize}[left=10pt, label=\textbullet]
                     \item Case 1: Bob measure in the same basis chosen by Alice $\to$ prob(decoding correctly)=1.
                     \item Case 2: Bob measures in the wrong basis $\to$ prob(decoding correctly)=$\frac{1}{2}$.
