@@ -93,15 +93,15 @@
             $\implies$ prob(Bob correct | Eve intercepted)$=\frac{9}{16}+\frac{1}{16}=\frac{5}{8}$.
             \vspace{15pt}
             
-            Maybe sometimes bits of Alice and Bob can disagree not because of an eavesdropper but because of \important{noise}! To deal with noise we can use some classical error connection.
+            Maybe sometimes bits of Alice and Bob can disagree not because of an eavesdropper but because of \important{noise}! To deal with noise we can use some classical error correction.
       \begin{remark}{Example}
          \begin{tcolorbox}[rouge]
-            \textbf{Repetition code:} Suppose noise flips with probability $\frac{1}{3}$. If i want to send a bit b over a noisy channel instead i'll send $bb\bar{b}$.
+            \textbf{Repetition code:} Suppose noise flips with probability $\frac{1}{3}$. If I want to send a bit b over a noisy channel instead i'll send $bb\bar{b}$.
             \begin{itemize}[left=10pt, label=\textbullet]
                 \item Binary linear code: $C \subset \mathbb{F}_2^m, \mathspace \left|C\right|=2^k, \left[m,k,d\right]$ with 
                    \begin{itemize}[left=10pt, label=\textendash]
                        \item m: length of the codeword,
-                       \item k: actual # of bits of information per codeword, 
+                       \item k: actual \# of bits of information per codeword, 
                        \item d: minimum distance of the code (minimum number of bits differing between 2 vectors in C, in general d=m).
                    \end{itemize}
             \end{itemize}
