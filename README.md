@@ -13,7 +13,7 @@
 
 ### Bachelor semester 3
 
-- [Overleaf Probabilty and statistics](https://www.overleaf.com/read/wpcmcxptmjgn#bbeadc) | [Probabilty and statistics.pdf](https://www.overleaf.com/read/wpcmcxptmjgn#bbeadc) Prof. Sebastien Ott
+- [Overleaf Probabilty and statistics](https://www.overleaf.com/read/wpcmcxptmjgn#bbeadc) | [Probabilty and statistics.pdf](https://github.com/22deeme22/notes/blob/main/proba_stats/main.pdf) Prof. Sebastien Ott
 
 
 ### Bachelor semester 5
