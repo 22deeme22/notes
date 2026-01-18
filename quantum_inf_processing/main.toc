@@ -35,10 +35,10 @@
 \contentsline {subsection}{\numberline {9.2}Model of quantum communication}{18}{subsection.9.2}%
 \contentsline {subsection}{\numberline {9.3}Types of (single-qubit) quantum errors}{18}{subsection.9.3}%
 \contentsline {subsection}{\numberline {9.4}Detection and correction of bitflip errors}{19}{subsection.9.4}%
-\contentsline {subsection}{\numberline {9.5}Detection and correction of phaseflip errors}{19}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.5}Detection and correction of phaseflip errors}{20}{subsection.9.5}%
 \contentsline {subsection}{\numberline {9.6}9-qubit Shor code}{20}{subsection.9.6}%
 \contentsline {subsection}{\numberline {9.7}Quantum code distance}{22}{subsection.9.7}%
-\contentsline {subsection}{\numberline {9.8}Fault tolerance and error propagation}{23}{subsection.9.8}%
-\contentsline {section}{\numberline {10}Quantum magnetic moment}{24}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Time evolution}{24}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Change of reference frame}{25}{subsection.10.2}%
+\contentsline {subsection}{\numberline {9.8}Fault tolerance and error propagation}{24}{subsection.9.8}%
+\contentsline {section}{\numberline {10}Quantum magnetic moment}{25}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Time evolution}{25}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Change of reference frame}{26}{subsection.10.2}%
