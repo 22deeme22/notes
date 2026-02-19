@@ -1,0 +1,135 @@
+\documentclass[10 ,titlepage, a4paper]{article}
+\usepackage{mystyle}
+
+\thispagestyle{fancy}
+\title{Notes of parallelism and concurrency in software}
+\author{Dario Marcone}
+\date{Jeudi 19 février 2026}
+
+\begin{document}
+\maketitle
+
+\setlength{\parindent}{0pt}
+
+\thispagestyle{empty}
+\tableofcontents
+\newpage
+
+\section{Metrics}
+    \textbf{Iron Law}
+    \begin{tcolorbox}[rouge]
+        \[\text{Processor Performance }= \frac{\text{Instructions}}{\text{Program}} \cdot \frac{\text{Cycles}}{\text{Instruction}} \cdot \frac{\text{Seconds}}{\text{Cycle}}.\]
+    \end{tcolorbox}
+    \begin{itemize}[left=10pt, label=\textbullet]
+        \item \textbf{$\frac{\text{Instructions}}{\text{Program}}$}:
+            \begin{tcolorbox}[gris]
+                The $\frac{\text{Instructions}}{\text{Program}}$ part represent the number of lines of code of your program, it is influenced by: 
+                \begin{itemize}[left=10pt]
+                    \item The compiler: depends of how many machine instructions per line of code. 
+                    \item The runtime system: depends of the language interpreted, the runtime overhead, etc
+                \end{itemize}
+                \begin{remark}{Remark}
+                    The runtime system is a program given with the programmation language (ex. JVM for Java), that gives necessary services and mecanisms to the program during its execution, like memory alllocation, etc\ldots
+                \end{remark}
+            \end{tcolorbox} 
+        \item \textbf{$\frac{\text{Cycles}}{\text{Instruction}}$}:
+            \begin{tcolorbox}[gris]
+                The $\frac{\text{Cycles}}{\text{Instruction}}$ part represent the number of cycles by instructions, it is influenced by:
+                \begin{itemize}[left=10pt]
+                    \item The front-end cycles (instruction cache, branch predictor, etc\ldots),
+                    \item The back-end cycles (data cache, ALU, FPU, etc\ldots),
+                    \item  The memory (latency, bandwith).
+                \end{itemize}
+                \begin{remark}{Remark}
+                    Front-end part of the pipeline CPU is the instruction fetching, decoding and branch prediction part, and the banc-end is the computation, memory access and data stockage part.
+                \end{remark}
+            \end{tcolorbox} 
+        \item \textbf{$\frac{\text{Seconds}}{\text{Cycle}}$}:
+            \begin{tcolorbox}[gris]
+                The $\frac{\text{Seconds}}{\text{Cycle}}$ part is the clock frequency. We have to be careful! The cycles per instruction (CPI) is a good metric for uniprocessor, but not necessarly for multi processor. In multiprocessors, some core may have to wait for others, to have a specific information or whatever, so when the core wait, it will just do some spinning threads which is very fast $\implies$ a low CPI! But in fact, you dont execute the program particularely faster.
+                     
+                It is better to use some metric for `` useful work'', like:
+                \begin{itemize}[left=10pt]
+                    \item Transactions complete per second,
+                    \item Request services per second.
+                \end{itemize}
+            \end{tcolorbox}
+    \end{itemize}
+    \textbf{Vocabulary parenthesis:}
+    \begin{tcolorbox}[vert]
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item \textbf{Latency:} time it takes for an event to complete 
+            \item \textbf{Bandwidth:} how many events per unit time
+        \end{itemize}
+       \important{Reducing latency increases bandwidth but not vice versa}.
+    \end{tcolorbox}
+    
+    
+    \textbf{Amdahl's law}
+    \begin{tcolorbox}[rouge]
+        The amdahl's law shows that we have to improve efficency of what take the most of the time in our code execution. 
+        \[\text{Speedup}=\frac{1}{\frac{\text{Fraction}_{\text{enhanced}}}{\text{Speedup}_{\text{enhanced}}}+\left(1-\text{Fraction}_{\text{enhanced}}\right)}.\]
+    \end{tcolorbox}
+    
+    \textbf{Roofline Model}
+    \begin{center}
+        \includegraphics[width=9cm]{images/1.png}
+    \end{center}
+    \begin{tcolorbox}[gris]
+         \begin{itemize}[left=10pt, label=\textbullet]
+            \item The x-axis correspond to the number of data used for computation: if it is low, then it means you load/write a lot of data but you don't make computation with them. You are limited by the speed of loading/writing of/in the memory, not by the CPU calculation speed $ \implies$ memory bound.
+            \item The y-axis correspond to the number of FLOPs that you can reach on the CPU, if you are doing a lot of computation by byte, then the CPU reach its maximum calculation speed $\implies$ peak FLOPs/sec, independent of memory.
+            \item We can know by what we are limited by taking the minimum of 
+            \[\begin{functionbypart}{\text{Performance}}
+                \text{Peak FLOPs/sec}  \\
+                \text{Bandwidth}\cdot \text{Intensity}
+            \end{functionbypart}
+            \]
+            It means that
+
+            if $B \cdot \text{Intensity} < \text{Peak FLOPs/sec} \implies$ we are limited by memory,
+            
+            if $B \cdot \text{Intensity} \geq \text{Peak FLOPs/sec} \implies$ we are limited by CPU.
+            
+        \end{itemize}
+    \end{tcolorbox}
+
+    \textbf{Parallel efficiency}
+    \begin{tcolorbox}[rouge]
+        \[\text{Parallel efficiency} = \frac{\text{Speedup}}{\text{\# of cores}}.\]
+    \end{tcolorbox}
+    
+    \textbf{Vocabulary parenthesis:}
+        \begin{tcolorbox}[vert]
+            \begin{itemize}[left=10pt, label=\textbullet]
+                \item \textbf{Speedup(n)}: performance improvement of n cores over 1 core,
+                \item \textbf{Costup(n)}: cost increase of n cores over 1 core.
+            \end{itemize}
+        \end{tcolorbox}
+        
+    \textbf{Different type of mean}
+    \begin{itemize}[left=10pt, label=\textbullet]
+        \item {Arithmetic mean}:
+        \begin{tcolorbox}[gris]
+            \[\frac{1}{n}\sum_{ i=1 } ^{ n }\text{Time}_i,\]
+        \end{tcolorbox}
+        \item {Harmonic mean}:
+            \begin{tcolorbox}[gris]
+                \[\frac{n}{\sum_{ i=1 } ^{ n }\frac{1}{\text{Rate}_i}},\]
+            \end{tcolorbox}
+        \item {Geometric mean}:
+            \begin{tcolorbox}[gris]
+                \[\text{Relative Rate}=\frac{\text{Rate}}{\text{Rate}_{\text{ref}}}=\frac{\text{Time}_{\text{ref}}}{\text{Time}},\]
+            \end{tcolorbox}
+        \item {Geometric mean}:
+            \begin{tcolorbox}[gris]
+                \[\sqrt[n]{\prod_{i=1}^{ n } \text{Relative Rate}_i}=\frac{\sqrt[n]{\prod_{i=1}^{ n } \text{Rate}_i}}{\text{Rate}_{\text{ref}}}.\]
+            \end{tcolorbox}
+            
+                
+            
+            
+    \end{itemize}
+    
+    \end{document}
+    
