@@ -16,7 +16,7 @@
 \newpage
 
 \section{Metrics}
-    \textbf{Iron Law}
+\subsection{Iron Law}
     \begin{tcolorbox}[rouge]
         \[\text{Processor Performance }= \frac{\text{Instructions}}{\text{Program}} \cdot \frac{\text{Cycles}}{\text{Instruction}} \cdot \frac{\text{Seconds}}{\text{Cycle}}.\]
     \end{tcolorbox}
@@ -65,7 +65,7 @@
     \end{tcolorbox}
     
     
-    \textbf{Amdahl's law}
+\subsection{Amdahl's law}
     \begin{tcolorbox}[rouge]
         The amdahl's law shows that we have to improve efficency of what take the most of the time in our code execution. 
         \[\text{Speedup}=\frac{1}{\frac{\text{Fraction}_{\text{enhanced}}}{\text{Speedup}_{\text{enhanced}}}+\left(1-\text{Fraction}_{\text{enhanced}}\right)}.\]
@@ -107,7 +107,7 @@
             \end{itemize}
         \end{tcolorbox}
         
-    \textbf{Different type of mean}
+\subsection{Different type of mean}
     \begin{itemize}[left=10pt, label=\textbullet]
         \item {Arithmetic mean}:
         \begin{tcolorbox}[gris]
@@ -130,6 +130,314 @@
             
             
     \end{itemize}
+\section{Parallel computing}
+\subsection{Expressing parallelism}
+\begin{tcolorbox}[violet] 
+    There was different era of core computing, first the \important{simple core era}, we were executing one instruction per cycle.\\
+    Then in \important{pre-multicore era}, we had one BIG fancy core:
+    \begin{itemize}[left=10pt, label=\textbullet]
+        \item A lot of budget on run a single instruction very fast, 
+        \item More transitors, so faster branch predictor, larger cache hierarchy, etc\ldots
+    \end{itemize}
+    Finally, we are in the \important{multicore era}, more transitors, but in simple cores: each core is slower (around 25\%), but there is (for example) two cores \textrightarrow $\mathspace 2\cdot 0.75 = 1.5$.\\   
+\end{tcolorbox}
+
+    But now, we have to parallelize our code, either it will run on only one of the cores. There is different way expressing parallelism as programmer:
+    \begin{itemize}[left=10pt, label=\textbullet]
+        \item Use existing parallel code through libraries: Spiral, ScalAPACK,
+        \item Writing in a parallel programming language: HPF, CAF, Java, Scala, 
+        \item Writing in compiler directives: OpenMP, Intel TBB, 
+        \item Writing using a threading library: MPI, PVM, Pthreads, 
+        \item Domain Specific Languages (DSLs): Spiral, CUDA.
+    \end{itemize}
+    \newpage
+    \textbf{PThreads:}
+    \begin{codeCenter}
+    \begin{Ccode}
+void parallel_cbrt(float* v, float* result, int N) {
+    pthread_t thread_id;
+    my_args args;
+    args.N = N/2;
+    args.v = v;
+    args.result = result;
+   (*@ \colorbox{red!30}{pthread\_create(\&thread\_id, NULL, my\_thread\_start, \&args)} @*)
+    my_cbrt(v + args.N, result + args.N, N - args.N);
+   (*@ \colorbox{red!30}{pthread\_join(thread\_id, NULL);} @*)
+}
+    \end{Ccode}
+    \end{codeCenter}
     
-    \end{document}
+\textbf{OpenMP:} We can parallelize simply when loop iterations are independent of each other.
+    \begin{codeCenter}
+    \begin{Ccode}
+void my_cbrt(float *v, float *result, int N) {
+   (*@ \colorbox{red!30}{\#pragma omp parallel for} @*)
+    for (int i = 0; i < N; ++i) {
+    float x = 1.f;
+    for (int j = 0; j < 10; ++j)
+    x = (1.f / 3.f) * (2.f*x + v[i] / (x*x));
+    result[i] = x;
+    }
+}    
+    \end{Ccode}
+    \end{codeCenter}
+    
+    \begin{tcolorbox}[vert]
+        
+    
+        Another idea of \important{multicore era}, is the \important{SIMD processing}: Single Instruction, Multiple Data. We add ALUs to increase our compute capability, the idea is to transform a loop where there is an instruction repeated on a lot of different data into an single instruction on a vector of a lot of data, then for a simple for loop:
+        \begin{codeCenter}
+        \begin{Ccode}
+for (int i = 0; i < 8; i++)
+c[i] = a[i] + b[i];
+        \end{Ccode}
+        \end{codeCenter}
+        We can compute this with one single operation of vector with the code:
+        \begin{codeCenter}
+        \begin{Ccode}
+__m256 va = _mm256_load_ps(a);
+__m256 vb = _mm256_load_ps(b);
+__m256 vc = _mm256_add_ps(va, vb);
+        \end{Ccode}
+        \end{codeCenter}
+        \lstinline!__m256! stand for the float type, the \lstinline!_mm256! is the size of the vector, here 256 bits (8 float) and the load/add is the operation of the funcion.\\
+        GPUs are big SIMD processor!
+    \end{tcolorbox}
+\subsection{Principles of parallel computing}
+    \begin{itemize}[left=10pt, label=\textbullet]
+        \item Finding enough paralellism, 
+        \item Division of work, 
+        \item Scaling, 
+        \item Communication and synchronization.
+    \end{itemize}
+    \begin{tcolorbox}[gris]
+    \textbf{Finding enough paralellism:} this is all the Amdahl's law part.
+    \end{tcolorbox}
+    \begin{tcolorbox}[gris]
+        \textbf{Division of work:}
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item Balance workload, give each parallel task the same rough amount of work.
+            \item Reduce communication, computation is useful work, communication is overhead.
+            \item Granularity, this is the ratio of computation to communication.
+            \item Fine-grained parallelism: the idea is to split the work into very small tasks. There is not a lot of computation by thread but a lot of computation $\implies$ low granularity, but we need a fast communication favors: e.g. SIMD, GPU, \ldots 
+            \item Coarse-grained parallelism: the idea is to split the work into big tasks. We have less cache and TLB misses and less communication, we can tolerate, but its harder to divide the work into equal time part.
+        \end{itemize}
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[gris]
+        \textbf{Communication \& synchronization:}
+        We will see three different model of communication/synchronization:
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item Message passing: the synchronization is at the I/O level, hadoop (e.g. datacenter).
+                \begin{itemize}[left=10pt]
+                    \item There is complelety different address spaces, threads communicate via sending/receiving message, the synchronization is implicit in messages. 
+                    \item This is harder to program than shared memory, but more scalable.
+                    \item Message passing is the most used communication system in datacenters.
+                \end{itemize}
+                
+            \item Shared memory: the synchronization is at the memory level, Scala (e.g. CPU). 
+                \begin{itemize}[left=10pt]
+                    \item Threads communicate by reading/writing to shared vars, that are like a big bulletin board (panneau d'affichage).
+                    \item Any thread can read or write, communication is implicit in memory operations (no send/receive operations).
+                    \item  Non-uniform memory access (NUMA): all processors can access any memory location, but cost of memory access is different for different processors.
+                    \item Implementation and some example:
+                            \begin{image}{Each thread has its own virtual address, but shared parts maps to the same physical location.}
+                            \includegraphics[width=6.5cm]{images/6.png}
+                            \end{image}
+                            \begin{image}{Any processor can directly reference any memory location (e.g. Intel Core i7 example (quad core)).}
+                            \includegraphics[width=4cm]{images/7.png}
+                            \end{image}
+                \end{itemize}
+            \item Dataflow: the synchronization is at the processor level, TensorFlor (e.g. TPU).
+                \begin{itemize}[left=10pt]
+                    \item In data-parallel computation, communication and synchronization are implicit, since each processor works on a different part of the vector and synchronizes (or joins) at the end.                \end{itemize}
+        \end{itemize}
+    \end{tcolorbox}
+\section{Hardware cache coherence}
+    \begin{tcolorbox}[violet]
+        A small reminder before starting: a cache contains usually the state (valid/invalid), the tag array and the data array that keeps cache blocks (a cache block == a cache line). \\
+        \textbf{4Cs cache miss model:}
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item Compulsory: access data for the first time.
+            \item Capacity: when the cache is not big enough.
+            \item Conflict: when two addresses map to the same set and way of the cache evicting one of them. 
+            \item Coherence: when a block is removed due to coherence messages from another core.
+        \end{itemize}
+    \end{tcolorbox}
+    Due to sharing data, incoherence appears between different caches. More specifically, when you're updating a value and reading a different copy. There is different ways to assure coherence we'll see two of them with their protocol.\\
+\subsection{Bus-based systems}
+    in bus-based systems, we have to add independent ``cache controllers'' to each core where each controller: is a FSM, sees all remote processor actions, takes coherence actions depending on block's state and protocol.
+    \begin{tcolorbox}[rouge]
+         \textbf{MESI protocol:} \important{M}odified, \important{E}xclusive, \important{S}hared and \important{I}nvalid states.
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item Modified: this cache has updated the value and holds the authoritative copy. 
+            \item Exclusive: this cache has an exlusive copy. 
+            \item Shared: one or more caches hold the value. 
+            \item Invalid.
+        \end{itemize}
+        Core actions:
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item PRd: processor attemps to read a line.
+            \item PWr: processor attempts to write a line.
+        \end{itemize}
+        Remote actions:
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item BusRd: obtain copy of a line with no intent to modify. 
+            \item BusRdX: obtain copy of a line with intent to modify.
+            \item BusInv: get rid of other copies.
+            \item DataWB: put updated value of a line on the bus.
+        \end{itemize}
+    \end{tcolorbox}
+    \newpage
+    \textbf{MESI protocol state diagram:}
+    \begin{center}
+    \includegraphics[width=9cm]{images/9.png}
+    \end{center}
+    Example:
+    \begin{center}
+    \includegraphics[width=9cm]{images/10.png}
+    \end{center}
+    The main problem with bus-based systems is that the bus becomes a bottleneck: as the number of cores increases, the traffic on the bus grows, leading to contention and reduced performance. That's why we'll introduce the point-to-point network organization.
+\subsection{Point-to-point systems}
+In the point-to-point system, the message is more scalable and have an explicit source and destination. For example, Intel Skylake uses a ring:
+    \begin{center}
+    \includegraphics[width=9cm]{images/11.png}
+    \end{center}
+    \begin{remark}{Remark}
+        In a ring (point-to-point) network, messages travel only along the path between sender and receiver, so links not on the path remain free, reducing overall traffic compared to a shared bus.   
+    \end{remark}
+    Now each core no longer sees all of the messafes, so we need to add another protocol controller to the MESI protocol into the system.\\
+    \newpage
+    \textbf{Directory-based protocol:}
+    \begin{tcolorbox}[vert]
+        In the directory-based protocole, we use a \important{coherence directory}. The directory tracks all caches that contain a particular block, then all messaged leaving the core a first sent to the directory and it takes the appropriate actions, and respond to the original cache request. The directory serves as a per-block address or
+    \end{tcolorbox}
+    \begin{tcolorbox}[rouge]
+        Cache to directory messages: 
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item GetRd: get copy to read, 
+            \item GetWr: get copy to modify, 
+            \item UpGrd: get rid of other copies, 
+            \item DataWB: write back a line, 
+            \item Ack: acknowledge message.
+        \end{itemize}
+        Directory to cache messages:
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item DwnGrd: go from E/M \textrightarrow S, 
+            \item Inv: get rid of your copy, 
+            \item Fill: here is a copy of the line,
+            \item Ack: acknowledge message.
+        \end{itemize}
+    \end{tcolorbox}\\
+    Example:
+    \begin{center}
+    \includegraphics[width=9cm]{images/12.png}
+    \end{center}
+    \begin{tcolorbox}[vert]
+        The \important{directory entry} contain: 2 bits storing the MESI coherence state, 39 bits containing the cache tag et $\log_2\left(\text{Cores}\right)$ bits identifying the core associated with this entry.
+    \end{tcolorbox}
+    The size of directory is dependent of the number and the size of caches. If there is two processor with 4-ways associatives caches, then the directory must be 8-way associative:
+    \begin{center}
+    \includegraphics[width=9cm]{images/13.png}
+    \end{center}
+    But centralized directory can also be a source of contention, so we can distribute the directory across L2 cache banks, with each memory block having a home bank that tracks which L1 caches hold copies.
+    \newpage
+    \textbf{Access to the directory:}\\
+    \begin{tcolorbox}[vert]
+        If we do the structure that we saw before for the directory, for four cores with 4-way caches, we need to have a 16-way associative cache! This is bad for latency and power. To allow this is the \important{sparse directory}, we can split the cache and take more tag bits to index.
+    \end{tcolorbox}
+    \begin{center}
+    \includegraphics[width=9cm]{images/14.png}
+    \end{center}
+    Now the problem is that we can have conflit easily! The solution is to make a bigger directory and use more tag bits to index.
+    \begin{image}{With this structre, we'll have low conflict rate, but a large area overhead\ldots}
+        \includegraphics[width=3.5cm]{images/15.png}
+    \end{image}
+\section{JSP ENCORE LE TITR}
+\subsection{Coherence misses}
+    \begin{tcolorbox}[vert]
+        Coherence adds extra misses when two cores acess the same cache line, then there is two types of coherence misses:
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item \important{True sharing}: the producer/consumer communication when processors read and write the same variable. 
+            \item \important{False sharing}: processors updating different data which are placed in the same cache block.
+        \end{itemize}
+    \end{tcolorbox}
+    \textbf{Histogram example:}\\
+    We have an input text and we want to count the occurences of each different characters in the text. We'll use OpenMP to divide the work across threads.
+    \begin{codeCenter}
+    \begin{Ccode}
+int histogram[N_BUCKETS];
+int in_data[INPUT_SIZE];
+
+#pragma omp parallel for shared (in_data, histogram)
+for(int i = 0; i < INPUT_SIZE;i++) {
+    unsigned bucket = calc_hist(in_data[i]);
+
+    #pragma omp critical
+    histogram[bucket]++;
+}
+    \end{Ccode}
+    \end{codeCenter}
+    Then, there is true sharing when processors modify the histogram \lstinline!histogram['a']++;!. To avoid this, we have to preserve correct value. then we can \begin{codeCenter}
+    \begin{Ccode}
+int histogram[N_BUCKETS];
+int tmp_hist[N_THREADS][N_BUCKETS];
+int in_data[INPUT_SIZE];
+
+// Repartition loop
+#pragma omp parallel for shared (in_data, tmp_hist)
+for(int i = 0; i < INPUT_SIZE;i++) {
+    int tid = omp_get_thread_num();
+    unsigned bucket = calc_hist(in_data[i]);
+    tmp_hist[tid][bucket]++;
+}
+
+// Merge loop
+#pragma omp parallel shared (tmp_hist, histogram)
+for(int i = 0; i < N_BUCKETS; i++) {
+    int tid = omp_get_thread_num();
+    #pragma omp critical
+    histogram[i] += tmp_hist[tid][i];
+}
+    \end{Ccode}
+    \end{codeCenter}
+    \begin{remark}{Remark}
+        In the code, \lstinline!shared (x, y)! tells OpenMP that all threads should see and access the same variable in memory (shared memory communication).
+    \end{remark}
+    In the first code, we have \lstinline!INPUT_SIZE! times the critical section and the read/write to the histogram. In the second one, we have \lstinline!N_BUCKETS! times the number of threads, then if the size of the input is way bigger than the number of buckets times the number of threads, we eliminate a lot of critialt sections and true sharing. \\
+    Here is just an alternative of the merge loop that eliminate all critical sections, but every thread accesses a fraction of everyone's histogram.
+        \begin{codeCenter}
+        \begin{Ccode}
+// Merge loop
+#pragma omp parallel for shared (tmp_hist, histogram)
+for(int i = 0; i < N_BUCKETS; i++) {
+    int tid;
+    for (tid = 0; tid < omp_get_num_threads(); tid++) {
+        histogram[i] += tmp_hist[tid][i];
+    }
+}
+        \end{Ccode}
+        \end{codeCenter}
+        
+    
+    
+     
+    
+    
+    
+    
+   
+        
+    
+    
+    
+
+    
+    
+    
+    
+       
+    
+    
+\end{document}
     

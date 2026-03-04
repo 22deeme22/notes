@@ -1,2 +1,13 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Metrics}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Iron Law}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Amdahl's law}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Different type of mean}{3}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Parallel computing}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Expressing parallelism}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Principles of parallel computing}{5}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Hardware cache coherence}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Bus-based systems}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Point-to-point systems}{8}{subsection.3.2}%
+\contentsline {section}{\numberline {4}JSP ENCORE LE TITR}{10}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Coherence misses}{10}{subsection.4.1}%

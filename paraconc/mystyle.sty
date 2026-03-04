@@ -16,6 +16,8 @@
 \usepackage{amsmath}
 \tcbuselibrary{skins, breakable}
 
+\usepackage{listings}
+\usepackage{xcolor} 
 \usepackage{tikz}
 \usepackage{varwidth} 
 
@@ -34,6 +36,51 @@
 \definecolor{rouge}{HTML}{FBEAEA}   % Rouge pastel clair
 \definecolor{rougeb}{HTML}{F5C6C6}  % Rouge doux un peu plus soutenu pour bordure
 
+% Couleurs lisibles pour le code
+\usepackage{xcolor}
+
+\definecolor{keywordblue}{HTML}{1A4F9C}  % bleu profond pour mots-clés
+\definecolor{stringred}{HTML}{D92F2F}     % rouge vif pour strings
+\definecolor{commentgreen}{HTML}{3A7F3A}  % vert moyen pour commentaires
+\definecolor{framegray}{HTML}{666666}     % gris foncé pour la bordure
+\definecolor{bggray}{HTML}{F7F7F7}        % fond gris très clair
+
+\lstset{
+    language=C,
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=\color{keywordblue}\bfseries,
+    stringstyle=\color{stringred},
+    commentstyle=\color{commentgreen}\itshape,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=5pt,
+    showstringspaces=false,
+    tabsize=4,
+    breaklines=true,
+    frame=single,
+    rulecolor=\color{framegray},
+    backgroundcolor=\color{bggray},
+    xleftmargin=5pt,
+    xrightmargin=5pt,
+    aboveskip=3pt,
+    belowskip=3pt,
+    escapeinside={(*@}{@*)}  % <-- indispensable !
+}
+% \lstset{
+%     language=C,
+%     basicstyle=\ttfamily\footnotesize,
+%     keywordstyle=\color{bleu}\bfseries,
+%     stringstyle=\color{rouge},
+%     commentstyle=\color{vert}\itshape,
+%     numbers=left,
+%     numberstyle=\tiny\color{gray},
+%     breaklines=true,
+%     frame=single,
+%     rulecolor=\color{rougeb},          % bordure rouge doux
+%     backgroundcolor=\color{rougeb}     % fond rouge doux
+% }
+%
 \newcommand{\important}[1]{\textbf{\textcolor{bleu}{#1}}} % Texte important
 
 \newcommand{\mathspace}{\mskip\thickmuskip}
@@ -80,6 +127,20 @@
   \end{center}
 }
 
+\lstnewenvironment{Ccode}[1][0.75\textwidth]{%
+    \lstset{style=myC, xleftmargin=5pt, xrightmargin=5pt, linewidth=#1}
+}{}
+
+
+% Environnement centré avec largeur personnalisable
+\newenvironment{codeCenter}[1][]{%
+    \begin{center}%
+    \begin{varwidth}{0.9\linewidth}{#1}%
+}{%
+    \end{varwidth}%
+    \end{center}%
+}
+
 
 
 \newenvironment{remark}[1]{%
@@ -93,6 +154,20 @@
     \end{minipage}
   \end{framedremark}
 }
+
+\newenvironment{image}[1]{%
+   \begin{framedremark}
+    \begin{minipage}[t]{0.37\textwidth}\vspace{0pt}
+      {#1}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[t]{0.57\textwidth}\vspace{0pt}
+}{%
+    \end{minipage}
+  \end{framedremark}
+}
+
+
 
 
 \newenvironment{resume}[1]{%
@@ -176,6 +251,7 @@
         sharp corners=none,       % coins arrondis
         arc=1mm,                  % rayon des coins
         boxrule=0.4pt,            % épaisseur de la bordure
+        breakable,
         left=4mm, right=4mm, top=2mm, bottom=2mm,
         before skip=10pt,
         after skip=10pt
@@ -251,5 +327,6 @@
 ]
     
 \end{tcolorbox}
+
 
 \endinput
