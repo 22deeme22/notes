@@ -12,3 +12,4 @@
 \contentsline {section}{\numberline {4}Optimizing software}{10}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Coherence misses}{10}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Work distribution and scheduling}{13}{subsection.4.2}%
+\contentsline {section}{\numberline {5}SIMD and vector}{13}{section.5}%

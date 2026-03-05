@@ -185,6 +185,7 @@ void my_cbrt(float *v, float *result, int N) {
     \begin{tcolorbox}[vert]
         
     
+        \hypertarget{simd}{}
         Another idea of \important{multicore era}, is the \important{SIMD processing}: Single Instruction, Multiple Data. We add ALUs to increase our compute capability, the idea is to transform a loop where there is an instruction repeated on a lot of different data into an single instruction on a vector of a lot of data, then for a simple for loop:
         \begin{codeCenter}
         \begin{Ccode}
@@ -489,6 +490,83 @@ for(i = 0; i < n; i++)
         \end{codeCenter}
     \end{image}
     We can use the \lstinline!if! clause to resolve this: \lstinline!#pragma omp parallel for if(n > 5000)!.\\
+\section{SIMD and vector}
+    We already introduce SIMD in the \hyperlink{simd}{\textbf{section 2.1}}. In the basic scalar pipelin, execution is in one simple ALU, and this code code 
+    \begin{codeCenter}
+    \begin{Ccode}
+void daxpy(int n, double a, double* x, double* y){
+    for(int i = 0; 0 < n; i++){
+        y[i] = a * x[i] + y[i];
+    }           
+}
+    \end{Ccode}
+    \end{codeCenter}
+    would look like this:
+    \begin{codeCenter}
+    \begin{Ccode}
+loop:
+    lw r1, 0(r2) //load x[i]
+    lw r6, 0(r3) //load y[i]
+    mul r1, r1, r4  //a*x[i]
+    add r6, r1, r6  //... + y[i]
+    sw r6, 0(r3)  //store y[i]
+    add r2, r2, 8
+    add r3, r3, 8
+    bne r2, r5, loop
+    \end{Ccode}
+    \end{codeCenter}
+    \begin{tcolorbox}[gris]
+        If we are doing 1024 iterations, we'll have $8 \cdot 1024 = 8192$ instructions. \\
+        We can count the number of misses too, a size of double is 8B, a cache line 64B $\implies$ 8 elements per block. We have two loads by loop, then we know that we have $\frac{2\cdot 1024}{8}=256$ misses.
+    \end{tcolorbox}
+    If we want to optimize this by having a out-of-order processor and a re-order buffer (c.f. computer architecture), knowing that a ROB is of size $\approx 500$ instructions, it is only 6\% of instructions that can be in the ROB. We can't augment the ROB size because it adds too much overhead $\implies$ out-of-order processors are not a very good solution.
+    \newpage
+    Let's introduce vector pipeline:
+    \begin{center}
+        \includegraphics[width=9cm]{images/20.png}
+    \end{center}
+    \begin{tcolorbox}[rouge]
+        The vector processors:
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item Reduces instruction bloat, 
+            \item Simplifies dependency checking, 
+            \item Potentially reduce cache misses, 
+            \item Reduces control hazards.
+        \end{itemize}
+    \end{tcolorbox}
+    \begin{tcolorbox}[gris]
+        \textbf{Examples of vector instructions:}
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item \lstinline!mul.v v1, v2, v1! does the dot product v1 $\cdot$ v2.
+            \item  \lstinline!mul.sv v1, r2, v1! multiplies scalar r1 to all elements of v1. 
+            \item \lstinline!lw.v v1, O(r1)! loads vector v1 from address r1. 
+            \item \lstinline!sw.v v1, O(r1)! stores vector v1 at address r1.
+        \end{itemize}
+    \end{tcolorbox}
+    Then our compiler code would look like this:
+    \begin{codeCenter}
+    \begin{Ccode}
+loop:
+    lw.v v1, 0(r2) ; load x[i]
+    lw.v v2, 0(r3) ; load y[i]
+    mul.sv v1, r4, v1 ; a*x[i]
+    add.v v1, v1, v2 ; … + y[i]
+    sw.v v1, 0(r3) ; store y[i]
+    add r2, r2, 512 ; 64*8
+    add r3, r3, 512
+    bne r2, r5, loop
+    \end{Ccode}
+    \end{codeCenter}
+    \begin{tcolorbox}[gris]
+        Now for 1024 iterations of our loop, we only have $8\cdot \left(\frac{1024}{64}\right)=128$ instructions. For misses, the vector load brings 64 elements at a time $\implies$ 8 cache lines $\implies 2\cdot \left(\frac{1024}{64}\right)=32$.
+    \end{tcolorbox}
+    
+    
+    
+    
+    
+    
+    
     
     
     
