@@ -267,7 +267,7 @@ __m256 vc = _mm256_add_ps(va, vb);
     \end{tcolorbox}
     Due to sharing data, incoherence appears between different caches. More specifically, when you're updating a value and reading a different copy. There is different ways to assure coherence we'll see two of them with their protocol.\\
 \subsection{Bus-based systems}
-    in bus-based systems, we have to add independent ``cache controllers'' to each core where each controller: is a FSM, sees all remote processor actions, takes coherence actions depending on block's state and protocol.
+    In bus-based systems, we have to add independent ``cache controllers'' to each core where each controller: is a FSM, sees all remote processor actions, takes coherence actions depending on block's state and protocol.
     \begin{tcolorbox}[rouge]
          \textbf{MESI protocol:} \important{M}odified, \important{E}xclusive, \important{S}hared and \important{I}nvalid states.
         \begin{itemize}[left=10pt, label=\textbullet]
@@ -307,11 +307,11 @@ In the point-to-point system, the message is more scalable and have an explicit 
     \begin{remark}{Remark}
         In a ring (point-to-point) network, messages travel only along the path between sender and receiver, so links not on the path remain free, reducing overall traffic compared to a shared bus.   
     \end{remark}
-    Now each core no longer sees all of the messafes, so we need to add another protocol controller to the MESI protocol into the system.\\
+    Now each core no longer sees all of the messages, so we need to add another protocol controller to the MESI protocol into the system.\\
     \newpage
     \textbf{Directory-based protocol:}
     \begin{tcolorbox}[vert]
-        In the directory-based protocole, we use a \important{coherence directory}. The directory tracks all caches that contain a particular block, then all messaged leaving the core a first sent to the directory and it takes the appropriate actions, and respond to the original cache request. The directory serves as a per-block address or
+        In the directory-based protocole, we use a \important{coherence directory}. The directory tracks all caches that contain a particular block, then all messages leaving the core are first sent to the directory and it takes the appropriate actions, and respond to the original cache request. The directory serves as a per-block address or
     \end{tcolorbox}
     \begin{tcolorbox}[rouge]
         Cache to directory messages: 
@@ -492,6 +492,7 @@ for(i = 0; i < n; i++)
     We can use the \lstinline!if! clause to resolve this: \lstinline!#pragma omp parallel for if(n > 5000)!.\\
 \section{SIMD and vector}
     We already introduce SIMD in the \hyperlink{simd}{\textbf{section 2.1}}. In the basic scalar pipelin, execution is in one simple ALU, and this code code 
+    \hypertarget{daxpy}{}
     \begin{codeCenter}
     \begin{Ccode}
 void daxpy(int n, double a, double* x, double* y){
@@ -560,41 +561,95 @@ loop:
     \begin{tcolorbox}[gris]
         Now for 1024 iterations of our loop, we only have $8\cdot \left(\frac{1024}{64}\right)=128$ instructions. For misses, the vector load brings 64 elements at a time $\implies$ 8 cache lines $\implies 2\cdot \left(\frac{1024}{64}\right)=32$.
     \end{tcolorbox}
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    To apply SIMD we need a specific hardware: 
+    \begin{itemize}[left=10pt, label=\textbullet]
+        \item Vector registers to store multiple elements of a vector in a single register, 
+        \item Replicated functional units inside th epipeline of a core (multiple lane/ALUs), 
+        \item Support for decoding new instructions (SIMD instructions).
+    \end{itemize}
+    \subsection{AVX instructions}
         
-        
-    
-    
-     
-    
-    
-    
-    
-   
-        
-    
-    
-    
+    AVX instructions are for 256-bit operations on x86 architecture.
+    \begin{center}
+    \includegraphics[width=10cm]{images/21.png}
+    \end{center}
+    \begin{tcolorbox}[violet]
+    Let's interpretate an AVX instructions e.g. \lstinline!vaddpd!:
+    \begin{itemize}[left=10pt, label=\textbullet]
+        \item \lstinline!v! means that is an AVX instructions,
+        \item \lstinline!add! indicate the operation,
+        \item \lstinline!p! means packed, it can also be \lstinline!s!, then it would be scalar (you can see upper),
+        \item \lstinline!s! stand for double-precision, can be \lstinline!s! for single-precision, etc\ldots
+    \end{itemize}
+    \end{tcolorbox}
+    To use AVX instructions there is multiple way, the simplest is to auto-compile the code by using -O3 when compiling C code. But there is two main problems with the auto-compile solution. Aliasing and alignement.\\
+    \begin{tcolorbox}[vert]
+       \important{Aliasing:} 
 
+        Let's take again our \hyperlink{daxpy}{\textbf{daxpy}} code, the compiler can't say at 100\% that pointers are independent, then it won't vectorize. To solve this we have to say to the compiler that pointers don't overlap by changing the signature into
+        \begin{codeCenter}
+        \begin{Ccode}
+void daxpy(int n, double a, double* restrict x, double* restrict y);
+        \end{Ccode}
+        \end{codeCenter}
+    \end{tcolorbox}
+    \begin{tcolorbox}[vert]
+        \important{Alignement:}
+
+        Modern DRAM accesses are per four bytes and for better performances, accesses to vector elements should be aligned.     
+    \end{tcolorbox}
+    for example, to load an 8-element 32-bit vector:
+    \begin{center}
+    \includegraphics[width=10cm]{images/22.png}
+    \end{center}
+    To solve this, you can use \lstinline!aligned_alloc! in C when allocating arrays and \lstinline!_attribute_((aligned(32)))! for static arrays.
+    \begin{tcolorbox}[rouge]
+        To summarize, the compiler cannot vectorize if:
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item There is loop with unknown number of iterations at runtime,
+            \item There is if-else statements or diverging condition inside loop,
+            \item There is dependence between loop iterations, 
+            \item There is function calls in the loop body.
+        \end{itemize}
+    \end{tcolorbox}
+
+    Another way to use AVX instructions is to optimize the code manually with ``intrisics''. Intrisics are compiler-provided functions that map directly to specific CPU instructions.
+    \begin{image}{Different intrisics data types }
+        \includegraphics[width=9cm]{images/23.png}
+    \end{image}
+    \begin{tcolorbox}[violet]
+        Let's interpretate an AVX intrisics function e.g. \\
+        \lstinline!_mm256_op_suffix(type param1, type param2, type param3)!:
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item \lstinline!mm256! means that we are working on the 256-bit registers,
+            \item \lstinline!op! is the operation to do, e.g. add, sub, load, etc\ldots
+            \item \lstinline!suffix! is the type of the returned vector, e.g. ps, pd, epi32, epu64, etc\ldots
+        \end{itemize}
+    \end{tcolorbox}
+    With this, our \hyperlink{daxpy}{\textbf{daxpy}} code would become 
+    \begin{codeCenter}
+    \begin{Ccode}
+__m256d vecA = _mm256_set_pd(a, a, a, a);
+
+for(int i = 0; i < n; i+=4) {
+    __m256d vecX = _mm256_load_pd(&x[i]); //Load x[i]...
+    __m256d vecY = _mm256_load_pd(&y[i]); //Load y[i]...
+    __m256d vecZ = _mm256_mul_pd(vecA, vecX); //  a*x
+    
+    vecY = _mm256_add_pd(vecZ, vecY); // ... + y
+    
+    // Store result back to y
+    _mm256_store_pd(&y[i], vecY);
+}
+    \end{Ccode}
+    \end{codeCenter}
+    AVX instrinsics C code optimize a lot normal code because cache misses are optimized too.
+\section{Message passing}
     
     
     
-    
-       
     
     
 \end{document}
     
+
