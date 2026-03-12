@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.10)  11 MAR 2026 17:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.10)  12 MAR 2026 19:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1086,7 +1086,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-<images/1.png, id=144, 1361.085pt x 676.5275pt>
+<images/1.png, id=154, 1361.085pt x 676.5275pt>
 File: images/1.png Graphic file (type png)
 <use images/1.png>
 Package pdftex.def Info: images/1.png  used on input line 76.
@@ -1405,14 +1405,14 @@ Underfull \hbox (badness 1472) in paragraph at lines 234--235
 []\T1/cmr/m/n/10 There is com-plelety dif-fer-ent ad-dress spaces, threads com-mu-ni-cate via send-
  []
 
-<images/6.png, id=195, 485.815pt x 354.32375pt>
+<images/6.png, id=205, 485.815pt x 354.32375pt>
 File: images/6.png Graphic file (type png)
 <use images/6.png>
 Package pdftex.def Info: images/6.png  used on input line 246.
 (pdftex.def)             Requested size: 184.9429pt x 134.88231pt.
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 247.
-<images/7.png, id=196, 311.1625pt x 195.73125pt>
+<images/7.png, id=206, 311.1625pt x 195.73125pt>
 File: images/7.png Graphic file (type png)
 <use images/7.png>
 Package pdftex.def Info: images/7.png  used on input line 249.
@@ -1490,17 +1490,17 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 [7]
-<images/9.png, id=208, 712.6625pt x 372.39125pt>
+<images/9.png, id=218, 712.6625pt x 372.39125pt>
 File: images/9.png Graphic file (type png)
 <use images/9.png>
 Package pdftex.def Info: images/9.png  used on input line 295.
 (pdftex.def)             Requested size: 256.0748pt x 133.80504pt.
-<images/10.png, id=209, 860.21375pt x 367.3725pt>
+<images/10.png, id=219, 860.21375pt x 367.3725pt>
 File: images/10.png Graphic file (type png)
 <use images/10.png>
 Package pdftex.def Info: images/10.png  used on input line 299.
 (pdftex.def)             Requested size: 256.0748pt x 109.36053pt.
-<images/11.png, id=210, 631.35875pt x 417.56pt>
+<images/11.png, id=220, 631.35875pt x 417.56pt>
 File: images/11.png Graphic file (type png)
 <use images/11.png>
 Package pdftex.def Info: images/11.png  used on input line 305.
@@ -1576,7 +1576,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-<images/12.png, id=218, 909.3975pt x 368.37625pt>
+<images/12.png, id=228, 909.3975pt x 368.37625pt>
 File: images/12.png Graphic file (type png)
 <use images/12.png>
 Package pdftex.def Info: images/12.png  used on input line 335.
@@ -1592,7 +1592,7 @@ l.337     \begin{tcolorbox}[vert]
                                  
 (That was another \errmessage.)
 
-<images/13.png, id=219, 489.83pt x 182.6825pt>
+<images/13.png, id=229, 489.83pt x 182.6825pt>
 File: images/13.png Graphic file (type png)
 <use images/13.png>
 Package pdftex.def Info: images/13.png  used on input line 342.
@@ -1614,12 +1614,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 346--349
 
  []
 
-<images/14.png, id=226, 685.56125pt x 235.88126pt>
+<images/14.png, id=236, 685.56125pt x 235.88126pt>
 File: images/14.png Graphic file (type png)
 <use images/14.png>
 Package pdftex.def Info: images/14.png  used on input line 351.
 (pdftex.def)             Requested size: 256.0748pt x 88.10971pt.
-<images/15.png, id=227, 277.035pt x 401.5pt>
+<images/15.png, id=237, 277.035pt x 401.5pt>
 File: images/15.png Graphic file (type png)
 <use images/15.png>
 Package pdftex.def Info: images/15.png  used on input line 355.
@@ -1783,7 +1783,7 @@ l.442     \begin{tcolorbox}[gris]
 (That was another \errmessage.)
 
 [11]
-<images/16.png, id=291, 870.25125pt x 318.18875pt>
+<images/16.png, id=301, 870.25125pt x 318.18875pt>
 File: images/16.png Graphic file (type png)
 <use images/16.png>
 Package pdftex.def Info: images/16.png  used on input line 447.
@@ -1831,12 +1831,12 @@ l.465     \begin{tcolorbox}[violet]
                                    
 (That was another \errmessage.)
 
-<images/17.png, id=292, 673.51625pt x 346.29375pt>
+<images/17.png, id=302, 673.51625pt x 346.29375pt>
 File: images/17.png Graphic file (type png)
 <use images/17.png>
 Package pdftex.def Info: images/17.png  used on input line 469.
 (pdftex.def)             Requested size: 256.0748pt x 131.66168pt.
-<images/18.png, id=293, 563.10374pt x 228.855pt>
+<images/18.png, id=303, 563.10374pt x 228.855pt>
 File: images/18.png Graphic file (type png)
 <use images/18.png>
 Package pdftex.def Info: images/18.png  used on input line 474.
@@ -1846,7 +1846,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 476--477
 
  []
 
-<images/19.png, id=294, 668.4975pt x 187.70125pt>
+<images/19.png, id=304, 668.4975pt x 187.70125pt>
 File: images/19.png Graphic file (type png)
 <use images/19.png>
 Package pdftex.def Info: images/19.png  used on input line 478.
@@ -1980,7 +1980,7 @@ l.519     \begin{tcolorbox}[gris]
 (That was another \errmessage.)
 
 [13 <./images/19.png>]
-<images/20.png, id=343, 1526.70375pt x 504.88625pt>
+<images/20.png, id=353, 1526.70375pt x 504.88625pt>
 File: images/20.png Graphic file (type png)
 <use images/20.png>
 Package pdftex.def Info: images/20.png  used on input line 527.
@@ -2123,7 +2123,7 @@ l.561     \begin{tcolorbox}[gris]
                                  
 (That was another \errmessage.)
 
-<images/21.png, id=344, 1474.50874pt x 642.4pt>
+<images/21.png, id=354, 1474.50874pt x 642.4pt>
 File: images/21.png Graphic file (type png)
 <use images/21.png>
 Package pdftex.def Info: images/21.png  used on input line 574.
@@ -2198,7 +2198,7 @@ l.596     \begin{tcolorbox}[vert]
                                  
 (That was another \errmessage.)
 
-<images/22.png, id=361, 1254.6875pt x 290.08376pt>
+<images/22.png, id=371, 1254.6875pt x 290.08376pt>
 File: images/22.png Graphic file (type png)
 <use images/22.png>
 Package pdftex.def Info: images/22.png  used on input line 603.
@@ -2258,7 +2258,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 [15 <./images/21.png> <./images/22.png>]
-<images/23.png, id=370, 1541.76pt x 432.61626pt>
+<images/23.png, id=380, 1541.76pt x 432.61626pt>
 File: images/23.png Graphic file (type png)
 <use images/23.png>
 Package pdftex.def Info: images/23.png  used on input line 618.
@@ -2310,34 +2310,246 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 645.
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 645.
 
-[16 <./images/23.png>] (./main.aux)
+
+./main.tex:648: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.648     \begin{tcolorbox}[vert]
+                                 
+(That was another \errmessage.)
+
+<images/24.png, id=382, 1111.15125pt x 363.3575pt>
+File: images/24.png Graphic file (type png)
+<use images/24.png>
+Package pdftex.def Info: images/24.png  used on input line 653.
+(pdftex.def)             Requested size: 256.0748pt x 83.73679pt.
+
+./main.tex:655: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.655     \begin{tcolorbox}[gris]
+                                 
+(That was another \errmessage.)
+
+
+./main.tex:663: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.663     \begin{tcolorbox}[gris]
+                                 
+(That was another \errmessage.)
+
+[16 <./images/23.png> <./images/24.png>]
+
+./main.tex:672: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.672     \begin{tcolorbox}[vert]
+                                 
+(That was another \errmessage.)
+
+
+./main.tex:677: Package Listings Error: Couldn't load requested style.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.677     \begin{Ccode}
+                       
+The following styles weren't loadable:
+    ,myc$
+This may cause errors in the sequel.
+
+
+./main.tex:677: Package Listings Error: style myc undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.677     \begin{Ccode}
+                       
+The style is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 688.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 688.
+
+
+./main.tex:689: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.689     \begin{tcolorbox}[vert]
+                                 
+(That was another \errmessage.)
+
+
+./main.tex:693: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.693     \begin{tcolorbox}[gris]
+                                 
+(That was another \errmessage.)
+
+
+./main.tex:701: Package Listings Error: Couldn't load requested style.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.701     \begin{Ccode}
+                       
+The following styles weren't loadable:
+    ,myc$
+This may cause errors in the sequel.
+
+
+./main.tex:701: Package Listings Error: style myc undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.701     \begin{Ccode}
+                       
+The style is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 717.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 717.
+
+
+./main.tex:720: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.720     \begin{tcolorbox}[violet]
+                                   
+(That was another \errmessage.)
+
+
+./main.tex:729: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.729     \begin{tcolorbox}[violet]
+                                   
+(That was another \errmessage.)
+
+[17]
+
+./main.tex:735: Package Listings Error: Couldn't load requested style.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.735     \begin{Ccode}
+                       
+The following styles weren't loadable:
+    ,myc$
+This may cause errors in the sequel.
+
+
+./main.tex:735: Package Listings Error: style myc undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.735     \begin{Ccode}
+                       
+The style is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 741.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 741.
+
+
+./main.tex:744: Package Listings Error: Couldn't load requested style.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.744     \begin{Ccode}
+                       
+The following styles weren't loadable:
+    ,myc$
+This may cause errors in the sequel.
+
+
+./main.tex:744: Package Listings Error: style myc undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.744     \begin{Ccode}
+                       
+The style is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 748.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 748.
+
+[18] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 9AE118B4316FF20048789022883B554E;2267
-(rerunfilecheck)             After:  D446B1596C11806AD800E6D7B752D63F;2389.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 6460962A35C7E0A9CA17A208EB6CABDA;2462.
  ) 
 Here is how much of TeX's memory you used:
- 31587 strings out of 469486
- 629647 string characters out of 5469658
+ 31692 strings out of 469486
+ 631132 string characters out of 5469658
  1504433 words of memory out of 5000000
- 59540 multiletter control sequences out of 15000+600000
+ 59609 multiletter control sequences out of 15000+600000
  645275 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  131i,12n,135p,516b,1583s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfit0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on main.pdf (17 pages, 1434729 bytes).
+Output written on main.pdf (19 pages, 1497888 bytes).
 PDF statistics:
- 516 PDF objects out of 1000 (max. 8388607)
- 392 compressed objects within 4 object streams
- 172 named destinations out of 1000 (max. 500000)
- 367 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 577 PDF objects out of 1000 (max. 8388607)
+ 448 compressed objects within 5 object streams
+ 208 named destinations out of 1000 (max. 500000)
+ 388 words of extra memory for PDF output out of 10000 (max. 10000000)
 
