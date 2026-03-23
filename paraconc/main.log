@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.10)  12 MAR 2026 19:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.10)  14 MAR 2026 16:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2529,27 +2529,271 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 748.
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 748.
 
-[18] (./main.aux)
+
+./main.tex:752: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.752     \begin{tcolorbox}[vert]
+                                 
+(That was another \errmessage.)
+
+
+./main.tex:756: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.756     \begin{tcolorbox}[rouge]
+                                  
+(That was another \errmessage.)
+
+
+./main.tex:759: Package Listings Error: Couldn't load requested style.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.759 \begin{Ccode}
+                   
+The following styles weren't loadable:
+    ,myc$
+This may cause errors in the sequel.
+
+
+./main.tex:759: Package Listings Error: style myc undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.759 \begin{Ccode}
+                   
+The style is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 774.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 774.
+
+Runaway argument?
+{\glueexpr 10pt 
+./main.tex:775: Paragraph ended before \addvspace was complete.
+<to be read again> 
+                   \par 
+l.775     \end{tcolorbox}
+                         
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+./main.tex:775: Missing number, treated as zero.
+<to be read again> 
+                   }
+l.775     \end{tcolorbox}
+                         
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./main.tex:775: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.775     \end{tcolorbox}
+                         
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./main.tex:775: Extra }, or forgotten \endgroup.
+<recently read> }
+                 
+l.775     \end{tcolorbox}
+                         
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+[18]
+
+./main.tex:780: Package Listings Error: Couldn't load requested style.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.780         \begin{Ccode}
+                           
+The following styles weren't loadable:
+    ,myc$
+This may cause errors in the sequel.
+
+
+./main.tex:780: Package Listings Error: style myc undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.780         \begin{Ccode}
+                           
+The style is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 789.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 789.
+
+
+./main.tex:793: Package Listings Error: Couldn't load requested style.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.793         \begin{Ccode}
+                           
+The following styles weren't loadable:
+    ,myc$
+This may cause errors in the sequel.
+
+
+./main.tex:793: Package Listings Error: style myc undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.793         \begin{Ccode}
+                           
+The style is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 802.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 802.
+
+<images/25.png, id=459, 1490.56876pt x 688.5725pt>
+File: images/25.png Graphic file (type png)
+<use images/25.png>
+Package pdftex.def Info: images/25.png  used on input line 806.
+(pdftex.def)             Requested size: 256.0748pt x 118.28506pt.
+
+./main.tex:808: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.808     \begin{tcolorbox}[vert]
+                                 
+(That was another \errmessage.)
+
+
+./main.tex:814: Package Listings Error: Couldn't load requested style.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.814         \begin{Ccode}
+                           
+The following styles weren't loadable:
+    ,myc$
+This may cause errors in the sequel.
+
+
+./main.tex:814: Package Listings Error: style myc undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.814         \begin{Ccode}
+                           
+The style is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 819.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 819.
+
+
+./main.tex:823: Package Listings Error: Couldn't load requested style.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.823         \begin{Ccode}
+                           
+The following styles weren't loadable:
+    ,myc$
+This may cause errors in the sequel.
+
+
+./main.tex:823: Package Listings Error: style myc undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.823         \begin{Ccode}
+                           
+The style is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 828.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 828.
+
+[19 <./images/25.png>] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6460962A35C7E0A9CA17A208EB6CABDA;2462.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 6460962A35C7E0A9CA17A208EB6CABDA;2462
+(rerunfilecheck)             After:  FC8EEA38BBE83D93D219174394D51B67;2598.
  ) 
 Here is how much of TeX's memory you used:
- 31692 strings out of 469486
- 631132 string characters out of 5469658
+ 31763 strings out of 469486
+ 632269 string characters out of 5469658
  1504433 words of memory out of 5000000
- 59609 multiletter control sequences out of 15000+600000
+ 59640 multiletter control sequences out of 15000+600000
  645275 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  131i,12n,135p,516b,1583s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfit0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on main.pdf (19 pages, 1497888 bytes).
+Output written on main.pdf (20 pages, 1576021 bytes).
 PDF statistics:
- 577 PDF objects out of 1000 (max. 8388607)
- 448 compressed objects within 5 object streams
- 208 named destinations out of 1000 (max. 500000)
- 388 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 632 PDF objects out of 1000 (max. 8388607)
+ 500 compressed objects within 5 object streams
+ 248 named destinations out of 1000 (max. 500000)
+ 393 words of extra memory for PDF output out of 10000 (max. 10000000)
 

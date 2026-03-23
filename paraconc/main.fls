@@ -481,6 +481,11 @@ INPUT ./images/24.png
 INPUT ./images/24.png
 INPUT ./images/24.png
 INPUT ./images/24.png
+INPUT ./images/25.png
+INPUT ./images/25.png
+INPUT ./images/25.png
+INPUT ./images/25.png
+INPUT ./images/25.png
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
