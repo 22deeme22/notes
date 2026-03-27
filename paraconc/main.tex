@@ -828,6 +828,115 @@ MPI_Isend(buf1, 1, MPI_INT,..
         \end{codeCenter}
     \end{image}
     \subsection{MPI collectives}
+        Some MPI instrunctions: 
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item \textbf{Broadcast:}
+
+                \begin{image}{It sends the same data to all processes in the group in a time $O\left(\log_2\left(n\right)\right)$.}
+                    \includegraphics[width=7cm]{images/26.png}
+                \end{image}
+            \item \textbf{Scatter:}
+                \begin{image}{It sends elements in an array to consecutive processes in a group, the data is transmitted in increasing order of process rank.}
+                    \includegraphics[width=7cm]{images/27.png}
+                \end{image}
+            \item \textbf{Gather:}
+                \begin{image}{It gathers elements from consecutive processes in group into an array.}
+                    \includegraphics[width=7cm]{images/28.png}
+                \end{image}
+            \item \textbf{Reduce:}
+                \begin{image}{It takes an array of input elements on each process and returns an array of output elements to the root process given a specific operation.}
+                    \includegraphics[width=7cm]{images/29.png}
+                \end{image}
+            \item \textbf{AllReduce:}
+                \begin{image}{It's similar to reduce but results are distributed to all processes}
+                    \includegraphics[width=7cm]{images/30.png}
+                \end{image}
+            \item \textbf{Scan:}
+                \begin{image}{Similar to AllReduce but with partial results}
+                    \includegraphics[width=7cm]{images/31.png}
+                \end{image}
+        \end{itemize}
+\section{Memory consistency}
+    \begin{tcolorbox}[vert]
+        Cache coherence simulate a unique shared memory, so we don't have to think about the location of different data. \important{Memory consistency} determine in which order intructions are simulated, because the processor can re-order instructions, we have to take care about memory consistency. It tells which re-ordering operations are acceptable or not.
+
+    The memory consistency affects performance!!
+    \end{tcolorbox}
+    
+    To express this we can just look at this example
+    \begin{tcolorbox}[rouge]
+        If we want to execute this two pieces of code, one in a processor, the other in another.
+
+        \vspace{1em}
+    \begin{minipage}{0.48\textwidth}
+        \begin{codeCenter}
+        \begin{Ccode}
+// A = r0 = 0
+(S0) A = 1;
+(L0) r0 = B;
+print(r0);           
+        \end{Ccode}
+        \end{codeCenter}
+    \end{minipage}
+    \begin{minipage}{0.48\textwidth}
+        \begin{codeCenter}
+        \begin{Ccode}
+// B = r1 = 0
+(S1) B = 1;
+(L1) r1 = A;
+print(r1);
+        \end{Ccode}
+        \end{codeCenter}
+    \end{minipage}
+    \end{tcolorbox}
+
+    We can obtain $\left(0,0\right)$ as result, but we don't expect that. Why we can obtain this? Because processors can execute this code like this
+    \begin{image}{First, A and B are in shared state in both processors, then processors execute the stores simultaneously. While value are in the storing process, non-blocking caches proceed and the read hits. It returns $\left(0,0\right)$.}
+        \includegraphics[width=6cm]{images/32.png}
+    \end{image}
+    
+    To avoid this we must define a rigorous memory model to tell each layer what can and can't happen. We'll see different model.
+    \subsection{Sequential consistency}
+    \begin{tcolorbox}[vert]
+        The goal of \important{sequential consistency} is that the multiprocessor should behave like a multitasked single processor. The result of any execution is the same as if the operations of all processors (cores) were executed in some sequential order, and the operations of each
+individual processor (core) appear in this sequence in the order specified by its
+program.
+    \end{tcolorbox}
+    The memory appears like it has a switch in front and like if each processor's memory accesses is executed atomically and in program order.
+    \begin{remark}{Remark}
+        When we say that it appears atomic, it means that a write transitions directly from “not visible” to “fully visible,” with no observable intermediate state. Then, it ensures that a write is either visible, either invisible, not half-half.
+    \end{remark}
+    \begin{tcolorbox}[violet]
+        To implement sequential consistency we have to ensure two things 
+        \begin{enumerate}[left=10pt]
+            \item Memory accesses happen in order.
+            \item Memory operations appear atomic.
+        \end{enumerate}
+    \end{tcolorbox}
+    To implement, we have to recall that the processor initially act like this
+    \begin{center}
+        \includegraphics[width=8cm]{images/33.png}
+    \end{center}
+    \begin{tcolorbox}[vert]
+        For the sequential consistency, we need to order memory instructions, using a \important{load-store queue (LSQ)} that will do the following things:
+        \begin{itemize} 
+            \item Track the FIFO (firs in first out) program order of loads and stores, 
+            \item Resolve addresses when they are ready, 
+            \item On a load, check for the \textbf{youngest} store to this address.
+        \end{itemize}
+    \end{tcolorbox}
+    \textbf{Load store queue functionality:}
+
+    The LSQ resolves which load/store addresses overlap and hold store operations until they retire.
+    
+    
+    
+    
+        
+    
+    
+    
+        
         
     
     

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.10)  14 MAR 2026 16:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.10)  23 MAR 2026 11:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1086,7 +1086,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-<images/1.png, id=154, 1361.085pt x 676.5275pt>
+<images/1.png, id=169, 1361.085pt x 676.5275pt>
 File: images/1.png Graphic file (type png)
 <use images/1.png>
 Package pdftex.def Info: images/1.png  used on input line 76.
@@ -1405,14 +1405,14 @@ Underfull \hbox (badness 1472) in paragraph at lines 234--235
 []\T1/cmr/m/n/10 There is com-plelety dif-fer-ent ad-dress spaces, threads com-mu-ni-cate via send-
  []
 
-<images/6.png, id=205, 485.815pt x 354.32375pt>
+<images/6.png, id=220, 485.815pt x 354.32375pt>
 File: images/6.png Graphic file (type png)
 <use images/6.png>
 Package pdftex.def Info: images/6.png  used on input line 246.
 (pdftex.def)             Requested size: 184.9429pt x 134.88231pt.
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 247.
-<images/7.png, id=206, 311.1625pt x 195.73125pt>
+<images/7.png, id=221, 311.1625pt x 195.73125pt>
 File: images/7.png Graphic file (type png)
 <use images/7.png>
 Package pdftex.def Info: images/7.png  used on input line 249.
@@ -1490,17 +1490,17 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 [7]
-<images/9.png, id=218, 712.6625pt x 372.39125pt>
+<images/9.png, id=233, 712.6625pt x 372.39125pt>
 File: images/9.png Graphic file (type png)
 <use images/9.png>
 Package pdftex.def Info: images/9.png  used on input line 295.
 (pdftex.def)             Requested size: 256.0748pt x 133.80504pt.
-<images/10.png, id=219, 860.21375pt x 367.3725pt>
+<images/10.png, id=234, 860.21375pt x 367.3725pt>
 File: images/10.png Graphic file (type png)
 <use images/10.png>
 Package pdftex.def Info: images/10.png  used on input line 299.
 (pdftex.def)             Requested size: 256.0748pt x 109.36053pt.
-<images/11.png, id=220, 631.35875pt x 417.56pt>
+<images/11.png, id=235, 631.35875pt x 417.56pt>
 File: images/11.png Graphic file (type png)
 <use images/11.png>
 Package pdftex.def Info: images/11.png  used on input line 305.
@@ -1576,7 +1576,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-<images/12.png, id=228, 909.3975pt x 368.37625pt>
+<images/12.png, id=243, 909.3975pt x 368.37625pt>
 File: images/12.png Graphic file (type png)
 <use images/12.png>
 Package pdftex.def Info: images/12.png  used on input line 335.
@@ -1592,7 +1592,7 @@ l.337     \begin{tcolorbox}[vert]
                                  
 (That was another \errmessage.)
 
-<images/13.png, id=229, 489.83pt x 182.6825pt>
+<images/13.png, id=244, 489.83pt x 182.6825pt>
 File: images/13.png Graphic file (type png)
 <use images/13.png>
 Package pdftex.def Info: images/13.png  used on input line 342.
@@ -1614,12 +1614,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 346--349
 
  []
 
-<images/14.png, id=236, 685.56125pt x 235.88126pt>
+<images/14.png, id=251, 685.56125pt x 235.88126pt>
 File: images/14.png Graphic file (type png)
 <use images/14.png>
 Package pdftex.def Info: images/14.png  used on input line 351.
 (pdftex.def)             Requested size: 256.0748pt x 88.10971pt.
-<images/15.png, id=237, 277.035pt x 401.5pt>
+<images/15.png, id=252, 277.035pt x 401.5pt>
 File: images/15.png Graphic file (type png)
 <use images/15.png>
 Package pdftex.def Info: images/15.png  used on input line 355.
@@ -1783,7 +1783,7 @@ l.442     \begin{tcolorbox}[gris]
 (That was another \errmessage.)
 
 [11]
-<images/16.png, id=301, 870.25125pt x 318.18875pt>
+<images/16.png, id=317, 870.25125pt x 318.18875pt>
 File: images/16.png Graphic file (type png)
 <use images/16.png>
 Package pdftex.def Info: images/16.png  used on input line 447.
@@ -1831,12 +1831,12 @@ l.465     \begin{tcolorbox}[violet]
                                    
 (That was another \errmessage.)
 
-<images/17.png, id=302, 673.51625pt x 346.29375pt>
+<images/17.png, id=318, 673.51625pt x 346.29375pt>
 File: images/17.png Graphic file (type png)
 <use images/17.png>
 Package pdftex.def Info: images/17.png  used on input line 469.
 (pdftex.def)             Requested size: 256.0748pt x 131.66168pt.
-<images/18.png, id=303, 563.10374pt x 228.855pt>
+<images/18.png, id=319, 563.10374pt x 228.855pt>
 File: images/18.png Graphic file (type png)
 <use images/18.png>
 Package pdftex.def Info: images/18.png  used on input line 474.
@@ -1846,7 +1846,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 476--477
 
  []
 
-<images/19.png, id=304, 668.4975pt x 187.70125pt>
+<images/19.png, id=320, 668.4975pt x 187.70125pt>
 File: images/19.png Graphic file (type png)
 <use images/19.png>
 Package pdftex.def Info: images/19.png  used on input line 478.
@@ -1980,7 +1980,7 @@ l.519     \begin{tcolorbox}[gris]
 (That was another \errmessage.)
 
 [13 <./images/19.png>]
-<images/20.png, id=353, 1526.70375pt x 504.88625pt>
+<images/20.png, id=368, 1526.70375pt x 504.88625pt>
 File: images/20.png Graphic file (type png)
 <use images/20.png>
 Package pdftex.def Info: images/20.png  used on input line 527.
@@ -2123,7 +2123,7 @@ l.561     \begin{tcolorbox}[gris]
                                  
 (That was another \errmessage.)
 
-<images/21.png, id=354, 1474.50874pt x 642.4pt>
+<images/21.png, id=369, 1474.50874pt x 642.4pt>
 File: images/21.png Graphic file (type png)
 <use images/21.png>
 Package pdftex.def Info: images/21.png  used on input line 574.
@@ -2198,7 +2198,7 @@ l.596     \begin{tcolorbox}[vert]
                                  
 (That was another \errmessage.)
 
-<images/22.png, id=371, 1254.6875pt x 290.08376pt>
+<images/22.png, id=386, 1254.6875pt x 290.08376pt>
 File: images/22.png Graphic file (type png)
 <use images/22.png>
 Package pdftex.def Info: images/22.png  used on input line 603.
@@ -2258,7 +2258,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 [15 <./images/21.png> <./images/22.png>]
-<images/23.png, id=380, 1541.76pt x 432.61626pt>
+<images/23.png, id=395, 1541.76pt x 432.61626pt>
 File: images/23.png Graphic file (type png)
 <use images/23.png>
 Package pdftex.def Info: images/23.png  used on input line 618.
@@ -2321,7 +2321,7 @@ l.648     \begin{tcolorbox}[vert]
                                  
 (That was another \errmessage.)
 
-<images/24.png, id=382, 1111.15125pt x 363.3575pt>
+<images/24.png, id=397, 1111.15125pt x 363.3575pt>
 File: images/24.png Graphic file (type png)
 <use images/24.png>
 Package pdftex.def Info: images/24.png  used on input line 653.
@@ -2688,7 +2688,7 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 802.
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 802.
 
-<images/25.png, id=459, 1490.56876pt x 688.5725pt>
+<images/25.png, id=474, 1490.56876pt x 688.5725pt>
 File: images/25.png Graphic file (type png)
 <use images/25.png>
 Package pdftex.def Info: images/25.png  used on input line 806.
@@ -2766,34 +2766,658 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 828.
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 828.
 
-[19 <./images/25.png>] (./main.aux)
+
+Underfull \hbox (badness 1424) in paragraph at lines 835--835
+[]\T1/cmr/m/n/10 It sends the same data to all
+ []
+
+<images/26.png, id=475, 1066.98625pt x 376.40625pt>
+File: images/26.png Graphic file (type png)
+<use images/26.png>
+Package pdftex.def Info: images/26.png  used on input line 836.
+(pdftex.def)             Requested size: 199.16928pt x 70.2601pt.
+Package mdframed Info: Not enough space on this page on input line 837.
+[19 <./images/25.png>]
+Package mdframed Info: Not enough space on this page on input line 837.
+<images/27.png, id=505, 1007.765pt x 365.365pt>
+File: images/27.png Graphic file (type png)
+<use images/27.png>
+Package pdftex.def Info: images/27.png  used on input line 840.
+(pdftex.def)             Requested size: 199.16928pt x 72.20757pt.
+<images/28.png, id=506, 1016.79875pt x 381.425pt>
+File: images/28.png Graphic file (type png)
+<use images/28.png>
+Package pdftex.def Info: images/28.png  used on input line 844.
+(pdftex.def)             Requested size: 199.16928pt x 74.71222pt.
+<images/29.png, id=507, 1122.1925pt x 435.6275pt>
+File: images/29.png Graphic file (type png)
+<use images/29.png>
+Package pdftex.def Info: images/29.png  used on input line 848.
+(pdftex.def)             Requested size: 199.16928pt x 77.31279pt.
+<images/30.png, id=508, 1062.97125pt x 429.605pt>
+File: images/30.png Graphic file (type png)
+<use images/30.png>
+Package pdftex.def Info: images/30.png  used on input line 852.
+(pdftex.def)             Requested size: 199.16928pt x 80.49173pt.
+<images/31.png, id=509, 1063.975pt x 454.69875pt>
+File: images/31.png Graphic file (type png)
+<use images/31.png>
+Package pdftex.def Info: images/31.png  used on input line 856.
+(pdftex.def)             Requested size: 199.16928pt x 85.11009pt.
+
+Overfull \vbox (9.3114pt too high) detected at line 857
+ []
+
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 857.
+
+Overfull \vbox (10.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (11.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (12.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (13.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (14.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (15.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (16.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (17.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (18.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (19.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (20.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (21.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (22.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (23.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (24.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (25.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (26.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (27.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (28.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (29.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (30.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (31.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (32.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (33.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (34.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (35.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (36.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (37.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (38.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (39.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (40.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (41.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (42.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (43.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (44.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (45.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (46.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (47.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (48.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (49.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (50.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (51.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (52.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (53.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (54.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (55.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (56.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (57.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (58.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (59.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (60.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (61.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (62.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (63.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (64.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (65.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (66.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (67.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (68.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (69.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (70.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (71.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (72.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (73.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (74.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (75.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (76.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (77.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (78.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (79.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (80.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (81.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (82.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (83.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (84.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (85.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (86.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (87.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (88.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (89.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (90.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (91.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (92.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (93.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (94.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (95.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (96.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (97.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (98.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (99.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (100.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (101.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (102.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (103.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (104.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (105.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (106.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (107.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (108.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (109.3114pt too high) detected at line 857
+ []
+
+
+Overfull \vbox (110.3114pt too high) detected at line 857
+ []
+
+
+Package mdframed Warning: correct box splittet fails
+ It seems you are using a non splittable contents
+(mdframed)                 on input line 857.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 857.
+[20 <./images/26.png> <./images/27.png> <./images/28.png> <./images/29.png> <./images/30.png>]
+
+./main.tex:860: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.860     \begin{tcolorbox}[vert]
+                                 
+(That was another \errmessage.)
+
+
+./main.tex:867: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.867     \begin{tcolorbox}[rouge]
+                                  
+(That was another \errmessage.)
+
+
+./main.tex:873: Package Listings Error: Couldn't load requested style.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.873         \begin{Ccode}
+                           
+The following styles weren't loadable:
+    ,myc$
+This may cause errors in the sequel.
+
+
+./main.tex:873: Package Listings Error: style myc undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.873         \begin{Ccode}
+                           
+The style is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 879.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 879.
+
+
+./main.tex:883: Package Listings Error: Couldn't load requested style.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.883         \begin{Ccode}
+                           
+The following styles weren't loadable:
+    ,myc$
+This may cause errors in the sequel.
+
+
+./main.tex:883: Package Listings Error: style myc undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.883         \begin{Ccode}
+                           
+The style is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 889.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 889.
+
+Runaway argument?
+{\glueexpr 10pt 
+./main.tex:891: Paragraph ended before \addvspace was complete.
+<to be read again> 
+                   \par 
+l.891     \end{tcolorbox}
+                         
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+./main.tex:891: Missing number, treated as zero.
+<to be read again> 
+                   }
+l.891     \end{tcolorbox}
+                         
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./main.tex:891: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.891     \end{tcolorbox}
+                         
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./main.tex:891: Extra }, or forgotten \endgroup.
+<recently read> }
+                 
+l.891     \end{tcolorbox}
+                         
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+<images/32.png, id=519, 526.96875pt x 464.73625pt>
+File: images/32.png Graphic file (type png)
+<use images/32.png>
+Package pdftex.def Info: images/32.png  used on input line 895.
+(pdftex.def)             Requested size: 170.71652pt x 150.55528pt.
+
+./main.tex:900: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.900     \begin{tcolorbox}[vert]
+                                 
+(That was another \errmessage.)
+
+[21 <./images/31.png> <./images/32.png>]
+Package mdframed Info: Not enough space on this page on input line 908.
+
+
+./main.tex:909: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.909     \begin{tcolorbox}[violet]
+                                   
+(That was another \errmessage.)
+
+<images/33.png, id=536, 816.04875pt x 504.88625pt>
+File: images/33.png Graphic file (type png)
+<use images/33.png>
+Package pdftex.def Info: images/33.png  used on input line 918.
+(pdftex.def)             Requested size: 227.62204pt x 140.8279pt.
+
+./main.tex:920: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.920     \begin{tcolorbox}[vert]
+                                 
+(That was another \errmessage.)
+
+[22 <./images/33.png>] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 6460962A35C7E0A9CA17A208EB6CABDA;2462
-(rerunfilecheck)             After:  FC8EEA38BBE83D93D219174394D51B67;2598.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 71FCED267D97E2FCFC85DD7A7D949D60;2906.
  ) 
 Here is how much of TeX's memory you used:
- 31763 strings out of 469486
- 632269 string characters out of 5469658
+ 31879 strings out of 469486
+ 634275 string characters out of 5469658
  1504433 words of memory out of 5000000
- 59640 multiletter control sequences out of 15000+600000
+ 59739 multiletter control sequences out of 15000+600000
  645275 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 131i,12n,135p,516b,1583s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 131i,12n,135p,516b,1604s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfit0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on main.pdf (20 pages, 1576021 bytes).
+Output written on main.pdf (23 pages, 1956599 bytes).
 PDF statistics:
- 632 PDF objects out of 1000 (max. 8388607)
- 500 compressed objects within 5 object streams
- 248 named destinations out of 1000 (max. 500000)
- 393 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 691 PDF objects out of 1000 (max. 8388607)
+ 539 compressed objects within 6 object streams
+ 265 named destinations out of 1000 (max. 500000)
+ 457 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -17,3 +17,5 @@
 \contentsline {section}{\numberline {6}Message passing}{16}{section.6}%
 \contentsline {subsection}{\numberline {6.1}MPI}{17}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}MPI collectives}{19}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Memory consistency}{21}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Sequential consistency}{21}{subsection.7.1}%
