@@ -42,17 +42,19 @@
                 \end{itemize}
                 \begin{remark}{Remark}
                     Front-end part of the pipeline CPU is the instruction fetching, decoding and branch prediction part, and the banc-end is the computation, memory access and data stockage part.
-                \end{remark}
-            \end{tcolorbox} 
-        \item \textbf{$\frac{\text{Seconds}}{\text{Cycle}}$}:
-            \begin{tcolorbox}[gris]
-                The $\frac{\text{Seconds}}{\text{Cycle}}$ part is the clock frequency. We have to be careful! The cycles per instruction (CPI) is a good metric for uniprocessor, but not necessarly for multi processor. In multiprocessors, some core may have to wait for others, to have a specific information or whatever, so when the core wait, it will just do some spinning threads which is very fast $\implies$ a low CPI! But in fact, you dont execute the program particularely faster.
+                    
+                    We have to be careful! The cycles per instruction (CPI) is a good metric for uniprocessor, but not necessarly for multi processor. In multiprocessors, some core may have to wait for others, to have a specific information or whatever, so when the core wait, it will just do some spinning threads which is very fast $\implies$ a low CPI! But in fact, you dont execute the program particularely faster.
                      
                 It is better to use some metric for `` useful work'', like:
                 \begin{itemize}[left=10pt]
                     \item Transactions complete per second,
                     \item Request services per second.
                 \end{itemize}
+                \end{remark}
+            \end{tcolorbox} 
+        \item \textbf{$\frac{\text{Seconds}}{\text{Cycle}}$}:
+            \begin{tcolorbox}[gris]
+                The $\frac{\text{Seconds}}{\text{Cycle}}$ part is the clock frequency.             
             \end{tcolorbox}
     \end{itemize}
     \textbf{Vocabulary parenthesis:}
@@ -927,40 +929,56 @@ program.
     \end{tcolorbox}
     \textbf{Load store queue functionality:}
 
-    The LSQ resolves which load/store addresses overlap and hold store operations until they retire.
+    The LSQ resolves which load/store addresses overlap and hold store operations until they retire. It cannot write ``speculative'' values to caches, a speculative value is a out of order value. It means that the LSQ cannot exit an entry that is till in the ROB.
+    \begin{center}
+        \includegraphics[width=8cm]{images/35.png}
+    \end{center}
     
     
-    
-    
+
+    At address resolution of each load, we have to check if there is an older write in the LSQ at the same address. To do this, we use a matrix of comparators, that checks every entry against all older ones. In the example of loads after sotre, loads sets bits for all older stores they depend on, then the store resets its column when updating the cache (commit).
+    \begin{image}{In this picture, each store have its colums, when the load address resolution happens, a 1 is set on the column of the store if this is the same address. Then, when the store quit the LSQ, its column is reset to 0.}
+        \begin{center}
+        \includegraphics[width=7cm]{images/34.png}
+        \end{center}
+    \end{image}
+
+        The problem now is that we have to wait for store to complete! If this is a miss in L1/L2/LLC, it can takes 100+ cycles! The goal is that the processor continue while store pending.
         
+    \begin{tcolorbox}[vert]
+        The solution is to add a \important{store buffer (SB)}. It sits between core and L1 cache and holds committted stores.
+    \end{tcolorbox}
+    \begin{center}
+        \includegraphics[width=9cm]{images/36.png}
+    \end{center}
+    \begin{tcolorbox}[gris]
+        In the LSQ, we have the address of stalled operations, why not using them?
+
+        We can't because it violates order or atomicity, but, in fact, we can use them by peeking. The idea is to peek at L1, to see if address is already there, if not, we fetch the block from lower level into L1. If the value is there, we \textbf{don't} load the value into the core. Fetching blocks into L1 from lower leves or other L1's doesn't impact order or atomicity, there is no values moved between the core and L1. We then can fetch as many blocks in parallel into L1 as needed.
+    \end{tcolorbox}
+
+\subsection{Processor consistency}
+    \begin{tcolorbox}[vert]
+    In processor consistency, reads in the LSQ can bypass writes in the SB.
+    \end{tcolorbox}
+    If we have instructions in store buffer, then the differences betweem sequential consistency with peek and processor consistency will be
+    \begin{center}
+        \includegraphics[width=9cm]{images/37.png}
+    \end{center}
+    In sequential consistency with peeking, load A hits L1, but still had to wait, in processor consistency, load A can bypass stores in the store buffer.
+
+\subsection{Weak consistency}
+    \begin{tcolorbox}[vert]
+        In \important{weak consistency} there is two sorts of memory operations, data operations or synchronization operations. Only synchronized one have any ordering, data operations have no order enforced among themselves.
+    \end{tcolorbox}
+    \begin{image}{ Synchronization instructions are called \lstinline!Fences!, it enforces program order for operations before/after.}
+    \begin{center}
+        \includegraphics[width=6cm]{images/38.png}
+    \end{center}
+    \end{image}
     
     
-    
-        
-        
-    
-    
-    
-    
-    
-    
-    
- 
-    
-    
-    
-    
-    
-    
-    
-        
-    
-    
-    
-    
-    
-    
-    
+
     
     
     
