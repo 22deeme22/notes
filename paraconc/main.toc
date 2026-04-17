@@ -21,3 +21,7 @@
 \contentsline {subsection}{\numberline {7.1}Sequential consistency}{21}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Processor consistency}{23}{subsection.7.2}%
 \contentsline {subsection}{\numberline {7.3}Weak consistency}{23}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Language level consistency}{24}{subsection.7.4}%
+\contentsline {subsubsection}{\numberline {7.4.1}Java Memory Model}{24}{subsubsection.7.4.1}%
+\contentsline {subsubsection}{\numberline {7.4.2}C++ 11 Memory Model}{25}{subsubsection.7.4.2}%
+\contentsline {subsubsection}{\numberline {7.4.3}OpenMP Memory Model}{26}{subsubsection.7.4.3}%

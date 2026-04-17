@@ -868,6 +868,7 @@ MPI_Isend(buf1, 1, MPI_INT,..
     \end{tcolorbox}
     
     To express this we can just look at this example
+    \hypertarget{consistency}{}
     \begin{tcolorbox}[rouge]
         If we want to execute this two pieces of code, one in a processor, the other in another.
 
@@ -978,6 +979,132 @@ program.
         \includegraphics[width=6cm]{images/38.png}
     \end{center}
     \end{image}
+   
+\subsection{Language level consistency}
+    \begin{tcolorbox}[vert]
+        A \important{data race} is when two conflicting operations from different thrads occur simultaneously. Operations conficlt if they access the same location, and at least one is a write and these simultaneous operations are defined back-to-back accesses in any sequentially consistency.
+    \end{tcolorbox}
+    If we check data races in our \hyperlink{consistency}{\textbf{\textit{first example}}} we can see that there is sequential consistency executions where read/write to A or B are back to back:
+    \begin{itemize}[left=10pt, label=\textbullet]
+        \item $A=1$
+        \item $r_1=B$
+        \item $B=1$
+        \item $r_2 = A$
+    \end{itemize}
+    \begin{tcolorbox}[rouge]
+        To make a data race free (DRF) code, we can do multiple things. Either we add add fences, by writing these lines: \lstinline! _sync_synchronize();!
+
+        The new way is to declaring \lstinline!A, B! as special variables (e.g. \lstinline!atomic int!).
+    \end{tcolorbox}
+
+    \textbf{DRF implies sequential consistency:}
+
+    Before we needed to adjust our programs depending on consistency model in th ISA. But with DRF even on hardware that uses PC or WC, our program sees it as SC, the programmer simply needs to obey the rules.
+
+    \subsubsection{Java Memory Model}
+
+    \begin{tcolorbox}[vert]
+        Memory order in Java is defined by \important{``happens-before''} relationship, these defined which re-ordering are possible in both the compiler and the JVM. Without the happens-before guarantee, the compiler/JVM can reorder instructions. From now, we'll write happens-before as an arrow: \textrightarrow. 
+    \end{tcolorbox}
+
+    \begin{tcolorbox}[gris]
+        There is five situations where \textrightarrow \space is guarantee by Java:
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item Actions in the same thread \textrightarrow \space each other in program order. 
+            \item Unlock a monitor \textrightarrow \space all locking operations. It means that a thread cannot hat is already locked by another thread, it must wait until the other thread unlocks it. 
+            \item Writing to a volatile \textrightarrow \space all subsequent reads of that field. 
+            \item All actions in a thread \textrightarrow \space a \lstinline!join()! on that thread.
+            \item If $A_x$ \textrightarrow \space $A_y$, and $A_y$ \textrightarrow \space $A_z$, then $A_x$ \textrightarrow \space $A_z$.
+        \end{itemize}
+    \end{tcolorbox}
+
+    If we can find two actions $A_x$ such that $A_x$ doesn't \textrightarrow \space $A_y$, and $A_y$ doesn't \textrightarrow \space $A_x$, we have found a data race.
+    \begin{center}
+    \includegraphics[width=4cm]{images/39.png}
+    \end{center}
+    \begin{image}{But sometimes, some actions may or may not happens before another. Then, \lstinline!wr(t)! is not guaranteed to happens before \lstinline!rd(t)!, so there is data race.}
+        \begin{center}
+        \includegraphics[width=3cm]{images/40.png}
+        \end{center}
+    \end{image}
+    To eliminate data race we can just add \lstinline!synchronized { }! blocks or \lstinline!@volatile! variables.
+
+    \textbf{Synchronized blocks versus volatile:}
+    \begin{tcolorbox}[gris]
+    Synchronized blocks can only works with objects, the thread can wait while others are in synchronized blocks and they can wrap whole functions or critical sections.
+    \begin{image}{On this code, another thread will either see both a and x to be updated neither a nor x to be updated}
+        \begin{codeCenter}
+        \begin{Ccode}
+synchronized {
+    a = b + c;
+    x = foo ();
+}
+        \end{Ccode}
+        \end{codeCenter}
+    \end{image}
+    \end{tcolorbox}
+    \begin{tcolorbox}[gris]
+        Volatile can be used with primitives (e.g. \lstinline!int!), there is no synchronization/direct access and it prevents specific memory re-ordering.
+        \begin{image}{If another thread sees x to be updated it must also see a to be updated. But reverse is not necessarily true.}
+            \begin{codeCenter}
+            \begin{Ccode}
+@volatile int a, x;
+a = b + c;
+x = foo();
+// can't reorder before 
+// wr(a)
+            \end{Ccode}
+            \end{codeCenter}
+        \end{image}
+    \end{tcolorbox}
+\subsubsection{C++ 11 Memory Model}
+    All thread can read/write to any locaation in the program scope through references and pointers, it's way more permissive than Java. Data races are similarly defined: we recall that a data race occurs when two conflicting memory operations that do not operate on ``special'' variables happens.  
+
+    The equivalent of a volatile variable is a \lstinline!std::atomic<T>! to designate a special variable of type T. The equivalent of synchronized blocks is defined as \lstinline!std::mutex(...)!.
+\subsubsection{OpenMP Memory Model}
+    Since OMP is yet another threading library its memory model differs from C++ 11. There is no concept of a synchronization variable like \lstinline!@volatile! or \lstinline!std::atomic<T>!. Locks must be accompanied by a flush (ex. to come).
+
+    Officially, OMP implements weak consistency except for flush operations.
+
+    \begin{tcolorbox}[rouge]
+    \begin{image}{When we writing code, we need to consider data races only on shared variables.}
+        \begin{codeCenter}
+        \begin{Ccode}
+#pragma omp parallel
+private (x) shared (y)
+{
+    x = ...
+    *y++; //data race
+}
+        \end{Ccode}
+        \end{codeCenter}
+    \end{image}
+    \end{tcolorbox}
+    \begin{tcolorbox}[vert]
+        A \important{flush} is a memory fence.
+    \end{tcolorbox}
+    \begin{image}{In order to communicate between threads, they do the follwing: firste thread writes the shared variable, then flushes the variable and the second thread flushes and then reads.}
+        \begin{codeCenter}
+        \begin{Ccode}
+int y;
+#pragma omp parallel shared(y)
+{
+    if( thr_id == 0 ) {
+    y = ...;
+    #pragma omp flush(y)
+}
+    #pragma omp flush(y)
+    ... = y;
+}
+        \end{Ccode}
+        \end{codeCenter}
+    \end{image}
+    
+    
+    
+    
+
+    
     
     
 
@@ -985,6 +1112,11 @@ program.
     
     
     
+    
+    
+    
+    
+
     
 \end{document}
     
