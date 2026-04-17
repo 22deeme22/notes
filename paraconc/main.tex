@@ -248,7 +248,9 @@ __m256 vc = _mm256_add_ps(va, vb);
                             \includegraphics[width=6.5cm]{images/6.png}
                             \end{image}
                             \begin{image}{Any processor can directly reference any memory location (e.g. Intel Core i7 example (quad core)).}
+                                \begin{center}
                             \includegraphics[width=4cm]{images/7.png}
+                                \end{center}
                             \end{image}
                 \end{itemize}
             \item Dataflow: the synchronization is at the processor level, TensorFlor (e.g. TPU).
@@ -383,7 +385,7 @@ for(int i = 0; i < INPUT_SIZE;i++) {
 }
     \end{Ccode}
     \end{codeCenter}
-    Then, there is true sharing when processors modify the histogram \lstinline!histogram['a']++;!. To avoid this, we have to preserve correct value. then we can \begin{codeCenter}
+    Then, there is true sharing when processors modify the histogram \lstinline!histogram['a']++;!. To avoid this, we have to preserve correct value. Then we can \begin{codeCenter}
     \begin{Ccode}
 int histogram[N_BUCKETS];
 int tmp_hist[N_THREADS][N_BUCKETS];
@@ -409,7 +411,7 @@ for(int i = 0; i < N_BUCKETS; i++) {
     \begin{remark}{Remark}
         In the code, \lstinline!shared (x, y)! tells OpenMP that all threads should see and access the same variable in memory (shared memory communication).
     \end{remark}
-    In the first code, we have \lstinline!INPUT_SIZE! times the critical section and the read/write to the histogram. In the second one, we have \lstinline!N_BUCKETS! times the number of threads, then if the size of the input is way bigger than the number of buckets times the number of threads, we eliminate a lot of critialt sections and true sharing. \\
+    In the first code, we have \lstinline!INPUT_SIZE! times the critical section and the read/write to the histogram. In the second one, we have \lstinline!N_BUCKETS! times the number of threads, then if the size of the input is way bigger than the number of buckets times the number of threads, we eliminate a lot of critical sections and true sharing. \\
     Here is just an alternative of the merge loop that eliminate all critical sections, but every thread accesses a fraction of everyone's histogram.
         \begin{codeCenter}
         \begin{Ccode}
@@ -475,13 +477,13 @@ PaddedCounter counters[NTHREADS];
     \begin{center}
     \includegraphics[width=9cm]{images/18.png}
     \end{center}
-    Arrays are too large to fin in caches, then if we want to calculate $A \cdot  B = C$, for every element of C if A and B are of size NxN, we'll have $1+N\left[\frac{4}{\text{cache line size}}\right]+N$ misses! Then for the whole calculation, we obtain $\left(N^3\left(1+c\right)+N^2\right)$ which is $O\left(N^3\right)$ misses (where $c =\frac{\text{element size}}{\text{cache line size}}$).\\
+    Arrays are too large to fit in caches, then if we want to calculate $A \cdot  B = C$, for every element of C if A and B are of size NxN, we'll have $1+N\left[\frac{4}{\text{cache line size}}\right]+N$ misses! Then for the whole calculation, we obtain $\left(N^3\left(1+c\right)+N^2\right)$ which is $O\left(N^3\right)$ misses (where $c =\frac{\text{element size}}{\text{cache line size}}$).\\
     \begin{image}{To avoid this, we can do blocking. \\ Then, for the whole array, we have to creat $\left(\frac{N}{n}\right)^2$ blocks and they have $2\cdot \left[\frac{4\cdot n}{\text{cache line size}}\right]$ misses, so finally we have $O\left(N^2\right)$ misses.}
         \includegraphics[width=9cm]{images/19.png}
     \end{image}
 \subsection{Work distribution and scheduling}
     \begin{tcolorbox}[violet]
-        OpenMP is a join/fork model where fork creates a eam of parallel threads and join synchronize and terminate threads  at the end of parallel region. But fork and join comes with an overhead.
+        OpenMP is a join/fork model where fork creates a team of parallel threads and join, synchronize and terminate threads  at the end of parallel region. But fork and join comes with an overhead.
     \end{tcolorbox}
     \begin{image}{For a code like this, if the loop has too few iterations, the fork and join overhead is bigger than the savings made by the parallel execution. There is no need to parallelize the loop.}
         \begin{codeCenter}
@@ -493,7 +495,7 @@ for(i = 0; i < n; i++)
     \end{image}
     We can use the \lstinline!if! clause to resolve this: \lstinline!#pragma omp parallel for if(n > 5000)!.\\
 \section{SIMD and vector}
-    We already introduce SIMD in the \hyperlink{simd}{\textbf{section 2.1}}. In the basic scalar pipelin, execution is in one simple ALU, and this code code 
+    We already introduce SIMD in the \hyperlink{simd}{\textbf{section 2.1}}. In the basic scalar pipeline, execution is in one simple ALU, and this code 
     \hypertarget{daxpy}{}
     \begin{codeCenter}
     \begin{Ccode}
@@ -581,7 +583,7 @@ loop:
         \item \lstinline!v! means that is an AVX instructions,
         \item \lstinline!add! indicate the operation,
         \item \lstinline!p! means packed, it can also be \lstinline!s!, then it would be scalar (you can see upper),
-        \item \lstinline!s! stand for double-precision, can be \lstinline!s! for single-precision, etc\ldots
+        \item \lstinline!d! stand for double-precision, can be \lstinline!s! for single-precision, etc\ldots
     \end{itemize}
     \end{tcolorbox}
     To use AVX instructions there is multiple way, the simplest is to auto-compile the code by using -O3 when compiling C code. But there is two main problems with the auto-compile solution. Aliasing and alignement.\\
