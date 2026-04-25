@@ -25,3 +25,10 @@
 \contentsline {subsubsection}{\numberline {7.4.1}Java Memory Model}{24}{subsubsection.7.4.1}%
 \contentsline {subsubsection}{\numberline {7.4.2}C++ 11 Memory Model}{25}{subsubsection.7.4.2}%
 \contentsline {subsubsection}{\numberline {7.4.3}OpenMP Memory Model}{26}{subsubsection.7.4.3}%
+\contentsline {section}{\numberline {8}Synchronization}{26}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Locks}{27}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {8.1.1}TS}{27}{subsubsection.8.1.1}%
+\contentsline {subsubsection}{\numberline {8.1.2}TTS}{28}{subsubsection.8.1.2}%
+\contentsline {subsubsection}{\numberline {8.1.3}TS with exponential back-off}{29}{subsubsection.8.1.3}%
+\contentsline {subsubsection}{\numberline {8.1.4}Load-locked and store-conditional}{29}{subsubsection.8.1.4}%
+\contentsline {subsubsection}{\numberline {8.1.5}Coarse/fine-grained locking}{30}{subsubsection.8.1.5}%

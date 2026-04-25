@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.10)  17 APR 2026 16:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.10)  25 APR 2026 16:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -940,49 +940,6 @@ command, so I can't give any explicit help.
 Pretend that you're Hercule Poirot: Examine all clues,
 and deduce the truth by order and method.
 
-Runaway argument?
-{\glueexpr 10pt 
-./main.tex:22: Paragraph ended before \addvspace was complete.
-<to be read again> 
-                   \par 
-l.22     \end{tcolorbox}
-                        
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-./main.tex:22: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.22     \end{tcolorbox}
-                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./main.tex:22: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.22     \end{tcolorbox}
-                        
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./main.tex:22: Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.22     \end{tcolorbox}
-                        
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
 
 ./main.tex:25: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -1043,50 +1000,7 @@ l.71     \begin{tcolorbox}[rouge]
                                  
 (That was another \errmessage.)
 
-Runaway argument?
-{\glueexpr 10pt 
-./main.tex:74: Paragraph ended before \addvspace was complete.
-<to be read again> 
-                   \par 
-l.74     \end{tcolorbox}
-                        
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-./main.tex:74: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.74     \end{tcolorbox}
-                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./main.tex:74: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.74     \end{tcolorbox}
-                        
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./main.tex:74: Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.74     \end{tcolorbox}
-                        
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-<images/1.png, id=200, 1361.085pt x 676.5275pt>
+<images/1.png, id=235, 1361.085pt x 676.5275pt>
 File: images/1.png Graphic file (type png)
 <use images/1.png>
 Package pdftex.def Info: images/1.png  used on input line 78.
@@ -1112,49 +1026,6 @@ Type  H <return>  for immediate help.
 l.100     \begin{tcolorbox}[rouge]
                                   
 (That was another \errmessage.)
-
-Runaway argument?
-{\glueexpr 10pt 
-./main.tex:102: Paragraph ended before \addvspace was complete.
-<to be read again> 
-                   \par 
-l.102     \end{tcolorbox}
-                         
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-./main.tex:102: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.102     \end{tcolorbox}
-                         
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./main.tex:102: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.102     \end{tcolorbox}
-                         
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./main.tex:102: Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.102     \end{tcolorbox}
-                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
 
 
 ./main.tex:105: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
@@ -1405,14 +1276,14 @@ Underfull \hbox (badness 1472) in paragraph at lines 236--237
 []\T1/cmr/m/n/10 There is com-plelety dif-fer-ent ad-dress spaces, threads com-mu-ni-cate via send-
  []
 
-<images/6.png, id=250, 485.815pt x 354.32375pt>
+<images/6.png, id=285, 485.815pt x 354.32375pt>
 File: images/6.png Graphic file (type png)
 <use images/6.png>
 Package pdftex.def Info: images/6.png  used on input line 248.
 (pdftex.def)             Requested size: 184.9429pt x 134.88231pt.
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 249.
-<images/7.png, id=251, 311.1625pt x 195.73125pt>
+<images/7.png, id=286, 311.1625pt x 195.73125pt>
 File: images/7.png Graphic file (type png)
 <use images/7.png>
 Package pdftex.def Info: images/7.png  used on input line 252.
@@ -1446,61 +1317,18 @@ l.275     \begin{tcolorbox}[rouge]
                                   
 (That was another \errmessage.)
 
-Runaway argument?
-{\glueexpr 10pt 
-./main.tex:295: Paragraph ended before \addvspace was complete.
-<to be read again> 
-                   \par 
-l.295     \end{tcolorbox}
-                         
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-./main.tex:295: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.295     \end{tcolorbox}
-                         
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./main.tex:295: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.295     \end{tcolorbox}
-                         
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./main.tex:295: Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.295     \end{tcolorbox}
-                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
 [7]
-<images/9.png, id=263, 712.6625pt x 372.39125pt>
+<images/9.png, id=298, 712.6625pt x 372.39125pt>
 File: images/9.png Graphic file (type png)
 <use images/9.png>
 Package pdftex.def Info: images/9.png  used on input line 299.
 (pdftex.def)             Requested size: 256.0748pt x 133.80504pt.
-<images/10.png, id=264, 860.21375pt x 367.3725pt>
+<images/10.png, id=299, 860.21375pt x 367.3725pt>
 File: images/10.png Graphic file (type png)
 <use images/10.png>
 Package pdftex.def Info: images/10.png  used on input line 303.
 (pdftex.def)             Requested size: 256.0748pt x 109.36053pt.
-<images/11.png, id=265, 631.35875pt x 417.56pt>
+<images/11.png, id=300, 631.35875pt x 417.56pt>
 File: images/11.png Graphic file (type png)
 <use images/11.png>
 Package pdftex.def Info: images/11.png  used on input line 309.
@@ -1533,50 +1361,20 @@ l.320     \begin{tcolorbox}[rouge]
                                   
 (That was another \errmessage.)
 
-Runaway argument?
-{\glueexpr 10pt 
-./main.tex:336: Paragraph ended before \addvspace was complete.
-<to be read again> 
-                   \par 
-l.336     \end{tcolorbox}
-                         \\
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
 
-./main.tex:336: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.336     \end{tcolorbox}
-                         \\
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
+./main.tex:337: LaTeX Error: There's no line here to end.
 
-./main.tex:336: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.336     \end{tcolorbox}
-                         \\
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.337     E
+           xample:
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
-./main.tex:336: Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.336     \end{tcolorbox}
-                         \\
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-<images/12.png, id=273, 909.3975pt x 368.37625pt>
+<images/12.png, id=308, 909.3975pt x 368.37625pt>
 File: images/12.png Graphic file (type png)
 <use images/12.png>
 Package pdftex.def Info: images/12.png  used on input line 339.
@@ -1592,7 +1390,7 @@ l.341     \begin{tcolorbox}[vert]
                                  
 (That was another \errmessage.)
 
-<images/13.png, id=274, 489.83pt x 182.6825pt>
+<images/13.png, id=309, 489.83pt x 182.6825pt>
 File: images/13.png Graphic file (type png)
 <use images/13.png>
 Package pdftex.def Info: images/13.png  used on input line 346.
@@ -1614,12 +1412,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 350--353
 
  []
 
-<images/14.png, id=281, 685.56125pt x 235.88126pt>
+<images/14.png, id=316, 685.56125pt x 235.88126pt>
 File: images/14.png Graphic file (type png)
 <use images/14.png>
 Package pdftex.def Info: images/14.png  used on input line 355.
 (pdftex.def)             Requested size: 256.0748pt x 88.10971pt.
-<images/15.png, id=282, 277.035pt x 401.5pt>
+<images/15.png, id=317, 277.035pt x 401.5pt>
 File: images/15.png Graphic file (type png)
 <use images/15.png>
 Package pdftex.def Info: images/15.png  used on input line 359.
@@ -1783,7 +1581,7 @@ l.446     \begin{tcolorbox}[gris]
 (That was another \errmessage.)
 
 [11]
-<images/16.png, id=347, 870.25125pt x 318.18875pt>
+<images/16.png, id=382, 870.25125pt x 318.18875pt>
 File: images/16.png Graphic file (type png)
 <use images/16.png>
 Package pdftex.def Info: images/16.png  used on input line 451.
@@ -1831,12 +1629,12 @@ l.469     \begin{tcolorbox}[violet]
                                    
 (That was another \errmessage.)
 
-<images/17.png, id=348, 673.51625pt x 346.29375pt>
+<images/17.png, id=383, 673.51625pt x 346.29375pt>
 File: images/17.png Graphic file (type png)
 <use images/17.png>
 Package pdftex.def Info: images/17.png  used on input line 473.
 (pdftex.def)             Requested size: 256.0748pt x 131.66168pt.
-<images/18.png, id=349, 563.10374pt x 228.855pt>
+<images/18.png, id=384, 563.10374pt x 228.855pt>
 File: images/18.png Graphic file (type png)
 <use images/18.png>
 Package pdftex.def Info: images/18.png  used on input line 478.
@@ -1846,7 +1644,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 480--481
 
  []
 
-<images/19.png, id=350, 668.4975pt x 187.70125pt>
+<images/19.png, id=385, 668.4975pt x 187.70125pt>
 File: images/19.png Graphic file (type png)
 <use images/19.png>
 Package pdftex.def Info: images/19.png  used on input line 482.
@@ -1980,7 +1778,7 @@ l.523     \begin{tcolorbox}[gris]
 (That was another \errmessage.)
 
 [13 <./images/19.png>]
-<images/20.png, id=398, 1526.70375pt x 504.88625pt>
+<images/20.png, id=433, 1526.70375pt x 504.88625pt>
 File: images/20.png Graphic file (type png)
 <use images/20.png>
 Package pdftex.def Info: images/20.png  used on input line 531.
@@ -1996,49 +1794,6 @@ Type  H <return>  for immediate help.
 l.533     \begin{tcolorbox}[rouge]
                                   
 (That was another \errmessage.)
-
-Runaway argument?
-{\glueexpr 10pt 
-./main.tex:541: Paragraph ended before \addvspace was complete.
-<to be read again> 
-                   \par 
-l.541     \end{tcolorbox}
-                         
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-./main.tex:541: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.541     \end{tcolorbox}
-                         
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./main.tex:541: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.541     \end{tcolorbox}
-                         
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./main.tex:541: Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.541     \end{tcolorbox}
-                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
 
 
 ./main.tex:542: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
@@ -2123,7 +1878,7 @@ l.565     \begin{tcolorbox}[gris]
                                  
 (That was another \errmessage.)
 
-<images/21.png, id=399, 1474.50874pt x 642.4pt>
+<images/21.png, id=434, 1474.50874pt x 642.4pt>
 File: images/21.png Graphic file (type png)
 <use images/21.png>
 Package pdftex.def Info: images/21.png  used on input line 578.
@@ -2198,7 +1953,7 @@ l.600     \begin{tcolorbox}[vert]
                                  
 (That was another \errmessage.)
 
-<images/22.png, id=416, 1254.6875pt x 290.08376pt>
+<images/22.png, id=451, 1254.6875pt x 290.08376pt>
 File: images/22.png Graphic file (type png)
 <use images/22.png>
 Package pdftex.def Info: images/22.png  used on input line 607.
@@ -2214,51 +1969,8 @@ l.610     \begin{tcolorbox}[rouge]
                                   
 (That was another \errmessage.)
 
-Runaway argument?
-{\glueexpr 10pt 
-./main.tex:618: Paragraph ended before \addvspace was complete.
-<to be read again> 
-                   \par 
-l.618     \end{tcolorbox}
-                         
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-./main.tex:618: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.618     \end{tcolorbox}
-                         
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./main.tex:618: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.618     \end{tcolorbox}
-                         
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./main.tex:618: Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.618     \end{tcolorbox}
-                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
 [15 <./images/21.png> <./images/22.png>]
-<images/23.png, id=425, 1541.76pt x 432.61626pt>
+<images/23.png, id=461, 1541.76pt x 432.61626pt>
 File: images/23.png Graphic file (type png)
 <use images/23.png>
 Package pdftex.def Info: images/23.png  used on input line 622.
@@ -2321,7 +2033,7 @@ l.652     \begin{tcolorbox}[vert]
                                  
 (That was another \errmessage.)
 
-<images/24.png, id=427, 1111.15125pt x 363.3575pt>
+<images/24.png, id=463, 1111.15125pt x 363.3575pt>
 File: images/24.png Graphic file (type png)
 <use images/24.png>
 Package pdftex.def Info: images/24.png  used on input line 657.
@@ -2582,49 +2294,6 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 778.
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 778.
 
-Runaway argument?
-{\glueexpr 10pt 
-./main.tex:779: Paragraph ended before \addvspace was complete.
-<to be read again> 
-                   \par 
-l.779     \end{tcolorbox}
-                         
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-./main.tex:779: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.779     \end{tcolorbox}
-                         
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./main.tex:779: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.779     \end{tcolorbox}
-                         
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./main.tex:779: Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.779     \end{tcolorbox}
-                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
 [18]
 
 ./main.tex:784: Package Listings Error: Couldn't load requested style.
@@ -2688,7 +2357,7 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 806.
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 806.
 
-<images/25.png, id=504, 1490.56876pt x 688.5725pt>
+<images/25.png, id=539, 1490.56876pt x 688.5725pt>
 File: images/25.png Graphic file (type png)
 <use images/25.png>
 Package pdftex.def Info: images/25.png  used on input line 810.
@@ -2771,7 +2440,7 @@ Underfull \hbox (badness 1424) in paragraph at lines 839--839
 []\T1/cmr/m/n/10 It sends the same data to all
  []
 
-<images/26.png, id=505, 1066.98625pt x 376.40625pt>
+<images/26.png, id=540, 1066.98625pt x 376.40625pt>
 File: images/26.png Graphic file (type png)
 <use images/26.png>
 Package pdftex.def Info: images/26.png  used on input line 840.
@@ -2779,27 +2448,27 @@ Package pdftex.def Info: images/26.png  used on input line 840.
 Package mdframed Info: Not enough space on this page on input line 841.
 [19 <./images/25.png>]
 Package mdframed Info: Not enough space on this page on input line 841.
-<images/27.png, id=535, 1007.765pt x 365.365pt>
+<images/27.png, id=571, 1007.765pt x 365.365pt>
 File: images/27.png Graphic file (type png)
 <use images/27.png>
 Package pdftex.def Info: images/27.png  used on input line 844.
 (pdftex.def)             Requested size: 199.16928pt x 72.20757pt.
-<images/28.png, id=536, 1016.79875pt x 381.425pt>
+<images/28.png, id=572, 1016.79875pt x 381.425pt>
 File: images/28.png Graphic file (type png)
 <use images/28.png>
 Package pdftex.def Info: images/28.png  used on input line 848.
 (pdftex.def)             Requested size: 199.16928pt x 74.71222pt.
-<images/29.png, id=537, 1122.1925pt x 435.6275pt>
+<images/29.png, id=573, 1122.1925pt x 435.6275pt>
 File: images/29.png Graphic file (type png)
 <use images/29.png>
 Package pdftex.def Info: images/29.png  used on input line 852.
 (pdftex.def)             Requested size: 199.16928pt x 77.31279pt.
-<images/30.png, id=538, 1062.97125pt x 429.605pt>
+<images/30.png, id=574, 1062.97125pt x 429.605pt>
 File: images/30.png Graphic file (type png)
 <use images/30.png>
 Package pdftex.def Info: images/30.png  used on input line 856.
 (pdftex.def)             Requested size: 199.16928pt x 80.49173pt.
-<images/31.png, id=539, 1063.975pt x 454.69875pt>
+<images/31.png, id=575, 1063.975pt x 454.69875pt>
 File: images/31.png Graphic file (type png)
 <use images/31.png>
 Package pdftex.def Info: images/31.png  used on input line 860.
@@ -3308,50 +2977,7 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 894.
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 894.
 
-Runaway argument?
-{\glueexpr 10pt 
-./main.tex:896: Paragraph ended before \addvspace was complete.
-<to be read again> 
-                   \par 
-l.896     \end{tcolorbox}
-                         
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-./main.tex:896: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.896     \end{tcolorbox}
-                         
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./main.tex:896: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.896     \end{tcolorbox}
-                         
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./main.tex:896: Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.896     \end{tcolorbox}
-                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-<images/32.png, id=549, 526.96875pt x 464.73625pt>
+<images/32.png, id=585, 526.96875pt x 464.73625pt>
 File: images/32.png Graphic file (type png)
 <use images/32.png>
 Package pdftex.def Info: images/32.png  used on input line 900.
@@ -3381,7 +3007,7 @@ l.914     \begin{tcolorbox}[violet]
                                    
 (That was another \errmessage.)
 
-<images/33.png, id=568, 816.04875pt x 504.88625pt>
+<images/33.png, id=603, 816.04875pt x 504.88625pt>
 File: images/33.png Graphic file (type png)
 <use images/33.png>
 Package pdftex.def Info: images/33.png  used on input line 923.
@@ -3397,12 +3023,12 @@ l.925     \begin{tcolorbox}[vert]
                                  
 (That was another \errmessage.)
 
-<images/35.png, id=569, 700.6175pt x 324.21124pt>
+<images/35.png, id=604, 700.6175pt x 324.21124pt>
 File: images/35.png Graphic file (type png)
 <use images/35.png>
 Package pdftex.def Info: images/35.png  used on input line 937.
 (pdftex.def)             Requested size: 227.62204pt x 105.33276pt.
-<images/34.png, id=570, 503.8825pt x 283.0575pt>
+<images/34.png, id=605, 503.8825pt x 283.0575pt>
 File: images/34.png Graphic file (type png)
 <use images/34.png>
 Package pdftex.def Info: images/34.png  used on input line 945.
@@ -3838,7 +3464,7 @@ l.951     \begin{tcolorbox}[vert]
                                  
 (That was another \errmessage.)
 
-<images/36.png, id=579, 640.3925pt x 252.945pt>
+<images/36.png, id=614, 640.3925pt x 252.945pt>
 File: images/36.png Graphic file (type png)
 <use images/36.png>
 Package pdftex.def Info: images/36.png  used on input line 955.
@@ -3865,7 +3491,7 @@ l.964     \begin{tcolorbox}[vert]
                                  
 (That was another \errmessage.)
 
-<images/37.png, id=580, 479.7925pt x 109.40875pt>
+<images/37.png, id=615, 479.7925pt x 109.40875pt>
 File: images/37.png Graphic file (type png)
 <use images/37.png>
 Package pdftex.def Info: images/37.png  used on input line 969.
@@ -3886,7 +3512,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 977--977
 []\T1/cmr/m/n/10 Synchronization in-struc-tions are
  []
 
-<images/38.png, id=581, 501.875pt x 460.72125pt>
+<images/38.png, id=616, 501.875pt x 460.72125pt>
 File: images/38.png Graphic file (type png)
 <use images/38.png>
 Package pdftex.def Info: images/38.png  used on input line 979.
@@ -3916,49 +3542,6 @@ l.994     \begin{tcolorbox}[rouge]
                                   
 (That was another \errmessage.)
 
-Runaway argument?
-{\glueexpr 10pt 
-./main.tex:998: Paragraph ended before \addvspace was complete.
-<to be read again> 
-                   \par 
-l.998     \end{tcolorbox}
-                         
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-./main.tex:998: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.998     \end{tcolorbox}
-                         
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./main.tex:998: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.998     \end{tcolorbox}
-                         
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./main.tex:998: Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.998     \end{tcolorbox}
-                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
 
 ./main.tex:1006: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -3982,12 +3565,12 @@ l.1010     \begin{tcolorbox}[gris]
 (That was another \errmessage.)
 
 [24 <./images/38.png>]
-<images/39.png, id=597, 295.1025pt x 433.62pt>
+<images/39.png, id=632, 295.1025pt x 433.62pt>
 File: images/39.png Graphic file (type png)
 <use images/39.png>
 Package pdftex.def Info: images/39.png  used on input line 1023.
 (pdftex.def)             Requested size: 113.81102pt x 167.23203pt.
-<images/40.png, id=598, 246.9225pt x 215.80624pt>
+<images/40.png, id=633, 246.9225pt x 215.80624pt>
 File: images/40.png Graphic file (type png)
 <use images/40.png>
 Package pdftex.def Info: images/40.png  used on input line 1027.
@@ -4126,49 +3709,6 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 1080
 
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 1081.
-Runaway argument?
-{\glueexpr 10pt 
-./main.tex:1082: Paragraph ended before \addvspace was complete.
-<to be read again> 
-                   \par 
-l.1082     \end{tcolorbox}
-                          
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-./main.tex:1082: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.1082     \end{tcolorbox}
-                          
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./main.tex:1082: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.1082     \end{tcolorbox}
-                          
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./main.tex:1082: Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.1082     \end{tcolorbox}
-                          
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
 
 ./main.tex:1083: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
 
@@ -4211,31 +3751,536 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 1100
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 1100.
 
-[26] (./main.aux)
+
+./main.tex:1104: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1104 \begin{tcolorbox}[vert]
+                              
+(That was another \errmessage.)
+
+
+./main.tex:1110: Package Listings Error: Couldn't load requested style.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1110         \begin{Ccode}
+                            
+The following styles weren't loadable:
+    ,myc$
+This may cause errors in the sequel.
+
+
+./main.tex:1110: Package Listings Error: style myc undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1110         \begin{Ccode}
+                            
+The style is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 1116.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 1116.
+
+
+./main.tex:1120: Package Listings Error: Couldn't load requested style.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1120         \begin{Ccode}
+                            
+The following styles weren't loadable:
+    ,myc$
+This may cause errors in the sequel.
+
+
+./main.tex:1120: Package Listings Error: style myc undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1120         \begin{Ccode}
+                            
+The style is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 1126.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 1126.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1108--1129
+[]$[]$ $[]$
+ []
+
+
+./main.tex:1137: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1137 \begin{tcolorbox}[gris]
+                              
+(That was another \errmessage.)
+
+
+./main.tex:1147: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1147 \begin{tcolorbox}[gris]
+                              
+(That was another \errmessage.)
+
+[26]
+
+./main.tex:1157: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1157     \begin{tcolorbox}[violet]
+                                    
+(That was another \errmessage.)
+
+
+./main.tex:1171: Package Listings Error: Couldn't load requested style.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1171     \begin{Ccode}
+                        
+The following styles weren't loadable:
+    ,myc$
+This may cause errors in the sequel.
+
+
+./main.tex:1171: Package Listings Error: style myc undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1171     \begin{Ccode}
+                        
+The style is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 1180.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 1180.
+
+
+./main.tex:1183: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1183     \begin{tcolorbox}[rouge]
+                                   
+(That was another \errmessage.)
+
+
+./main.tex:1186: Package Listings Error: Couldn't load requested style.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1186     \begin{Ccode}
+                        
+The following styles weren't loadable:
+    ,myc$
+This may cause errors in the sequel.
+
+
+./main.tex:1186: Package Listings Error: style myc undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1186     \begin{Ccode}
+                        
+The style is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 1194.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 1194.
+
+
+Underfull \hbox (badness 3049) in paragraph at lines 1195--1195
+[]\T1/cmr/m/n/10 We need a new processor-to-
+ []
+
+
+Underfull \hbox (badness 1286) in paragraph at lines 1195--1195
+\T1/cmr/m/n/10 cache trans-ac-tion in cache co-
+ []
+
+<images/41.png, id=684, 293.095pt x 495.8525pt>
+File: images/41.png Graphic file (type png)
+<use images/41.png>
+Package pdftex.def Info: images/41.png  used on input line 1197.
+(pdftex.def)             Requested size: 71.13188pt x 120.33865pt.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 1199.
+[27]
+<images/42.png, id=707, 991.705pt x 607.26875pt>
+File: images/42.png Graphic file (type png)
+<use images/42.png>
+Package pdftex.def Info: images/42.png  used on input line 1206.
+(pdftex.def)             Requested size: 199.16928pt x 121.96123pt.
+
+Overfull \hbox (42.09981pt too wide) in paragraph at lines 1206--1206
+ [] 
+ []
+
+<images/43.png, id=708, 985.6825pt x 590.205pt>
+File: images/43.png Graphic file (type png)
+<use images/43.png>
+Package pdftex.def Info: images/43.png  used on input line 1208.
+(pdftex.def)             Requested size: 213.39566pt x 127.77415pt.
+
+./main.tex:1213: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1213     \begin{tcolorbox}[rouge]
+                                   
+(That was another \errmessage.)
+
+
+./main.tex:1216: Package Listings Error: Couldn't load requested style.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216         \begin{Ccode}
+                            
+The following styles weren't loadable:
+    ,myc$
+This may cause errors in the sequel.
+
+
+./main.tex:1216: Package Listings Error: style myc undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1216         \begin{Ccode}
+                            
+The style is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 1227.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 1227.
+
+<images/44.png, id=709, 1209.51875pt x 681.54625pt>
+File: images/44.png Graphic file (type png)
+<use images/44.png>
+Package pdftex.def Info: images/44.png  used on input line 1232.
+(pdftex.def)             Requested size: 341.43306pt x 192.39157pt.
+[28 <./images/41.png> <./images/42.png> <./images/43.png>]
+
+./main.tex:1236: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1236     \begin{tcolorbox}[rouge]
+                                   
+(That was another \errmessage.)
+
+
+./main.tex:1244: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1244     \begin{tcolorbox}[rouge]
+                                   
+(That was another \errmessage.)
+
+
+./main.tex:1249: Package Listings Error: Couldn't load requested style.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1249     \begin{Ccode}
+                        
+The following styles weren't loadable:
+    ,myc$
+This may cause errors in the sequel.
+
+
+./main.tex:1249: Package Listings Error: style myc undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1249     \begin{Ccode}
+                        
+The style is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 1260.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 1260.
+
+
+./main.tex:1261: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1261     \begin{tcolorbox}[violet]
+                                    
+(That was another \errmessage.)
+
+
+./main.tex:1266: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1266     \begin{tcolorbox}[gris]
+                                  
+(That was another \errmessage.)
+
+[29 <./images/44.png>]
+<images/45.png, id=742, 589.20125pt x 305.14pt>
+File: images/45.png Graphic file (type png)
+<use images/45.png>
+Package pdftex.def Info: images/45.png  used on input line 1278.
+(pdftex.def)             Requested size: 113.81102pt x 58.941pt.
+
+
+./main.tex:1280: Package Listings Error: Couldn't load requested style.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1280         \begin{Ccode}
+                            
+The following styles weren't loadable:
+    ,myc$
+This may cause errors in the sequel.
+
+
+./main.tex:1280: Package Listings Error: style myc undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1280         \begin{Ccode}
+                            
+The style is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 1290.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 1290.
+
+<images/46.png, id=743, 529.98pt x 282.05376pt>
+File: images/46.png Graphic file (type png)
+<use images/46.png>
+Package pdftex.def Info: images/46.png  used on input line 1296.
+(pdftex.def)             Requested size: 113.81102pt x 60.5672pt.
+
+./main.tex:1298: Package Listings Error: Couldn't load requested style.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1298         \begin{Ccode}
+                            
+The following styles weren't loadable:
+    ,myc$
+This may cause errors in the sequel.
+
+
+./main.tex:1298: Package Listings Error: style myc undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1298         \begin{Ccode}
+                            
+The style is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 1308.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 1308.
+
+<images/47.png, id=744, 1118.1775pt x 522.95375pt>
+File: images/47.png Graphic file (type png)
+<use images/47.png>
+Package pdftex.def Info: images/47.png  used on input line 1311.
+(pdftex.def)             Requested size: 284.52756pt x 133.06816pt.
+<images/48.png, id=745, 984.67876pt x 70.2625pt>
+File: images/48.png Graphic file (type png)
+<use images/48.png>
+Package pdftex.def Info: images/48.png  used on input line 1316.
+(pdftex.def)             Requested size: 284.52756pt x 20.30269pt.
+
+./main.tex:1320: Package pgfkeys Error: Choice 'none' unknown in choice key '/tcb/sharp corners'. I am going to ignore this key.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1320     \begin{tcolorbox}[violet]
+                                    
+(That was another \errmessage.)
+
+[30 <./images/45.png> <./images/46.png> <./images/47.png> <./images/48.png>]
+
+./main.tex:1337: Package Listings Error: Couldn't load requested style.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1337     \begin{Ccode}
+                        
+The following styles weren't loadable:
+    ,myc$
+This may cause errors in the sequel.
+
+
+./main.tex:1337: Package Listings Error: style myc undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1337     \begin{Ccode}
+                        
+The style is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 1343.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 1343.
+
+
+./main.tex:1348: Package Listings Error: Couldn't load requested style.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1348 \begin{Ccode}
+                    
+The following styles weren't loadable:
+    ,myc$
+This may cause errors in the sequel.
+
+
+./main.tex:1348: Package Listings Error: style myc undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1348 \begin{Ccode}
+                    
+The style is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 1354.
+
+
+Package varwidth Warning: Failed to reprocess entire contents on input line 1354.
+
+
+Overfull \hbox (2.22168pt too wide) in paragraph at lines 1334--1357
+[]$[]$ $[]$
+ []
+
+<images/49.png, id=773, 1059.96pt x 414.54875pt>
+File: images/49.png Graphic file (type png)
+<use images/49.png>
+Package pdftex.def Info: images/49.png  used on input line 1358.
+(pdftex.def)             Requested size: 256.0748pt x 100.15158pt.
+[31 <./images/49.png>] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 713C3A25A473D994932FBA0001F6966B;3907.
+(rerunfilecheck)             Checksum: 4D88D736D1E5E949AA0088B53C1D59AC;4932.
  ) 
 Here is how much of TeX's memory you used:
- 32036 strings out of 469486
- 636795 string characters out of 5469658
+ 32286 strings out of 469486
+ 640466 string characters out of 5469658
  1504433 words of memory out of 5000000
- 59855 multiletter control sequences out of 15000+600000
- 645976 words of font info for 84 fonts, out of 8000000 for 9000
+ 60018 multiletter control sequences out of 15000+600000
+ 646662 words of font info for 85 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  131i,12n,135p,528b,1777s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfit0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on main.pdf (27 pages, 2105847 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfit0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
+Output written on main.pdf (32 pages, 2591683 bytes).
 PDF statistics:
- 796 PDF objects out of 1000 (max. 8388607)
- 623 compressed objects within 7 object streams
- 305 named destinations out of 1000 (max. 500000)
- 540 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 968 PDF objects out of 1000 (max. 8388607)
+ 769 compressed objects within 8 object streams
+ 391 named destinations out of 1000 (max. 500000)
+ 641 words of extra memory for PDF output out of 10000 (max. 10000000)
 
