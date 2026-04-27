@@ -32,3 +32,6 @@
 \contentsline {subsubsection}{\numberline {8.1.3}TS with exponential back-off}{29}{subsubsection.8.1.3}%
 \contentsline {subsubsection}{\numberline {8.1.4}Load-locked and store-conditional}{29}{subsubsection.8.1.4}%
 \contentsline {subsubsection}{\numberline {8.1.5}Coarse/fine-grained locking}{30}{subsubsection.8.1.5}%
+\contentsline {section}{\numberline {9}Concurrency control}{31}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Deadlocks}{31}{subsection.9.1}%
+\contentsline {subsubsection}{\numberline {9.1.1}Detection}{32}{subsubsection.9.1.1}%

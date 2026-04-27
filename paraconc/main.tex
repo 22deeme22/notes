@@ -1347,16 +1347,116 @@ synchronized(objA){
 \begin{codeCenter}
 \begin{Ccode}
 // P1
-objB = tbl.get(2);
+objB = tbl.get(1);
 synchronized(objA){
     synchronized(objB){
 \end{Ccode}
 \end{codeCenter}
 \end{minipage}
 Then,
+
+\hypertarget{lock}{}
 \begin{center}
 \includegraphics[width=9cm]{images/49.png}
 \end{center}
+\section{Concurrency control}
+\subsection{Deadlocks}
+Many things can block the process, lets focus on deadlocks and livelocks. We already seen what a deadlock is on the \hyperlink{lock}{\textit{diagram just above}}. We can spot deadlocks by looking at what are the necessary and sufficient conditions for deadlocks.
+    \begin{tcolorbox}[gris]
+        If any of these four properties are missing, deadlock will not happen:
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item Mutual exclusion: the system has resources protected by locks, 
+
+                We can't be prevent this property from being true in modern systems, it's essential to prevent data corruption and data races.
+            \item Hold and wait: hold a resource and wait for another,
+
+                \begin{image}{
+                        We saw this example in the \hyperlink{lock}{\textit{diagram above}}.
+                    }
+                    \begin{codeCenter}
+                    \begin{Ccode}
+objA = tbl.get(1);
+objB = tb1.get(2);
+synchronized(objA){
+    synchronized(objB){
+        ...
+                    \end{Ccode}
+                    \end{codeCenter}
+                \end{image}
+                \begin{image}{A possible solution is to say that a thread must acquire all resources before it runs. In our example it would be like going from fine-grained locking to coarse-grained locking.}
+                    \begin{codeCenter}
+                    \begin{Ccode}
+// Lock the entire hash table
+synchronized(tbl) { 
+    objA = tbl.get(1);
+    objB = tb1.get(2);
+    ...
+}
+                    \end{Ccode}
+                    \end{codeCenter}
+                    
+                \end{image}
+            \item No pre-emption: there is no way for B to ``seize the lock'' from A,
+
+                This leads to problems such as priority inversion as discussed earlier. A possible solution is to allocate priority to threads so higher priority thread can pre-empt lower priority thread and steal resources. But this approach is generally unsafe, several problems can arise like data corruption or performance overhead.
+            \item Cycling waiting: A waits for B, B waits for A,
+
+                This is the easiest and most practical to ensure this property never holds. A solution is to only allow acquiring locks in a fixed order, it means that if two objects A and B needs resources A and B, we say that both will first get (or try to get) A, and only then B. In \hyperlink{locks}{\textit{our example}}, both processors would have \lstinline!objA = tbl.get(1);!. 
+        \end{itemize}
+    \end{tcolorbox}
+        \textbf{Challenges and applications:}
+
+        Processes often don't know ahead of time which resources to lock, the programmer must ensure code follows ordering. Ordering locks often applied to list-like data structures, when the elements to lock are bounded, for example: multiple threads accessing a single array, sort the elements of the array in some order and allow threads to lock the elemts one by one in the order. This is a very popular approach that we found inside the linux kernel.
+        
+    \subsubsection{Detection}
+        Sometimes we can't prevent deadlocks, then, the second best approach is to detect it and kill procceses involved in the deadlock. Thgis approach require two things: an algorithm to detect deadlocks and an algorithm to recover from a deadlock.
+        \begin{tcolorbox}[vert]
+            A \important{resource allocation graph (RAG)} is a graph where: nodes are either resources or threads, a resource node can have multiple units and there is directed edges between threads and resource. If RAG has o directed cycle, the current state is deadlock-free. If RAG has a directed cycle: if there is only one unit per resource, there is a deadlock, for multiple units per resource, there is a possibiliy of deadlock.
+        \end{tcolorbox}
+        Let's see the notation of the one unit per resource case.
+        \begin{center}
+        \includegraphics[width=10cm]{images/50.png}
+        \end{center}
+        \begin{image}{On this graph, we can see that there is a directed cycle, then the system is deadlocked!}
+            \begin{center}
+            \includegraphics[width=8cm]{images/51.png}
+            \end{center}
+        \end{image}
+        Let's see the notation of the multiple unit per resource case.
+        \begin{center}
+        \includegraphics[width=10cm]{images/52.png}
+        \end{center}
+        \begin{image}{In this graph there is two directed cycle, but there may or may not be a deadlock. Let's check.}
+            \includegraphics[width=8cm]{images/53.png
+        }
+        \end{image}
+        Let's go step by step:
+        \begin{enumerate}
+            \item P4 can execute and free up resource, we can remove it from the graph, 
+            \item P3 can now use R5, which has free unit, 
+            \item P3 will execute next and can be removed from the graph, 
+            \item P1 can now use R1 and P2 can use R3, 
+            \item Both P1 and P2 can execute and be removed from the graph,
+            \item Finally P0 execute.
+        \end{enumerate}
+        So there is no deadlocks in this system!
+        \begin{tcolorbox}[violet]
+            Now that we know how to detect a deadlock, what to do next? We can either terminate the process or pre-empt it.
+            \begin{itemize}[left=10pt, label=\textbullet]
+                \item Process termination is easy to do (simply kill all deadlocked processes) but may run into data corruption issues. 
+                \item Process pre-emption is harder to do (must choose a fair victim and how much to rollback) but a more safer approach.
+            \end{itemize}
+        \end{tcolorbox}
+        Livelocks have the same four necessary and sufficient conditions for deadlocks apply.
+
+        Instead of witing difficult locking code, we can simply tell the runtime to make a section atomic. This is thanks to the hardware transactional memory (HTM). We only need to declare a variable so its updates will be atomic, language runtime fugires it all out.
+        
+        
+        
+        
+        
+    
+    
 
     
 
@@ -1364,7 +1464,7 @@ Then,
     
                         
     
-    
+        
     
 
     
