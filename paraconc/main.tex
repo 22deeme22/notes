@@ -1449,7 +1449,137 @@ synchronized(tbl) {
         \end{tcolorbox}
         Livelocks have the same four necessary and sufficient conditions for deadlocks apply.
 
+        
+    \subsection{Transactional memory}
         Instead of witing difficult locking code, we can simply tell the runtime to make a section atomic. This is thanks to the hardware transactional memory (HTM). We only need to declare a variable so its updates will be atomic, language runtime fugires it all out.
+        
+        \begin{tcolorbox}[vert]
+            A \important{memory transaction} is an atomic and isolated sequence of memory accesses, it's supported in hardware by processor and cache hierarchy.
+        \end{tcolorbox}
+        
+        \begin{tcolorbox}[vert]
+            \important{Transactional memory (TM)} have several properties:
+            \begin{itemize}[left=10pt, label=\textbullet]
+                \item Atomicity: upon transaction commit, all writes take effect at once and on transaction abort, no writes take effect. 
+                \item Isolation: no other processor can observe writes before commit. 
+                \item Serializability: transactions seem to commit in a single serial order but the exact order is not guaranteed.
+            \end{itemize}
+            Contrary to locks, transactions compose gracefully.
+        \end{tcolorbox}
+        We need some new instructions and hardware changes to implement TM.
+
+        \begin{tcolorbox}[gris]
+            Let's introduce three Intel Haswell intructions: \lstinline!xbegin! \textrightarrow start transaction, takes pointer to fallback address in case of abors, \lstinline!xend! \textrightarrow ends transaction, \lstinline!xabort! software initiated transaction abord.
+        \end{tcolorbox}
+        The CPU assume that no conflicts occur, it records every read and writes between \lstinline!xbegin! and \lstinline!xend! and every state is speculative (can be seen only by the core). Then the CPU checks for conflicts in the data structure (if another core is using same resources), for example, it sees a BusRdX or a BusInv matching a load (W/R) or a store (W/W) in LSQ. Check if there is another corner case (cache eviction, interruption, \ldots). Finally, on conflict, execute recovery code.
+        \begin{image}{Here is an code exemple}
+            \begin{codeCenter}
+            \begin{Ccode}
+xbegin recover
+ld r1, mem[obj]
+addi r1, #10
+st mem[obj], r1
+xend // commit trans.
+recover:
+br rec_handler
+            \end{Ccode}
+            \end{codeCenter}
+        \end{image}
+        We can observe two cases, the first one, successful:
+        \begin{image}{LD OBJ and ST OBJ hit in the cache, all state remains in the pipeline and we wait until we see XEND to start commiting.}
+            \begin{center}
+            \includegraphics[width=8cm]{images/54.png}
+            \end{center}
+        \end{image}
+        Let's see now a case with conflict:
+        \begin{image}{Here we assume hat OBJ is in S state. Then the store operations induce sending a BusInv to get to M state (can be called a store miss, we can't write immediately). We then flush all instructions and execute the jump to label ``recover'' given by the user.}
+            \begin{center}
+            \includegraphics[width=8cm]{images/55.png}
+            \end{center}
+        \end{image}
+        So we have to check for conflict at every operation by using coherence actions (BusRd, BusRdX, BusInv, etc\ldots).
+    \subsection{Point to point synchronization}
+        \begin{tcolorbox}[violet]
+        Let's recall flag-based synchronization:
+        
+        \vspace{0.8em}
+        \begin{minipage}{0.48\textwidth}
+            Thread 0:
+                \begin{codeCenter}
+                \begin{Ccode}
+// val = done = 0;
+val = expensive_func();
+done = 1;
+                \end{Ccode}
+                \end{codeCenter}
+            \end{minipage}
+            \begin{minipage}{0.48\textwidth}
+            Thread 1:
+                \begin{codeCenter}
+                \begin{Ccode}
+// done = 0;
+while(!done){ }
+... = val;
+                \end{Ccode}
+                \end{codeCenter}
+            \end{minipage}
+        \end{tcolorbox}
+        It assumes sequntial consistency!
+        \begin{tcolorbox}[vert]
+           \important{Barriers} introduce planned stalls in threads, like wait for all threads to read input before start. They use flags.
+        \end{tcolorbox}
+        Here is the idea behind the implementation of the barrier:
+        \begin{image}{
+                \begin{enumerate}[left=10pt]
+                    \item Clear the flag, tell all incoming threads to wait,
+                    \item Every arriving thread increments \lstinline!counter!, 
+                    \item Last thread sees \lstinline!counter == num\_threads!,
+                    \item Set the flag, all threads leave,
+                \end{enumerate}
+            }
+            \begin{codeCenter}
+            \begin{Ccode}
+struct Barrier_t {
+    Lock aLock;
+    int counter;
+    int flag;
+};
+            \end{Ccode}
+            \end{codeCenter}
+        \end{image}
+        \begin{tcolorbox}[rouge]
+        A basic implementation of this algorithm wouldn't work because some thread can arrive to a new barrier while others haven't left the one before, so there would be a deadlock. That's why we need to keep a private copy of the flag, the first thread to arrive writes its private copy (\lstinline!int local_sense = 0; //private!). It looks like this:
+        \begin{codeCenter}
+        \begin{Ccode}
+void senseBarrier(Barrier_t* b, int num_threads) {
+    local_sense = !(local_sense); // (Step 1)
+    lock(b->aLock);
+    int num_waiting = ++(b->counter); // (Step 2)
+    if( num_waiting == num_threads ) { // (Step 3)
+        unlock(b->aLock);
+        b->counter = 0;
+        b->flag = local_sense; // (Step 4)
+    } else {
+        unlock(b->aLock);
+        while( b->flag != local_sense ); // spin
+    }
+} 
+        \end{Ccode}
+        \end{codeCenter}
+        \end{tcolorbox}
+        
+        
+    
+        
+    
+    
+        
+        
+        
+        
+        
+        
+       
         
         
         
