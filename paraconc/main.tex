@@ -1606,41 +1606,124 @@ omp_init_lock(&lock);
 omp_destroy_lock(&lock);
         \end{Ccode}
         \end{codeCenter}
-        
-        
         \end{tcolorbox}
-        
-        
-        
-        
-    
-        
-    
-    
-        
-        
-        
-        
-        
-        
-       
-        
-        
-        
-        
-        
-    
-    
+\section{Context switching}
+    \begin{tcolorbox}[vert]
+        A \important{process} is running instance of a program and are independent of each other. Each process has its own virtual address space and they don't share any system resources. 
+    \end{tcolorbox}
+    Hundreds of processes can exist on a CPU but only few of them run in parallel at any given time. The OSS schedules and switches processes as needed, it gives the illusion of multi-tasking and allloes for concurrency (another process runs when one is blocked). For now, P in picture means process not processor.
+    \begin{center}
+        \includegraphics[width=10cm]{images/57.png}
+    \end{center}
+    \begin{tcolorbox}[vert]
+        A single process usually runs multiple \important{threads} at the same time. Threads are independent and can execute various functionality, each has its own programcounter, stack and variable values. Unlike processes, threads also share resources: the heap, the code and global data of the process are shared. All threads operate in the same virtual address space.
+    \end{tcolorbox}
+    \begin{center}
+        \includegraphics[width=5cm]{images/58.png}
+    \end{center}
+    We already saw OpenMP, which is simply an easy-to-use abstraction over Pthreads.
+    \begin{tcolorbox}[vert]
+        \important{POSIX threads (Pthreads)} are general-purpose threads. They are created, scheduled and managed by the kernel, these are also referred to as ``kernel'' threads. They offer fine-grained control over functionality, synchronization and scheduling.
+    \end{tcolorbox}
+    Many languages offer high-level thread libraries using Pthreads, \lstinline!thread! library in C++ for example, that can be used to build complex multi-threaded programs. Threads can also switch to avoid wasting cycles. 
 
-    
+    For example, in a web server, we can create a new thread everytime that we need to handle a new request, so thread 0 can continue to loop and listening for incoming requests. 
 
-        
-    
-                        
-    
-        
-    
+    Here is the code example:
+    \begin{codeCenter}
+    \begin{Ccode}
+struct Request {
+    ...
+};
+void handle_request(Request req) {
+    ...
+}
+int main() {
+    while (true) {
+        auto req = get_next_request();
+        if (req) {
+            std::thread t(handle_request, *req);
+            t.detach();
+        } else {
+            std::this_thread::sleep_for(std::chrono::milliseconds(50));
+        }
+    }
+    return 0;
+}
+    \end{Ccode}
+    \end{codeCenter}
+    \begin{image}{But now imagine we are running the web server on a CPU with four cores, at any given time, only three requests can be handled in parallel.}
+        \begin{center}
+        \includegraphics[width=5cm]{images/59.png}
+        \end{center}
+    \end{image}
+    If there is a high rate of incoming requests, the web server will spawn new threads to handle the new requests. These new threads will be locked behind the threads handling the old requests. Then, there is two options: wait for the threads executing the old requests to finish first or context switch threads!
+    \begin{tcolorbox}[rouge]
+    Let's see that requests can waste cycles. In this code,
+    \begin{codeCenter}
+    \begin{Ccode}
+struct Request {
+    int id, type;
+    std::string payload;
+};
 
+int hash_arr[N];
+void handle_request(Request req) {
+    if (req.type == 0) {
+        std::ofstream outfile("output.txt", std::ios::app);
+        outfile << "Request " << req.id << ": " << req.payload << "\n";
+        outfile.close();
+    } else if (req.type == 1) {
+        hash_arr[req.id] = calc_hash(req.payload);
+    }
+}
+    \end{Ccode}
+    \end{codeCenter}
+    We have two type of request: type 0 write the string into a file, type 1 compute the SHA hash of the string and store it. Writing a single line to a file can take between hundred $\mu s$ to $ms$. So a thread handling a type 0 request is simply IDLE during I/O \textrightarrow \space more than hundred $\mu$s are wasted per line.
+
+    By this time we could serviced around ten type 1 request. There is also threads executing type 1 requests that can get blocked behing threads executing type 0 requests that are wasting clock cycles.
+    \end{tcolorbox}
+    We already saw that parallellism is the ability to execute threads at the same time, to speed up a single task by splitting it amongst multiple threads. It exploits multiple cores. But what is really concurrency?
+    \begin{tcolorbox}[vert]
+        \important{Concurrency} is the ability to hide latency among blocked threads, to increase utilization of a core and throughput.
+    \end{tcolorbox}
+    \begin{center}
+        \includegraphics[width=8cm]{images/60.png} 
+    \end{center}
+    For our code with context switching the kernel would switches the thread with a ``ready'' thread. Once the I/O operation is done, the kernel swithces back the waiting thread. 
+
+    The kernel co-ordinates the switch: 
+    \begin{enumerate}
+        \item It saves the context of the current thread, 
+        \item Calls the scheduler algorithm to pick the next thread, 
+        \item Restores the context of the next thread.
+    \end{enumerate}
+    The context saved means that we that we save the ``state'' of a thread that mus be saved before a switch.
+    \begin{image}{You need to remember the PC (program counter) of the last executed instruction before the switch, here \lstinline!lw r6, O(r3)!, and also the value of all registers before the switch.}
+        \begin{codeCenter}
+        \begin{Ccode}
+lw r1, 0(r2)
+lw r6, 0(r3)
+
+/* Switch to a different thread */
+...
+/* Resume normal execution */
+
+mul r1, r1, r4
+add r6, r1, r6
+sw r6, 0(r3)
+        \end{Ccode}
+        \end{codeCenter}
+    \end{image}
+    There is no need to save shared resources, only the thread-private ones.
+
+    But context switching involves overhead. The explicit one: a syscall means letting the pipeline empty, use the trap table to jump to the syscall code, switch OS. We need also to dump the current threasd's context to memory, load the new thread's context and return from syscall, switch back to user. But there is also the implicit overhead: all microarchitectural state that is shared (branch tables, TLB, cache hierarchy) is affeted while a thread is running.
+
+    Considering all this overhead, context switching is only worth if the time to switch, run and switch back is less that IDLE time, knowing that a single switche between threads in Linux takes ~1-5 $\mu$s. 
+    
+    
+    
+    
     
 \end{document}
     

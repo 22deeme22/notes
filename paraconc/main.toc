@@ -37,3 +37,4 @@
 \contentsline {subsubsection}{\numberline {9.1.1}Detection}{32}{subsubsection.9.1.1}%
 \contentsline {subsection}{\numberline {9.2}Transactional memory}{34}{subsection.9.2}%
 \contentsline {subsection}{\numberline {9.3}Point to point synchronization}{35}{subsection.9.3}%
+\contentsline {section}{\numberline {10}Context switching}{37}{section.10}%
