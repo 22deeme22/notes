@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1777304359.38626 "main.tex" "main.pdf" "main" 1777304363.7248 2
+["pdflatex"] 1777369695.63927 "main.tex" "main.pdf" "main" 1777369699.8826 2
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1775415801 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1775415801 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbi1000.tfm" 1775415801 3072 e6fe53b666f9cbd66cb135c6fdea66d3 ""
@@ -283,13 +283,14 @@
   "images/53.png" 1777205294.51394 95521 1ae505a94162c2d1c421db21ecd4a738 ""
   "images/54.png" 1777301227.76792 21403 af242656b67c3deb0c81f4759a80a347 ""
   "images/55.png" 1777301489.59991 24312 a46ea601d3eddcde8faa94009c69ce0d ""
+  "images/56.png" 1777369038.90486 29665 e0a942db049b4b9e323d581c9b5f938e ""
   "images/6.png" 1772635937.96193 52656 73e335656383565b35ad0d5b86c55223 ""
   "images/7.png" 1772637823.638 185203 22d988bdecd5470c563bb724836b03d2 ""
   "images/9.png" 1772641157.82688 81845 fa7326fb9033f71c79b8192d328fd856 ""
-  "main.aux" 1777304363.44492 6896 f7c91cde6a72696999f83f360be70275 "pdflatex"
-  "main.out" 1777304363.44592 5668 a986fbdaeced11670afea041e57ef2e2 "pdflatex"
-  "main.tex" 1777304359.05492 80317 ccc5945fc39657a9cc664d6963f46127 ""
-  "main.toc" 1777304363.44592 3239 ae05047cbe48e38629576a8d873c9bdb "pdflatex"
+  "main.aux" 1777369699.59984 6896 f7c91cde6a72696999f83f360be70275 "pdflatex"
+  "main.out" 1777369699.60084 5668 a986fbdaeced11670afea041e57ef2e2 "pdflatex"
+  "main.tex" 1777369693.91284 82283 b5ce5e65adb72e8064c4861a26d21f27 ""
+  "main.toc" 1777369699.60084 3239 ae05047cbe48e38629576a8d873c9bdb "pdflatex"
   "mystyle.sty" 1777120294.23538 9426 1191d65ee33b18258950f6f8a597ee3e ""
   (generated)
   "main.aux"

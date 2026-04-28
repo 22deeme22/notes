@@ -1566,7 +1566,51 @@ void senseBarrier(Barrier_t* b, int num_threads) {
 } 
         \end{Ccode}
         \end{codeCenter}
+        \textbf{Traffic on bus:} $O\left(P\right)$, \space \space \textbf{Latency: }$O\left(P\right)$.
         \end{tcolorbox}
+        \begin{tcolorbox}[vert]
+            But we can achieve a $\log\left(P\right)$ latency with \important{combining trees}! The strategy is to acquire when the processor arrives at barrier, performs \lstinline!atomicIncr(parent.counter)!, and the process recurses to the root. The idea is that when every children of a parent are arrived, the parent (who is also a children) can increment its own parent, until we reach the root. 
+        \end{tcolorbox}
+        \begin{center}
+            \includegraphics[width=10cm]{images/56.png}
+        \end{center}
+        \begin{tcolorbox}[gris]
+            
+        
+        \textbf{Examples of locks in OpenMP:}
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item \lstinline!omp\_init\_lock(omp\_lock\_t *)! : initializes the lock variable passed, lock is not held by the initializing thread, 
+            \item \lstinline!omp\_destroy\_lock(omp\_lock\_t *)! : disassociates the given lock variable from any locks, 
+            \tem \lstinline!omp\_set\_lock(omp\_lock\_t *)! : waits until the lock is available, then acquires the lock, 
+            \item \lstinline!omp\_unset\_lock(omp\_lock\_t *)! : releases the lock, 
+            \item \lstinline!omp\_test\_lock(omp\_lock\_t *)! : attempts to set a lock, but does not block if the lock is unavailable.
+        \end{itemize} 
+        
+        \begin{codeCenter}
+        \begin{Ccode}
+omp_lock_t lock;
+omp_init_lock(&lock);
+
+#pragma omp parallel num_threads(4)
+{
+    int tid = omp_get_thread_num( );
+    int i;
+    for (i = 0; i < 3; ++i){
+        omp_set_lock(&lock);
+        printf("T %d: begin locked region\n", tid);
+        printf ("T %d: end locked region\n", tid);
+        omp_unset_lock(&lock);
+    }
+}
+
+omp_destroy_lock(&lock);
+        \end{Ccode}
+        \end{codeCenter}
+        
+        
+        \end{tcolorbox}
+        
+        
         
         
     
