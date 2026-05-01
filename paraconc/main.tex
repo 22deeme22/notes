@@ -1717,9 +1717,30 @@ sw r6, 0(r3)
     \end{image}
     There is no need to save shared resources, only the thread-private ones.
 
+    \begin{tcolorbox}[gris]
     But context switching involves overhead. The explicit one: a syscall means letting the pipeline empty, use the trap table to jump to the syscall code, switch OS. We need also to dump the current threasd's context to memory, load the new thread's context and return from syscall, switch back to user. But there is also the implicit overhead: all microarchitectural state that is shared (branch tables, TLB, cache hierarchy) is affeted while a thread is running.
 
     Considering all this overhead, context switching is only worth if the time to switch, run and switch back is less that IDLE time, knowing that a single switche between threads in Linux takes ~1-5 $\mu$s. 
+    \end{tcolorbox}
+    \subsection{User threads}
+    Only the kernel has permissions to schedule threads to run on cores. But using the kernel for switching is overkill. So an idea is to sepaarate the two requirements:
+    \begin{enumerate}[left=10pt]
+        \item Scheduling threads to run on cores - the kernel is needed. 
+        \item Switching between threads on the same core - we can actually do this on user threads.
+    \end{enumerate}
+    \begin{tcolorbox}[violet]
+    The creation of a thread is done by the function \lstinline!pthread_create()! that uses a syscall to ask the kernel to create the thread. To create a thread we need to:
+    \begin{itemize}[left=10pt, label=\textbullet]
+        \item Allocating a data structure to store the context (PC, SP, regs).
+        \item Allocating a stack.
+        \item Initializing the context.
+    \end{itemize}
+    \end{tcolorbox}
+    So now what if the user created threads instead of the kernel. A user thread library would handle tasks typically done by the kernel: create and manage threads, schedule which thread euns and when, save and restore context during switches.
+    \begin{tcolorbox}[vert]
+        A thread created entirely in user space is called a \important{user thread}. Thread scheduling happens then at the user level.
+    \end{tcolorbox}
+    At any given time, ony one usre thread can run on a core: the user thread either runs to completion or gets blocked. If the user thread gets blocked or completes execution,. it need to switch to another user thread. Previously, it was the kernel who detected blocked or completed threads, now it's not possible because the kernel is unaware of these user threads. SLIDE 12.
     
     
     
