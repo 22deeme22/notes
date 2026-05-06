@@ -18,7 +18,7 @@
 
 ### Bachelor semester 5
 
-- [Overleaf Introduction to quantum information processing](https://www.overleaf.com/read/hvmzmstfbxvy#74c869) | [Introduction to quantum information processing.pdf](https://github.com/22deeme22/notes/blob/main/quantum_inf_processing/main.pdf) Prof. Nicolas Macris & Yihui Quek
+- [Overleaf Introduction to quantum information processing](https://www.overleaf.com/read/hvmzmstfbxvy#74c869) | [Introduction to quantum information processing.pdf](https://github.com/22deeme22/notes/blob/main/qip/main.pdf) Prof. Nicolas Macris & Yihui Quek
   
 ### Contributing
 If by any chance someone is reading this line and find a typo or want to contribute to the notes don't hesitate to create an issue here.
