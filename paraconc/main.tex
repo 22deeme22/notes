@@ -2060,9 +2060,24 @@ class HashService:
         ...
     \end{Ccode}
     \end{codeCenter}
-
-                
     \end{tcolorbox}
+    In our server case, the \texttt{hash\_file} function is using \texttt{sha} function. So it will look like this:
+    \begin{center}
+        \includegraphics[width=9cm]{images/66.png}
+    \end{center}
+    We can't directly transfer data between stubs, because languages stores types in various formats in memory. So we have to do marshalling/unmarshalling.
+    \begin{tcolorbox}[vert]
+        \important{Marshalling} turn data from a memory representation into a representation that can be sent over the network. RPC unifies marshalling data for all servicees, once received RPC needs to be able to save it to memory again.
+    \end{tcolorbox}
+    \begin{tcolorbox}[vert]
+        \important{Unmarshalling} tunr data received from the network in an IDL representation into a memory representation of the receiving language.
+    \end{tcolorbox}
+    \begin{center}
+        \includegraphics[width=11cm]{images/67.png}
+    \end{center}
+    SLIDE 17
+    
+    
     
     
 
