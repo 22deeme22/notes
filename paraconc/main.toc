@@ -1,0 +1,42 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Metrics}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Iron Law}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Amdahl's law}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Different type of mean}{4}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Parallel computing}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Expressing parallelism}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Principles of parallel computing}{5}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Hardware cache coherence}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Bus-based systems}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Point-to-point systems}{8}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Optimizing software}{10}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Coherence misses}{10}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Work distribution and scheduling}{13}{subsection.4.2}%
+\contentsline {section}{\numberline {5}SIMD and vector}{13}{section.5}%
+\contentsline {subsection}{\numberline {5.1}AVX instructions}{14}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Message passing}{16}{section.6}%
+\contentsline {subsection}{\numberline {6.1}MPI}{17}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}MPI collectives}{19}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Memory consistency}{21}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Sequential consistency}{21}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Processor consistency}{23}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Weak consistency}{23}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Language level consistency}{24}{subsection.7.4}%
+\contentsline {subsubsection}{\numberline {7.4.1}Java Memory Model}{24}{subsubsection.7.4.1}%
+\contentsline {subsubsection}{\numberline {7.4.2}C++ 11 Memory Model}{25}{subsubsection.7.4.2}%
+\contentsline {subsubsection}{\numberline {7.4.3}OpenMP Memory Model}{26}{subsubsection.7.4.3}%
+\contentsline {section}{\numberline {8}Synchronization}{26}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Locks}{27}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {8.1.1}TS}{27}{subsubsection.8.1.1}%
+\contentsline {subsubsection}{\numberline {8.1.2}TTS}{28}{subsubsection.8.1.2}%
+\contentsline {subsubsection}{\numberline {8.1.3}TS with exponential back-off}{29}{subsubsection.8.1.3}%
+\contentsline {subsubsection}{\numberline {8.1.4}Load-locked and store-conditional}{29}{subsubsection.8.1.4}%
+\contentsline {subsubsection}{\numberline {8.1.5}Coarse/fine-grained locking}{30}{subsubsection.8.1.5}%
+\contentsline {section}{\numberline {9}Concurrency control}{31}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Deadlocks}{31}{subsection.9.1}%
+\contentsline {subsubsection}{\numberline {9.1.1}Detection}{32}{subsubsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.2}Transactional memory}{34}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Point to point synchronization}{35}{subsection.9.3}%
+\contentsline {section}{\numberline {10}Context switching}{37}{section.10}%
+\contentsline {subsection}{\numberline {10.1}User threads}{39}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Coroutines}{40}{subsection.10.2}%
