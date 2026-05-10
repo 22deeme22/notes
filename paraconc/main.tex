@@ -2361,7 +2361,7 @@ loop:
         \begin{center}
         \includegraphics[width=5cm]{images/84.png}
         \end{center}
-        Previously, only caches and predictors were shared, with SMT, instructions from different threads are interleaved cycle by cycle.
+        Previously, only caches and predictors were shared, with SMT, instructions from different threads are interleaved in the same cycle.
 
         But do we need then to resolve all potential dependenced between threads (e.g. $T_1$ and $T_2$ are both executing \texttt{add r1, r2, r3})? No we don't because registers are physically mapped then,
         \[T_1: \text{\texttt{add r1, r2, r3} becomes: \texttt{add p4, p2, p3}}\]
@@ -2405,34 +2405,125 @@ loop:
         \item Vectore lane threading: same as SIMD (Single Instruction Multiple Data), we group the thread in \important{warp}, and all threads in the warp execute the same instruction simultaneously on different data elements. 
         \item Multithreading across pipeline depth: multiple warps can share the pipeline.
     \end{itemize}
+    This is data level parallelism.\\
     
-
-    
-    
-    
+    There is mutltiple way to compute identically different data items. We alreay saw the classic muli-core way (not optimal if it is only for identical instructions on every data) and the SIMD way, recall:
+    \begin{center}
+        \includegraphics[width=7cm]{images/86.png}
+    \end{center}
+    With SIMD, every lane operate on the same registers, it is specifically useful to operate on objects like vectors, but then there is no flexibility.
+    \begin{tcolorbox}[vert]
+       On GPUs, we apply have the \important{single instruction multiple thread (SIMT)} execution model. It seems similar as SIMD but each lane can run independent threads in ``lockstep''. Threads operate on different registers (have its own separate context). SIMT is SIMD with hardware multithreading.
+    \end{tcolorbox}
+    \begin{center}
+        \includegraphics[width=7cm]{images/87.png}
+    \end{center}
+    If we summary:
+    \begin{itemize}[left=10pt, label=\textbullet]
+        \item MIMD/SPMD: this is good for thread level parallelism but bad for data level parallism. It's the easiest programming way. 
+        \item SIMD/Vector: this is good for data level parallelism but the programmability is then limited and it's hard to scale up. 
+        \item SIMT: this is good for data level parallelism, the programmability is better and it's easy to scale up.
+    \end{itemize}
+    \begin{center}
+        \includegraphics[width=11cm]{images/88.png}
+    \end{center}
+    \subsection{GPU's hardware}
         
 
+    \begin{tcolorbox}[violet]
+    The GPU hardware is a set of GPU core (streaming multiprocessor (SM) for NVIDIA). There is around 10-100 SMs in a GPU and inside there is typically 4 SIMT. Inside SIMT there is generally 8 SIMD lane (``CUDA core''), so 32 in a SM.
+    \end{tcolorbox}
+    \begin{center}
+        \includegraphics[width=13cm]{images/89.png}
+    \end{center}
+    If we compare with the hardware of a CPU, we would see 
+    \begin{center}
+    \begin{minipage}{0.45\textwidth}
+        for \textbf{CPU}:
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item A few large ALUs, 
+            \item Large caches, 
+            \item Brand predicition, speculation and OoO,
+            \item High clock frquency,
+            \item Limited multithreading.
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}{0.45\textwidth}
+        for \textbf{GPU}:
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item A sea of small alus, 
+            \item Small, shallow cache hierarchy, 
+            \item Simple control logic, in-order, 
+            \item Massive multithreading, 
+            \item High memory bandwith.
+        \end{itemize}
+    \end{minipage}
+    \end{center}
+    \begin{center}
+        \includegraphics[width=14cm]{images/90.png}
+    \end{center}
+    But GPU is a co-processor, it needs a companion CPU, this is the CPU that launch work and get back result.
+    \begin{remark}{Remark}
+        We now have also little GPUs that are integrate on-chip (iGPU), this is a same architecture that a GPU but with much less resources. This is typically used for driving graphics in desktops/laptops.
+    \begin{center}
+        \includegraphics[width=4cm]{images/91.png}
+    \end{center}
+    \end{remark}
+    \section{CUDA}
+    \begin{tcolorbox}[vert]
+        There is multiple GPU but we will focus on \important{CUDA (Compute Unified Device Architecture)}. This is the most widely used.    
+    \end{tcolorbox}
+    There is no ``pure'' GPU program, this is always a host or CPU program that launches work on GPU. It's only accelerating functions (that are called GPU kernel).\\
         
-    
-       
-    
-    
-    
-    
-    
-    
-    
-    
-    
-            
-        
-    
-    
-    
+    GPU kernels follow the SIMT model:
+    \begin{itemize}[left=10pt, label=\textbullet]
+        \item GPU kernel code specifies what each thread must do, 
+        \item Thread index specifies which data the thread must operate on, 
+        \item Kernel is launched by the CPU, specifying how many threads should execute the kernel.
+    \end{itemize}
+    Let's just recall the organization hierarchy:
+    \begin{center}
+    \begin{minipage}{0.45\textwidth}
+        \includegraphics[width=10cm]{images/92.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \includegraphics[width=8cm]{images/93.png}
+    \end{minipage}
+    \end{center}
+    An advantage of breaking threads into thread blocks is that the CUDA runtime automatically distributes them according to the available GPU resources, and that threads within a thread block can collaborate more efficiently.\\
 
-
+    A kernel is launched with a grid of threads, a grid is organized as a 3D array of thread blocks and threads.
+    \begin{center}
+    \includegraphics[width=7cm]{images/94.png}
+    \end{center}
+    Each block and thread has a unique index tuple with three coorindates.
+    \begin{center}
+    \begin{minipage}{0.45\textwidth}
+    \includegraphics[width=8cm]{images/95.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+    \includegraphics[width=6cm]{images/96.png}
+    \end{minipage}
+    \end{center}
+    So the thread's global coordintes are:
+    \begin{codeCenter}
+    \begin{Ccode}
+x = blockIdx.x * blockDim.x + threadIdx.x
+y = blockIdx.y * blockDim.y + threadIdx.y
+z = blockIdx.z * blockDim.z + threadIdx.z
+    \end{Ccode}
+    \end{codeCenter}
+    
+    
+    
+    
+    
+    
     
 \end{document}
+    
 
     
 

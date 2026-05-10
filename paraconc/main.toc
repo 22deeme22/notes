@@ -47,3 +47,5 @@
 \contentsline {subsection}{\numberline {12.1}CGMT vs. FGMT}{53}{subsection.12.1}%
 \contentsline {subsection}{\numberline {12.2}SMT}{54}{subsection.12.2}%
 \contentsline {section}{\numberline {13}GPUs}{55}{section.13}%
+\contentsline {subsection}{\numberline {13.1}GPU's hardware}{56}{subsection.13.1}%
+\contentsline {section}{\numberline {14}CUDA}{57}{section.14}%
