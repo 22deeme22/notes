@@ -2668,20 +2668,83 @@ __global__ void vecadd_kernel(...) {
 
             This is called \important{control flow divergence}. In this case, all threads execute all lines, but some discard their result (wasted compute). A predication mask determines whose results to keep.
         \end{tcolorbox}
-        SLIDE 30
-        
-        
-        
+        \begin{center}
+        \begin{minipage}{0.45\textwidth}
+        Programs with many conditional branches are not well-suited for GPU's SIMT execution, there 50\% of performance loss.
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.45\textwidth}
+        \begin{center}
+        \includegraphics[width=5cm]{images/102.png}
+        \end{center}
+        \end{minipage}
+        \end{center}
+        But it's okay (mani) if different warps take different paths, so we can do something like this:
+        \begin{codeCenter}
+        \begin{Ccode}
+if (threadIdx.x / WARP_SIZE > 0) {. . .} // T0, T1, …, T31
+else {. . . } // T32, T33, …, T63
+        \end{Ccode}
+        \end{codeCenter}
+    \subsection{Basic synchronization}
+        \begin{tcolorbox}[vert]
+            In CUDA, we commonly use \important{threadblock barrier}. All threads of a threadblock must reach the barrier before any of them can proceed past the barrier, but threads from different threadblocks are not synchronized.
+        \end{tcolorbox}
+        \begin{center}
+        \includegraphics[width=11cm]{images/103.png}
+        \end{center}
+        A threadblock barrier is an execution barrier and a memory barrier, what it means:
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item An execution barrier is when all threads of a threadblock must reach the barrier before any of them can proceed forward. 
+            \item A memory barrier is when a write by any thread before the barrier is guaranteed to be visible to all threads in the threadblock after the barrier.
+        \end{itemize}
+        Then, if we code this setup:
+        \begin{center}
+        \includegraphics[width=11cm]{images/104.png}
+        \end{center}
+        It ensure after the barrier of threadblock k that \texttt{x[i]=i, x[i+1]=i+1, \ldots, x[j]=j}. But nothing ensure that \texttt{x[j+1]=j+1}, for this, we have to wait that the barrier of threadblock k+1 occurs.  
+        \begin{tcolorbox}[rouge]
+            Now if we have conditional statements and barriers, something like this:
+            \begin{codeCenter}
+            \begin{Ccode}
+__global void test_syncthread(unsigned* x, int N) {
+    if(threadIdx % 2 == 0) {
+        ...
+        __syncthreads();
+    }
+    else {
+        ...
+        __syncthreads();
+    }
+}
+            \end{Ccode}
+            \end{codeCenter}
+            Then not all threads will execute the same barrier, so it can wait forever: there is a possible deadlock. We have to use barriers only if all threads of a threadblock are guaranteed to either hit the barrier or none will.
+        \end{tcolorbox}
+        Remember that there is no explicit global barrier across all threads of a kernel because not all thread blocks of a kernel may execute simultaneously. If you desire a ``global'' barrier, then the solution is to split the kernel in two kernels.
+        \begin{center}
+        \begin{minipage}{0.45\textwidth}
+            \texttt{KernelA1<< nBlk, nTid >>(args)} \\
+            \texttt{KernelA2<< nBlk, nTid >>(args)} 
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.45\textwidth}
+        \begin{center}
+        \includegraphics[width=6cm]{images/105.png}
+        \end{center}
+        \end{minipage}
+        \end{center}
+        \begin{remark}{Remark}
+            Kernel launches are asynchronous, if you are launching two kernel one after another, the CPU won't wait for the first kernel to finish before sending the second one. But on the GPU the second kernel will only start executing after the first one finishes execution. If you want that you CPU wait that the GPU finish the execution, you can use \texttt{cudaDeviceSynchronize()}, \texttt{cudaMemCpy()} is also blocking. 
+        \end{remark}
         
         
        
         
         
-    
-    
-    
-    
-    
+            
+       
+   
     
 \end{document}
     

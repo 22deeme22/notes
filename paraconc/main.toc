@@ -1,0 +1,53 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Metrics}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Iron Law}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Amdahl's law}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Different type of mean}{5}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Parallel computing}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Expressing parallelism}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Principles of parallel computing}{6}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Hardware cache coherence}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Bus-based systems}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Point-to-point systems}{9}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Optimizing software}{11}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Coherence misses}{11}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Work distribution and scheduling}{14}{subsection.4.2}%
+\contentsline {section}{\numberline {5}SIMD and vector}{14}{section.5}%
+\contentsline {subsection}{\numberline {5.1}AVX instructions}{15}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Message passing}{17}{section.6}%
+\contentsline {subsection}{\numberline {6.1}MPI}{18}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}MPI collectives}{20}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Memory consistency}{22}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Sequential consistency}{22}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Processor consistency}{24}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Weak consistency}{24}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Language level consistency}{25}{subsection.7.4}%
+\contentsline {subsubsection}{\numberline {7.4.1}Java Memory Model}{25}{subsubsection.7.4.1}%
+\contentsline {subsubsection}{\numberline {7.4.2}C++ 11 Memory Model}{26}{subsubsection.7.4.2}%
+\contentsline {subsubsection}{\numberline {7.4.3}OpenMP Memory Model}{27}{subsubsection.7.4.3}%
+\contentsline {section}{\numberline {8}Synchronization}{27}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Locks}{28}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {8.1.1}TS}{28}{subsubsection.8.1.1}%
+\contentsline {subsubsection}{\numberline {8.1.2}TTS}{29}{subsubsection.8.1.2}%
+\contentsline {subsubsection}{\numberline {8.1.3}TS with exponential back-off}{30}{subsubsection.8.1.3}%
+\contentsline {subsubsection}{\numberline {8.1.4}Load-locked and store-conditional}{30}{subsubsection.8.1.4}%
+\contentsline {subsubsection}{\numberline {8.1.5}Coarse/fine-grained locking}{31}{subsubsection.8.1.5}%
+\contentsline {section}{\numberline {9}Concurrency control}{32}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Deadlocks}{32}{subsection.9.1}%
+\contentsline {subsubsection}{\numberline {9.1.1}Detection}{33}{subsubsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.2}Transactional memory}{35}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Point to point synchronization}{36}{subsection.9.3}%
+\contentsline {section}{\numberline {10}Context switching}{38}{section.10}%
+\contentsline {subsection}{\numberline {10.1}User threads}{40}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Coroutines}{41}{subsection.10.2}%
+\contentsline {section}{\numberline {11}Microservices}{44}{section.11}%
+\contentsline {subsection}{\numberline {11.1}RPC}{46}{subsection.11.1}%
+\contentsline {subsubsection}{\numberline {11.1.1}gRPC}{48}{subsubsection.11.1.1}%
+\contentsline {section}{\numberline {12}Multi-threaded processors}{50}{section.12}%
+\contentsline {subsection}{\numberline {12.1}CGMT vs. FGMT}{53}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}SMT}{54}{subsection.12.2}%
+\contentsline {section}{\numberline {13}GPUs}{55}{section.13}%
+\contentsline {subsection}{\numberline {13.1}GPU's hardware}{56}{subsection.13.1}%
+\contentsline {section}{\numberline {14}CUDA}{57}{section.14}%
+\contentsline {subsection}{\numberline {14.1}Example of GPU-accelerated program}{58}{subsection.14.1}%
+\contentsline {subsection}{\numberline {14.2}Basic synchronization}{62}{subsection.14.2}%
