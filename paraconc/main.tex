@@ -2507,7 +2507,7 @@ loop:
     \includegraphics[width=6cm]{images/96.png}
     \end{minipage}
     \end{center}
-    So the thread's global coordintes are:
+    So the thread's global coordinates are:
     \begin{codeCenter}
     \begin{Ccode}
 x = blockIdx.x * blockDim.x + threadIdx.x
@@ -2515,7 +2515,168 @@ y = blockIdx.y * blockDim.y + threadIdx.y
 z = blockIdx.z * blockDim.z + threadIdx.z
     \end{Ccode}
     \end{codeCenter}
+    \subsection{Example of GPU-accelerated program}
+        Let's take as example a function that is adding two vectors:
+        \begin{codeCenter}
+        \begin{Ccode}
+void vecadd(float* x, float* y, float* z, int N) {
+    for(unsigned int i = 0; i < N; ++i) {
+        z[i] = x[i] + y[i];
+    }
+}
+        \end{Ccode}
+        \end{codeCenter}
+        \begin{center}
+            \includegraphics[width=9cm]{images/97.png}
+        \end{center}
+        The addition of N elements can be splut among N threads: thread 0 adds \texttt{x[0]} and \texttt{y[0]}, thread 1 adds \texttt{x[1]} and \texttt{y[1]}.
+        \begin{center}
+            \includegraphics[width=9cm]{images/98.png}
+        \end{center}
+        \begin{tcolorbox}[rouge]
+            The role of the CPU will be to:
+            \begin{enumerate}
+                \item Allocate the GPU memory, 
+                \item Copy data to GPU memory, 
+                \item Launch the kernel on the GPU, 
+                \item Perform computation on GPU, 
+                \item Copy results from GPU memory, 
+                \item Deallocate GPU memory.
+            \end{enumerate}
+        \end{tcolorbox}
+        \textbf{Allocate (1) and deallocate (6) GPU memory:}\\
+
+        There is APis for that.
+        \begin{center}
+        \begin{minipage}{0.45\textwidth}
+        \textbf{Allocate:}
+        \begin{codeCenter}
+        \begin{Ccode}
+cudaError_t cudaMalloc(void **devPtr, size_t size)
+        \end{Ccode}
+        \end{codeCenter}
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item \texttt{devPtr} is a pointer to a pointer to allocated device (GPU) memory. 
+            \item \texttt{size} is the requested allocation size in bytes.
+        \end{itemize}
+\end{minipage}
+        \hfill
+        \begin{minipage}{0.45\textwidth}
+        \textbf{Deallocate:}
+        \begin{codeCenter}
+        \begin{Ccode}
+cudaError_t cudaFree(void *devPtr)
+        \end{Ccode}
+        \end{codeCenter}
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item \texttt{devPtr} is a pointer to device memory to free.
+        \end{itemize}
+        \end{minipage}
+        \end{center}
+        In both function, the return error \texttt{cudaError\_t} helps with error checking.\\
+        \begin{remark}{Disclaimer}
+       When you are writing 
+        \begin{codeCenter}
+        \begin{Ccode}
+cudaMalloc( (void**)&gpu_array, SIZE_N);
+        \end{Ccode}
+        \end{codeCenter}
+        You can't access (dereference) the pointer from the CPU (your program)!
+        \end{remark}
+        \textbf{Copying data (2) to and from (5) GPU memory:}
+        \begin{codeCenter}
+        \begin{Ccode}
+cudaError_t cudaMemcpy(void *dst, const void *src, size_t count, enum cudaMemcpyKind kind)
+        \end{Ccode}
+        \end{codeCenter}
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item \texttt{dst} is the destination memory address, 
+            \item \texttt{src}  is the source memory address, 
+            \item \texttt{count} is the Size in bytes to copy, 
+            \item \texttt{kind} is the type of transfer (c.f. slides).
+        \end{itemize}
+        
+        \begin{tcolorbox}[violet]
+            
+        
+        Finally, the function that will launch our vector addition kernel function will look like this:
+        \begin{codeCenter}
+        \begin{Ccode}
+void vecadd(float* x, float* y, float* z, int N) {
     
+    // Step 1: Allocate GPU memory
+    float *x_d, *y_d, *z_d;
+    const unsigned int numThreadsPerBlock, numBlocks;
+    cudaMalloc((void**) &x_d, N*sizeof(float));
+    cudaMalloc((void**) &y_d, N*sizeof(float));
+    cudaMalloc((void**) &z_d, N*sizeof(float));
+    
+    // Step 2: Copy data to GPU memory
+    cudaMemcpy(x_d, x, N*sizeof(float), cudaMemcpyHostToDevice);
+    cudaMemcpy(y_d, y, N*sizeof(float), cudaMemcpyHostToDevice);
+    
+    // Step 3: Launch kernel on GPU
+    numThreadsPerBlock = 256;
+    numBlocks = (N + numThreadsPerBlock – 1)/numThreadsPerBlock;
+    vecadd_kernel <<< numBlocks, numThreadsPerBlock >>> (x_d, y_d, z_d, N);
+    
+    // Step 5: Copy result back from GPU memory
+    cudaMemcpy(z, z_d, N*sizeof(float), cudaMemcpyDeviceToHost);
+    
+    // Step 6: Deallocate GPU memory
+    cudaFree(x_d);
+    cudaFree(y_d);
+    cudaFree(z_d);
+}
+        \end{Ccode}
+        \end{codeCenter}
+        \end{tcolorbox}
+        Here, our kernel (\texttt{vecadd\_kernel}) have to be declared like this: \begin{codeCenter}
+        \begin{Ccode}
+__global__ void vecadd_kernel(...) {
+    ...
+}
+        \end{Ccode}
+        \end{codeCenter}
+        Here are every declaration keywords:
+        \begin{center}
+        \includegraphics[width=6cm]{images/99.png}
+        \end{center}
+        \begin{tcolorbox}[gris]
+            Recall that a block thread can have up to 1024 threads, the programmer has the option of choosing from a range to dividing up the work between thread blocks.\\
+
+            Assume that we want to compute on an image of size 64x48, one thread per pixel means we need $\sim 3k$ threads. If we have a GPU with these constraits:
+            \begin{itemize}[left=10pt, label=\textbullet]
+                \item 15 SMs, with maximum 64 warps per SM, 
+                \item 2048 threads maximum per SM, 
+                \item 16 thread blocks maximum per SM, 
+                \item 1 warp is 32 threads, 
+                \item 960 concurrently scheduled warps (you can launch more, but they will serialize).
+            \end{itemize}
+            To have the maximum performance, the GPU should be fully occupied, so we can leverage as much parallelism as the ardware allows.
+        \end{tcolorbox}
+        If we choose to have only four large thread block of 1024 threads each then only 4 of 15 SMs will be occupied. The absolute maximum is 26\%, so we aren't using all hardware.
+        \begin{center}
+        \includegraphics[width=3cm]{images/100.png}
+        \end{center}
+        But if we are doing 48 thread blocks fo 64 threads each, then SMs will have only 3 or 4 threadblocks, with each 2 warps.
+        \begin{center}
+        \includegraphics[width=4cm]{images/101.png}
+        \end{center}
+        \begin{tcolorbox}[vert]
+            Now remember, we said that there is only on PC in a warp for multiple thread operating on multiple data. But what if the code has a conditional branch?\\
+
+            This is called \important{control flow divergence}. In this case, all threads execute all lines, but some discard their result (wasted compute). A predication mask determines whose results to keep.
+        \end{tcolorbox}
+        SLIDE 30
+        
+        
+        
+        
+        
+       
+        
+        
     
     
     
