@@ -2469,7 +2469,7 @@ loop:
         \includegraphics[width=4cm]{images/91.png}
     \end{center}
     \end{remark}
-    \section{CUDA}
+    \subsection{CUDA}
     \begin{tcolorbox}[vert]
         There is multiple GPU but we will focus on \important{CUDA (Compute Unified Device Architecture)}. This is the most widely used.    
     \end{tcolorbox}
@@ -2515,7 +2515,7 @@ y = blockIdx.y * blockDim.y + threadIdx.y
 z = blockIdx.z * blockDim.z + threadIdx.z
     \end{Ccode}
     \end{codeCenter}
-    \subsection{Example of GPU-accelerated program}
+    \subsubsection{Example of GPU-accelerated program}
         Let's take as example a function that is adding two vectors:
         \begin{codeCenter}
         \begin{Ccode}
@@ -2686,7 +2686,7 @@ if (threadIdx.x / WARP_SIZE > 0) {. . .} // T0, T1, …, T31
 else {. . . } // T32, T33, …, T63
         \end{Ccode}
         \end{codeCenter}
-    \subsection{Basic synchronization}
+    \subsubsection{Basic synchronization}
         \begin{tcolorbox}[vert]
             In CUDA, we commonly use \important{threadblock barrier}. All threads of a threadblock must reach the barrier before any of them can proceed past the barrier, but threads from different threadblocks are not synchronized.
         \end{tcolorbox}
@@ -2737,6 +2737,170 @@ __global void test_syncthread(unsigned* x, int N) {
         \begin{remark}{Remark}
             Kernel launches are asynchronous, if you are launching two kernel one after another, the CPU won't wait for the first kernel to finish before sending the second one. But on the GPU the second kernel will only start executing after the first one finishes execution. If you want that you CPU wait that the GPU finish the execution, you can use \texttt{cudaDeviceSynchronize()}, \texttt{cudaMemCpy()} is also blocking. 
         \end{remark}
+\subsection{GPU memory}
+Let's first see differences between the CPU and GPU memory.
+\begin{tcolorbox}[gris]
+\begin{center}
+\begin{minipage}{0.45\textwidth}
+\textbf{CPU:}
+\begin{itemize}[left=10pt, label=\textbullet]
+    \item Limited number of registers, 
+    \item One virtual address space, 
+    \item Large caches for latency
+\end{itemize}
+
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\textbf{GPU:}
+\begin{itemize}[left=10pt, label=\textbullet]
+    \item Many registers, 
+    \item Many different address spaces, 
+    \item Small caches.
+\end{itemize}
+
+\end{minipage}
+\end{center}
+
+\end{tcolorbox}
+    GPUs have many register because it's the memory piece that provides the fastest access, and we need to have a very fast context switch. It has then large register file is key to hiding latency: it keeps register state of many warps ready.
+    \begin{center}
+        \includegraphics[width=11cm]{images/106.png}
+    \end{center}
+    \subsubsection{Global memory}
+    \begin{tcolorbox}[vert]
+    The main memory of a GPU is the \important{global memory}. It's an off chip memory on the GPU board, the goal is to provide high bandwidth, latency is a lessor concern. The global memory is accessible to all threads in a grid, it remains live (if it's not freed) across kernel launch and enable inter-grid communication. This is the memory that we access by doing \texttt{cudaMalloc}. 
+    \end{tcolorbox}
+    The problem that we encounter with GPUs is that they have plenty of compute (max. FLOPS actually at 51 TFLOPs/sec) but the global memory bandwidth, event if we try to have the biggest one it doesn't suffice (max. memory bandwidth actually at 2TB/sec).\\
+    
+On GPU we aime a lot of bandwith where in CPU we aim low latency. So the memory hierarchy of GPU is built to bridge the gap between the computational bound and the bandwidth bound.
+
+    \begin{center}
+        \includegraphics[width=11cm]{images/108.png}
+    \end{center}
+
+\subsubsection{Local memory}\\
+Before talking about local memory, we have to define the memory access coalescing. \\
+
+Threads in a warp executiong lock-step often simultaneously access different words within the same cache line. The GPU cache line size is 128 bytes, then, if all threads of warp access contiguous 4 bytres then they map to the same cache line.
+\begin{tcolorbox}[vert]
+    The \important{hardware coalescer} merge accesses from threads of a warp to a single cache access, then, in our example above, we are doing one memory access instead of 32.
+\end{tcolorbox}
+
+    \begin{center}
+        \includegraphics[width=11cm]{images/107.png}
+    \end{center}
+    We can't always do coalesced memory accesses, it depends on software. Let's retake the vector addition example.
+    \begin{codeCenter}
+    \begin{Ccode}
+__global__ void vecadd_kernel(float* x, float* y, float* z, int N)
+{
+    int i = blockDim.x*blockIdx.x + threadIdx.x;
+    z[i] = x[i] + y[i];
+} 
+    \end{Ccode}
+    \end{codeCenter}
+    Accesses to \texttt{x}, \texttt{y}, and \texttt{z} are coalesced because the 32 threads of a warp access consecutive memory addresses. Each thread computes its index as:
+\[
+    i = \texttt{blockDim.x} \times \texttt{blockIdx.x} + \texttt{threadIdx.x}
+\]
+    Since \texttt{threadIdx.x} varies from 0 to 31 across the warp, the threads access \texttt{x[i], x[i+1], \ldots, x[i+31]}, which are contiguous in memory. The GPU can therefore merge all 32 accesses into a single memory transaction.\\
+
+But there is different types of coalesced memory acceses, and some are better than others.
+\begin{tcolorbox}[rouge]
+    
+
+\begin{itemize}[left=10pt, label=\textbullet]
+    \item \textbf{Warp requests 32 aligned, consecutive 4 byte words:}
+
+        Addresses fall within one cache line, so if e.g. it's a miss, 128 bytes move across the bus. The bus transfer utilization rate is then of 100\%.
+        \begin{codeCenter}
+        \begin{Ccode}
+i = (blockIdx.x * blockDim.x) + threadIdx.x ;
+A[i]
+        \end{Ccode}
+        \end{codeCenter}
+        \begin{center}
+            \includegraphics[width=9cm]{images/109.png}
+        \end{center}
+    \item \textbf{Warp requests 32 aligned, permuted 4-byte words:}
+
+        The effect is the same as if it was consecutive.
+        \begin{codeCenter}
+        \begin{Ccode}
+t32 = (threadIdx.x / 32) * 32;
+i = (blockIdx.x * blockDim.x) + t32 + (31 - threadIdx.x %32);
+A[i]
+        \end{Ccode}
+        \end{codeCenter}
+        \begin{center}
+        \includegraphics[width=9cm]{images/110.png}
+        \end{center} 
+    \item \textbf{All threads in a warp request the same 4-byte word:}
+
+        Addresses fall within a single cache line but the warp needs only four bytes, then on a miss there is 128 bytes that are moving across the bus but the tbus transfer utilization rate is of 3.125\%.
+        \begin{codeCenter}
+        \begin{Ccode}
+i = blockidx.x * BlockDim.x;
+A[i]
+        \end{Ccode}
+        \end{codeCenter}
+        \begin{center}
+            \includegraphics[width=9cm]{images/111.png}
+        \end{center}
+        
+    \item \textbf{Warp requests 32 misaligned, consecutive 4-byte words:}
+
+        Addresses fall within two cache lines, so on a miss 256 bytes are moving across the bus and the bus transfer utilization is of 50\%.
+        \begin{codeCenter}
+        \begin{Ccode}
+// OFFSET = 64
+i = blockidx.x * BlockDim.x + threadIdx.x + OFFSET;
+A[i]
+        \end{Ccode}
+        \end{codeCenter}
+        \begin{center}
+            \includegraphics[width=9cm]{images/112.png}
+        \end{center}
+        
+    \item \textbf{Warp request 32 scattered 4-byte words:}
+
+        Addresses fall within N caches lines, so on a miss $N\cdot 128$ bytes move across the bus on a miss. The bus utilization rate then becomes of $\frac{128}{\left(N\cdot 128\right)}$ for $N=32$ \textrightarrow \space 3.125\%.
+        \begin{codeCenter}
+        \begin{Ccode}
+i = blockidx.x * BlockDim.x + threadidx.x * 32;
+A[i]
+        \end{Ccode}
+        \end{codeCenter}
+        \begin{center}
+            \includegraphics[width=9cm]{images/113.png}
+        \end{center}
+        
+
+        
+        
+\end{itemize}
+\end{tcolorbox}
+
+SLIDE 30
+    
+   
+    
+
+\subsubsection{Constant memory}\\
+Don't need to support write so simpler caches.
+
+\subsubsection{Shared memory}\\
+Memory shared into a threadblocks \\
+
+
+
+
+
+\[
+\]
+
+            
         
         
        

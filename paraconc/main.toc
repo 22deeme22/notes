@@ -48,6 +48,11 @@
 \contentsline {subsection}{\numberline {12.2}SMT}{54}{subsection.12.2}%
 \contentsline {section}{\numberline {13}GPUs}{55}{section.13}%
 \contentsline {subsection}{\numberline {13.1}GPU's hardware}{56}{subsection.13.1}%
-\contentsline {section}{\numberline {14}CUDA}{57}{section.14}%
-\contentsline {subsection}{\numberline {14.1}Example of GPU-accelerated program}{58}{subsection.14.1}%
-\contentsline {subsection}{\numberline {14.2}Basic synchronization}{62}{subsection.14.2}%
+\contentsline {subsection}{\numberline {13.2}CUDA}{57}{subsection.13.2}%
+\contentsline {subsubsection}{\numberline {13.2.1}Example of GPU-accelerated program}{58}{subsubsection.13.2.1}%
+\contentsline {subsubsection}{\numberline {13.2.2}Basic synchronization}{61}{subsubsection.13.2.2}%
+\contentsline {subsection}{\numberline {13.3}GPU memory}{63}{subsection.13.3}%
+\contentsline {subsubsection}{\numberline {13.3.1}Global memory}{63}{subsubsection.13.3.1}%
+\contentsline {subsubsection}{\numberline {13.3.2}Local memory}{64}{subsubsection.13.3.2}%
+\contentsline {subsubsection}{\numberline {13.3.3}Constant memory}{66}{subsubsection.13.3.3}%
+\contentsline {subsubsection}{\numberline {13.3.4}Shared memory}{66}{subsubsection.13.3.4}%
