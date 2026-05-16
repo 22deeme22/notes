@@ -480,6 +480,7 @@ PaddedCounter counters[NTHREADS];
     \includegraphics[width=9cm]{images/18.png}
     \end{center}
     Arrays are too large to fit in caches, then if we want to calculate $A \cdot  B = C$, for every element of C if A and B are of size NxN, we'll have $1+N\left[\frac{4}{\text{cache line size}}\right]+N$ misses! Then for the whole calculation, we obtain $\left(N^3\left(1+c\right)+N^2\right)$ which is $O\left(N^3\right)$ misses (where $c =\frac{\text{element size}}{\text{cache line size}}$).\\
+    \hypertarget{matrix}{}
     \begin{image}{To avoid this, we can do blocking. \\ Then, for the whole array, we have to creat $\left(\frac{N}{n}\right)^2$ blocks and they have $2\cdot \left[\frac{4\cdot n}{\text{cache line size}}\right]$ misses, so finally we have $O\left(N^2\right)$ misses.}
         \includegraphics[width=9cm]{images/19.png}
     \end{image}
@@ -2875,23 +2876,160 @@ A[i]
         \begin{center}
             \includegraphics[width=9cm]{images/113.png}
         \end{center}
-        
-
-        
-        
 \end{itemize}
 \end{tcolorbox}
-
-SLIDE 30
-    
-   
-    
-
-\subsubsection{Constant memory}\\
-Don't need to support write so simpler caches.
+Now that we saw what's a coalesced memory access, we can see how works the local memory.
+\begin{tcolorbox}[vert]
+    \important{Local memory} is private to each GPU thread, each thread can have different data for the same virtual address in local memory. It contains everything on the stack that can't fit in registers. Physically, local memory is stored in global memory: it's a logical adress space. There is the same latency as global memory but all accesses to local memory are \important{always coalesced}. It's then still much slower than registers.
+\end{tcolorbox}
+    \subsubsection{Constant memory}
+\begin{tcolorbox}[vert]
+    \important{Constant memory} is a special type of memory allocation for data that won't be written. Then we can doing simpler caches for constant memory that doesn't need to support write operations: no need for write ports, no need for write-back data in the constant cache.
+\end{tcolorbox}
+\begin{center}
+    \includegraphics[width=9cm]{images/114.png}
+\end{center}
+To allocate constant memory we have first to declare the constant memory array as a global variable (accesssible to all threads of kernel):
+\begin{codeCenter}
+\begin{Ccode}
+__constant__ float filter_c[FILTER_DIM][FILTER_DIM];
+\end{Ccode}
+\end{codeCenter}
+Then you must initialize constant memory from the host with this command:
+\begin{codeCenter}
+\begin{Ccode}
+cudaMemcpyToSymbol(filter_c, filter, FILTER_DIM*FILTER_DIM*sizeof(float));
+\end{Ccode}
+\end{codeCenter}
+\begin{remark}{Remark}
+    You can only allocate up to 64kB.
+\end{remark}
 
 \subsubsection{Shared memory}\\
-Memory shared into a threadblocks \\
+\begin{tcolorbox}[vert]
+    First, \important{shared memory} is a software managed cache, it means that the program must direct what to bring into the cache and what to evict. Shared memory is private to each threadblock, it's call shared because it's shared berween all threads in a threadblock but each threadblock has its own copy of shared memory variables.
+\end{tcolorbox}
+\begin{center}
+    \includegraphics[width=9cm]{images/115.png}
+\end{center}
+To use shared memory you have to 
+\begin{enumerate}[left=10pt]
+    \item Allocate shared memory, 
+    \item Load data into shared memory from global memory, 
+    \item Repeatedly access data from shared memory (shared memory is only useful if there is significant data reuse).
+    \item Once computation is done, write results back to global memory.
+\end{enumerate}
+
+\begin{tcolorbox}[violet]
+    \textbf{Step 1: Allocating shared memory}
+
+    There is two ways to allocated shared memory:
+    \begin{itemize}[left=10pt, label=\textbullet]
+        \item Static allocation:
+
+            It's when the allocation size is fixed at compile time. The cons are that you have a maximum of 48kB per threadblock and that the size of the allocation cannot be input-independent.
+            \begin{codeCenter}
+            \begin{Ccode}
+// IN_TILE_DIM is constant
+    __shared__ float in_s[IN_TILE_DIM][IN_TILE_DIM][IN_TILE_DIM];
+    
+    if(i >= 0 && i < N && j >= 0 && j < N && k >= 0 && k < N) {
+        in_s[threadIdx.z][threadIdx.y][threadIdx.x] = in[i*N*N + j*N + k];
+    }
+            \end{Ccode}
+            \end{codeCenter}
+        \item Dynamic allocation:
+
+            It's when the allocation size is set during kernel launch. So you can allocate on chunk per threadblock and pass the size of the chunk during the kernel launch, so it can be larger than 48kB.
+            \begin{codeCenter}
+            \begin{Ccode}
+//device code
+__global__ void alloc_shared () {
+    extern __shared__ float in_s[];
+    float *p1_v = &in_s[0];
+    float *p2_v = &in_s[N]
+    ...
+}
+
+//host code
+...
+alloc_shared <<<nBlk, nTh, (2*N*sizeof(float))>>>
+            \end{Ccode}
+            \end{codeCenter}
+    \end{itemize}
+\end{tcolorbox}
+\begin{remark}{Remark}
+    Programmer can hint to CUDA runtime how an SM should split its on-chip memory between L1 cache and shared memory with the \texttt{cudaFuncSetCacheConfig(kernel\_name, enum cacheConfig)} and the following \texttt{cacheConfig} options:
+    \begin{codeCenter}
+    \begin{Ccode}
+cudaFuncCachePreferShared
+cudaFuncCachePreferL1
+cudaFuncCachePreferEqual
+cudaFuncCachePreferNone (Default)
+    \end{Ccode}
+    \end{codeCenter}
+\end{remark}
+\begin{tcolorbox}[rouge]
+Shared memory can be used for example for the \hyperlink{matrix}{\textit{tiled matrix multiplication}}. If we decide to allocate a threadblock to compute results of a tile of the output matrix, the problem is that cache hits are not guaranteed because the L1 cache is shared amongst all threadblocks of a SM and L2 cache is shared amongst all threadblocks of a grid. So you have not guaranteed that the data that was in the cache weren't evicted by another threadblock.\\
+
+Then the solution is to make the threads of the threadnlock load on tile each from A and B to its copy of shared memory. Then you use the data loaded in the shared memory, here we use the software cache properties.\\
+
+Here is the code of this example:
+\begin{codeCenter}
+\begin{Ccode}
+__shared__ float A_s[TILE_DIM][TILE_DIM];
+__shared__ float B_s[TILE_DIM][TILE_DIM];
+
+unsigned int row = blockIdx.y*blockDim.y + threadIdx.y;
+unsigned int col = blockIdx.x*blockDim.x + threadIdx.x;
+
+float sum = 0.0f;
+
+for(unsigned int tile = 0; tile < N/TILE_DIM; ++tile) {
+
+    // Load tile to shared memory
+    A_s[threadIdx.y][threadIdx.x] = A[row*N + tile*TILE_DIM + threadIdx.x];
+    B_s[threadIdx.y][threadIdx.x] = B[(tile*TILE_DIM + threadIdx.y)*N + col];
+__syncthreads();
+
+    // Compute with tile
+    for(unsigned int i = 0; i < TILE_DIM; ++i) {
+        sum += A_s[threadIdx.y][i]*B_s[i][threadIdx.x];
+    }
+    __syncthreads();
+}
+
+C[row*N + col] = sum;
+\end{Ccode}
+\end{codeCenter}
+\end{tcolorbox}
+The advantages of using shared memory are that:
+\begin{itemize}[left=10pt, label=\textbullet]
+    \item It saves global memory access, 
+    \item The access to shared memory is as fast as L1 cache, 
+    \item Unlike caches, reductions in global memory access are guaranteed.
+    \item Every threadblock has its own copy of shared memory variables so there is no need to manage sharing.
+\end{itemize}
+Shared memory is organized in 32 banks, each bank can service one address at a time so we can do at most 32 simultaneous accesses. The idea is that each thread of the warp can access one bank. Successive 32-bit (4 bytes) words are assigned to successive banks.\\
+
+\begin{tcolorbox}[vert]
+The bank can serve one address at time so if each thread of the warp access a different bank, everything is fine! If two threads access the same bank but also the same address in the bank, then everything is fine too because the bank has only to serve one address.
+
+But if two threads access different address in the same bank then it cannot serve both at the same time and we call this a \important{bank conflict}.  
+\end{tcolorbox}
+\begin{center}
+    \includegraphics[width=12cm]{images/116.png}
+\end{center}
+To resume:
+\begin{center}
+    \includegraphics[width=11cm]{images/118.png}
+    \includegraphics[width=12cm]{images/117.png}
+\end{center}
+
+
+
+
+
 
 
 
