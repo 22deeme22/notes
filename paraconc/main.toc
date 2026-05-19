@@ -56,3 +56,4 @@
 \contentsline {subsubsection}{\numberline {13.3.2}Local memory}{64}{subsubsection.13.3.2}%
 \contentsline {subsubsection}{\numberline {13.3.3}Constant memory}{66}{subsubsection.13.3.3}%
 \contentsline {subsubsection}{\numberline {13.3.4}Shared memory}{66}{subsubsection.13.3.4}%
+\contentsline {subsection}{\numberline {13.4}Parallel reduction}{69}{subsection.13.4}%
