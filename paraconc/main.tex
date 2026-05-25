@@ -3079,34 +3079,320 @@ To resume:
     \begin{tcolorbox}[gris]
         Here the problem is that we can't do a global synchronization after each level because \texttt{\_\_syncthreads()} only works within the same threadblock. The solution is, like we already said \hyperlink{launch}{\textit{here}}, to launch separate kernel for each level.
     \end{tcolorbox}
+    Reduction has a low ariithmetic intensity, all input elements are loaded from memory, so the goal is to reduce global memory accesses. Since partial sums can be reused, we can load to shared memory first.
+    \begin{tcolorbox}[rouge]
+        We load one elements/thread from global to shared memory \textrightarrow T0 loads element 0, T1 loads element 1, \ldots\\
+
+        Steps of our reduction are:
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item Each thread reduce two elements (T0 reduces element 0 and 1, T1 reduces elements 2 and 3, \ldots).
+            \item Desactivate half of the threads at the end of each step. 
+            \item Terminate when one thread left.
+            \item Write back result to global memory, so it's visible to the next kernel.
+        \end{itemize}
+    \end{tcolorbox}
+    \begin{center}
+        \includegraphics[width=12cm]{images/124.png}
+    \end{center}
+    If we simply implement this reduction, we get this:
+    \begin{codeCenter}
+    \begin{Ccode}
+__global__ void reduce(int *g_idata, int *g_odata, int n){
+    extern __shared__ int sdata[];
+    // each thread loads one element from global to shared mem
+    unsigned int tid = threadIdx.x;
+    unsigned int i = blockIdx.x*blockDim.x+ threadIdx.x;
+    sdata[tid] = (i < n) ? g_idata[i] : 0;
+    __syncthreads();
+    
+    // do reduction in shared mem
+    for (unsigned int s = 1; s < blockDim.x; s *= 2) { // s = stride
+        if (tid % (2*s) == 0) {
+        // only even threadIDs participate
+            sdata[tid] += sdata[tid + s];
+        }
+        __syncthreads();
+    }
+    // write result for this block to global mem
+    if (tid == 0) g_odata[blockIdx.x] = sdata[0];
+}
+    \end{Ccode}
+    \end{codeCenter}
+    \begin{tcolorbox}[gris]
+        The problem is that the following block is highly divergent, so it leads to poor performance.
+        \begin{codeCenter}
+        \begin{Ccode}
+if (tid % (2*s) == 0) {
+    // only even threadIDs participate
+    sdata[tid] += sdata[tid + s];
+}
+        
+        \end{Ccode}
+        \end{codeCenter}
+        To solve this, we can replace this block by this one:
+        \begin{codeCenter}
+        \begin{Ccode}
+for (unsigned int s=1; s < blockDim.x; s *= 2) {
+    int index = 2 * s * tid;
+    
+    if (index < blockDim.x) {
+        sdata[index] += sdata[index + s];
+    }
+    __syncthreads();
+}
+        \end{Ccode}
+        \end{codeCenter}
+The core insight is simple: we want all active threads to be neighbors.
+In version 1, the condition \texttt{tid \% (2*s) == 0} picks threads $0, 2, 4, 6 \ldot$, they're spread out, so every warp has a mix of active/inactive threads.\\
+
+In version 2, \texttt{index = 2 * s * tid} flips the logic, instead of asking ``is my thread id special enough to work?'', we ask ``what position should thread tid write to?''. Thread 0 handles position 0, thread 1 handles position 2, thread 2 handles position 4\ldots so the active threads are always $, 1, 2, 3\ldots$, packed together in the first warps.
+    \end{tcolorbox}
+    Now, it looks like this:
+    \begin{center}
+        \includegraphics[width=12cm]{images/125.png}
+    \end{center}
+    \begin{center}
+    \begin{minipage}{0.45\textwidth}
+    We still have problem with the code now ! We access shared memory with \texttt{index = 2 * s * tid}, so we have bank conflict ! 
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+    \begin{center}
+        \includegraphics[width=5cm]{images/126.png}
+    \end{center}
+    \end{minipage}
+    \end{center}
+    To solve this, we can replace our loop by a reversed one and a \texttt{threadID} based indexing.
+    \begin{codeCenter}
+    \begin{Ccode}
+for (unsigned int s = blockDim.x/2; s > 0; s /= 2) {
+    if (tid < s) {
+        sdata[tid] += sdata[tid + s];
+    }
+    __syncthreads();
+}
+    \end{Ccode}
+    \end{codeCenter}
+    So our scheme changes again,
+    \begin{center}
+        \includegraphics[width=12cm]{images/127.png}
+    \end{center}
+    \begin{tcolorbox}[violet]
+        As final optimization, we can allow each thread to low two elements and do the first reduction step alogside the load. So we need halves the number of thread in a threadblock.
+        \begin{codeCenter}
+        \begin{Ccode}
+// each thread loads two elements from global to shared mem
+// and performs the first step of the reduction
+unsigned int tid = threadIdx.x;
+unsigned int i = blockIdx.x* blockDim.x * 2 + threadIdx.x;
+sdata[tid] = (i < N) ? ((i + blockDim.x) < N ?
+    (g_idata[i] + g_idata[i + blockDim.x])
+    : g_idata[i]) : 0;
+__syncthreads();
+        \end{Ccode}
+        \end{codeCenter}
+        With these four optimizations, the kernel time is reduced from 327ms to 9ms !
+    \end{tcolorbox}
+\subsection{Advanced synchronization}
+\begin{tcolorbox}[vert]
+    We already saw that there only exists barrier to wait for all threads within a block. But there also exist \important{atomic operations in CUDA}. For example:
+    \begin{codeCenter}
+    \begin{Ccode}
+int atomicAdd(int* address, int val)
+    \end{Ccode}
+    \end{codeCenter}   
+    This operation reads the 32-bit word old pointed to by address in global or shared memory, computes result and stores the result back to memoy at the same address. The function returns old.\\
+\end{tcolorbox}
+    \begin{center}
+    \begin{minipage}{0.45\textwidth}
+        Let's see an exmple of use of atomics with a program that count the number of ASCII character in an input text.
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+            \includegraphics[width=10cm]{images/128.png}
+    \end{minipage}
+    \end{center}
+    Here's the basic program for our example:
+    \begin{codeCenter}
+    \begin{Ccode}
+__global__ void hist_calc(char* data, unsigned int length, unsigned int* histogram) {
+    unsigned int idx = blockIdx.x * blockDim.x + threadIdx.x;
+    
+    if (idx < length) {
+        // Calculate the bucket
+        int position = (unsigned char) data[index]; 
+        
+        // Atomically update the count
+        atomicAdd(&histogram[position], 1);     }
+}
+    \end{Ccode}
+    \end{codeCenter}
+    The problem here is that we have an atomic operation that access global memory at each loop, so it's really inefficient. To solve this, we'll reduce srialization through privatization. It means that each threadblock will keeps their own copy of histogram in the shared memory and the merge private copies in the global memory in phase 2.
+    \begin{center}
+        \includegraphics[width=11cm]{images/129.png}
+    \end{center}
+    \begin{codeCenter}
+    \begin{Ccode}
+__global__ void hist_calc(char* data, unsigned int length, unsigned int* histogram){
+    
+    __shared__ unsigned int histo_s[NUM_BINS];
+    
+    //initialize private histogram 
+    for (unsigned int bin = threadIdx.x; bin < NUM_BINS; bin += blockDim.x)
+        histo_s[bin] = 0;
+    __syncthreads();
+
+    // Update private histogram count (similar to what you saw before)
+    unsigned int index = blockIdx.x * blockDim.x + threadIdx.x;
+    if (index < length) {
+        int position = (unsigned char) data[index];
+        atomicAdd(&histo_s[position], 1);
+    }
+    __syncthreads();
+
+    //Merge results onto the final histogram in the global memory
+    for (unsigned int bin = threadIdx.x; bin < NUM_BINS; bin += blockDim.x) {
+        unsigned int val = histo_s[bin];
+        if (val > 0) atomicAdd(&histo[bin], val);
+    }
+}
+    \end{Ccode}
+    \end{codeCenter}
+    We encounter two main problem when we want to implement synchronization objects on GPUs,
+    \begin{itemize}[left=10pt, label=\textbullet]
+        \item \textbf{First one:}
+            \begin{tcolorbox}[violet]
+                CUDA has a weak memory consistency model, we already saw the definition but we can recall it informally: the order in which a thread writes data to memory is not necessarily the order in which the data is observed being written by another thread.
+            \end{tcolorbox}
+        \item \textbf{Second one:}
+            \begin{tcolorbox}[violet]
+                GPUs L1 caches (caches inside SMs) aren't coherent.
+            \end{tcolorbox}
+    \end{itemize}
+    To solve this we have the same object that on processors, a fence instruction (\texttt{\_\_threadfence}) for ordering read/writes. They are very similar to fences in ARM, but to recall:\\
+    \begin{tcolorbox}[gris]
+        \texttt{\_\_threadfence} serves two purposes
+        \begin{itemize}[left=10pt, label=\textbullet]
+            \item Writes appearing before the fence by the calling thread must become visible to any threads in the grid before any writes after the fence in the calling thread.
+            \item Load, stores, atomics in the calling thread cannot be reordered across a \texttt{\_\_threadfence}.
+        \end{itemize}
+    \end{tcolorbox}
+    \begin{center}
+    \begin{minipage}{0.45\textwidth}
+    \begin{center}
+        \textbf{Thread 1:}
+        \begin{codeCenter}
+        \begin{Ccode}
+__device__ void writeXY()
+{
+    X = 10;
+    __threadfence();
+    Y = 20;
+}
+        \end{Ccode}
+        \end{codeCenter}
+    \end{center}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \begin{center}
+            \textbf{Thread 2:}
+            \begin{codeCenter}
+            \begin{Ccode}
+__device__ void readXY()
+{
+    int B = Y;
+    __threadfence();
+    int A = X;
+}
+            \end{Ccode}
+            \end{codeCenter}
+        \end{center}
+    \end{minipage}
+    \end{center}
+    The \texttt{\_\_threadfence} of thread 1 ensures that \texttt{Y=20} muste be observed after \texttt{X=10}. The \texttt{\_\_threadfence} of thread 2 ensures that the two loads are not reordered, so \texttt{Y} is read first and then \texttt{X}.
+    \begin{tcolorbox}[rouge]
+        Fences are used to create locks in CUDA program:
+        \begin{codeCenter}
+        \begin{Ccode}
+// 0 -> lock is free. 1 -> locked
+__global__ int lock = 0; 
+
+// wait until lock value is zero
+while (atomicCAS(&lock, 0, 1) == 0); 
+// Ensures that code in the critical section does not start executing before lock is acquired
+__threadfence(); 
+                
+// Critical section
+...
+
+// Ensures the critical section finishes before lock release
+__threadfence(); 
+                 
+// Release lock by setting it to zero
+atomicExch(&lock, 0);
+        \end{Ccode}
+        \end{codeCenter}
+    \end{tcolorbox}
+    \subsection{CUDA streams}
+    \begin{center}
+        \includegraphics[width=9cm]{images/130.png}
+    \end{center}
+    Data copy across can take long, can we overlap data copy with kernel execution?\\
+
+    Until now we made program where data copy and GPU computation are serialized:
+    \begin{center}
+        \includegraphics[width=11cm]{images/131.png}
+    \end{center}
+        The idea  is to have a pipeline to overlap data copy with compute. 
+    \begin{center}
+    \includegraphics[width=11cm]{images/132.png}
+    \end{center}
+    \begin{tcolorbox}[vert]
+    \important{Streams} are work queues to queue GPU-related tasks (e.g. kernel launch, memcopy). Independent tasks can be queued on separate queues. Tasks in the same stream execute sequentially but tasks in different streams can execute concurrently.
+    \end{tcolorbox}
+    \begin{center}
+        \includegraphics[width=12cm]{images/133.png}
+    \end{center}
+    To create a stream you use the following function:
+    \begin{codeCenter}
+    \begin{Ccode}
+cudaError_t cudaStreamCreate (cudaStream_t* pStream);
+    \end{Ccode}
+    \end{codeCenter}
+    where \texttt{pstream} is the pointer to the new stream identifier.
+    \begin{remark}{Remark}
+        You can find an implementation of \texttt{VectorAdd} with streams to overlap compute and data copy in slides 76-78 of lecture 13.1. It is a bit too long to put them there.
+    \end{remark}
+    \begin{tcolorbox}[violet]
+    Remember that \texttt{cudaMemcpy} is a blocking function call, but here we need an asynchronous one because with this function the host cannot proceed until the data copy is done.\\
+    
+    \texttt{cudaMemcpyAsync} is the asynchronous data transfer over PCIe, it allows host to proceed without waiting for copy to finish (non-blocking).
+    \end{tcolorbox}
+    \begin{tcolorbox}[vert]
+        All GPU-related tasks that do not specify a stream use the \important{``null'' stream}, it synchronizes all streams so it allows no concurrency across other streams.
+    \end{tcolorbox}
+    
+    
+    
+    
+    
+    
+    
+        
+    
+    
+    
+    
+    
+   
+    
+    
+        
+    
+    
+    
      
-            
-            
-            
-            
-            
-    
-    
-
-
-
-
-
-
-
-
-
-
-\[
-\]
-
-            
-        
-        
-       
-        
-        
-            
        
    
     
