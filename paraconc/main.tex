@@ -1696,7 +1696,7 @@ void handle_request(Request req) {
     \begin{center}
         \includegraphics[width=8cm]{images/60.png} 
     \end{center}
-    For our code with context switching the kernel would switches the thread with a ``ready'' thread. Once the I/O operation is done, the kernel swithces back the waiting thread. 
+    For our code with context switching the kernel would switches the thread with a ``ready'' thread. Once the I/O operation is done, the kernel switches back the waiting thread. 
 
     The kernel co-ordinates the switch: 
     \begin{enumerate}
@@ -1704,7 +1704,7 @@ void handle_request(Request req) {
         \item Calls the scheduler algorithm to pick the next thread, 
         \item Restores the context of the next thread.
     \end{enumerate}
-    The context saved means that we that we save the ``state'' of a thread that must be saved before a switch.
+    The context save means that we saved the ``state'' of a thread that must be saved before a switch.
     \begin{image}{You need to remember the PC (program counter) of the last executed instruction before the switch, here \lstinline!lw r6, O(r3)!, and also the value of all registers before the switch.}
         \begin{codeCenter}
         \begin{Ccode}
@@ -1724,12 +1724,12 @@ sw r6, 0(r3)
     There is no need to save shared resources, only the thread-private ones.
 
     \begin{tcolorbox}[gris]
-    But context switching involves overhead. The explicit one: a syscall means letting the pipeline empty, use the trap table to jump to the syscall code, switch OS. We need also to dump the current threasd's context to memory, load the new thread's context and return from syscall, switch back to user. But there is also the implicit overhead: all microarchitectural state that is shared (branch tables, TLB, cache hierarchy) is affeted while a thread is running.
+    But context switching involves overhead. The explicit one: a syscall means letting the pipeline empty, use the trap table to jump to the syscall code, switch OS. We need also to dump the current thread's context to memory, load the new thread's context and return from syscall, switch back to user. But there is also the implicit overhead: all microarchitectural state that is shared (branch tables, TLB, cache hierarchy) is affected while a thread is running.
 
     Considering all this overhead, context switching is only worth if the time to switch, run and switch back is less that IDLE time, knowing that a single switche between threads in Linux takes ~1-5 $\mu$s. 
     \end{tcolorbox}
     \subsection{User threads}
-    Only the kernel has permissions to schedule threads to run on cores. But using the kernel for switching is overkill. So an idea is to sepaarate the two requirements:
+    Only the kernel has permissions to schedule threads to run on cores. But using the kernel for switching is overkill. So an idea is to separate the two requirements:
     \begin{enumerate}[left=10pt]
         \item Scheduling threads to run on cores - the kernel is needed. 
         \item Switching between threads on the same core - we can actually do this on user threads.
@@ -1742,16 +1742,16 @@ sw r6, 0(r3)
         \item Initializing the context.
     \end{itemize}
     \end{tcolorbox}
-    So now what if the user created threads instead of the kernel. A user thread library would handle tasks typically done by the kernel: create and manage threads, schedule which thread euns and when, save and restore context during switches.
+    So now what if the user created threads instead of the kernel. A user thread library would handle tasks typically done by the kernel: create and manage threads, schedule which thread runs and when, save and restore context during switches.
     \begin{tcolorbox}[vert]
         A thread created entirely in user space is called a \important{user thread}. Thread scheduling happens then at the user level.
     \end{tcolorbox}
-    At any given time, ony one usre thread can run on a core: the user thread either runs to completion or gets blocked. If the user thread gets blocked or completes execution, it need to switch to another user thread. Previously, it was the kernel who detected blocked or completed threads, now it's not possible because the kernel is unaware of these user threads. 
+    At any given time, only one user thread can run on a core: the user thread either runs to completion or gets blocked. If the user thread gets blocked or completes execution, it need to switch to another user thread. Previously, it was the kernel who detected blocked or completed threads, now it's not possible because the kernel is unaware of these user threads. 
     \begin{tcolorbox}[vert]
         So now the user thread needs to \important{yield} to give back control. It means that it should give up control of the core voluntarily. The user thread library has a scheduler which picks the next user thread to run.
     \end{tcolorbox}
     \begin{tcolorbox}[rouge]
-        Here is a pseudocode example of a context switch with  user threads. We first create a new thread by allocating an initializing the context and add the thread to a global queue. Then the function \texttt{yield} saves the coontext of the current thread, append thread to the queue, gets the next thread from the queue, restores the context of the next thread and resume execution of next thread.
+        Here is a pseudocode example of a context switch with  user threads. We first create a new thread by allocating and initializing the context and add the thread to a global queue. Then the function \texttt{yield} saves the context of the current thread, append thread to the queue, gets the next thread from the queue, restores the context of the next thread and resume execution of next thread.
     
     \begin{codeCenter}
     \begin{Ccode}
@@ -1778,9 +1778,9 @@ function func2():
     \end{codeCenter}
     Then, we done context switching without the kernel!
     \end{tcolorbox}
-        So switching is 10-100 times faster than switching between kernel thrads because there is no overhead from syscalls and kernel scheduler. We can then make more switch and have a better concurrency.
+        So switching is 10-100 times faster than switching between kernel threads because there is no overhead from syscalls and kernel scheduler. We can then make more switch and have a better concurrency.
     \subsection{Coroutines}
-    The yielding needs to happen at the same time as the operation that will block our thread. We have to switch before that the part that block in the function is executed. 
+    The yielding needs to happen at the same time as the operation that will block our thread. We have to switch before that the part of that block in the function is executed. 
     \begin{tcolorbox}[vert]
         The idea of \important{coroutines} is that the programmer knows when something is going to block the thread so he has functions that can cooperate by pausing and resuming its own function. Cooperative functions or routines are called \important{couroutines}: they are functions that can be paused and resumed. They are implementable through callbacks and language support.
     \end{tcolorbox}
@@ -1895,7 +1895,7 @@ loop.run_until_complete(
     \begin{center}
         \includegraphics[width=9cm]{images/62.png}
     \end{center}
-    Let's now adapt our \hyperlink{server}{\textit{server}}. We have to first modify our function \texttt{save\_file} and \texttt{sha}: we have to turn the asynchronous, we have to make the I/O write function inside asynchronous too and finally we need to wait on the file writing operation. The our functions look now like this:
+    Let's now adapt our \hyperlink{server}{\textit{server}}. We have to first modify our function \texttt{save\_file} and \texttt{sha}: we have to turn them asynchronous, we have to make the I/O write function inside asynchronous too and finally we need to wait on the file writing operation. Then our functions look now like this:
     \begin{codeCenter}
     \begin{Ccode}
 async def save_file(req):
@@ -1929,7 +1929,7 @@ async def event_loop():
     \begin{tcolorbox}[vert]
         A \important{monolith} is a single application that contains all the functionality. All functions are part onf the same program and run in the same address spaces.
     \end{tcolorbox}
-    Real-world monoliths are complex and contain several functions, it suffer from synchronization overheads among threads, it doesn't scale well. Overhead limit monoliths from fully utlilizing all the cores and there is synchronization limits performance beyon a few cores.In resume, there is a lot of part that are dependent and should be synchronized.
+    Real-world monoliths are complex and contain several functions, it suffer from synchronization overheads among threads, it doesn't scale well. Overhead limit monoliths from fully utlilizing all the cores and there is synchronization limits performance beyond a few cores. In resume, there is a lot of part that are dependent and should be synchronized.
     \begin{tcolorbox}[rouge]
         A solution to use cores effectively is to run multiple monolith copies. Each instance behaves as an independent server, threads among different instances shouldn't synchronize with each other. Also, each instance runs on a smaller number of cores and scales well.
     \end{tcolorbox}
@@ -1940,7 +1940,7 @@ async def event_loop():
     \begin{itemize}[left=10pt, label=\textbullet]
         \item Memory capacity: each monolith can take a big chunk of server's memoy. 
 
-            If each instance of a srever can consume a large amount of memory (e.g. 60\% of the system's total memory capacity), then you can't run many instances together on the same server.
+            If each instance of a server can consume a large amount of memory (e.g. 60\% of the system's total memory capacity), then you can't run many instances together on the same server.
         \item Memory bandwidth: Analytic workloads scale well but us a lot of memory bandwidth. 
         \item NIC bandwidth: performance may be limited based on availability of NICs. 
         \item Accelerators: GPUs in a server may require CPU cores for coordination.
@@ -1950,7 +1950,7 @@ async def event_loop():
     \end{tcolorbox}
     Now that we saw every disadvantages of monolith, how can we improve this?\\
 
-    In our web server, we can maybe group our functions based on the type of task they perform. We clearly have to distinct types of tasks:
+    In our web server, we can maybe group our functions based on the type of task they perform. We clearly have two distinct types of tasks:
     \begin{enumerate}[left=10pt]
         \item Save and serve files (\texttt{save\_file} and \texttt{get\_line})
         \item Perform hash computations (\texttt{sha})
@@ -1960,7 +1960,7 @@ async def event_loop():
     \end{center}
     These two tasks are indenpendent, they can be separated logically and physically !
     \begin{tcolorbox}[vert]
-        Groups of functions an be treated as separate ``services'' based on functionality and needs. Services have separate codebases, address spaces, etc\ldots This is called a \important{microservice architecture}: a set of small (micro), independent and self-contained services.
+        Groups of functions can be treated as separate ``services'' based on functionality and needs. Services have separate codebases, address spaces, etc\ldots This is called a \important{microservice architecture}: a set of small (micro), independent and self-contained services.
     \end{tcolorbox}
     A service executes a single task type in isolation, each service has its own address to receive requests. Each service has also its own copy of \texttt{handle\_request}, processes incoming requests and chooses which function to execute.
 
@@ -1995,7 +1995,7 @@ async def event_loop():
             
         
     \end{tcolorbox}
-    Before, we saw that if our server use eight cores and 60\% of the system's total memory then we can only run one server. Now we can completely uliyes all cores and memory:
+    Before, we saw that if our server use eight cores and 60\% of the system's total memory then we can only run one server. Now we can completely utilize all cores and memory:
     \begin{center}
         \includegraphics[width=13cm]{images/64.png}
     \end{center}
@@ -2004,11 +2004,11 @@ async def event_loop():
     \begin{itemize}[left=10pt, label=\textbullet]
         \item Services can be written independently of each other and we can choose the best programming language according to a service's needs.
         \item We can have cheaper plans: cloud providers offer servers with different price in function of resources that they have (e.g. memory).
-        \item There is more fault tolerance: one srevice failing doesn't lead to the entire workload failing.
+        \item There is more fault tolerance: one service failing doesn't lead to the entire workload failing.
         \item It allows reusability: services are isolated but can be accessed from any other service.
     \end{itemize}
     \end{tcolorbox}
-    But there is also disadvantages! Services have to communicate between them by messages, it beacomes critical as the number of services increases.
+    But there is also disadvantages! Services have to communicate between them by messages, it becomes critical as the number of services increases.
     \begin{remark}{Remark}
         Connectivity graph are important for scalability:\\
             \includegraphics[width=6cm]{images/65.png}
@@ -2084,7 +2084,7 @@ class HashService:
     To call a function, for example \texttt{hash\_file} that calls \texttt{sha}, it works like this:
     \begin{enumerate}[left=10pt]
         \item \texttt{hash\_file} calls the client stub's \texttt{sha} function with its inputs. 
-        \item Client stub's \texttt{sha} function takes the input and marshalls data from memory into a representation that an be sent over the network (RPC provide the send function to send marshalled data).
+        \item Client stub's \texttt{sha} function takes the input and marshalls data from memory into a representation that can be sent over the network (RPC provide the send function to send marshalled data).
         \item Marshalled data is sent to hash service, RPC libraries include a built-in server that listens for RPC requests coming in from the network.
         \item Server stub's \texttt{sha} function takes the input and unmarshalls the data into variables that can be used by functions.
         \item It calls the functions \texttt{sha}.
@@ -2180,7 +2180,7 @@ server.wait_for_termination()
         \end{Ccode}
         \end{codeCenter}
        \end{tcolorbox}
-    Usually we should have done a TCP connection to communicate with the client. But gRPC channels abstract away communication, everything is buit-in: streaming, retries, deadlines and cancellations.
+    Usually we should have done a TCP connection to communicate with the client. But gRPC channels abstract away communication, everything is built-in: streaming, retries, deadlines and cancellations.
     \begin{center}
         \includegraphics[width=9cm]{images/71.png}
     \end{center}
@@ -2282,7 +2282,7 @@ loop:
     \end{center}
     Finally we obtain an average IPC of 1.6 ($\frac{\#\text{ instrs}}{\# \text{ cycles}}=\frac{11}{7}=1.6$).
     \begin{tcolorbox}[vert]
-        An other reason why pipeline bubbles occurs is the \important{branch controle flow}: it's when we predict the branch direction to keep fetching instrunctions.
+        An other reason why pipeline bubbles occurs is the \important{branch control flow}: it's when we predict the branch direction to keep fetching instructions.
 
     If we are waiting for the real direction before fetching it would introduces bubbles: two cycles mininum with a shallow pipeline because we usually know the target of the branch (e.g. \texttt{beq}) on the execute stage. Real pipelines are much deeper (14+) so we prefer to predict the target of the branch to continue to fetch immediately. If the prediction was right we continue, otherwise we flush the pipeline.
     \end{tcolorbox}
@@ -2328,7 +2328,7 @@ loop:
         \includegraphics[width=6cm]{images/80.png} 
     \end{center}
     \begin{tcolorbox}[violet]
-    The critical decision on CGMT is when we have to switch threads: the thread switch + the pipe fill thime should be way smaller that the blocking latency.\\
+    The critical decision on CGMT is when we have to switch threads: the thread switch + the pipe fill time should be way smaller that the blocking latency.\\
 
     The advantage of CGMT is that it requires small changes to exisiting hardware but it slow down the performance of a single-thread (shared resources, etc\ldots).
     \end{tcolorbox}
@@ -2397,7 +2397,7 @@ loop:
     It is especially well suited to wide-issue out-of-order processors, where unused execution slots can be filled by other threads.
 
     \begin{remark}{Remark}
-        Private caches for SMT are easier to implement bu shared caches are faster to communicate among threads, there is no coherence overhead and offers more flexibility in allocating resources.
+        Private caches for SMT are easier to implement but shared caches are faster to communicate among threads, there is no coherence overhead and offers more flexibility in allocating resources.
     \end{remark}
 \section{GPUs}
     \begin{tcolorbox}[vert]
