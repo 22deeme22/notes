@@ -985,7 +985,7 @@ program.
    
 \subsection{Language level consistency}
     \begin{tcolorbox}[vert]
-        A \important{data race} is when two conflicting operations from different thrads occur simultaneously. Operations conficlt if they access the same location, and at least one is a write and these simultaneous operations are defined back-to-back accesses in any sequentially consistency.
+        A \important{data race} is when two conflicting operations from different thrads occur simultaneously. Operations conflict if they access the same location, and at least one is a write and these simultaneous operations are defined back-to-back accesses in any sequentially consistency.
     \end{tcolorbox}
     If we check data races in our \hyperlink{consistency}{\textbf{\textit{first example}}} we can see that there is sequential consistency executions where read/write to A or B are back to back:
     \begin{itemize}[left=10pt, label=\textbullet]
@@ -1014,7 +1014,7 @@ program.
         There is five situations where \textrightarrow \space is guarantee by Java:
         \begin{itemize}[left=10pt, label=\textbullet]
             \item Actions in the same thread \textrightarrow \space each other in program order. 
-            \item Unlock a monitor \textrightarrow \space all locking operations. It means that a thread cannot hat is already locked by another thread, it must wait until the other thread unlocks it. 
+            \item Unlock a monitor \textrightarrow \space all locking operations. It means that a thread cannot lock a value if this value is already locked by another thread, it must wait until the other thread unlocks it. 
             \item Writing to a volatile \textrightarrow \space all subsequent reads of that field. 
             \item All actions in a thread \textrightarrow \space a \lstinline!join()! on that thread.
             \item If $A_x$ \textrightarrow \space $A_y$, and $A_y$ \textrightarrow \space $A_z$, then $A_x$ \textrightarrow \space $A_z$.
@@ -1105,7 +1105,7 @@ int y;
     
 \section{Synchronization}
 \begin{tcolorbox}[vert]
-    \important{Hardware synchronization} is the ability if the CPU to provide atomic instructions. For example, in this code:
+    \important{Hardware synchronization} is the ability of the CPU to provide atomic instructions. For example, in this code:
 
     \vspace{1em}
     \begin{minipage}{0.48\textwidth}
@@ -1132,7 +1132,7 @@ st X, r1
 \end{tcolorbox}
     \textbf{Objectives of synchronization:}
     \begin{itemize}[left=10pt, label=\textbullet]
-        \item There should be low overhead and we have to take care of scabiity because synchronization can limit scability.
+        \item There should be low overhead and we have to take care of scalability because synchronization can limit scalability.
         \item Our synchronization should ensure correctness, synchronization failures are very difficult to debug.
         \item Hardware and software must agree on synchronizations methods.
     \end{itemize}
@@ -1169,7 +1169,7 @@ st X, r1
     \subsubsection{TS}
     To implement a lock we need to define a memory location where threads communicate w.r.t. who can execute and who must wait (c.f. \hyperlink{sinc}{\textit{phases of synchronization}}).
 
-    If we try to creat a lock by just define a variable \lstinline!lock! that is equal to 0 when the thread can access and 1 otherwise, like this:
+    If we try to create a lock by just define a variable \lstinline!lock! that is equal to 0 when the thread can access and 1 otherwise, like this:
     \begin{codeCenter}
     \begin{Ccode}
 Lock:   
@@ -1214,7 +1214,7 @@ Unlock:
     \subsubsection{TTS}
     Hopefully there is way to reduce coherence traffic. One way is to test locally.
     \begin{tcolorbox}[rouge]
-        The idea behind ``test-and-test-and-set'' (TTS) is to just read classicaly the lock, if it's 1 (locked), then we juste wait. Then, only if it's 0, we read one more time the lock with the TS isntruction. So when the processor is waiting, it juste does BusRd instead of BusRdX and doesn't invalidate other caches.
+        The idea behind ``test-and-test-and-set'' (TTS) is to just read classicaly the lock, if it's 1 (locked), then we juste wait. Then, only if it's 0, we read one more time the lock with the TS instruction. So when the processor is waiting, it juste does BusRd instead of BusRdX and doesn't invalidate other caches.
         \begin{codeCenter}
         \begin{Ccode}
 Test:
@@ -1240,14 +1240,14 @@ Unlock:
         Another way to reduce coherence traffic is the TS lock with exponential bacl-off. The idea is to wait after failing to acquire the lock. To get a balance between lock latency and contention, we increase the time exponentially every fail (1 ms, 2 ms, 4 ms, \ldots). 
     \end{tcolorbox}
 
-    TS with exponential back-off have the same uncontentded latency as TS but potentially higher latency under contention. It generates less traffic than TS because it's not continually attempting to acquire lock. It also improve scalability but it can cause sever unfairness: newe requester back off for shorter intervals.
+    TS with exponential back-off have the same uncontentded latency as TS but potentially higher latency under contention. It generates less traffic than TS because it's not continually attempting to acquire lock. It also improve scalability but it can cause sever unfairness: new requester back off for shorter intervals.
 
     One of the issue with TS and TTS is that they require an instruction that is both a read and a write and this is a challenge for pipelined processors. It must also lock the bus until the RMW completes, so it complicates cache controller logic and two memory accesses per sintruction is more difficult to track in CPU pipeline.
     \subsubsection{Load-locked and store-conditional}
     \begin{tcolorbox}[rouge]
-        Load-locked (LL) and store-conditional (SC) together provides atomi Read-Modify-Write. The idea is that LL read a value a ``put it under surveillance'', then we can continue to execute some code. After, we can store with SC, that write only if the value hasn't been modified in the memory (by another processor). If it has, we restart from the LL.
+        Load-locked (LL) and store-conditional (SC) together provides atomic Read-Modify-Write. The idea is that LL read a value a ``put it under surveillance'', then we can continue to execute some code. After, we can store with SC, that write only if the value hasn't been modified in the memory (by another processor). If it has, we restart from the LL.
     \end{tcolorbox}
-    We can use LL/Sc to build many types of locks, for example TS:
+    We can use LL/SC to build many types of locks, for example TS:
     \begin{codeCenter}
     \begin{Ccode}
 Test_and_Set:
@@ -1262,9 +1262,9 @@ Release:
     \end{Ccode}
     \end{codeCenter}
     \begin{tcolorbox}[violet]
-    \textbf{Blocking sychronization:}
+    \textbf{Blocking synchronization:}
 
-    The idea of blocking synchronization is that if the progress cannot be made because a resource cannot be acquired, then we free up the core for another thread. We suspend the running thread, the OS schedules another thread to run and the other thread can run and make progress.
+    The idea of blocking synchronization is that if the progress cannot be make because a resource cannot be acquired, then we free up the core for another thread. We suspend the running thread, the OS schedules another thread to run and the other thread can run and make progress.
     \end{tcolorbox}
     \begin{tcolorbox}[gris]
         \textbf{Busy waiting (spinning) vs blocking sychronization:}
@@ -1339,6 +1339,7 @@ void editHash(HashTbl tbl, int key) {
     \begin{codeCenter}
     \begin{Ccode}
 // P0
+objA = tbl.get(1);
 objB = tbl.get(2);
 synchronized(objA){
     synchronized(objB){
@@ -1350,6 +1351,7 @@ synchronized(objA){
 \begin{codeCenter}
 \begin{Ccode}
 // P1
+objA = tbl.get(2);
 objB = tbl.get(1);
 synchronized(objA){
     synchronized(objB){
@@ -1409,12 +1411,12 @@ synchronized(tbl) {
     \end{tcolorbox}
         \textbf{Challenges and applications:}
 
-        Processes often don't know ahead of time which resources to lock, the programmer must ensure code follows ordering. Ordering locks often applied to list-like data structures, when the elements to lock are bounded, for example: multiple threads accessing a single array, sort the elements of the array in some order and allow threads to lock the elemts one by one in the order. This is a very popular approach that we found inside the linux kernel.
+        Processes often don't know ahead of time which resources to lock, the programmer must ensure code follows ordering. Ordering locks often applied to list-like data structures, when the elements to lock are bounded, for example: multiple threads accessing a single array, sort the elements of the array in some order and allow threads to lock the elements one by one in the order. This is a very popular approach that we found inside the linux kernel.
         
     \subsubsection{Detection}
-        Sometimes we can't prevent deadlocks, then, the second best approach is to detect it and kill procceses involved in the deadlock. Thgis approach require two things: an algorithm to detect deadlocks and an algorithm to recover from a deadlock.
+        Sometimes we can't prevent deadlocks, then, the second best approach is to detect it and kill procceses involved in the deadlock. This approach require two things: an algorithm to detect deadlocks and an algorithm to recover from a deadlock.
         \begin{tcolorbox}[vert]
-            A \important{resource allocation graph (RAG)} is a graph where: nodes are either resources or threads, a resource node can have multiple units and there is directed edges between threads and resource. If RAG has o directed cycle, the current state is deadlock-free. If RAG has a directed cycle: if there is only one unit per resource, there is a deadlock, for multiple units per resource, there is a possibiliy of deadlock.
+            A \important{resource allocation graph (RAG)} is a graph where: nodes are either resources or threads, a resource node can have multiple units and there is directed edges between threads and resource. If RAG has no directed cycle, the current state is deadlock-free. If RAG has a directed cycle: if there is only one unit per resource, there is a deadlock, for multiple units per resource, there is a possibiliy of deadlock.
         \end{tcolorbox}
         Let's see the notation of the one unit per resource case.
         \begin{center}
@@ -1472,7 +1474,7 @@ synchronized(tbl) {
         We need some new instructions and hardware changes to implement TM.
 
         \begin{tcolorbox}[gris]
-            Let's introduce three Intel Haswell intructions: \lstinline!xbegin! \textrightarrow start transaction, takes pointer to fallback address in case of abors, \lstinline!xend! \textrightarrow ends transaction, \lstinline!xabort! software initiated transaction abord.
+            Let's introduce three Intel Haswell intructions: \lstinline!xbegin! \textrightarrow start transaction, takes pointer to fallback address in case of abors, \lstinline!xend! \textrightarrow ends transaction, \lstinline!xabort! software initiated transaction abordt
         \end{tcolorbox}
         The CPU assume that no conflicts occur, it records every read and writes between \lstinline!xbegin! and \lstinline!xend! and every state is speculative (can be seen only by the core). Then the CPU checks for conflicts in the data structure (if another core is using same resources), for example, it sees a BusRdX or a BusInv matching a load (W/R) or a store (W/W) in LSQ. Check if there is another corner case (cache eviction, interruption, \ldots). Finally, on conflict, execute recovery code.
         \begin{image}{Here is an code exemple}
@@ -1527,7 +1529,7 @@ while(!done){ }
                 \end{codeCenter}
             \end{minipage}
         \end{tcolorbox}
-        It assumes sequntial consistency!
+        It assumes sequential consistency!
         \begin{tcolorbox}[vert]
            \important{Barriers} introduce planned stalls in threads, like wait for all threads to read input before start. They use flags.
         \end{tcolorbox}
@@ -1582,11 +1584,11 @@ void senseBarrier(Barrier_t* b, int num_threads) {
         
         \textbf{Examples of locks in OpenMP:}
         \begin{itemize}[left=10pt, label=\textbullet]
-            \item \lstinline!omp\_init\_lock(omp\_lock\_t *)! : initializes the lock variable passed, lock is not held by the initializing thread, 
-            \item \lstinline!omp\_destroy\_lock(omp\_lock\_t *)! : disassociates the given lock variable from any locks, 
-            \tem \lstinline!omp\_set\_lock(omp\_lock\_t *)! : waits until the lock is available, then acquires the lock, 
-            \item \lstinline!omp\_unset\_lock(omp\_lock\_t *)! : releases the lock, 
-            \item \lstinline!omp\_test\_lock(omp\_lock\_t *)! : attempts to set a lock, but does not block if the lock is unavailable.
+            \item \lstinline!omp_init_lock(omp_lock_t *)! : initializes the lock variable passed, lock is not held by the initializing thread, 
+            \item \lstinline!omp_destroy_lock(omp_lock_t *)! : disassociates the given lock variable from any locks, 
+            \tem \lstinline!omp_set_lock(omp_lock_t *)! : waits until the lock is available, then acquires the lock, 
+            \item \lstinline!omp_unset_lock(omp_lock_t *)! : releases the lock, 
+            \item \lstinline!omp_test_lock(omp_lock_t *)! : attempts to set a lock, but does not block if the lock is unavailable.
         \end{itemize} 
         
         \begin{codeCenter}
@@ -1614,7 +1616,7 @@ omp_destroy_lock(&lock);
     \begin{tcolorbox}[vert]
         A \important{process} is running instance of a program and are independent of each other. Each process has its own virtual address space and they don't share any system resources. 
     \end{tcolorbox}
-    Hundreds of processes can exist on a CPU but only few of them run in parallel at any given time. The OSS schedules and switches processes as needed, it gives the illusion of multi-tasking and allloes for concurrency (another process runs when one is blocked). For now, P in picture means process not processor.
+    Hundreds of processes can exist on a CPU but only few of them run in parallel at any given time. The OS schedules and switches processes as needed, it gives the illusion of multi-tasking and allloes for concurrency (another process runs when one is blocked). For now, P in picture means process not processor.
     \begin{center}
         \includegraphics[width=10cm]{images/57.png}
     \end{center}
@@ -1685,7 +1687,7 @@ void handle_request(Request req) {
 \end{codeCenter}\hypertarget{type0}{}
     We have two type of request: type 0 write the string into a file, type 1 compute the SHA hash of the string and store it. Writing a single line to a file can take between hundred $\mu s$ to $ms$. So a thread handling a type 0 request is simply IDLE during I/O \textrightarrow \space more than hundred $\mu$s are wasted per line.
 
-    By this time we could serviced around ten type 1 request. There is also threads executing type 1 requests that can get blocked behing threads executing type 0 requests that are wasting clock cycles.
+    By this time we could serviced around then type 1 request. There is also threads executing type 1 requests that can get blocked behind threads executing type 0 requests that are wasting clock cycles.
     \end{tcolorbox}
     We already saw that parallellism is the ability to execute threads at the same time, to speed up a single task by splitting it amongst multiple threads. It exploits multiple cores. But what is really concurrency?
     \begin{tcolorbox}[vert]
@@ -1702,7 +1704,7 @@ void handle_request(Request req) {
         \item Calls the scheduler algorithm to pick the next thread, 
         \item Restores the context of the next thread.
     \end{enumerate}
-    The context saved means that we that we save the ``state'' of a thread that mus be saved before a switch.
+    The context saved means that we that we save the ``state'' of a thread that must be saved before a switch.
     \begin{image}{You need to remember the PC (program counter) of the last executed instruction before the switch, here \lstinline!lw r6, O(r3)!, and also the value of all registers before the switch.}
         \begin{codeCenter}
         \begin{Ccode}
