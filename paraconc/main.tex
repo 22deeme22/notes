@@ -6,7 +6,7 @@
 \thispagestyle{fancy}
 \title{Notes of parallelism and concurrency in software}
 \author{Dario Marcone}
-\date{Jeudi 19 février 2026}
+\date{Thursday 19 February 2026}
 
 \begin{document}
 \maketitle
@@ -20,7 +20,7 @@
 \section{Metrics}
 \subsection{Iron Law}
     \begin{tcolorbox}[rouge]
-        \[\text{Processor Performance }= \frac{\text{Instructions}}{\text{Program}} \cdot \frac{\text{Cycles}}{\text{Instruction}} \cdot \frac{\text{Seconds}}{\text{Cycle}}.\]
+        \[\text{Execution time}= \frac{1}{\text{Processor performance}}= \frac{\text{Instructions}}{\text{Program}} \cdot \frac{\text{Cycles}}{\text{Instruction}} \cdot \frac{\text{Seconds}}{\text{Cycle}}.\]
     \end{tcolorbox}
     \begin{itemize}[left=10pt, label=\textbullet]
         \item \textbf{$\frac{\text{Instructions}}{\text{Program}}$}:
@@ -31,21 +31,16 @@
                     \item The runtime system: depends of the language interpreted, the runtime overhead, etc
                 \end{itemize}
                 \begin{remark}{Remark}
-                    The runtime system is a program given with the programmation language (ex. JVM for Java), that gives necessary services and mecanisms to the program during its execution, like memory alllocation, etc\ldots
+                    The runtime system is a program given with the programmation language (ex. JVM for Java), that gives necessary services and mechanisms to the program during its execution, like memory allocation, etc\ldots
                 \end{remark}
             \end{tcolorbox} 
         \item \textbf{$\frac{\text{Cycles}}{\text{Instruction}}$}:
-            \begin{tcolorbox}[gris]
-                The $\frac{\text{Cycles}}{\text{Instruction}}$ part represent the number of cycles by instructions, it is influenced by:
-                \begin{itemize}[left=10pt]
-                    \item The front-end cycles (instruction cache, branch predictor, etc\ldots),
-                    \item The back-end cycles (data cache, ALU, FPU, etc\ldots),
-                    \item  The memory (latency, bandwith).
+            \begin{tcolorbox}[gris] The $\frac{\text{Cycles}}{\text{Instruction}}$ part represent the number of cycles by instructions, it is influenced by: \begin{itemize}[left=10pt] \item The front-end cycles (instruction cache, branch predictor, etc\ldots), \item The back-end cycles (data cache, ALU, FPU, etc\ldots), \item  The memory (latency, bandwidth).
                 \end{itemize}
                 \begin{remark}{Remark}
-                    Front-end part of the pipeline CPU is the instruction fetching, decoding and branch prediction part, and the banc-end is the computation, memory access and data stockage part.
+                    Front-end part of the pipeline CPU is the instruction fetching, decoding and branch prediction part, and the back-end is the computation, memory access and data storage part.
                     
-                    We have to be careful! The cycles per instruction (CPI) is a good metric for uniprocessor, but not necessarly for multi processor. In multiprocessors, some core may have to wait for others, to have a specific information or whatever, so when the core wait, it will just do some spinning threads which is very fast $\implies$ a low CPI! But in fact, you dont execute the program particularely faster.
+                    We have to be careful! The cycles per instruction (CPI) is a good metric for uniprocessor, but not necessarily for multi processor. In multiprocessors, some core may have to wait for others, to have a specific information or whatever, so when the core wait, it will just do some spinning threads which is very fast $\implies$ a low CPI! But in fact, you don't execute the program particularly faster.
                      
                 It is better to use some metric for `` useful work'', like:
                 \begin{itemize}[left=10pt]
@@ -71,7 +66,7 @@
     
 \subsection{Amdahl's law}
     \begin{tcolorbox}[rouge]
-        The amdahl's law shows that we have to improve efficency of what take the most of the time in our code execution. 
+        The amdahl's law shows that we have to improve efficiency of what take the most of the time in our code execution. 
         \[\text{Speedup}=\frac{1}{\frac{\text{Fraction}_{\text{enhanced}}}{\text{Speedup}_{\text{enhanced}}}+\left(1-\text{Fraction}_{\text{enhanced}}\right)}.\]
     \end{tcolorbox}
     
@@ -83,17 +78,13 @@
          \begin{itemize}[left=10pt, label=\textbullet]
             \item The x-axis correspond to the number of data used for computation: if it is low, then it means you load/write a lot of data but you don't make computation with them. You are limited by the speed of loading/writing of/in the memory, not by the CPU calculation speed $ \implies$ memory bound.
             \item The y-axis correspond to the number of FLOPs that you can reach on the CPU, if you are doing a lot of computation by byte, then the CPU reach its maximum calculation speed $\implies$ peak FLOPs/sec, independent of memory.
-            \item We can know by what we are limited by taking the minimum of 
-            \[\begin{functionbypart}{\text{Performance}}
-                \text{Peak FLOPs/sec}  \\
-                \text{Bandwidth}\cdot \text{Intensity}
-            \end{functionbypart}
-            \]
+            \item We can know by what we are limited by taking 
+            \[min\left(\text{peak FLOPs/sec }\space, \space \text{bandwidth}\cdot \text{intensity}\right).\]
             It means that
 
-            if $B \cdot \text{Intensity} < \text{Peak FLOPs/sec} \implies$ we are limited by memory,
+            If $B \cdot \text{Intensity} < \text{Peak FLOPs/sec} \implies$ we are limited by memory,
             
-            if $B \cdot \text{Intensity} \geq \text{Peak FLOPs/sec} \implies$ we are limited by CPU.
+            If $B \cdot \text{Intensity} \geq \text{Peak FLOPs/sec} \implies$ we are limited by CPU.
             
         \end{itemize}
     \end{tcolorbox}
@@ -141,9 +132,9 @@
     Then in \important{pre-multicore era}, we had one BIG fancy core:
     \begin{itemize}[left=10pt, label=\textbullet]
         \item A lot of budget on run a single instruction very fast, 
-        \item More transitors, so faster branch predictor, larger cache hierarchy, etc\ldots
+        \item More transistors, so faster branch predictor, larger cache hierarchy, etc\ldots
     \end{itemize}
-    Finally, we are in the \important{multicore era}, more transitors, but in simple cores: each core is slower (around 25\%), but there is (for example) two cores \textrightarrow $\mathspace 2\cdot 0.75 = 1.5$.\\   
+    Finally, we are in the \important{multicore era}, more transistors, but in simple cores: each core is slower (around 25\%), but there is (for example) two cores \textrightarrow $\mathspace 2\cdot 0.75 = 1.5$.\\   
 \end{tcolorbox}
 
     But now, we have to parallelize our code, either it will run on only one of the cores. There is different way expressing parallelism as programmer:
@@ -205,18 +196,18 @@ __m256 vb = _mm256_load_ps(b);
 __m256 vc = _mm256_add_ps(va, vb);
         \end{Ccode}
         \end{codeCenter}
-        \lstinline!__m256! stand for the float type, the \lstinline!_mm256! is the size of the vector, here 256 bits (8 float) and the load/add is the operation of the funcion.\\
+        \lstinline!__m256! stand for the float type, the \lstinline!_mm256! is the size of the vector, here 256 bits (8 float) and the load/add is the operation of the function.\\
         GPUs are big SIMD processor!
     \end{tcolorbox}
 \subsection{Principles of parallel computing}
     \begin{itemize}[left=10pt, label=\textbullet]
-        \item Finding enough paralellism, 
+        \item Finding enough parallelism, 
         \item Division of work, 
         \item Scaling, 
         \item Communication and synchronization.
     \end{itemize}
     \begin{tcolorbox}[gris]
-    \textbf{Finding enough paralellism:} this is all the Amdahl's law part.
+    \textbf{Finding enough parallelism:} this is all the Amdahl's law part.
     \end{tcolorbox}
     \begin{tcolorbox}[gris]
         \textbf{Division of work:}
@@ -233,11 +224,11 @@ __m256 vc = _mm256_add_ps(va, vb);
         \textbf{Communication \& synchronization:}
         We will see three different model of communication/synchronization:
         \begin{itemize}[left=10pt, label=\textbullet]
-            \item Message passing: the synchronization is at the I/O level, hadoop (e.g. datacenter).
+            \item Message passing: the synchronization is at the I/O level, hadoop (e.g. Data center).
                 \begin{itemize}[left=10pt]
-                    \item There is complelety different address spaces, threads communicate via sending/receiving message, the synchronization is implicit in messages. 
+                    \item There is completely different address spaces, threads communicate via sending/receiving message, the synchronization is implicit in messages. 
                     \item This is harder to program than shared memory, but more scalable.
-                    \item Message passing is the most used communication system in datacenters.
+                    \item Message passing is the most used communication system in data centers.
                 \end{itemize}
                 
             \item Shared memory: the synchronization is at the memory level, Scala (e.g. CPU). 
@@ -278,13 +269,13 @@ __m256 vc = _mm256_add_ps(va, vb);
          \textbf{MESI protocol:} \important{M}odified, \important{E}xclusive, \important{S}hared and \important{I}nvalid states.
         \begin{itemize}[left=10pt, label=\textbullet]
             \item Modified: this cache has updated the value and holds the authoritative copy. 
-            \item Exclusive: this cache has an exlusive copy. 
+            \item Exclusive: this cache has an exclusive copy. 
             \item Shared: one or more caches hold the value. 
             \item Invalid.
         \end{itemize}
         Core actions:
         \begin{itemize}[left=10pt, label=\textbullet]
-            \item PRd: processor attemps to read a line.
+            \item PRd: processor attempts to read a line.
             \item PWr: processor attempts to write a line.
         \end{itemize}
         Remote actions:
@@ -317,7 +308,7 @@ In the point-to-point system, the message is more scalable and have an explicit 
     \newpage
     \textbf{Directory-based protocol:}
     \begin{tcolorbox}[vert]
-        In the directory-based protocole, we use a \important{coherence directory}. The directory tracks all caches that contain a particular block, then all messages leaving the core are first sent to the directory and it takes the appropriate actions, and respond to the original cache request. The directory serves as a per-block address or
+        In the directory-based protocol, we use a \important{coherence directory}. The directory tracks all caches that contain a particular block, then all messages leaving the core are first sent to the directory and it takes the appropriate actions, and respond to the original cache request. The directory serves as a per-block address or
     \end{tcolorbox}
     \begin{tcolorbox}[rouge]
         Cache to directory messages: 
@@ -341,9 +332,9 @@ In the point-to-point system, the message is more scalable and have an explicit 
     \includegraphics[width=9cm]{images/12.png}
     \end{center}
     \begin{tcolorbox}[vert]
-        The \important{directory entry} contain: 2 bits storing the MESI coherence state, 39 bits containing the cache tag et $\log_2\left(\text{Cores}\right)$ bits identifying the core associated with this entry.
+        The \important{directory entry} contain: 2 bits storing the MESI coherence state, 39 bits containing the cache tag and $\log_2\left(\text{Cores}\right)$ bits identifying the core associated with this entry.
     \end{tcolorbox}
-    The size of directory is dependent of the number and the size of caches. If there is two processor with 4-ways associatives caches, then the directory must be 8-way associative:
+    The size of directory is dependent of the number and the size of caches. If there is two processor with 4-ways associative caches, then the directory must be 8-way associative:
     \begin{center}
     \includegraphics[width=9cm]{images/13.png}
     \end{center}
@@ -356,14 +347,14 @@ In the point-to-point system, the message is more scalable and have an explicit 
     \begin{center}
     \includegraphics[width=9cm]{images/14.png}
     \end{center}
-    Now the problem is that we can have conflit easily! The solution is to make a bigger directory and use more tag bits to index.
-    \begin{image}{With this structre, we'll have low conflict rate, but a large area overhead\ldots}
+    Now the problem is that we can have conflict easily! The solution is to make a bigger directory and use more tag bits to index.
+    \begin{image}{With this structure, we'll have low conflict rate, but a large area overhead\ldots}
         \includegraphics[width=3.5cm]{images/15.png}
     \end{image}
 \section{Optimizing software}
 \subsection{Coherence misses}
     \begin{tcolorbox}[vert]
-        Coherence adds extra misses when two cores acess the same cache line, then there is two types of coherence misses:
+        Coherence adds extra misses when two cores access the same cache line, then there is two types of coherence misses:
         \begin{itemize}[left=10pt, label=\textbullet]
             \item \important{True sharing}: the producer/consumer communication when processors read and write the same variable. 
             \item \important{False sharing}: processors updating different data which are placed in the same cache block.
@@ -371,7 +362,7 @@ In the point-to-point system, the message is more scalable and have an explicit 
     \end{tcolorbox}
     \textbf{True sharing, histogram example:}
     \begin{tcolorbox}[gris]
-        We have an input text and we want to count the occurences of each different characters in the text. We'll use OpenMP to divide the work across threads.
+        We have an input text and we want to count the occurrences of each different characters in the text. We'll use OpenMP to divide the work across threads.
     \end{tcolorbox}
     \begin{codeCenter}
     \begin{Ccode}
@@ -414,7 +405,7 @@ for(int i = 0; i < N_BUCKETS; i++) {
         In the code, \lstinline!shared (x, y)! tells OpenMP that all threads should see and access the same variable in memory (shared memory communication).
     \end{remark}
     In the first code, we have \lstinline!INPUT_SIZE! times the critical section and the read/write to the histogram. In the second one, we have \lstinline!N_BUCKETS! times the number of threads, then if the size of the input is way bigger than the number of buckets times the number of threads, we eliminate a lot of critical sections and true sharing. \\
-    Here is just an alternative of the merge loop that eliminate all critical sections, but every thread accesses a fraction of everyone's histogram.
+    Here is just an alternative of the merge loop that eliminating all critical sections, but every thread accesses a fraction of everyone's histogram.
         \begin{codeCenter}
         \begin{Ccode}
 // Merge loop
@@ -446,7 +437,7 @@ for(int i = 0; i < INPUT_SIZE;i++) {
     \end{Ccode}
     \end{codeCenter}
     \begin{tcolorbox}[gris]
-        Nowadays, cache line are 64 byte in general, then it can store the four \lstinline!int! on the same cache line. So everytime a core update its counter value, it invalidate every other cache line, this is false sharing!
+        Nowadays, cache line are 64 byte in general, then it can store the four \lstinline!int! on the same cache line. So every time a core update its counter value, it invalidate every other cache line, this is false sharing!
     \end{tcolorbox}
     
     \begin{center}
@@ -469,19 +460,19 @@ PaddedCounter counters[NTHREADS];
     \end{Ccode}
     \end{codeCenter}
     \begin{tcolorbox}[violet]
-        We saw that eliminate false sharing take a lot of space, so the capacity and conflict misses increases. Then, the bigger the cache is, the less the padding is efficient to reduct global misses.
+        We saw that eliminating false sharing take a lot of space, so the capacity and conflict misses increases. Then, the bigger the cache is, the less the padding is efficient to reduct global misses.
     \end{tcolorbox}
     \begin{center}
     \includegraphics[width=9cm]{images/17.png}
     \end{center}
     \textbf{Block locality:}\\
-    The locality of caches can be a problem in a program that, for example, multiply matrices, because we read the first matrice vertically and the second one horizontally.
+    The locality of caches can be a problem in a program that, for example, multiply matrices, because we read the first matrix vertically and the second one horizontally.
     \begin{center}
     \includegraphics[width=9cm]{images/18.png}
     \end{center}
     Arrays are too large to fit in caches, then if we want to calculate $A \cdot  B = C$, for every element of C if A and B are of size NxN, we'll have $1+N\left[\frac{4}{\text{cache line size}}\right]+N$ misses! Then for the whole calculation, we obtain $\left(N^3\left(1+c\right)+N^2\right)$ which is $O\left(N^3\right)$ misses (where $c =\frac{\text{element size}}{\text{cache line size}}$).\\
     \hypertarget{matrix}{}
-    \begin{image}{To avoid this, we can do blocking. \\ Then, for the whole array, we have to creat $\left(\frac{N}{n}\right)^2$ blocks and they have $2\cdot \left[\frac{4\cdot n}{\text{cache line size}}\right]$ misses, so finally we have $O\left(N^2\right)$ misses.}
+    \begin{image}{To avoid this, we can do blocking. \\ Then, for the whole array, we have to create $\left(\frac{N}{n}\right)^2$ blocks and they have $2\cdot \left[\frac{4\cdot n}{\text{cache line size}}\right]$ misses, so finally we have $O\left(N^2\right)$ misses.}
         \includegraphics[width=9cm]{images/19.png}
     \end{image}
 \subsection{Work distribution and scheduling}
@@ -571,7 +562,7 @@ loop:
     To apply SIMD we need a specific hardware: 
     \begin{itemize}[left=10pt, label=\textbullet]
         \item Vector registers to store multiple elements of a vector in a single register, 
-        \item Replicated functional units inside th epipeline of a core (multiple lane/ALUs), 
+        \item Replicated functional units inside the pipeline of a core (multiple lane/ALUs), 
         \item Support for decoding new instructions (SIMD instructions).
     \end{itemize}
     \subsection{AVX instructions}
@@ -581,7 +572,7 @@ loop:
     \includegraphics[width=10cm]{images/21.png}
     \end{center}
     \begin{tcolorbox}[violet]
-    Let's interpretate an AVX instructions e.g. \lstinline!vaddpd!:
+    Let's interpret an AVX instructions e.g. \lstinline!vaddpd!:
     \begin{itemize}[left=10pt, label=\textbullet]
         \item \lstinline!v! means that is an AVX instructions,
         \item \lstinline!add! indicate the operation,
@@ -589,7 +580,7 @@ loop:
         \item \lstinline!d! stand for double-precision, can be \lstinline!s! for single-precision, etc\ldots
     \end{itemize}
     \end{tcolorbox}
-    To use AVX instructions there is multiple way, the simplest is to auto-compile the code by using -O3 when compiling C code. But there is two main problems with the auto-compile solution. Aliasing and alignement.\\
+    To use AVX instructions there is multiple way, the simplest is to auto-compile the code by using -O3 when compiling C code. But there is two main problems with the auto-compile solution. Aliasing and alignment.\\
     \begin{tcolorbox}[vert]
        \important{Aliasing:} 
 
@@ -601,7 +592,7 @@ void daxpy(int n, double a, double* restrict x, double* restrict y);
         \end{codeCenter}
     \end{tcolorbox}
     \begin{tcolorbox}[vert]
-        \important{Alignement:}
+        \important{Alignment:}
 
         Modern DRAM accesses are per four bytes and for better performances, accesses to vector elements should be aligned.     
     \end{tcolorbox}
@@ -625,7 +616,7 @@ void daxpy(int n, double a, double* restrict x, double* restrict y);
         \includegraphics[width=9cm]{images/23.png}
     \end{image}
     \begin{tcolorbox}[violet]
-        Let's interpretate an AVX intrisics function e.g. \\
+        Let's interpret an AVX intrisics function e.g. \\
         \lstinline!_mm256_op_suffix(type param1, type param2, type param3)!:
         \begin{itemize}[left=10pt, label=\textbullet]
             \item \lstinline!mm256! means that we are working on the 256-bit registers,
@@ -650,11 +641,11 @@ for(int i = 0; i < n; i+=4) {
 }
     \end{Ccode}
     \end{codeCenter}
-    AVX instrinsics C code optimize a lot normal code because cache misses are optimized too.
+    AVX intrinsic C code optimize a lot normal code because cache misses are optimized too.
 \section{Message passing}
     \begin{tcolorbox}[vert]
     
-        \important{Message passing} is used when the memory is distributed, it happens and it's very useful for supercomputer or datacenters. So we have to use message passing when we have a particular hardware where: each node has its own memory, there is a network interface card (NIC) that connects nodes to a newtork.
+        \important{Message passing} is used when the memory is distributed, it happens and it's very useful for supercomputer or data centers. So we have to use message passing when we have a particular hardware where: each node has its own memory, there is a network interface card (NIC) that connects nodes to a network.
     \end{tcolorbox}
     \begin{center}
     \includegraphics[width=9cm]{images/24.png}
@@ -664,20 +655,20 @@ for(int i = 0; i < n; i+=4) {
         \begin{itemize}[left=10pt, label=\textbullet]
             \item The cost scalability: cache-coherent shared memory becomes expensive quite fast and distributed memory without cache coherence is common. 
             \item The transparency: the communication is explicit (send/receive messages).
-            \item The fault tolerence: if a process fail it doesn't crash the entire system.
+            \item The fault tolerance: if a process fail it doesn't crash the entire system.
         \end{itemize}
     \end{tcolorbox}
     \begin{tcolorbox}[gris]
-        Disavantages of message passing are:
+        Disadvantages of message passing are:
         \begin{itemize}[left=10pt, label=\textbullet]
             \item There is a higher communication overhead: syscalls, user-level library, etc \ldots 
             \item It increases the code complexity. 
-            \item It is difficult to overlap with computation: while the message is travelling its hard to compute at the same time.
+            \item It is difficult to overlap with computation: while the message is traveling its hard to compute at the same time.
         \end{itemize}
     \end{tcolorbox}
 \subsection{MPI}
     \begin{tcolorbox}[vert]
-        To apply message passing we use \important{MPI (Message Passing Interface)}. The model of MPI is a \important{SPMD (Single Program Multiple Data)} model: each process has a copy of the same program anf they all run at their own rate and can take different paths through the code.
+        To apply message passing we use \important{MPI (Message Passing Interface)}. The model of MPI is a \important{SPMD (Single Program Multiple Data)} model: each process has a copy of the same program and they all run at their own rate and can take different paths through the code.
     \end{tcolorbox}
     A simple code using MPI looks like this:
     \begin{codeCenter}
@@ -726,7 +717,7 @@ int main( int argc, char *argv[] )
 
     \begin{tcolorbox}[violet]
         
-        \textbf{Send:} \lstinline!MPI_Send! is a blocking functioin call, it returns when message has been delivered to the system but it doesn't imply that the message has been received by the target process. There exist variant with different effects:
+        \textbf{Send:} \lstinline!MPI_Send! is a blocking function call, it returns when message has been delivered to the system but it doesn't imply that the message has been received by the target process. There exist variant with different effects:
         \begin{itemize}[left=10pt]
             \item \lstinline!MPI_Bsend!: it returns when the message is buffered in an application buffer (doesn't wait at all before returning), 
             \item \lstinline!MPI_Ssend!: it returns only when receiver has started to receive the message,
@@ -753,9 +744,9 @@ int A[1000];
 MPI_Send(A, 1000, MPI_INT, rank, tag, MPI_COMM_WORLD);
     \end{Ccode}
     \end{codeCenter}
-    A hybrid approach is often the best (chunks of 100 elements), the first approach creats too much overhead and the second one solicit the memory and spam the cache if arrays are too big.
+    A hybrid approach is often the best (chunks of 100 elements), the first approach creates too much overhead and the second one solicit the memory and spam the cache if arrays are too big.
     
-    For short messages, latency dominates transfer time, but for long messages this is bandwith. 
+    For short messages, latency dominates transfer time, but for long messages this is bandwidth. 
     \begin{tcolorbox}[vert]
         The \important{critical message size} is the amount of buffer that exists in the system, you can find it by computing 
         \[\text{latency} \cdot  \text{bandwidth}.\]
@@ -813,7 +804,7 @@ if(rank == 0){
     \includegraphics[width=9cm]{images/25.png}
     \end{center}
     \begin{tcolorbox}[vert]
-        To avoid this we can use \important{asynchronous communcation}.
+        To avoid this we can use \important{asynchronous communication}.
         Non-blocking function calls return immediately after invocation but they doesn't provide any guarantee on the status of the message, so the programmer have to check manually for completion of message transfer. It requires more programmer effort but allows to overlap communication with computation and increase the efficiency and performance of the program.
     \end{tcolorbox}
     \begin{image}{Asynchronous transfer can be used in this situation. Process does not wait before moving on to different data.}
@@ -835,7 +826,7 @@ MPI_Isend(buf1, 1, MPI_INT,..
         \end{codeCenter}
     \end{image}
     \subsection{MPI collectives}
-        Some MPI instrunctions: 
+        Some MPI instructions: 
         \begin{itemize}[left=10pt, label=\textbullet]
             \item \textbf{Broadcast:}
 
@@ -865,7 +856,7 @@ MPI_Isend(buf1, 1, MPI_INT,..
         \end{itemize}
 \section{Memory consistency}
     \begin{tcolorbox}[vert]
-        Cache coherence simulate a unique shared memory, so we don't have to think about the location of different data. \important{Memory consistency} determine in which order intructions are simulated, because the processor can re-order instructions, we have to take care about memory consistency. It tells which re-ordering operations are acceptable or not.
+        Cache coherence simulate a unique shared memory, so we don't have to think about the location of different data. \important{Memory consistency} determine in which order instructions are simulated, because the processor can re-order instructions, we have to take care about memory consistency. It tells which re-ordering operations are acceptable or not.
 
     The memory consistency affects performance!!
     \end{tcolorbox}
@@ -906,7 +897,7 @@ print(r1);
     To avoid this we must define a rigorous memory model to tell each layer what can and can't happen. We'll see different model.
     \subsection{Sequential consistency}
     \begin{tcolorbox}[vert]
-        The goal of \important{sequential consistency} is that the multiprocessor should behave like a multitasked single processor. The result of any execution is the same as if the operations of all processors (cores) were executed in some sequential order, and the operations of each
+        The goal of \important{sequential consistency} is that the multiprocessor should behave like a multi tasked single processor. The result of any execution is the same as if the operations of all processors (cores) were executed in some sequential order, and the operations of each
 individual processor (core) appear in this sequence in the order specified by its
 program.
     \end{tcolorbox}
@@ -935,15 +926,15 @@ program.
     \end{tcolorbox}
     \textbf{Load store queue functionality:}
 
-    The LSQ resolves which load/store addresses overlap and hold store operations until they retire. It cannot write ``speculative'' values to caches, a speculative value is a out of order value. It means that the LSQ cannot exit an entry that is till in the ROB.
+    The LSQ resolves which load/store addresses overlap and hold store operations until they retire. It cannot write ``speculative'' values to caches, a speculative value is a out of order value. It means that the LSQ cannot exit an entry that is still in the ROB.
     \begin{center}
         \includegraphics[width=8cm]{images/35.png}
     \end{center}
     
     
 
-    At address resolution of each load, we have to check if there is an older write in the LSQ at the same address. To do this, we use a matrix of comparators, that checks every entry against all older ones. In the example of loads after sotre, loads sets bits for all older stores they depend on, then the store resets its column when updating the cache (commit).
-    \begin{image}{In this picture, each store have its colums, when the load address resolution happens, a 1 is set on the column of the store if this is the same address. Then, when the store quit the LSQ, its column is reset to 0.}
+    At address resolution of each load, we have to check if there is an older write in the LSQ at the same address. To do this, we use a matrix of comparators, that checks every entry against all older ones. In the example of loads after store, loads sets bits for all older stores they depend on, then the store resets its column when updating the cache (commit).
+    \begin{image}{In this picture, each store have its column, when the load address resolution happens, a 1 is set on the column of the store if this is the same address. Then, when the store quit the LSQ, its column is reset to 0.}
         \begin{center}
         \includegraphics[width=7cm]{images/34.png}
         \end{center}
@@ -952,7 +943,7 @@ program.
         The problem now is that we have to wait for store to complete! If this is a miss in L1/L2/LLC, it can takes 100+ cycles! The goal is that the processor continue while store pending.
         
     \begin{tcolorbox}[vert]
-        The solution is to add a \important{store buffer (SB)}. It sits between core and L1 cache and holds committted stores.
+        The solution is to add a \important{store buffer (SB)}. It sits between core and L1 cache and holds committed stores.
     \end{tcolorbox}
     \begin{center}
         \includegraphics[width=9cm]{images/36.png}
@@ -960,14 +951,14 @@ program.
     \begin{tcolorbox}[gris]
         In the LSQ, we have the address of stalled operations, why not using them?
 
-        We can't because it violates order or atomicity, but, in fact, we can use them by peeking. The idea is to peek at L1, to see if address is already there, if not, we fetch the block from lower level into L1. If the value is there, we \textbf{don't} load the value into the core. Fetching blocks into L1 from lower leves or other L1's doesn't impact order or atomicity, there is no values moved between the core and L1. We then can fetch as many blocks in parallel into L1 as needed.
+        We can't because it violates order or atomicity, but, in fact, we can use them by peeking. The idea is to peek at L1, to see if address is already there, if not, we fetch the block from lower level into L1. If the value is there, we \textbf{don't} load the value into the core. Fetching blocks into L1 from lower level or other L1's doesn't impact order or atomicity, there is no values moved between the core and L1. We then can fetch as many blocks in parallel into L1 as needed.
     \end{tcolorbox}
 
 \subsection{Processor consistency}
     \begin{tcolorbox}[vert]
     In processor consistency, reads in the LSQ can bypass writes in the SB.
     \end{tcolorbox}
-    If we have instructions in store buffer, then the differences betweem sequential consistency with peek and processor consistency will be
+    If we have instructions in store buffer, then the differences between sequential consistency with peek and processor consistency will be
     \begin{center}
         \includegraphics[width=9cm]{images/37.png}
     \end{center}
@@ -985,7 +976,7 @@ program.
    
 \subsection{Language level consistency}
     \begin{tcolorbox}[vert]
-        A \important{data race} is when two conflicting operations from different thrads occur simultaneously. Operations conflict if they access the same location, and at least one is a write and these simultaneous operations are defined back-to-back accesses in any sequentially consistency.
+        A \important{data race} is when two conflicting operations from different threads occur simultaneously. Operations conflict if they access the same location, and at least one is a write and these simultaneous operations are defined back-to-back accesses in any sequentially consistency.
     \end{tcolorbox}
     If we check data races in our \hyperlink{consistency}{\textbf{\textit{first example}}} we can see that there is sequential consistency executions where read/write to A or B are back to back:
     \begin{itemize}[left=10pt, label=\textbullet]
@@ -1002,7 +993,7 @@ program.
 
     \textbf{DRF implies sequential consistency:}
 
-    Before we needed to adjust our programs depending on consistency model in th ISA. But with DRF even on hardware that uses PC or WC, our program sees it as SC, the programmer simply needs to obey the rules.
+    Before we needed to adjust our programs depending on consistency model in the ISA. But with DRF even on hardware that uses PC or WC, our program sees it as SC, the programmer simply needs to obey the rules.
 
     \subsubsection{Java Memory Model}
 
@@ -1061,7 +1052,7 @@ x = foo();
         \end{image}
     \end{tcolorbox}
 \subsubsection{C++ 11 Memory Model}
-    All thread can read/write to any locaation in the program scope through references and pointers, it's way more permissive than Java. Data races are similarly defined: we recall that a data race occurs when two conflicting memory operations that do not operate on ``special'' variables happens.  
+    All thread can read/write to any location in the program scope through references and pointers, it's way more permissive than Java. Data races are similarly defined: we recall that a data race occurs when two conflicting memory operations that do not operate on ``special'' variables happens.  
 
     The equivalent of a volatile variable is a \lstinline!std::atomic<T>! to designate a special variable of type T. The equivalent of synchronized blocks is defined as \lstinline!std::mutex(...)!.
 \subsubsection{OpenMP Memory Model}
@@ -1086,7 +1077,7 @@ private (x) shared (y)
     \begin{tcolorbox}[vert]
         A \important{flush} is a memory fence.
     \end{tcolorbox}
-    \begin{image}{In order to communicate between threads, they do the follwing: firste thread writes the shared variable, then flushes the variable and the second thread flushes and then reads.}
+    \begin{image}{In order to communicate between threads, they do the following: first thread writes the shared variable, then flushes the variable and the second thread flushes and then reads.}
         \begin{codeCenter}
         \begin{Ccode}
 int y;
@@ -1152,7 +1143,7 @@ st X, r1
     \begin{itemize}[left=10pt, label=\textbullet]
         \item Acquire method: how threads attempts to gain access to the resource. 
         \item Release method: how to enable others threads to access to the resource. 
-        \item Waiting algorithm: how threads for access to the ressource.
+        \item Waiting algorithm: how threads for access to the resource.
     \end{itemize}
 \end{tcolorbox}
 \subsection{Locks}
@@ -1214,7 +1205,7 @@ Unlock:
     \subsubsection{TTS}
     Hopefully there is way to reduce coherence traffic. One way is to test locally.
     \begin{tcolorbox}[rouge]
-        The idea behind ``test-and-test-and-set'' (TTS) is to just read classicaly the lock, if it's 1 (locked), then we juste wait. Then, only if it's 0, we read one more time the lock with the TS instruction. So when the processor is waiting, it juste does BusRd instead of BusRdX and doesn't invalidate other caches.
+        The idea behind ``test-and-test-and-set'' (TTS) is to just read classically the lock, if it's 1 (locked), then we just wait. Then, only if it's 0, we read one more time the lock with the TS instruction. So when the processor is waiting, it just does BusRd instead of BusRdX and doesn't invalidate other caches.
         \begin{codeCenter}
         \begin{Ccode}
 Test:
@@ -1234,15 +1225,15 @@ Unlock:
     \begin{center}
     \includegraphics[width=12cm]{images/44.png}
     \end{center}
-    TTS have slighty higher latency than TS, but is more scalable and storage cost stay unchanged.
+    TTS have slightly higher latency than TS, but is more scalable and storage cost stay unchanged.
     \subsubsection{TS with exponential back-off}
     \begin{tcolorbox}[rouge]
-        Another way to reduce coherence traffic is the TS lock with exponential bacl-off. The idea is to wait after failing to acquire the lock. To get a balance between lock latency and contention, we increase the time exponentially every fail (1 ms, 2 ms, 4 ms, \ldots). 
+        Another way to reduce coherence traffic is the TS lock with exponential back-off. The idea is to wait after failing to acquire the lock. To get a balance between lock latency and contention, we increase the time exponentially every fail (1 ms, 2 ms, 4 ms, \ldots). 
     \end{tcolorbox}
 
-    TS with exponential back-off have the same uncontentded latency as TS but potentially higher latency under contention. It generates less traffic than TS because it's not continually attempting to acquire lock. It also improve scalability but it can cause sever unfairness: new requester back off for shorter intervals.
+    TS with exponential back-off have the same uncontented latency as TS but potentially higher latency under contention. It generates less traffic than TS because it's not continually attempting to acquire lock. It also improve scalability but it can cause sever unfairness: new requester back off for shorter intervals.
 
-    One of the issue with TS and TTS is that they require an instruction that is both a read and a write and this is a challenge for pipelined processors. It must also lock the bus until the RMW completes, so it complicates cache controller logic and two memory accesses per sintruction is more difficult to track in CPU pipeline.
+    One of the issue with TS and TTS is that they require an instruction that is both a read and a write and this is a challenge for pipelined processors. It must also lock the bus until the RMW completes, so it complicates cache controller logic and two memory accesses per instruction is more difficult to track in CPU pipeline.
     \subsubsection{Load-locked and store-conditional}
     \begin{tcolorbox}[rouge]
         Load-locked (LL) and store-conditional (SC) together provides atomic Read-Modify-Write. The idea is that LL read a value a ``put it under surveillance'', then we can continue to execute some code. After, we can store with SC, that write only if the value hasn't been modified in the memory (by another processor). If it has, we restart from the LL.
@@ -1267,7 +1258,7 @@ Release:
     The idea of blocking synchronization is that if the progress cannot be make because a resource cannot be acquired, then we free up the core for another thread. We suspend the running thread, the OS schedules another thread to run and the other thread can run and make progress.
     \end{tcolorbox}
     \begin{tcolorbox}[gris]
-        \textbf{Busy waiting (spinning) vs blocking sychronization:}
+        \textbf{Busy waiting (spinning) vs blocking synchronization:}
         \begin{itemize}[left=10pt, label=\textbullet]
             \item Busy-waiting is preferable if scheduling overhead is larger than expected wait time, the scheduling overhead is in order of microseconds where it's in nanoseconds for a few spinning operations.
             \item Blocking is preferred if waiting time is significant and there are other tasks that need processor's resources.
@@ -1314,7 +1305,7 @@ void editHash(HashTbl tbl, int key) {
         \includegraphics[width=10cm]{images/47.png}
         \end{center}
     \textbf{Localized locking:}
-    Localizing locking can sometime not be as easy at it seems, on this exemple, which pointers do we edit on \lstinline!delete(12)!?
+    Localizing locking can sometime not be as easy at it seems, on this example, which pointers do we edit on \lstinline!delete(12)!?
     \begin{center}
     \includegraphics[width=10cm]{images/48.png}
     \end{center}
@@ -1331,7 +1322,7 @@ void editHash(HashTbl tbl, int key) {
         \item \textbf{Lock composability:} It's when a thread contains several locks, it can lead to deadlock or livelock if it's implemented incorrectly.
     \end{itemize}
     \end{tcolorbox}
-    Here is an exemple of lock composability which is the major problem in most modern systems. If we have a code that lock successively two objects like this: 
+    Here is an example of lock composability which is the major problem in most modern systems. If we have a code that lock successively two objects like this: 
 
 \vspace{0.5em}
 \begin{minipage}{0.5\textwidth}
@@ -1414,9 +1405,9 @@ synchronized(tbl) {
         Processes often don't know ahead of time which resources to lock, the programmer must ensure code follows ordering. Ordering locks often applied to list-like data structures, when the elements to lock are bounded, for example: multiple threads accessing a single array, sort the elements of the array in some order and allow threads to lock the elements one by one in the order. This is a very popular approach that we found inside the linux kernel.
         
     \subsubsection{Detection}
-        Sometimes we can't prevent deadlocks, then, the second best approach is to detect it and kill procceses involved in the deadlock. This approach require two things: an algorithm to detect deadlocks and an algorithm to recover from a deadlock.
+        Sometimes we can't prevent deadlocks, then, the second best approach is to detect it and kill processes involved in the deadlock. This approach require two things: an algorithm to detect deadlocks and an algorithm to recover from a deadlock.
         \begin{tcolorbox}[vert]
-            A \important{resource allocation graph (RAG)} is a graph where: nodes are either resources or threads, a resource node can have multiple units and there is directed edges between threads and resource. If RAG has no directed cycle, the current state is deadlock-free. If RAG has a directed cycle: if there is only one unit per resource, there is a deadlock, for multiple units per resource, there is a possibiliy of deadlock.
+            A \important{resource allocation graph (RAG)} is a graph where: nodes are either resources or threads, a resource node can have multiple units and there is directed edges between threads and resource. If RAG has no directed cycle, the current state is deadlock-free. If RAG has a directed cycle: if there is only one unit per resource, there is a deadlock, for multiple units per resource, there is a possibility of deadlock.
         \end{tcolorbox}
         Let's see the notation of the one unit per resource case.
         \begin{center}
@@ -1456,7 +1447,7 @@ synchronized(tbl) {
 
         
     \subsection{Transactional memory}
-        Instead of witing difficult locking code, we can simply tell the runtime to make a section atomic. This is thanks to the hardware transactional memory (HTM). We only need to declare a variable so its updates will be atomic, language runtime fugires it all out.
+        Instead of writing difficult locking code, we can simply tell the runtime to make a section atomic. This is thanks to the hardware transactional memory (HTM). We only need to declare a variable so its updates will be atomic, language runtime figures it all out.
         
         \begin{tcolorbox}[vert]
             A \important{memory transaction} is an atomic and isolated sequence of memory accesses, it's supported in hardware by processor and cache hierarchy.
@@ -1474,10 +1465,10 @@ synchronized(tbl) {
         We need some new instructions and hardware changes to implement TM.
 
         \begin{tcolorbox}[gris]
-            Let's introduce three Intel Haswell intructions: \lstinline!xbegin! \textrightarrow start transaction, takes pointer to fallback address in case of abors, \lstinline!xend! \textrightarrow ends transaction, \lstinline!xabort! software initiated transaction abordt
+            Let's introduce three Intel Haswell instructions: \lstinline!xbegin! \textrightarrow start transaction, takes pointer to fallback address in case of abort, \lstinline!xend! \textrightarrow ends transaction, \lstinline!xabort! software initiated transaction abort
         \end{tcolorbox}
         The CPU assume that no conflicts occur, it records every read and writes between \lstinline!xbegin! and \lstinline!xend! and every state is speculative (can be seen only by the core). Then the CPU checks for conflicts in the data structure (if another core is using same resources), for example, it sees a BusRdX or a BusInv matching a load (W/R) or a store (W/W) in LSQ. Check if there is another corner case (cache eviction, interruption, \ldots). Finally, on conflict, execute recovery code.
-        \begin{image}{Here is an code exemple}
+        \begin{image}{Here is an code example}
             \begin{codeCenter}
             \begin{Ccode}
 xbegin recover
@@ -1491,7 +1482,7 @@ br rec_handler
             \end{codeCenter}
         \end{image}
         We can observe two cases, the first one, successful:
-        \begin{image}{LD OBJ and ST OBJ hit in the cache, all state remains in the pipeline and we wait until we see XEND to start commiting.}
+        \begin{image}{LD OBJ and ST OBJ hit in the cache, all state remains in the pipeline and we wait until we see XEND to start committing.}
             \begin{center}
             \includegraphics[width=8cm]{images/54.png}
             \end{center}
@@ -1616,12 +1607,12 @@ omp_destroy_lock(&lock);
     \begin{tcolorbox}[vert]
         A \important{process} is running instance of a program and are independent of each other. Each process has its own virtual address space and they don't share any system resources. 
     \end{tcolorbox}
-    Hundreds of processes can exist on a CPU but only few of them run in parallel at any given time. The OS schedules and switches processes as needed, it gives the illusion of multi-tasking and allloes for concurrency (another process runs when one is blocked). For now, P in picture means process not processor.
+    Hundreds of processes can exist on a CPU but only few of them run in parallel at any given time. The OS schedules and switches processes as needed, it gives the illusion of multi-tasking and allows for concurrency (another process runs when one is blocked). For now, P in picture means process not processor.
     \begin{center}
         \includegraphics[width=10cm]{images/57.png}
     \end{center}
     \begin{tcolorbox}[vert]
-        A single process usually runs multiple \important{threads} at the same time. Threads are independent and can execute various functionality, each has its own programcounter, stack and variable values. Unlike processes, threads also share resources: the heap, the code and global data of the process are shared. All threads operate in the same virtual address space.
+        A single process usually runs multiple \important{threads} at the same time. Threads are independent and can execute various functionality, each has its own program counter, stack and variable values. Unlike processes, threads also share resources: the heap, the code and global data of the process are shared. All threads operate in the same virtual address space.
     \end{tcolorbox}
     \begin{center}
         \includegraphics[width=5cm]{images/58.png}
@@ -1632,7 +1623,7 @@ omp_destroy_lock(&lock);
     \end{tcolorbox}
     Many languages offer high-level thread libraries using Pthreads, \lstinline!thread! library in C++ for example, that can be used to build complex multi-threaded programs. Threads can also switch to avoid wasting cycles. 
 
-    For example, in a web server, we can create a new thread everytime that we need to handle a new request, so thread 0 can continue to loop and listening for incoming requests. 
+    For example, in a web server, we can create a new thread every time that we need to handle a new request, so thread 0 can continue to loop and listening for incoming requests. 
 
     Here is the code example:
     \begin{codeCenter}
@@ -1689,7 +1680,7 @@ void handle_request(Request req) {
 
     By this time we could serviced around then type 1 request. There is also threads executing type 1 requests that can get blocked behind threads executing type 0 requests that are wasting clock cycles.
     \end{tcolorbox}
-    We already saw that parallellism is the ability to execute threads at the same time, to speed up a single task by splitting it amongst multiple threads. It exploits multiple cores. But what is really concurrency?
+    We already saw that parallelism is the ability to execute threads at the same time, to speed up a single task by splitting it among multiple threads. It exploits multiple cores. But what is really concurrency?
     \begin{tcolorbox}[vert]
         \important{Concurrency} is the ability to hide latency among blocked threads, to increase utilization of a core and throughput.
     \end{tcolorbox}
@@ -1724,9 +1715,9 @@ sw r6, 0(r3)
     There is no need to save shared resources, only the thread-private ones.
 
     \begin{tcolorbox}[gris]
-    But context switching involves overhead. The explicit one: a syscall means letting the pipeline empty, use the trap table to jump to the syscall code, switch OS. We need also to dump the current thread's context to memory, load the new thread's context and return from syscall, switch back to user. But there is also the implicit overhead: all microarchitectural state that is shared (branch tables, TLB, cache hierarchy) is affected while a thread is running.
+    But context switching involves overhead. The explicit one: a syscall means letting the pipeline empty, use the trap table to jump to the syscall code, switch OS. We need also to dump the current thread's context to memory, load the new thread's context and return from syscall, switch back to user. But there is also the implicit overhead: all micro architectural state that is shared (branch tables, TLB, cache hierarchy) is affected while a thread is running.
 
-    Considering all this overhead, context switching is only worth if the time to switch, run and switch back is less that IDLE time, knowing that a single switche between threads in Linux takes ~1-5 $\mu$s. 
+    Considering all this overhead, context switching is only worth if the time to switch, run and switch back is less that IDLE time, knowing that a single switch between threads in Linux takes ~1-5 $\mu$s. 
     \end{tcolorbox}
     \subsection{User threads}
     Only the kernel has permissions to schedule threads to run on cores. But using the kernel for switching is overkill. So an idea is to separate the two requirements:
@@ -1742,7 +1733,7 @@ sw r6, 0(r3)
         \item Initializing the context.
     \end{itemize}
     \end{tcolorbox}
-    So now what if the user created threads instead of the kernel. A user thread library would handle tasks typically done by the kernel: create and manage threads, schedule which thread runs and when, save and restore context during switches.
+    So now what if the user created threads instead of the kernel? A user thread library would handle tasks typically done by the kernel: create and manage threads, schedule which thread runs and when, save and restore context during switches.
     \begin{tcolorbox}[vert]
         A thread created entirely in user space is called a \important{user thread}. Thread scheduling happens then at the user level.
     \end{tcolorbox}
@@ -1782,7 +1773,7 @@ function func2():
     \subsection{Coroutines}
     The yielding needs to happen at the same time as the operation that will block our thread. We have to switch before that the part of that block in the function is executed. 
     \begin{tcolorbox}[vert]
-        The idea of \important{coroutines} is that the programmer knows when something is going to block the thread so he has functions that can cooperate by pausing and resuming its own function. Cooperative functions or routines are called \important{couroutines}: they are functions that can be paused and resumed. They are implementable through callbacks and language support.
+        The idea of \important{coroutines} is that the programmer knows when something is going to block the thread so he has functions that can cooperate by pausing and resuming its own function. Cooperative functions or routines are called \important{coroutines}: they are functions that can be paused and resumed. They are implementable through callbacks and language support.
     \end{tcolorbox}
     \begin{tcolorbox}[rouge]
         Let's switch now to retake our \hyperlink{server}{\textit{web server}} code but now in Python:
@@ -1925,11 +1916,11 @@ async def event_loop():
     \end{Ccode}
     \end{codeCenter}
 \section{Microservices}
-    We did a server and ran it with only one executable file, one application deployed event if it's running on four cores. It is called a monolith.
+    We did a server and ran it with only one executable file, one application deployed even if it's running on four cores. It is called a monolith.
     \begin{tcolorbox}[vert]
-        A \important{monolith} is a single application that contains all the functionality. All functions are part onf the same program and run in the same address spaces.
+        A \important{monolith} is a single application that contains all the functionality. All functions are part of the same program and run in the same address spaces.
     \end{tcolorbox}
-    Real-world monoliths are complex and contain several functions, it suffer from synchronization overheads among threads, it doesn't scale well. Overhead limit monoliths from fully utlilizing all the cores and there is synchronization limits performance beyond a few cores. In resume, there is a lot of part that are dependent and should be synchronized.
+    Real-world monoliths are complex and contain several functions, it suffer from synchronization overheads among threads, it doesn't scale well. Overhead limit monoliths from fully utilizing all the cores and there is synchronization limits performance beyond a few cores. In resume, there is a lot of part that are dependent and should be synchronized.
     \begin{tcolorbox}[rouge]
         A solution to use cores effectively is to run multiple monolith copies. Each instance behaves as an independent server, threads among different instances shouldn't synchronize with each other. Also, each instance runs on a smaller number of cores and scales well.
     \end{tcolorbox}
@@ -1938,10 +1929,10 @@ async def event_loop():
     \end{center}
     But monoliths use other resources too:
     \begin{itemize}[left=10pt, label=\textbullet]
-        \item Memory capacity: each monolith can take a big chunk of server's memoy. 
+        \item Memory capacity: each monolith can take a big chunk of server's memory. 
 
             If each instance of a server can consume a large amount of memory (e.g. 60\% of the system's total memory capacity), then you can't run many instances together on the same server.
-        \item Memory bandwidth: Analytic workloads scale well but us a lot of memory bandwidth. 
+        \item Memory bandwidth: Analytic workloads scale well but use a lot of memory bandwidth. 
         \item NIC bandwidth: performance may be limited based on availability of NICs. 
         \item Accelerators: GPUs in a server may require CPU cores for coordination.
     \end{itemize}
@@ -1958,7 +1949,7 @@ async def event_loop():
     \begin{center}
         \includegraphics[width=7cm]{images/63.png}
     \end{center}
-    These two tasks are indenpendent, they can be separated logically and physically !
+    These two tasks are independent, they can be separated logically and physically !
     \begin{tcolorbox}[vert]
         Groups of functions can be treated as separate ``services'' based on functionality and needs. Services have separate codebases, address spaces, etc\ldots This is called a \important{microservice architecture}: a set of small (micro), independent and self-contained services.
     \end{tcolorbox}
@@ -2005,7 +1996,7 @@ async def event_loop():
         \item Services can be written independently of each other and we can choose the best programming language according to a service's needs.
         \item We can have cheaper plans: cloud providers offer servers with different price in function of resources that they have (e.g. memory).
         \item There is more fault tolerance: one service failing doesn't lead to the entire workload failing.
-        \item It allows reusability: services are isolated but can be accessed from any other service.
+        \item It allows re-usability: services are isolated but can be accessed from any other service.
     \end{itemize}
     \end{tcolorbox}
     But there is also disadvantages! Services have to communicate between them by messages, it becomes critical as the number of services increases.
@@ -2070,7 +2061,7 @@ class HashService:
     \end{center}
     We can't directly transfer data between stubs, because languages stores types in various formats in memory. So we have to do marshalling/unmarshalling.
     \begin{tcolorbox}[vert]
-        \important{Marshalling} turn data from a memory representation into a representation that can be sent over the network. RPC unifies marshalling data for all servicees, once received RPC needs to be able to save it to memory again.
+        \important{Marshalling} turn data from a memory representation into a representation that can be sent over the network. RPC unifies marshalling data for all services, once received RPC needs to be able to save it to memory again.
     \end{tcolorbox}
     \begin{tcolorbox}[vert]
         \important{Unmarshalling} turn data received from the network in an IDL representation into a memory representation of the receiving language.
@@ -2118,7 +2109,7 @@ class HashService:
 syntax = "proto3"; // Define protobuf syntax
 
 message HashRequest {
-    string input = 1; // One is the ordered attribute for seialization
+    string input = 1; // One is the ordered attribute for serialization
 }
 
 message HashResult {
@@ -2221,7 +2212,7 @@ print(f"Hash result for '{request.input}' is: {response.result}")
         \end{center}
     \end{image}
 \section{Multi-threaded processors}
-    Artihmetic untis in CPUs are often not busy because there is long-latency memory accesses, exceptions due to I/O or syscalls, etc\ldots Then, we often switch threads a lot. The thing is, can we keep thread context around in hardware instead of save and restore context everytime?\\
+    Arithmetic units in CPUs are often not busy because there is long-latency memory accesses, exceptions due to I/O or syscalls, etc\ldots Then, we often switch threads a lot. The thing is, can we keep thread context around in hardware instead of save and restore context every time?\\
 
     Let's remind how looks a basic superscalar pipeline:
     \begin{center}
@@ -2276,7 +2267,7 @@ loop:
     \begin{center}
         \includegraphics[width=8cm]{images/76.png} 
     \end{center}
-    And our pipeline would have bubbles (also caused by the add waitin for \texttt{sw} operation):
+    And our pipeline would have bubbles (also caused by the add waiting for \texttt{sw} operation):
     \begin{center}
         \includegraphics[width=7cm]{images/77.png} 
     \end{center}
@@ -2284,9 +2275,9 @@ loop:
     \begin{tcolorbox}[vert]
         An other reason why pipeline bubbles occurs is the \important{branch control flow}: it's when we predict the branch direction to keep fetching instructions.
 
-    If we are waiting for the real direction before fetching it would introduces bubbles: two cycles mininum with a shallow pipeline because we usually know the target of the branch (e.g. \texttt{beq}) on the execute stage. Real pipelines are much deeper (14+) so we prefer to predict the target of the branch to continue to fetch immediately. If the prediction was right we continue, otherwise we flush the pipeline.
+    If we are waiting for the real direction before fetching it would introduces bubbles: two cycles minimum with a shallow pipeline because we usually know the target of the branch (e.g. \texttt{beq}) on the execute stage. Real pipelines are much deeper (14+) so we prefer to predict the target of the branch to continue to fetch immediately. If the prediction was right we continue, otherwise we flush the pipeline.
     \end{tcolorbox}
-    Finally data dependences can also obviously create bubbles in the pipeline: they can't execute in the same cycle, etc\ldots But we remember that with OoO cores, we can easily traverses loops and issues loads.
+    Finally data dependencies can also obviously create bubbles in the pipeline: they can't execute in the same cycle, etc\ldots But we remember that with OoO cores, we can easily traverses loops and issues loads.
     \begin{tcolorbox}[rouge]
         But real programs are not so simple: there is many cycles where nothing can be issued a more realistic IPC would be between 0.5 and 1.
     \end{tcolorbox}
@@ -2294,7 +2285,7 @@ loop:
     We can imagine then that there is a lot of waste, we classify it in two categories:
     \begin{itemize}[left=10pt, label=\textbullet]
         \item \important{Vertical waste}: whole cycle is empty, nothing issued, this is common after long latency events.
-        \item \important{Horizontal waste}: we are unable to use full issue width, this is when the software isn't exposing enough ILP for hardware (the code isn't enough paralleizable).
+        \item \important{Horizontal waste}: we are unable to use full issue width, this is when the software isn't exposing enough ILP for hardware (the code isn't enough parallelizable).
     \end{itemize}
     \end{tcolorbox}
     \begin{center}
@@ -2321,7 +2312,7 @@ loop:
         \includegraphics[width=6cm]{images/79.png} 
     \end{center}
     \begin{remark}{Remark}
-        We can see that the real difference of hw multithreading with user-level/OS context switching is that it takes only few cycles instead of multiple milliseconds.
+        We can see that the real difference of hardware multithreading with user-level/OS context switching is that it takes only few cycles instead of multiple milliseconds.
     \end{remark}
     If we made the choice of not having a 4-way pipeline with hardware multithreading but two cores with 2-way pipeline, it would have less horizontal waste but it would suffer from more vertical on long latency.
     \begin{center}
@@ -2330,7 +2321,7 @@ loop:
     \begin{tcolorbox}[violet]
     The critical decision on CGMT is when we have to switch threads: the thread switch + the pipe fill time should be way smaller that the blocking latency.\\
 
-    The advantage of CGMT is that it requires small changes to exisiting hardware but it slow down the performance of a single-thread (shared resources, etc\ldots).
+    The advantage of CGMT is that it requires small changes to existing hardware but it slow down the performance of a single-thread (shared resources, etc\ldots).
     \end{tcolorbox}
     \begin{tcolorbox}[vert]
         The \important{fine grained multithreading implementation (FGMT)} consist in cycle between multiple threads periodically, we eliminate the switch time by keeping all thread hot.
@@ -2354,9 +2345,9 @@ loop:
     \end{center}
     In FGMT design there is no critical decision, to improve throughput we only have to have enough threads to eliminate vertical waste (e.g. for a pipeline depth of 8, using 8 threads isn't enough).\\
 
-    FGMT have a reasonable single thread performance and is efficient in case of many thread. But it's more complicated for hardware to track dependences and many more contexts means we need many more registers.
+    FGMT have a reasonable single thread performance and is efficient in case of many thread. But it's more complicated for hardware to track dependencies and many more contexts means we need many more registers.
 
-    Notify that both, CGMT and FGMT cannot address horiztontal waste, only vertical.
+    Notify that both, CGMT and FGMT cannot address horizontal waste, only vertical.
     \subsection{SMT}
         \begin{tcolorbox}[vert]
             The idea of \important{simultaneous multithreading (SMT)} is to have instructions from multiple threads in the same cycle. This is the first design that can reduce horizontal waste.
@@ -2366,7 +2357,7 @@ loop:
         \end{center}
         Previously, only caches and predictors were shared, with SMT, instructions from different threads are interleaved in the same cycle.
 
-        But do we need then to resolve all potential dependenced between threads (e.g. $T_1$ and $T_2$ are both executing \texttt{add r1, r2, r3})? No we don't because registers are physically mapped then,
+        But do we need then to resolve all potential dependencies between threads (e.g. $T_1$ and $T_2$ are both executing \texttt{add r1, r2, r3})? No we don't because registers are physically mapped then,
         \[T_1: \text{\texttt{add r1, r2, r3} becomes: \texttt{add p4, p2, p3}}\]
         \[T_2: \text{\texttt{add r1, r2, r3} becomes: \texttt{add p9, p8, p5}}\]
         \begin{tcolorbox}[rouge]
@@ -2386,7 +2377,7 @@ loop:
         \end{center}
     The critical decision for SMT is the fetch-interleaving policy: since multiple threads are active, the processor must choose which thread provide instructions to the pipeline at any given time.\\
 
-    The requirement to improve throughput is that we should have enought threads to utilize resources but fewer than needed to stretch dependences.
+    The requirement to improve throughput is that we should have enough threads to utilize resources but fewer than needed to stretch dependencies.
     \begin{tcolorbox}[gris]
         So how to decide which threads fetch instructions? The goal is to maximize active use of issue width. \\
         
@@ -2405,12 +2396,12 @@ loop:
     \end{tcolorbox}
     In GPUs there is two levels of multithreading:
     \begin{itemize}[left=10pt, label=\textbullet]
-        \item Vectore lane threading: same as SIMD (Single Instruction Multiple Data), we group the thread in \important{warp}, and all threads in the warp execute the same instruction simultaneously on different data elements. 
+        \item Vector lane threading: same as SIMD (Single Instruction Multiple Data), we group the thread in \important{warp}, and all threads in the warp execute the same instruction simultaneously on different data elements. 
         \item Multithreading across pipeline depth: multiple warps can share the pipeline.
     \end{itemize}
     This is data level parallelism.\\
     
-    There is mutltiple way to compute identically different data items. We alreay saw the classic muli-core way (not optimal if it is only for identical instructions on every data) and the SIMD way, recall:
+    There is multiple way to compute identically different data items. We already saw the classic multi-core way (not optimal if it is only for identical instructions on every data) and the SIMD way, recall:
     \begin{center}
         \includegraphics[width=7cm]{images/86.png}
     \end{center}
@@ -2423,7 +2414,7 @@ loop:
     \end{center}
     If we summary:
     \begin{itemize}[left=10pt, label=\textbullet]
-        \item MIMD/SPMD: this is good for thread level parallelism but bad for data level parallism. It's the easiest programming way. 
+        \item MIMD/SPMD: this is good for thread level parallelism but bad for data level parallelism. It's the easiest programming way. 
         \item SIMD/Vector: this is good for data level parallelism but the programmability is then limited and it's hard to scale up. 
         \item SIMT: this is good for data level parallelism, the programmability is better and it's easy to scale up.
     \end{itemize}
@@ -2446,19 +2437,19 @@ loop:
         \begin{itemize}[left=10pt, label=\textbullet]
             \item A few large ALUs, 
             \item Large caches, 
-            \item Brand predicition, speculation and OoO,
-            \item High clock frquency,
+            \item Branch prediction, speculation and OoO,
+            \item High clock frequency,
             \item Limited multithreading.
         \end{itemize}
     \end{minipage}
     \begin{minipage}{0.45\textwidth}
         for \textbf{GPU}:
         \begin{itemize}[left=10pt, label=\textbullet]
-            \item A sea of small alus, 
+            \item A sea of small ALUs, 
             \item Small, shallow cache hierarchy, 
             \item Simple control logic, in-order, 
             \item Massive multithreading, 
-            \item High memory bandwith.
+            \item High memory bandwidth.
         \end{itemize}
     \end{minipage}
     \end{center}
@@ -2500,7 +2491,7 @@ loop:
     \begin{center}
     \includegraphics[width=7cm]{images/94.png}
     \end{center}
-    Each block and thread has a unique index tuple with three coorindates.
+    Each block and thread has a unique index tuple with three coordinates.
     \begin{center}
     \begin{minipage}{0.45\textwidth}
     \includegraphics[width=8cm]{images/95.png}
@@ -2532,7 +2523,7 @@ void vecadd(float* x, float* y, float* z, int N) {
         \begin{center}
             \includegraphics[width=9cm]{images/97.png}
         \end{center}
-        The addition of N elements can be splut among N threads: thread 0 adds \texttt{x[0]} and \texttt{y[0]}, thread 1 adds \texttt{x[1]} and \texttt{y[1]}.
+        The addition of N elements can be split among N threads: thread 0 adds \texttt{x[0]} and \texttt{y[0]}, thread 1 adds \texttt{x[1]} and \texttt{y[1]}.
         \begin{center}
             \includegraphics[width=9cm]{images/98.png}
         \end{center}
@@ -2648,7 +2639,7 @@ __global__ void vecadd_kernel(...) {
         \begin{tcolorbox}[gris]
             Recall that a block thread can have up to 1024 threads, the programmer has the option of choosing from a range to dividing up the work between thread blocks.\\
 
-            Assume that we want to compute on an image of size 64x48, one thread per pixel means we need $\sim 3k$ threads. If we have a GPU with these constraits:
+            Assume that we want to compute on an image of size 64x48, one thread per pixel means we need $\sim 3k$ threads. If we have a GPU with these constrains:
             \begin{itemize}[left=10pt, label=\textbullet]
                 \item 15 SMs, with maximum 64 warps per SM, 
                 \item 2048 threads maximum per SM, 
@@ -2656,13 +2647,13 @@ __global__ void vecadd_kernel(...) {
                 \item 1 warp is 32 threads, 
                 \item 960 concurrently scheduled warps (you can launch more, but they will serialize).
             \end{itemize}
-            To have the maximum performance, the GPU should be fully occupied, so we can leverage as much parallelism as the ardware allows.
+            To have the maximum performance, the GPU should be fully occupied, so we can leverage as much parallelism as the hardware allows.
         \end{tcolorbox}
         If we choose to have only four large thread block of 1024 threads each then only 4 of 15 SMs will be occupied. The absolute maximum is 26\%, so we aren't using all hardware.
         \begin{center}
         \includegraphics[width=3cm]{images/100.png}
         \end{center}
-        But if we are doing 48 thread blocks fo 64 threads each, then SMs will have only 3 or 4 threadblocks, with each 2 warps.
+        But if we are doing 48 thread blocks of 64 threads each, then SMs will have only 3 or 4 threadblocks, with each 2 warps.
         \begin{center}
         \includegraphics[width=4cm]{images/101.png}
         \end{center}
@@ -2685,7 +2676,7 @@ __global__ void vecadd_kernel(...) {
         But it's okay (mani) if different warps take different paths, so we can do something like this:
         \begin{codeCenter}
         \begin{Ccode}
-if (threadIdx.x / WARP_SIZE > 0) {. . .} // T0, T1, …, T31
+if (threadIdx.x / WARP_SIZE = 0) {. . .} // T0, T1, …, T31
 else {. . . } // T32, T33, …, T63
         \end{Ccode}
         \end{codeCenter}
@@ -2739,7 +2730,7 @@ __global void test_syncthread(unsigned* x, int N) {
         \end{minipage}
         \end{center}
         \begin{remark}{Remark}
-            Kernel launches are asynchronous, if you are launching two kernel one after another, the CPU won't wait for the first kernel to finish before sending the second one. But on the GPU the second kernel will only start executing after the first one finishes execution. If you want that you CPU wait that the GPU finish the execution, you can use \texttt{cudaDeviceSynchronize()}, \texttt{cudaMemCpy()} is also blocking. 
+            Kernel launches are asynchronous, the CPU cannot send a second kernel but it will run the sequential code on the CPU without waiting that the GPU finishes the kernel execution. If you want that you CPU wait that the GPU finish the execution, you can use \texttt{cudaDeviceSynchronize()}, \texttt{cudaMemCpy()} is also blocking. 
         \end{remark}
 \subsection{GPU memory}
 Let's first see differences between the CPU and GPU memory.
@@ -2767,7 +2758,7 @@ Let's first see differences between the CPU and GPU memory.
 \end{center}
 
 \end{tcolorbox}
-    GPUs have many register because it's the memory piece that provides the fastest access, and we need to have a very fast context switch. It has then large register file is key to hiding latency: it keeps register state of many warps ready.
+    GPUs have many register because it's the memory piece that provides the fastest access, and we need to have a very fast context switch. Large register file is key to hiding latency: it keeps register state of many warps ready.
     \begin{center}
         \includegraphics[width=11cm]{images/106.png}
     \end{center}
@@ -2777,7 +2768,7 @@ Let's first see differences between the CPU and GPU memory.
     \end{tcolorbox}
     The problem that we encounter with GPUs is that they have plenty of compute (max. FLOPS actually at 51 TFLOPs/sec) but the global memory bandwidth, event if we try to have the biggest one it doesn't suffice (max. memory bandwidth actually at 2TB/sec).\\
     
-On GPU we aime a lot of bandwith where in CPU we aim low latency. So the memory hierarchy of GPU is built to bridge the gap between the computational bound and the bandwidth bound.
+On GPU we aim a lot of bandwidth where in CPU we aim low latency. So the memory hierarchy of GPU is built to bridge the gap between the computational bound and the bandwidth bound.
 
     \begin{center}
         \includegraphics[width=11cm]{images/108.png}
@@ -2786,9 +2777,9 @@ On GPU we aime a lot of bandwith where in CPU we aim low latency. So the memory 
 \subsubsection{Local memory}\\
 Before talking about local memory, we have to define the memory access coalescing. \\
 
-Threads in a warp executiong lock-step often simultaneously access different words within the same cache line. The GPU cache line size is 128 bytes, then, if all threads of warp access contiguous 4 bytres then they map to the same cache line.
+Threads in a warp execution lock-step often simultaneously access different words within the same cache line. The GPU cache line size is 128 bytes, then, if all threads of warp access contiguous 4 bytes then they map to the same cache line.
 \begin{tcolorbox}[vert]
-    The \important{hardware coalescer} merge accesses from threads of a warp to a single cache access, then, in our example above, we are doing one memory access instead of 32.
+    The \important{hardware coalescer} merge accesses from threads of a warp to a single cache access, then, we are doing one memory access instead of 32.
 \end{tcolorbox}
 
     \begin{center}
@@ -2810,7 +2801,7 @@ __global__ void vecadd_kernel(float* x, float* y, float* z, int N)
 \]
     Since \texttt{threadIdx.x} varies from 0 to 31 across the warp, the threads access \texttt{x[i], x[i+1], \ldots, x[i+31]}, which are contiguous in memory. The GPU can therefore merge all 32 accesses into a single memory transaction.\\
 
-But there is different types of coalesced memory acceses, and some are better than others.
+But there is different types of coalesced memory accesses, and some are better than others.
 \begin{tcolorbox}[rouge]
     
 
@@ -2842,7 +2833,7 @@ A[i]
         \end{center} 
     \item \textbf{All threads in a warp request the same 4-byte word:}
 
-        Addresses fall within a single cache line but the warp needs only four bytes, then on a miss there is 128 bytes that are moving across the bus but the tbus transfer utilization rate is of 3.125\%.
+        Addresses fall within a single cache line but the warp needs only four bytes, then on a miss there is 128 bytes that are moving across the bus but the bus transfer utilization rate is of 3.125\%.
         \begin{codeCenter}
         \begin{Ccode}
 i = blockidx.x * BlockDim.x;
@@ -2883,7 +2874,7 @@ A[i]
 \end{tcolorbox}
 Now that we saw what's a coalesced memory access, we can see how works the local memory.
 \begin{tcolorbox}[vert]
-    \important{Local memory} is private to each GPU thread, each thread can have different data for the same virtual address in local memory. It contains everything on the stack that can't fit in registers. Physically, local memory is stored in global memory: it's a logical adress space. There is the same latency as global memory but all accesses to local memory are \important{always coalesced}. It's then still much slower than registers.
+    \important{Local memory} is private to each GPU thread, each thread can have different data for the same virtual address in local memory. It contains everything on the stack that can't fit in registers. Physically, local memory is stored in global memory: it's a logical address space. There is the same latency as global memory but all accesses to local memory are \important{always coalesced}. It's then still much slower than registers.
 \end{tcolorbox}
     \subsubsection{Constant memory}
 \begin{tcolorbox}[vert]
@@ -2892,7 +2883,7 @@ Now that we saw what's a coalesced memory access, we can see how works the local
 \begin{center}
     \includegraphics[width=9cm]{images/114.png}
 \end{center}
-To allocate constant memory we have first to declare the constant memory array as a global variable (accesssible to all threads of kernel):
+To allocate constant memory we have first to declare the constant memory array as a global variable (accessible to all threads of kernel):
 \begin{codeCenter}
 \begin{Ccode}
 __constant__ float filter_c[FILTER_DIM][FILTER_DIM];
@@ -2910,7 +2901,7 @@ cudaMemcpyToSymbol(filter_c, filter, FILTER_DIM*FILTER_DIM*sizeof(float));
 
 \subsubsection{Shared memory}\\
 \begin{tcolorbox}[vert]
-    First, \important{shared memory} is a software managed cache, it means that the program must direct what to bring into the cache and what to evict. Shared memory is private to each threadblock, it's call shared because it's shared berween all threads in a threadblock but each threadblock has its own copy of shared memory variables.
+    First, \important{shared memory} is a software managed cache, it means that the program must direct what to bring into the cache and what to evict. Shared memory is private to each threadblock, it's call shared because it's shared between all threads in a threadblock but each threadblock has its own copy of shared memory variables.
 \end{tcolorbox}
 \begin{center}
     \includegraphics[width=9cm]{images/115.png}
@@ -2973,9 +2964,9 @@ cudaFuncCachePreferNone (Default)
     \end{codeCenter}
 \end{remark}
 \begin{tcolorbox}[rouge]
-Shared memory can be used for example for the \hyperlink{matrix}{\textit{tiled matrix multiplication}}. If we decide to allocate a threadblock to compute results of a tile of the output matrix, the problem is that cache hits are not guaranteed because the L1 cache is shared amongst all threadblocks of a SM and L2 cache is shared amongst all threadblocks of a grid. So you have not guaranteed that the data that was in the cache weren't evicted by another threadblock.\\
+Shared memory can be used for example for the \hyperlink{matrix}{\textit{tiled matrix multiplication}}. If we decide to allocate a threadblock to compute results of a tile of the output matrix, the problem is that cache hits are not guaranteed because the L1 cache is shared among all threadblocks of a SM and L2 cache is shared among all threadblocks of a grid. So you have not guaranteed that the data that was in the cache weren't evicted by another threadblock.\\
 
-Then the solution is to make the threads of the threadnlock load on tile each from A and B to its copy of shared memory. Then you use the data loaded in the shared memory, here we use the software cache properties.\\
+Then the solution is to make the threads of the threadlock load on tile each from A and B to its copy of shared memory. Then you use the data loaded in the shared memory, here we use the software cache properties.\\
 
 Here is the code of this example:
 \begin{codeCenter}
@@ -3081,14 +3072,14 @@ To resume:
     \begin{tcolorbox}[gris]
         Here the problem is that we can't do a global synchronization after each level because \texttt{\_\_syncthreads()} only works within the same threadblock. The solution is, like we already said \hyperlink{launch}{\textit{here}}, to launch separate kernel for each level.
     \end{tcolorbox}
-    Reduction has a low ariithmetic intensity, all input elements are loaded from memory, so the goal is to reduce global memory accesses. Since partial sums can be reused, we can load to shared memory first.
+    Reduction has a low arithmetic intensity, all input elements are loaded from memory, so the goal is to reduce global memory accesses. Since partial sums can be reused, we can load to shared memory first.
     \begin{tcolorbox}[rouge]
         We load one elements/thread from global to shared memory \textrightarrow T0 loads element 0, T1 loads element 1, \ldots\\
 
         Steps of our reduction are:
         \begin{itemize}[left=10pt, label=\textbullet]
             \item Each thread reduce two elements (T0 reduces element 0 and 1, T1 reduces elements 2 and 3, \ldots).
-            \item Desactivate half of the threads at the end of each step. 
+            \item Deactivate half of the threads at the end of each step. 
             \item Terminate when one thread left.
             \item Write back result to global memory, so it's visible to the next kernel.
         \end{itemize}
@@ -3229,7 +3220,7 @@ __global__ void hist_calc(char* data, unsigned int length, unsigned int* histogr
 }
     \end{Ccode}
     \end{codeCenter}
-    The problem here is that we have an atomic operation that access global memory at each loop, so it's really inefficient. To solve this, we'll reduce srialization through privatization. It means that each threadblock will keeps their own copy of histogram in the shared memory and the merge private copies in the global memory in phase 2.
+    The problem here is that we have an atomic operation that access global memory at each loop, so it's really inefficient. To solve this, we'll reduce serialization through privatization. It means that each threadblock will keeps their own copy of histogram in the shared memory and the merge private copies in the global memory in phase 2.
     \begin{center}
         \includegraphics[width=11cm]{images/129.png}
     \end{center}
@@ -3286,7 +3277,7 @@ __global__ void hist_calc(char* data, unsigned int length, unsigned int* histogr
         \begin{codeCenter}
         \begin{Ccode}
 __device__ void writeXY()
-{
+
     X = 10;
     __threadfence();
     Y = 20;
@@ -3312,7 +3303,7 @@ __device__ void readXY()
         \end{center}
     \end{minipage}
     \end{center}
-    The \texttt{\_\_threadfence} of thread 1 ensures that \texttt{Y=20} muste be observed after \texttt{X=10}. The \texttt{\_\_threadfence} of thread 2 ensures that the two loads are not reordered, so \texttt{Y} is read first and then \texttt{X}.
+    The \texttt{\_\_threadfence} of thread 1 ensures that \texttt{Y=20} must be observed after \texttt{X=10}. The \texttt{\_\_threadfence} of thread 2 ensures that the two loads are not reordered, so \texttt{Y} is read first and then \texttt{X}.
     \begin{tcolorbox}[rouge]
         Fences are used to create locks in CUDA program:
         \begin{codeCenter}
