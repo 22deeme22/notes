@@ -3365,29 +3365,92 @@ cudaError_t cudaStreamCreate (cudaStream_t* pStream);
     \begin{tcolorbox}[vert]
         All GPU-related tasks that do not specify a stream use the \important{``null'' stream}, it synchronizes all streams so it allows no concurrency across other streams.
     \end{tcolorbox}
-    
-    
-    
-    
-    
-    
-    
+    \subsection{UVM}
+        \begin{tcolorbox}[vert]
+            With \important{unified virtual memory (UVM)} we are simplifying programming by eliminating following steps:
+            \begin{itemize}[left=10pt, label=\textbullet]
+                \item Allocating GPU memory (CUDAMalloc),
+                \item Copying data to CPU memory, 
+                \item Copying the results from GPU memory.
+            \end{itemize}
+        \end{tcolorbox}
+        \begin{center}
+        \includegraphics[width=9cm]{images/134.png}
+        \end{center}
+        Here is an example of the difference between the \texttt{vecAdd} program with and without using UVM:
+        \begin{tcolorbox}[rouge]
+            
         
-    
-    
-    
-    
-    
+        \textbf{Without UVM:}
+        \begin{codeCenter}
+        \begin{Ccode}
+void vecAdd(int N) {
+    int *x, *y, *z;
+    x = (int*) malloc(N*sizeof(int));
+    ...
+    int *x_d, *y_d, *z_d;
+    cudaMalloc((void**)&x_d, N*sizeof(int));
+    ...
+    cudaMemcpy(x_d, x, ...);
+    ...
+    vecAddKernel <<<…>>> (x_d, y_d, z_d, N);
+    cudaMemcpy(z, z_d, ...);
+    cudaFree(x_d);
+    ...
+    free(x);
+    ...
+}
+        \end{Ccode}
+        \end{codeCenter}
+        \textbf{With UVM:}
+        \begin{codeCenter}
+        \begin{Ccode}
+void vecAdd(int N) {
+    int *x, *y, *z;
+    cudaMallocManaged((void**)&x,
+    N*sizeof(int));
+    ...
+    vecAddKernel <<<…>>> (x, y, z, N);
+    cudaDeviceSynchronize();
+    cudaFree(x);
+    ...
+}
+    \end{Ccode}
+    \end{codeCenter}
+    \end{tcolorbox}
+    If we are programming a pointer-based data structure without UVM it will look like this:
+    \begin{center}
+    \includegraphics[width=10cm]{images/135.png}
+    \end{center}
+    \begin{center}
+    \begin{minipage}{0.45\textwidth}
+    With UVM there is no need for separate memory allocation, pointer update and explicit memcopy.
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+    \begin{center}
+    \includegraphics[width=3cm]{images/136.png}
+    \end{center}
+    \end{minipage}
+    \end{center}
+    \textbf{How UVM work?}
+    \begin{tcolorbox}[violet]
+        \begin{enumerate}[left=10pt]
+            \item GPU hardware detects access to unmapped memory, 
+            \item GPU raises page fault, 
+            \item UVM driver migrates the page containing the data and maps it, 
+            \item UVM driver notifies GPU, 
+            \item GPU restarts execution from the faulting instruction.
+        \end{enumerate}
+    \end{tcolorbox}
+    The GPU's global memory is limited to a few 10s of GBs. The real benefit of UVM is that the UVM on-demand migration allows you to oversubscribe global memory capacity, where initially cudaMalloc fails if you try to allocate memory beyond the global memory capacity.\\
+
+    \noindent When the GPU global memory is full, the GPU raises a page fault, then it evict data page from global memory to DRAM and migrate requested page to global memory. GPU restarts then execution from the faulting instruction.
    
     
     
-        
     
     
-    
-     
-       
-   
     
 \end{document}
     

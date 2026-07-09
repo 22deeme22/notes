@@ -59,3 +59,4 @@
 \contentsline {subsection}{\numberline {13.4}Parallel reduction}{69}{subsection.13.4}%
 \contentsline {subsection}{\numberline {13.5}Advanced synchronization}{73}{subsection.13.5}%
 \contentsline {subsection}{\numberline {13.6}CUDA streams}{75}{subsection.13.6}%
+\contentsline {subsection}{\numberline {13.7}UVM}{76}{subsection.13.7}%
