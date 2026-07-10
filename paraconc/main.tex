@@ -3446,6 +3446,20 @@ void vecAdd(int N) {
     The GPU's global memory is limited to a few 10s of GBs. The real benefit of UVM is that the UVM on-demand migration allows you to oversubscribe global memory capacity, where initially cudaMalloc fails if you try to allocate memory beyond the global memory capacity.\\
 
     \noindent When the GPU global memory is full, the GPU raises a page fault, then it evict data page from global memory to DRAM and migrate requested page to global memory. GPU restarts then execution from the faulting instruction.
+    \subsection{Tensor cores}
+        We invented specialized GPU for deep neural network (DNN), where the main operation is the matrix multiplication.
+        \begin{center}
+        \begin{minipage}{0.45\textwidth}
+        \includegraphics[width=7cm]{images/138.png}
+        
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.45\textwidth}
+        \includegraphics[width=7cm]{images/137.png}
+        
+        \end{minipage}
+        \end{center}
+        
    
     
     

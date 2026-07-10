@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.27)  9 JUL 2026 16:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.27)  10 JUL 2026 11:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1010,7 +1010,7 @@ l.68     \begin{tcolorbox}[rouge]
                                  
 (That was another \errmessage.)
 
-<images/1.png, id=380, 1361.085pt x 676.5275pt>
+<images/1.png, id=385, 1361.085pt x 676.5275pt>
 File: images/1.png Graphic file (type png)
 <use images/1.png>
 Package pdftex.def Info: images/1.png  used on input line 75.
@@ -1286,14 +1286,14 @@ Underfull \hbox (badness 1442) in paragraph at lines 229--230
 []\T1/cmr/m/n/10 There is com-pletely dif-fer-ent ad-dress spaces, threads com-mu-ni-cate via send-
  []
 
-<images/6.png, id=431, 485.815pt x 354.32375pt>
+<images/6.png, id=436, 485.815pt x 354.32375pt>
 File: images/6.png Graphic file (type png)
 <use images/6.png>
 Package pdftex.def Info: images/6.png  used on input line 241.
 (pdftex.def)             Requested size: 184.9429pt x 134.88231pt.
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 242.
-<images/7.png, id=432, 311.1625pt x 195.73125pt>
+<images/7.png, id=437, 311.1625pt x 195.73125pt>
 File: images/7.png Graphic file (type png)
 <use images/7.png>
 Package pdftex.def Info: images/7.png  used on input line 245.
@@ -1328,17 +1328,17 @@ l.268     \begin{tcolorbox}[rouge]
 (That was another \errmessage.)
 
 [8]
-<images/9.png, id=443, 712.6625pt x 372.39125pt>
+<images/9.png, id=448, 712.6625pt x 372.39125pt>
 File: images/9.png Graphic file (type png)
 <use images/9.png>
 Package pdftex.def Info: images/9.png  used on input line 292.
 (pdftex.def)             Requested size: 256.0748pt x 133.80504pt.
-<images/10.png, id=444, 860.21375pt x 367.3725pt>
+<images/10.png, id=449, 860.21375pt x 367.3725pt>
 File: images/10.png Graphic file (type png)
 <use images/10.png>
 Package pdftex.def Info: images/10.png  used on input line 296.
 (pdftex.def)             Requested size: 256.0748pt x 109.36053pt.
-<images/11.png, id=445, 631.35875pt x 417.56pt>
+<images/11.png, id=450, 631.35875pt x 417.56pt>
 File: images/11.png Graphic file (type png)
 <use images/11.png>
 Package pdftex.def Info: images/11.png  used on input line 302.
@@ -1384,7 +1384,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-<images/12.png, id=453, 909.3975pt x 368.37625pt>
+<images/12.png, id=458, 909.3975pt x 368.37625pt>
 File: images/12.png Graphic file (type png)
 <use images/12.png>
 Package pdftex.def Info: images/12.png  used on input line 332.
@@ -1400,7 +1400,7 @@ l.334     \begin{tcolorbox}[vert]
                                  
 (That was another \errmessage.)
 
-<images/13.png, id=454, 489.83pt x 182.6825pt>
+<images/13.png, id=459, 489.83pt x 182.6825pt>
 File: images/13.png Graphic file (type png)
 <use images/13.png>
 Package pdftex.def Info: images/13.png  used on input line 339.
@@ -1422,12 +1422,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 343--346
 
  []
 
-<images/14.png, id=461, 685.56125pt x 235.88126pt>
+<images/14.png, id=466, 685.56125pt x 235.88126pt>
 File: images/14.png Graphic file (type png)
 <use images/14.png>
 Package pdftex.def Info: images/14.png  used on input line 348.
 (pdftex.def)             Requested size: 256.0748pt x 88.10971pt.
-<images/15.png, id=462, 277.035pt x 401.5pt>
+<images/15.png, id=467, 277.035pt x 401.5pt>
 File: images/15.png Graphic file (type png)
 <use images/15.png>
 Package pdftex.def Info: images/15.png  used on input line 352.
@@ -1591,7 +1591,7 @@ l.439     \begin{tcolorbox}[gris]
 (That was another \errmessage.)
 
 [12]
-<images/16.png, id=528, 870.25125pt x 318.18875pt>
+<images/16.png, id=533, 870.25125pt x 318.18875pt>
 File: images/16.png Graphic file (type png)
 <use images/16.png>
 Package pdftex.def Info: images/16.png  used on input line 444.
@@ -1639,17 +1639,17 @@ l.462     \begin{tcolorbox}[violet]
                                    
 (That was another \errmessage.)
 
-<images/17.png, id=529, 673.51625pt x 346.29375pt>
+<images/17.png, id=534, 673.51625pt x 346.29375pt>
 File: images/17.png Graphic file (type png)
 <use images/17.png>
 Package pdftex.def Info: images/17.png  used on input line 466.
 (pdftex.def)             Requested size: 256.0748pt x 131.66168pt.
-<images/18.png, id=530, 563.10374pt x 228.855pt>
+<images/18.png, id=535, 563.10374pt x 228.855pt>
 File: images/18.png Graphic file (type png)
 <use images/18.png>
 Package pdftex.def Info: images/18.png  used on input line 471.
 (pdftex.def)             Requested size: 256.0748pt x 104.0733pt.
-<images/19.png, id=531, 668.4975pt x 187.70125pt>
+<images/19.png, id=536, 668.4975pt x 187.70125pt>
 File: images/19.png Graphic file (type png)
 <use images/19.png>
 Package pdftex.def Info: images/19.png  used on input line 476.
@@ -1783,7 +1783,7 @@ l.517     \begin{tcolorbox}[gris]
 (That was another \errmessage.)
 
 [14 <./images/19.png>]
-<images/20.png, id=579, 1526.70375pt x 504.88625pt>
+<images/20.png, id=584, 1526.70375pt x 504.88625pt>
 File: images/20.png Graphic file (type png)
 <use images/20.png>
 Package pdftex.def Info: images/20.png  used on input line 525.
@@ -1883,7 +1883,7 @@ l.559     \begin{tcolorbox}[gris]
                                  
 (That was another \errmessage.)
 
-<images/21.png, id=580, 1474.50874pt x 642.4pt>
+<images/21.png, id=585, 1474.50874pt x 642.4pt>
 File: images/21.png Graphic file (type png)
 <use images/21.png>
 Package pdftex.def Info: images/21.png  used on input line 572.
@@ -1958,7 +1958,7 @@ l.594     \begin{tcolorbox}[vert]
                                  
 (That was another \errmessage.)
 
-<images/22.png, id=597, 1254.6875pt x 290.08376pt>
+<images/22.png, id=602, 1254.6875pt x 290.08376pt>
 File: images/22.png Graphic file (type png)
 <use images/22.png>
 Package pdftex.def Info: images/22.png  used on input line 601.
@@ -1975,7 +1975,7 @@ l.604     \begin{tcolorbox}[rouge]
 (That was another \errmessage.)
 
 [16 <./images/21.png> <./images/22.png>]
-<images/23.png, id=606, 1541.76pt x 432.61626pt>
+<images/23.png, id=611, 1541.76pt x 432.61626pt>
 File: images/23.png Graphic file (type png)
 <use images/23.png>
 Package pdftex.def Info: images/23.png  used on input line 616.
@@ -2038,7 +2038,7 @@ l.646     \begin{tcolorbox}[vert]
                                  
 (That was another \errmessage.)
 
-<images/24.png, id=608, 1111.15125pt x 363.3575pt>
+<images/24.png, id=613, 1111.15125pt x 363.3575pt>
 File: images/24.png Graphic file (type png)
 <use images/24.png>
 Package pdftex.def Info: images/24.png  used on input line 651.
@@ -2362,7 +2362,7 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 800.
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 800.
 
-<images/25.png, id=685, 1490.56876pt x 688.5725pt>
+<images/25.png, id=690, 1490.56876pt x 688.5725pt>
 File: images/25.png Graphic file (type png)
 <use images/25.png>
 Package pdftex.def Info: images/25.png  used on input line 804.
@@ -2445,7 +2445,7 @@ Underfull \hbox (badness 1424) in paragraph at lines 833--833
 []\T1/cmr/m/n/10 It sends the same data to all
  []
 
-<images/26.png, id=686, 1066.98625pt x 376.40625pt>
+<images/26.png, id=691, 1066.98625pt x 376.40625pt>
 File: images/26.png Graphic file (type png)
 <use images/26.png>
 Package pdftex.def Info: images/26.png  used on input line 834.
@@ -2453,27 +2453,27 @@ Package pdftex.def Info: images/26.png  used on input line 834.
 Package mdframed Info: Not enough space on this page on input line 835.
 [20 <./images/25.png>]
 Package mdframed Info: Not enough space on this page on input line 835.
-<images/27.png, id=716, 1007.765pt x 365.365pt>
+<images/27.png, id=721, 1007.765pt x 365.365pt>
 File: images/27.png Graphic file (type png)
 <use images/27.png>
 Package pdftex.def Info: images/27.png  used on input line 838.
 (pdftex.def)             Requested size: 199.16928pt x 72.20757pt.
-<images/28.png, id=717, 1016.79875pt x 381.425pt>
+<images/28.png, id=722, 1016.79875pt x 381.425pt>
 File: images/28.png Graphic file (type png)
 <use images/28.png>
 Package pdftex.def Info: images/28.png  used on input line 842.
 (pdftex.def)             Requested size: 199.16928pt x 74.71222pt.
-<images/29.png, id=718, 1122.1925pt x 435.6275pt>
+<images/29.png, id=723, 1122.1925pt x 435.6275pt>
 File: images/29.png Graphic file (type png)
 <use images/29.png>
 Package pdftex.def Info: images/29.png  used on input line 846.
 (pdftex.def)             Requested size: 199.16928pt x 77.31279pt.
-<images/30.png, id=719, 1062.97125pt x 429.605pt>
+<images/30.png, id=724, 1062.97125pt x 429.605pt>
 File: images/30.png Graphic file (type png)
 <use images/30.png>
 Package pdftex.def Info: images/30.png  used on input line 850.
 (pdftex.def)             Requested size: 199.16928pt x 80.49173pt.
-<images/31.png, id=720, 1063.975pt x 454.69875pt>
+<images/31.png, id=725, 1063.975pt x 454.69875pt>
 File: images/31.png Graphic file (type png)
 <use images/31.png>
 Package pdftex.def Info: images/31.png  used on input line 854.
@@ -2982,7 +2982,7 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 888.
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 888.
 
-<images/32.png, id=730, 526.96875pt x 464.73625pt>
+<images/32.png, id=735, 526.96875pt x 464.73625pt>
 File: images/32.png Graphic file (type png)
 <use images/32.png>
 Package pdftex.def Info: images/32.png  used on input line 894.
@@ -3012,7 +3012,7 @@ l.908     \begin{tcolorbox}[violet]
                                    
 (That was another \errmessage.)
 
-<images/33.png, id=749, 816.04875pt x 504.88625pt>
+<images/33.png, id=754, 816.04875pt x 504.88625pt>
 File: images/33.png Graphic file (type png)
 <use images/33.png>
 Package pdftex.def Info: images/33.png  used on input line 917.
@@ -3028,12 +3028,12 @@ l.919     \begin{tcolorbox}[vert]
                                  
 (That was another \errmessage.)
 
-<images/35.png, id=750, 700.6175pt x 324.21124pt>
+<images/35.png, id=755, 700.6175pt x 324.21124pt>
 File: images/35.png Graphic file (type png)
 <use images/35.png>
 Package pdftex.def Info: images/35.png  used on input line 931.
 (pdftex.def)             Requested size: 227.62204pt x 105.33276pt.
-<images/34.png, id=751, 503.8825pt x 283.0575pt>
+<images/34.png, id=756, 503.8825pt x 283.0575pt>
 File: images/34.png Graphic file (type png)
 <use images/34.png>
 Package pdftex.def Info: images/34.png  used on input line 939.
@@ -3469,7 +3469,7 @@ l.945     \begin{tcolorbox}[vert]
                                  
 (That was another \errmessage.)
 
-<images/36.png, id=760, 640.3925pt x 252.945pt>
+<images/36.png, id=765, 640.3925pt x 252.945pt>
 File: images/36.png Graphic file (type png)
 <use images/36.png>
 Package pdftex.def Info: images/36.png  used on input line 949.
@@ -3496,7 +3496,7 @@ l.958     \begin{tcolorbox}[vert]
                                  
 (That was another \errmessage.)
 
-<images/37.png, id=761, 479.7925pt x 109.40875pt>
+<images/37.png, id=766, 479.7925pt x 109.40875pt>
 File: images/37.png Graphic file (type png)
 <use images/37.png>
 Package pdftex.def Info: images/37.png  used on input line 963.
@@ -3517,7 +3517,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 971--971
 []\T1/cmr/m/n/10 Synchronization in-struc-tions are
  []
 
-<images/38.png, id=762, 501.875pt x 460.72125pt>
+<images/38.png, id=767, 501.875pt x 460.72125pt>
 File: images/38.png Graphic file (type png)
 <use images/38.png>
 Package pdftex.def Info: images/38.png  used on input line 973.
@@ -3570,12 +3570,12 @@ l.1004     \begin{tcolorbox}[gris]
 (That was another \errmessage.)
 
 [25 <./images/38.png>]
-<images/39.png, id=778, 295.1025pt x 433.62pt>
+<images/39.png, id=783, 295.1025pt x 433.62pt>
 File: images/39.png Graphic file (type png)
 <use images/39.png>
 Package pdftex.def Info: images/39.png  used on input line 1017.
 (pdftex.def)             Requested size: 113.81102pt x 167.23203pt.
-<images/40.png, id=779, 246.9225pt x 215.80624pt>
+<images/40.png, id=784, 246.9225pt x 215.80624pt>
 File: images/40.png Graphic file (type png)
 <use images/40.png>
 Package pdftex.def Info: images/40.png  used on input line 1021.
@@ -3951,7 +3951,7 @@ Underfull \hbox (badness 1286) in paragraph at lines 1189--1189
 \T1/cmr/m/n/10 cache trans-ac-tion in cache co-
  []
 
-<images/41.png, id=830, 293.095pt x 495.8525pt>
+<images/41.png, id=835, 293.095pt x 495.8525pt>
 File: images/41.png Graphic file (type png)
 <use images/41.png>
 Package pdftex.def Info: images/41.png  used on input line 1191.
@@ -3959,7 +3959,7 @@ Package pdftex.def Info: images/41.png  used on input line 1191.
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 1193.
 [28]
-<images/42.png, id=852, 991.705pt x 607.26875pt>
+<images/42.png, id=857, 991.705pt x 607.26875pt>
 File: images/42.png Graphic file (type png)
 <use images/42.png>
 Package pdftex.def Info: images/42.png  used on input line 1200.
@@ -3969,7 +3969,7 @@ Overfull \hbox (42.09981pt too wide) in paragraph at lines 1200--1200
  [] 
  []
 
-<images/43.png, id=853, 985.6825pt x 590.205pt>
+<images/43.png, id=858, 985.6825pt x 590.205pt>
 File: images/43.png Graphic file (type png)
 <use images/43.png>
 Package pdftex.def Info: images/43.png  used on input line 1202.
@@ -4016,7 +4016,7 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 1221
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 1221.
 
-<images/44.png, id=854, 1209.51875pt x 681.54625pt>
+<images/44.png, id=859, 1209.51875pt x 681.54625pt>
 File: images/44.png Graphic file (type png)
 <use images/44.png>
 Package pdftex.def Info: images/44.png  used on input line 1226.
@@ -4098,7 +4098,7 @@ l.1260     \begin{tcolorbox}[gris]
 (That was another \errmessage.)
 
 [30 <./images/44.png>]
-<images/45.png, id=889, 589.20125pt x 305.14pt>
+<images/45.png, id=894, 589.20125pt x 305.14pt>
 File: images/45.png Graphic file (type png)
 <use images/45.png>
 Package pdftex.def Info: images/45.png  used on input line 1272.
@@ -4135,7 +4135,7 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 1284
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 1284.
 
-<images/46.png, id=890, 529.98pt x 282.05376pt>
+<images/46.png, id=895, 529.98pt x 282.05376pt>
 File: images/46.png Graphic file (type png)
 <use images/46.png>
 Package pdftex.def Info: images/46.png  used on input line 1290.
@@ -4171,12 +4171,12 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 1302
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 1302.
 
-<images/47.png, id=891, 1118.1775pt x 522.95375pt>
+<images/47.png, id=896, 1118.1775pt x 522.95375pt>
 File: images/47.png Graphic file (type png)
 <use images/47.png>
 Package pdftex.def Info: images/47.png  used on input line 1305.
 (pdftex.def)             Requested size: 284.52756pt x 133.06816pt.
-<images/48.png, id=892, 984.67876pt x 70.2625pt>
+<images/48.png, id=897, 984.67876pt x 70.2625pt>
 File: images/48.png Graphic file (type png)
 <use images/48.png>
 Package pdftex.def Info: images/48.png  used on input line 1310.
@@ -4260,7 +4260,7 @@ Overfull \hbox (2.22168pt too wide) in paragraph at lines 1328--1353
 []$[]$ $[]$
  []
 
-<images/49.png, id=919, 1059.96pt x 414.54875pt>
+<images/49.png, id=924, 1059.96pt x 414.54875pt>
 File: images/49.png Graphic file (type png)
 <use images/49.png>
 Package pdftex.def Info: images/49.png  used on input line 1356.
@@ -4354,12 +4354,12 @@ l.1409         \begin{tcolorbox}[vert]
                                       
 (That was another \errmessage.)
 
-<images/50.png, id=948, 1448.41125pt x 650.43pt>
+<images/50.png, id=953, 1448.41125pt x 650.43pt>
 File: images/50.png Graphic file (type png)
 <use images/50.png>
 Package pdftex.def Info: images/50.png  used on input line 1414.
 (pdftex.def)             Requested size: 284.52756pt x 127.77122pt.
-<images/51.png, id=949, 981.6675pt x 591.20876pt>
+<images/51.png, id=954, 981.6675pt x 591.20876pt>
 File: images/51.png Graphic file (type png)
 <use images/51.png>
 Package pdftex.def Info: images/51.png  used on input line 1418.
@@ -4784,12 +4784,12 @@ Package mdframed Info: You first box width is to small
  mdframed fixed it
 (mdframed)              on input line 1420.
 [33 <./images/50.png>]
-<images/52.png, id=963, 1510.64375pt x 663.47874pt>
+<images/52.png, id=968, 1510.64375pt x 663.47874pt>
 File: images/52.png Graphic file (type png)
 <use images/52.png>
 Package pdftex.def Info: images/52.png  used on input line 1423.
 (pdftex.def)             Requested size: 284.52756pt x 124.95876pt.
-<images/53.png, id=964, 991.705pt x 616.3025pt>
+<images/53.png, id=969, 991.705pt x 616.3025pt>
 File: images/53.png Graphic file (type png)
 <use images/53.png>
 Package pdftex.def Info: images/53.png  used on input line 1427.
@@ -4876,7 +4876,7 @@ Underfull \hbox (badness 2662) in paragraph at lines 1485--1485
 \T1/cmr/m/n/10 cache, all state re-mains in the
  []
 
-<images/54.png, id=978, 649.42625pt x 227.85126pt>
+<images/54.png, id=983, 649.42625pt x 227.85126pt>
 File: images/54.png Graphic file (type png)
 <use images/54.png>
 Package pdftex.def Info: images/54.png  used on input line 1487.
@@ -5301,7 +5301,7 @@ Package mdframed Info: You first box width is to small
  mdframed fixed it
 (mdframed)              on input line 1489.
 [35]
-<images/55.png, id=992, 655.44875pt x 220.825pt>
+<images/55.png, id=997, 655.44875pt x 220.825pt>
 File: images/55.png Graphic file (type png)
 <use images/55.png>
 Package pdftex.def Info: images/55.png  used on input line 1493.
@@ -5486,7 +5486,7 @@ l.1567         \begin{tcolorbox}[vert]
                                       
 (That was another \errmessage.)
 
-<images/56.png, id=1018, 619.31375pt x 158.5925pt>
+<images/56.png, id=1023, 619.31375pt x 158.5925pt>
 File: images/56.png Graphic file (type png)
 <use images/56.png>
 Package pdftex.def Info: images/56.png  used on input line 1571.
@@ -5554,7 +5554,7 @@ l.1607     \begin{tcolorbox}[vert]
 (That was another \errmessage.)
 
 [37 <./images/56.png>]
-<images/57.png, id=1055, 749.80125pt x 124.465pt>
+<images/57.png, id=1060, 749.80125pt x 124.465pt>
 File: images/57.png Graphic file (type png)
 <use images/57.png>
 Package pdftex.def Info: images/57.png  used on input line 1612.
@@ -5571,7 +5571,7 @@ l.1614     \begin{tcolorbox}[vert]
                                   
 (That was another \errmessage.)
 
-<images/58.png, id=1056, 409.53pt x 356.33125pt>
+<images/58.png, id=1061, 409.53pt x 356.33125pt>
 File: images/58.png Graphic file (type png)
 <use images/58.png>
 Package pdftex.def Info: images/58.png  used on input line 1618.
@@ -5619,7 +5619,7 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 1650
 Package varwidth Warning: Failed to reprocess entire contents on input line 1650.
 
 [38 <./images/57.png> <./images/58.png>]
-<images/59.png, id=1063, 509.905pt x 334.24875pt>
+<images/59.png, id=1068, 509.905pt x 334.24875pt>
 File: images/59.png Graphic file (type png)
 <use images/59.png>
 Package pdftex.def Info: images/59.png  used on input line 1653.
@@ -5679,7 +5679,7 @@ l.1684     \begin{tcolorbox}[vert]
 (That was another \errmessage.)
 
 [39 <./images/59.png>]
-<images/60.png, id=1107, 593.21625pt x 287.0725pt>
+<images/60.png, id=1112, 593.21625pt x 287.0725pt>
 File: images/60.png Graphic file (type png)
 <use images/60.png>
 Package pdftex.def Info: images/60.png  used on input line 1688.
@@ -6298,7 +6298,7 @@ l.1883     \begin{tcolorbox}[vert]
                                   
 (That was another \errmessage.)
 
-<images/62.png, id=1178, 1342.01375pt x 513.92pt>
+<images/62.png, id=1183, 1342.01375pt x 513.92pt>
 File: images/62.png Graphic file (type png)
 <use images/62.png>
 Package pdftex.def Info: images/62.png  used on input line 1887.
@@ -6463,7 +6463,7 @@ l.1924     \begin{tcolorbox}[rouge]
                                    
 (That was another \errmessage.)
 
-<images/61.png, id=1204, 701.62125pt x 159.59625pt>
+<images/61.png, id=1209, 701.62125pt x 159.59625pt>
 File: images/61.png Graphic file (type png)
 <use images/61.png>
 Package pdftex.def Info: images/61.png  used on input line 1928.
@@ -6485,7 +6485,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1942--1943
  []
 
 [44 <./images/61.png>]
-<images/63.png, id=1225, 558.085pt x 214.8025pt>
+<images/63.png, id=1230, 558.085pt x 214.8025pt>
 File: images/63.png Graphic file (type png)
 <use images/63.png>
 Package pdftex.def Info: images/63.png  used on input line 1950.
@@ -6528,7 +6528,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1983--1984
 
  []
 
-<images/64.png, id=1226, 898.35625pt x 200.75pt>
+<images/64.png, id=1231, 898.35625pt x 200.75pt>
 File: images/64.png Graphic file (type png)
 <use images/64.png>
 Package pdftex.def Info: images/64.png  used on input line 1991.
@@ -6545,7 +6545,7 @@ l.1993     \begin{tcolorbox}[rouge]
 (That was another \errmessage.)
 
 [45 <./images/63.png> <./images/64.png>]
-<images/65.png, id=1235, 550.055pt x 228.855pt>
+<images/65.png, id=1240, 550.055pt x 228.855pt>
 File: images/65.png Graphic file (type png)
 <use images/65.png>
 Package pdftex.def Info: images/65.png  used on input line 2005.
@@ -6688,7 +6688,7 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 2056
 Package varwidth Warning: Failed to reprocess entire contents on input line 2056.
 
 [46 <./images/65.png>]
-<images/66.png, id=1245, 871.255pt x 244.915pt>
+<images/66.png, id=1250, 871.255pt x 244.915pt>
 File: images/66.png Graphic file (type png)
 <use images/66.png>
 Package pdftex.def Info: images/66.png  used on input line 2060.
@@ -6716,7 +6716,7 @@ l.2066     \begin{tcolorbox}[vert]
                                   
 (That was another \errmessage.)
 
-<images/67.png, id=1246, 860.21375pt x 125.46875pt>
+<images/67.png, id=1251, 860.21375pt x 125.46875pt>
 File: images/67.png Graphic file (type png)
 <use images/67.png>
 Package pdftex.def Info: images/67.png  used on input line 2070.
@@ -6733,7 +6733,7 @@ l.2072     \begin{tcolorbox}[gris]
 (That was another \errmessage.)
 
 [47 <./images/66.png> <./images/67.png>]
-<images/68.png, id=1272, 873.2625pt x 239.89626pt>
+<images/68.png, id=1277, 873.2625pt x 239.89626pt>
 File: images/68.png Graphic file (type png)
 <use images/68.png>
 Package pdftex.def Info: images/68.png  used on input line 2088.
@@ -6770,7 +6770,7 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 2099
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 2099.
 
-<images/69.png, id=1273, 861.2175pt x 319.1925pt>
+<images/69.png, id=1278, 861.2175pt x 319.1925pt>
 File: images/69.png Graphic file (type png)
 <use images/69.png>
 Package pdftex.def Info: images/69.png  used on input line 2103.
@@ -6854,7 +6854,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2139--2140
  []
 
 [48 <./images/68.png> <./images/69.png>]
-<images/70.png, id=1313, 760.8425pt x 185.69376pt>
+<images/70.png, id=1318, 760.8425pt x 185.69376pt>
 File: images/70.png Graphic file (type png)
 <use images/70.png>
 Package pdftex.def Info: images/70.png  used on input line 2143.
@@ -6907,7 +6907,7 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 2172
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 2172.
 
-<images/71.png, id=1314, 772.8875pt x 218.8175pt>
+<images/71.png, id=1319, 772.8875pt x 218.8175pt>
 File: images/71.png Graphic file (type png)
 <use images/71.png>
 Package pdftex.def Info: images/71.png  used on input line 2176.
@@ -6955,7 +6955,7 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 2197
 Package varwidth Warning: Failed to reprocess entire contents on input line 2197.
 
 [49 <./images/70.png> <./images/71.png>]
-<images/72.png, id=1344, 918.43124pt x 166.6225pt>
+<images/72.png, id=1349, 918.43124pt x 166.6225pt>
 File: images/72.png Graphic file (type png)
 <use images/72.png>
 Package pdftex.def Info: images/72.png  used on input line 2204.
@@ -6970,7 +6970,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2209--2209
 
  []
 
-<images/73.png, id=1345, 291.0875pt x 344.28625pt>
+<images/73.png, id=1350, 291.0875pt x 344.28625pt>
 File: images/73.png Graphic file (type png)
 <use images/73.png>
 Package pdftex.def Info: images/73.png  used on input line 2211.
@@ -6980,12 +6980,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 2215--2216
 
  []
 
-<images/74.png, id=1346, 749.80125pt x 329.23pt>
+<images/74.png, id=1351, 749.80125pt x 329.23pt>
 File: images/74.png Graphic file (type png)
 <use images/74.png>
 Package pdftex.def Info: images/74.png  used on input line 2219.
 (pdftex.def)             Requested size: 256.0748pt x 112.43907pt.
-<images/75.png, id=1347, 455.7025pt x 338.26375pt>
+<images/75.png, id=1352, 455.7025pt x 338.26375pt>
 File: images/75.png Graphic file (type png)
 <use images/75.png>
 Package pdftex.def Info: images/75.png  used on input line 2229.
@@ -7066,12 +7066,12 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 2264
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 2264.
 
-<images/76.png, id=1369, 792.9625pt x 493.845pt>
+<images/76.png, id=1374, 792.9625pt x 493.845pt>
 File: images/76.png Graphic file (type png)
 <use images/76.png>
 Package pdftex.def Info: images/76.png  used on input line 2268.
 (pdftex.def)             Requested size: 227.62204pt x 141.75703pt.
-<images/77.png, id=1370, 440.64626pt x 182.6825pt>
+<images/77.png, id=1375, 440.64626pt x 182.6825pt>
 File: images/77.png Graphic file (type png)
 <use images/77.png>
 Package pdftex.def Info: images/77.png  used on input line 2272.
@@ -7110,7 +7110,7 @@ l.2284     \begin{tcolorbox}[vert]
                                   
 (That was another \errmessage.)
 
-<images/78.png, id=1394, 491.8375pt x 226.8475pt>
+<images/78.png, id=1399, 491.8375pt x 226.8475pt>
 File: images/78.png Graphic file (type png)
 <use images/78.png>
 Package pdftex.def Info: images/78.png  used on input line 2292.
@@ -7138,12 +7138,12 @@ l.2308     \begin{tcolorbox}[vert]
                                   
 (That was another \errmessage.)
 
-<images/79.png, id=1400, 579.16376pt x 326.21875pt>
+<images/79.png, id=1405, 579.16376pt x 326.21875pt>
 File: images/79.png Graphic file (type png)
 <use images/79.png>
 Package pdftex.def Info: images/79.png  used on input line 2312.
 (pdftex.def)             Requested size: 170.71652pt x 96.15404pt.
-<images/80.png, id=1401, 676.5275pt x 308.15125pt>
+<images/80.png, id=1406, 676.5275pt x 308.15125pt>
 File: images/80.png Graphic file (type png)
 <use images/80.png>
 Package pdftex.def Info: images/80.png  used on input line 2319.
@@ -7175,12 +7175,12 @@ l.2326     \begin{tcolorbox}[vert]
                                   
 (That was another \errmessage.)
 
-<images/81.png, id=1402, 512.91624pt x 253.94875pt>
+<images/81.png, id=1407, 512.91624pt x 253.94875pt>
 File: images/81.png Graphic file (type png)
 <use images/81.png>
 Package pdftex.def Info: images/81.png  used on input line 2330.
 (pdftex.def)             Requested size: 142.26378pt x 70.43478pt.
-<images/82.png, id=1403, 684.5575pt x 422.57875pt>
+<images/82.png, id=1408, 684.5575pt x 422.57875pt>
 File: images/82.png Graphic file (type png)
 <use images/82.png>
 Package pdftex.def Info: images/82.png  used on input line 2336.
@@ -7190,7 +7190,7 @@ Overfull \hbox (0.71266pt too wide) in paragraph at lines 2336--2337
  [] 
  []
 
-<images/83.png, id=1404, 650.43pt x 419.5675pt>
+<images/83.png, id=1409, 650.43pt x 419.5675pt>
 File: images/83.png Graphic file (type png)
 <use images/83.png>
 Package pdftex.def Info: images/83.png  used on input line 2342.
@@ -7216,7 +7216,7 @@ l.2352         \begin{tcolorbox}[vert]
                                       
 (That was another \errmessage.)
 
-<images/84.png, id=1412, 597.23125pt x 303.1325pt>
+<images/84.png, id=1417, 597.23125pt x 303.1325pt>
 File: images/84.png Graphic file (type png)
 <use images/84.png>
 Package pdftex.def Info: images/84.png  used on input line 2356.
@@ -7242,7 +7242,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2366--2367
 
  []
 
-<images/85.png, id=1413, 733.74126pt x 345.29pt>
+<images/85.png, id=1418, 733.74126pt x 345.29pt>
 File: images/85.png Graphic file (type png)
 <use images/85.png>
 Package pdftex.def Info: images/85.png  used on input line 2376.
@@ -7284,7 +7284,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2402--2403
 
  []
 
-<images/86.png, id=1422, 596.2275pt x 331.2375pt>
+<images/86.png, id=1427, 596.2275pt x 331.2375pt>
 File: images/86.png Graphic file (type png)
 <use images/86.png>
 Package pdftex.def Info: images/86.png  used on input line 2406.
@@ -7301,12 +7301,12 @@ l.2409     \begin{tcolorbox}[vert]
                                   
 (That was another \errmessage.)
 
-<images/87.png, id=1428, 593.21625pt x 303.1325pt>
+<images/87.png, id=1433, 593.21625pt x 303.1325pt>
 File: images/87.png Graphic file (type png)
 <use images/87.png>
 Package pdftex.def Info: images/87.png  used on input line 2413.
 (pdftex.def)             Requested size: 199.16928pt x 101.7732pt.
-<images/88.png, id=1429, 641.39626pt x 112.42pt>
+<images/88.png, id=1434, 641.39626pt x 112.42pt>
 File: images/88.png Graphic file (type png)
 <use images/88.png>
 Package pdftex.def Info: images/88.png  used on input line 2422.
@@ -7322,18 +7322,18 @@ l.2427     \begin{tcolorbox}[violet]
                                     
 (That was another \errmessage.)
 
-<images/89.png, id=1430, 822.07124pt x 335.2525pt>
+<images/89.png, id=1435, 822.07124pt x 335.2525pt>
 File: images/89.png Graphic file (type png)
 <use images/89.png>
 Package pdftex.def Info: images/89.png  used on input line 2431.
 (pdftex.def)             Requested size: 369.88582pt x 150.84177pt.
 [56 <./images/86.png> <./images/87.png> <./images/88.png>]
-<images/90.png, id=1438, 703.62875pt x 140.525pt>
+<images/90.png, id=1443, 703.62875pt x 140.525pt>
 File: images/90.png Graphic file (type png)
 <use images/90.png>
 Package pdftex.def Info: images/90.png  used on input line 2457.
 (pdftex.def)             Requested size: 398.33858pt x 79.55328pt.
-<images/91.png, id=1439, 302.12875pt x 210.7875pt>
+<images/91.png, id=1444, 302.12875pt x 210.7875pt>
 File: images/91.png Graphic file (type png)
 <use images/91.png>
 Package pdftex.def Info: images/91.png  used on input line 2463.
@@ -7356,7 +7356,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2470--2471
  []
 
 [57 <./images/89.png> <./images/90.png> <./images/91.png>]
-<images/92.png, id=1447, 744.7825pt x 320.19624pt>
+<images/92.png, id=1452, 744.7825pt x 320.19624pt>
 File: images/92.png Graphic file (type png)
 <use images/92.png>
 Package pdftex.def Info: images/92.png  used on input line 2481.
@@ -7366,7 +7366,7 @@ Overfull \hbox (86.07094pt too wide) in paragraph at lines 2481--2482
 [][] 
  []
 
-<images/93.png, id=1448, 552.0625pt x 357.335pt>
+<images/93.png, id=1453, 552.0625pt x 357.335pt>
 File: images/93.png Graphic file (type png)
 <use images/93.png>
 Package pdftex.def Info: images/93.png  used on input line 2485.
@@ -7381,12 +7381,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 2488--2489
 
  []
 
-<images/94.png, id=1449, 528.97626pt x 251.94125pt>
+<images/94.png, id=1454, 528.97626pt x 251.94125pt>
 File: images/94.png Graphic file (type png)
 <use images/94.png>
 Package pdftex.def Info: images/94.png  used on input line 2492.
 (pdftex.def)             Requested size: 199.16928pt x 94.8583pt.
-<images/95.png, id=1450, 768.8725pt x 223.83624pt>
+<images/95.png, id=1455, 768.8725pt x 223.83624pt>
 File: images/95.png Graphic file (type png)
 <use images/95.png>
 Package pdftex.def Info: images/95.png  used on input line 2497.
@@ -7396,7 +7396,7 @@ Overfull \hbox (29.16542pt too wide) in paragraph at lines 2497--2498
 [][] 
  []
 
-<images/96.png, id=1451, 503.8825pt x 164.615pt>
+<images/96.png, id=1456, 503.8825pt x 164.615pt>
 File: images/96.png Graphic file (type png)
 <use images/96.png>
 Package pdftex.def Info: images/96.png  used on input line 2501.
@@ -7463,13 +7463,13 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 2522
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 2522.
 
-<images/97.png, id=1452, 898.35625pt x 231.86626pt>
+<images/97.png, id=1457, 898.35625pt x 231.86626pt>
 File: images/97.png Graphic file (type png)
 <use images/97.png>
 Package pdftex.def Info: images/97.png  used on input line 2524.
 (pdftex.def)             Requested size: 256.0748pt x 66.09317pt.
 [58 <./images/92.png> <./images/93.png> <./images/94.png> <./images/95.png> <./images/96.png> <./images/97.png>]
-<images/98.png, id=1473, 743.77875pt x 247.92625pt>
+<images/98.png, id=1478, 743.77875pt x 247.92625pt>
 File: images/98.png Graphic file (type png)
 <use images/98.png>
 Package pdftex.def Info: images/98.png  used on input line 2528.
@@ -7724,7 +7724,7 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 2634
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 2634.
 
-<images/99.png, id=1494, 751.80875pt x 363.3575pt>
+<images/99.png, id=1499, 751.80875pt x 363.3575pt>
 File: images/99.png Graphic file (type png)
 <use images/99.png>
 Package pdftex.def Info: images/99.png  used on input line 2637.
@@ -7746,12 +7746,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 2640--2641
  []
 
 [60 <./images/99.png>]
-<images/100.png, id=1532, 283.0575pt x 284.06125pt>
+<images/100.png, id=1537, 283.0575pt x 284.06125pt>
 File: images/100.png Graphic file (type png)
 <use images/100.png>
 Package pdftex.def Info: images/100.png  used on input line 2654.
 (pdftex.def)             Requested size: 85.35826pt x 85.66113pt.
-<images/101.png, id=1533, 418.56375pt x 307.1475pt>
+<images/101.png, id=1538, 418.56375pt x 307.1475pt>
 File: images/101.png Graphic file (type png)
 <use images/101.png>
 Package pdftex.def Info: images/101.png  used on input line 2658.
@@ -7773,7 +7773,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2661--2662
 
  []
 
-<images/102.png, id=1534, 635.37375pt x 589.20125pt>
+<images/102.png, id=1539, 635.37375pt x 589.20125pt>
 File: images/102.png Graphic file (type png)
 <use images/102.png>
 Package pdftex.def Info: images/102.png  used on input line 2672.
@@ -7880,13 +7880,13 @@ l.2684         \begin{tcolorbox}[vert]
                                       
 (That was another \errmessage.)
 
-<images/103.png, id=1535, 1503.6175pt x 647.41875pt>
+<images/103.png, id=1540, 1503.6175pt x 647.41875pt>
 File: images/103.png Graphic file (type png)
 <use images/103.png>
 Package pdftex.def Info: images/103.png  used on input line 2688.
 (pdftex.def)             Requested size: 312.9803pt x 134.75673pt.
 [61 <./images/100.png> <./images/101.png> <./images/102.png>]
-<images/104.png, id=1546, 1457.445pt x 694.595pt>
+<images/104.png, id=1551, 1457.445pt x 694.595pt>
 File: images/104.png Graphic file (type png)
 <use images/104.png>
 Package pdftex.def Info: images/104.png  used on input line 2697.
@@ -7934,7 +7934,7 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 2715
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 2715.
 
-<images/105.png, id=1547, 530.98375pt x 293.095pt>
+<images/105.png, id=1552, 530.98375pt x 293.095pt>
 File: images/105.png Graphic file (type png)
 <use images/105.png>
 Package pdftex.def Info: images/105.png  used on input line 2728.
@@ -7951,7 +7951,7 @@ l.2737 \begin{tcolorbox}[gris]
                               
 (That was another \errmessage.)
 
-<images/106.png, id=1566, 866.23625pt x 110.4125pt>
+<images/106.png, id=1571, 866.23625pt x 110.4125pt>
 File: images/106.png Graphic file (type png)
 <use images/106.png>
 Package pdftex.def Info: images/106.png  used on input line 2763.
@@ -7972,7 +7972,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2769--2770
 
  []
 
-<images/108.png, id=1567, 601.24625pt x 189.70876pt>
+<images/108.png, id=1572, 601.24625pt x 189.70876pt>
 File: images/108.png Graphic file (type png)
 <use images/108.png>
 Package pdftex.def Info: images/108.png  used on input line 2774.
@@ -8007,7 +8007,7 @@ l.2781 \begin{tcolorbox}[vert]
                               
 (That was another \errmessage.)
 
-<images/107.png, id=1575, 859.21pt x 383.4325pt>
+<images/107.png, id=1580, 859.21pt x 383.4325pt>
 File: images/107.png Graphic file (type png)
 <use images/107.png>
 Package pdftex.def Info: images/107.png  used on input line 2786.
@@ -8090,7 +8090,7 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 2817
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 2817.
 
-<images/109.png, id=1576, 590.205pt x 99.37125pt>
+<images/109.png, id=1581, 590.205pt x 99.37125pt>
 File: images/109.png Graphic file (type png)
 <use images/109.png>
 Package pdftex.def Info: images/109.png  used on input line 2819.
@@ -8126,7 +8126,7 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 2830
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 2830.
 
-<images/110.png, id=1577, 588.1975pt x 104.39pt>
+<images/110.png, id=1582, 588.1975pt x 104.39pt>
 File: images/110.png Graphic file (type png)
 <use images/110.png>
 Package pdftex.def Info: images/110.png  used on input line 2832.
@@ -8162,7 +8162,7 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 2842
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 2842.
 
-<images/111.png, id=1578, 605.26125pt x 106.3975pt>
+<images/111.png, id=1583, 605.26125pt x 106.3975pt>
 File: images/111.png Graphic file (type png)
 <use images/111.png>
 Package pdftex.def Info: images/111.png  used on input line 2844.
@@ -8198,7 +8198,7 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 2856
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 2856.
 
-<images/112.png, id=1579, 597.23125pt x 106.3975pt>
+<images/112.png, id=1584, 597.23125pt x 106.3975pt>
 File: images/112.png Graphic file (type png)
 <use images/112.png>
 Package pdftex.def Info: images/112.png  used on input line 2858.
@@ -8234,7 +8234,7 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 2869
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 2869.
 
-<images/113.png, id=1580, 596.2275pt x 116.435pt>
+<images/113.png, id=1585, 596.2275pt x 116.435pt>
 File: images/113.png Graphic file (type png)
 <use images/113.png>
 Package pdftex.def Info: images/113.png  used on input line 2871.
@@ -8263,7 +8263,7 @@ l.2880 \begin{tcolorbox}[vert]
                               
 (That was another \errmessage.)
 
-<images/114.png, id=1618, 862.22125pt x 380.42125pt>
+<images/114.png, id=1623, 862.22125pt x 380.42125pt>
 File: images/114.png Graphic file (type png)
 <use images/114.png>
 Package pdftex.def Info: images/114.png  used on input line 2884.
@@ -8354,7 +8354,7 @@ l.2903 \begin{tcolorbox}[vert]
                               
 (That was another \errmessage.)
 
-<images/115.png, id=1619, 864.22874pt x 378.41376pt>
+<images/115.png, id=1624, 864.22874pt x 378.41376pt>
 File: images/115.png Graphic file (type png)
 <use images/115.png>
 Package pdftex.def Info: images/115.png  used on input line 2907.
@@ -8542,17 +8542,17 @@ l.3009 \begin{tcolorbox}[vert]
                               
 (That was another \errmessage.)
 
-<images/116.png, id=1665, 866.23625pt x 241.90375pt>
+<images/116.png, id=1670, 866.23625pt x 241.90375pt>
 File: images/116.png Graphic file (type png)
 <use images/116.png>
 Package pdftex.def Info: images/116.png  used on input line 3015.
 (pdftex.def)             Requested size: 341.43306pt x 95.34607pt.
-<images/118.png, id=1666, 859.21pt x 379.4175pt>
+<images/118.png, id=1671, 859.21pt x 379.4175pt>
 File: images/118.png Graphic file (type png)
 <use images/118.png>
 Package pdftex.def Info: images/118.png  used on input line 3019.
 (pdftex.def)             Requested size: 312.9803pt x 138.21123pt.
-<images/117.png, id=1667, 821.0675pt x 358.33875pt>
+<images/117.png, id=1672, 821.0675pt x 358.33875pt>
 File: images/117.png Graphic file (type png)
 <use images/117.png>
 Package pdftex.def Info: images/117.png  used on input line 3020.
@@ -8569,12 +8569,12 @@ l.3023     \begin{tcolorbox}[vert]
                                   
 (That was another \errmessage.)
 
-<images/119.png, id=1697, 318.18875pt x 268.00125pt>
+<images/119.png, id=1702, 318.18875pt x 268.00125pt>
 File: images/119.png Graphic file (type png)
 <use images/119.png>
 Package pdftex.def Info: images/119.png  used on input line 3027.
 (pdftex.def)             Requested size: 85.35826pt x 71.89102pt.
-<images/120.png, id=1698, 278.03876pt x 318.18875pt>
+<images/120.png, id=1703, 278.03876pt x 318.18875pt>
 File: images/120.png Graphic file (type png)
 <use images/120.png>
 Package pdftex.def Info: images/120.png  used on input line 3039.
@@ -8584,18 +8584,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 3046--3047
 
  []
 
-<images/121.png, id=1699, 401.5pt x 283.0575pt>
+<images/121.png, id=1704, 401.5pt x 283.0575pt>
 File: images/121.png Graphic file (type png)
 <use images/121.png>
 Package pdftex.def Info: images/121.png  used on input line 3052.
 (pdftex.def)             Requested size: 142.26378pt x 100.29822pt.
 [69 <./images/118.png> <./images/117.png> <./images/119.png> <./images/120.png>]
-<images/122.png, id=1708, 391.4625pt x 225.84375pt>
+<images/122.png, id=1713, 391.4625pt x 225.84375pt>
 File: images/122.png Graphic file (type png)
 <use images/122.png>
 Package pdftex.def Info: images/122.png  used on input line 3063.
 (pdftex.def)             Requested size: 142.26378pt x 82.0756pt.
-<images/123.png, id=1709, 866.23625pt x 294.09875pt>
+<images/123.png, id=1714, 866.23625pt x 294.09875pt>
 File: images/123.png Graphic file (type png)
 <use images/123.png>
 Package pdftex.def Info: images/123.png  used on input line 3070.
@@ -8628,7 +8628,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3077--3078
 
  []
 
-<images/124.png, id=1711, 849.1725pt x 436.63126pt>
+<images/124.png, id=1716, 849.1725pt x 436.63126pt>
 File: images/124.png Graphic file (type png)
 <use images/124.png>
 Package pdftex.def Info: images/124.png  used on input line 3088.
@@ -8753,12 +8753,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 3138--3140
  []
 
 [71 <./images/124.png>]
-<images/125.png, id=1759, 892.33376pt x 460.72125pt>
+<images/125.png, id=1764, 892.33376pt x 460.72125pt>
 File: images/125.png Graphic file (type png)
 <use images/125.png>
 Package pdftex.def Info: images/125.png  used on input line 3145.
 (pdftex.def)             Requested size: 341.43306pt x 176.28505pt.
-<images/126.png, id=1760, 335.2525pt x 275.0275pt>
+<images/126.png, id=1765, 335.2525pt x 275.0275pt>
 File: images/126.png Graphic file (type png)
 <use images/126.png>
 Package pdftex.def Info: images/126.png  used on input line 3154.
@@ -8795,7 +8795,7 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 3168
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 3168.
 
-<images/127.png, id=1761, 733.74126pt x 410.53375pt>
+<images/127.png, id=1766, 733.74126pt x 410.53375pt>
 File: images/127.png Graphic file (type png)
 <use images/127.png>
 Package pdftex.def Info: images/127.png  used on input line 3171.
@@ -8890,7 +8890,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3197--3198
 
  []
 
-<images/128.png, id=1777, 1092.08pt x 403.5075pt>
+<images/128.png, id=1782, 1092.08pt x 403.5075pt>
 File: images/128.png Graphic file (type png)
 <use images/128.png>
 Package pdftex.def Info: images/128.png  used on input line 3205.
@@ -8931,7 +8931,7 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 3222
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 3222.
 
-<images/129.png, id=1778, 1580.90625pt x 444.66125pt>
+<images/129.png, id=1783, 1580.90625pt x 444.66125pt>
 File: images/129.png Graphic file (type png)
 <use images/129.png>
 Package pdftex.def Info: images/129.png  used on input line 3225.
@@ -9111,7 +9111,7 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 3328
 
 Package varwidth Warning: Failed to reprocess entire contents on input line 3328.
 
-<images/130.png, id=1835, 1421.31pt x 421.575pt>
+<images/130.png, id=1840, 1421.31pt x 421.575pt>
 File: images/130.png Graphic file (type png)
 <use images/130.png>
 Package pdftex.def Info: images/130.png  used on input line 3332.
@@ -9121,12 +9121,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 3334--3335
 
  []
 
-<images/131.png, id=1836, 1491.5725pt x 406.51875pt>
+<images/131.png, id=1841, 1491.5725pt x 406.51875pt>
 File: images/131.png Graphic file (type png)
 <use images/131.png>
 Package pdftex.def Info: images/131.png  used on input line 3338.
 (pdftex.def)             Requested size: 312.9803pt x 85.29701pt.
-<images/132.png, id=1837, 1325.95375pt x 340.27126pt>
+<images/132.png, id=1842, 1325.95375pt x 340.27126pt>
 File: images/132.png Graphic file (type png)
 <use images/132.png>
 Package pdftex.def Info: images/132.png  used on input line 3342.
@@ -9143,7 +9143,7 @@ l.3344     \begin{tcolorbox}[vert]
 (That was another \errmessage.)
 
 [75 <./images/130.png> <./images/131.png> <./images/132.png>]
-<images/133.png, id=1877, 1328.965pt x 412.54124pt>
+<images/133.png, id=1882, 1328.965pt x 412.54124pt>
 File: images/133.png Graphic file (type png)
 <use images/133.png>
 Package pdftex.def Info: images/133.png  used on input line 3348.
@@ -9218,7 +9218,7 @@ l.3369         \begin{tcolorbox}[vert]
                                       
 (That was another \errmessage.)
 
-<images/134.png, id=1878, 787.94376pt x 272.01625pt>
+<images/134.png, id=1883, 787.94376pt x 272.01625pt>
 File: images/134.png Graphic file (type png)
 <use images/134.png>
 Package pdftex.def Info: images/134.png  used on input line 3378.
@@ -9357,12 +9357,12 @@ Package varwidth Warning: Failed to reprocess entire contents on input line 3419
 Package varwidth Warning: Failed to reprocess entire contents on input line 3419.
 
 [76 <./images/133.png> <./images/134.png>]
-<images/135.png, id=1887, 677.53125pt x 384.43625pt>
+<images/135.png, id=1892, 677.53125pt x 384.43625pt>
 File: images/135.png Graphic file (type png)
 <use images/135.png>
 Package pdftex.def Info: images/135.png  used on input line 3423.
 (pdftex.def)             Requested size: 284.52756pt x 161.44452pt.
-<images/136.png, id=1888, 194.7275pt x 395.4775pt>
+<images/136.png, id=1893, 194.7275pt x 395.4775pt>
 File: images/136.png Graphic file (type png)
 <use images/136.png>
 Package pdftex.def Info: images/136.png  used on input line 3432.
@@ -9384,26 +9384,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 3446--3447
 
  []
 
-[78] (./main.aux)
+<images/138.png, id=1928, 570.13pt x 201.75375pt>
+File: images/138.png Graphic file (type png)
+<use images/138.png>
+Package pdftex.def Info: images/138.png  used on input line 3453.
+(pdftex.def)             Requested size: 199.16928pt x 70.4794pt.
+
+Overfull \hbox (0.71266pt too wide) in paragraph at lines 3453--3454
+[][] 
+ []
+
+<images/137.png, id=1929, 501.875pt x 124.465pt>
+File: images/137.png Graphic file (type png)
+<use images/137.png>
+Package pdftex.def Info: images/137.png  used on input line 3458.
+(pdftex.def)             Requested size: 199.16928pt x 49.39388pt.
+
+Overfull \hbox (0.71266pt too wide) in paragraph at lines 3458--3459
+[][] 
+ []
+
+[78 <./images/138.png> <./images/137.png>] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: E151C8C511768D6BEF251F7F92160620;8691
-(rerunfilecheck)             After:  4B9F27B42FE8B146887DD77CA35AD11C;8597.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 87F1098278A7173F7189355A2ED51A20;8720.
  ) 
 Here is how much of TeX's memory you used:
- 34777 strings out of 469486
- 685294 string characters out of 5469658
+ 34793 strings out of 469486
+ 685618 string characters out of 5469658
  1516387 words of memory out of 5000000
- 61814 multiletter control sequences out of 15000+600000
+ 61829 multiletter control sequences out of 15000+600000
  648053 words of font info for 88 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  102i,12n,112p,550b,1899s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -9411,10 +9424,10 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{locks} has been referenced but does not exist, replaced by a fixed one
 
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfit0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (79 pages, 5946890 bytes).
+Output written on main.pdf (79 pages, 5982736 bytes).
 PDF statistics:
- 2261 PDF objects out of 2487 (max. 8388607)
- 1826 compressed objects within 19 object streams
- 1079 named destinations out of 1200 (max. 500000)
- 1300 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2270 PDF objects out of 2487 (max. 8388607)
+ 1831 compressed objects within 19 object streams
+ 1080 named destinations out of 1200 (max. 500000)
+ 1318 words of extra memory for PDF output out of 10000 (max. 10000000)
 
