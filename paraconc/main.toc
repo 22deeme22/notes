@@ -1,4 +1,5 @@
 \babel@toc {english}{}\relax 
+\contentsline {section}{Introduction}{2}{section*.2}%
 \contentsline {section}{\numberline {1}Metrics}{3}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Iron Law}{3}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Amdahl's law}{4}{subsection.1.2}%
